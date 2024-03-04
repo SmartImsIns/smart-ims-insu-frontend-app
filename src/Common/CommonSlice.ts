@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { ICommon } from '../models/Common/Common';
+import { ICommon } from '../models/common/Common';
 
 const initialState: ICommon = {
     isLoading: false,

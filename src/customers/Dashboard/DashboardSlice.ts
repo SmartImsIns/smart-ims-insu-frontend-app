@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { IDashboardSlice } from '../../models/Dashboard/Dashboard';
+import { IDashboardSlice } from '../../models/customers/dashboard/Dashboard';
 import { GetTestData } from './DashboardAction';
 
 const initialState: IDashboardSlice = {
