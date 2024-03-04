@@ -1,6 +1,6 @@
 import { configureStore, combineReducers, ThunkAction, Action, AnyAction } from '@reduxjs/toolkit';
 import DashboardSlice from '../customers/Dashboard/DashboardSlice';
-import CommonSlice from '../Common/CommonSlice';
+import CommonSlice from '../common/CommonSlice';
 
 const appReducer = combineReducers({
   dashboard: DashboardSlice,

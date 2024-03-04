@@ -1,6 +1,6 @@
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
-import Error from './Common/Error/Error';
-import Login from './Login/Login';
+import Error from './common/Error/Error';
+import Login from './login/Login';
 import CustomerRoutes from './customers/CustomerRoutes';
 
 const ApplicationRoutes = (props: any) => {
