@@ -1,7 +1,9 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import { BrowserRouter } from "react-router-dom"
+import { BrowserRouter } from "react-router-dom";
 import { Provider } from 'react-redux';
+import { ThemeProvider } from '@mui/material/styles';
+import theme from './app-theme/theme';
 import ApplicationRoutes from './Routes';
 import './index.css';
 import App from './App';
@@ -16,7 +18,9 @@ root.render(
   // <React.StrictMode>
     <BrowserRouter>
       <Provider store={store}>
+        <ThemeProvider theme={theme}>
           <ApplicationRoutes />
+        </ThemeProvider>
       </Provider>
     </BrowserRouter>
   // </React.StrictMode>

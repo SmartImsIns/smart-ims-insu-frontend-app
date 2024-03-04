@@ -1,4 +1,4 @@
-import { setIsLoading, setIsSuccess, setIsError, setMessage, setDisplayMsg, setCalledReducerType, resetCommonSlice } from '../Common/CommonSlice';
+import { setIsLoading, setIsSuccess, setIsError, setMessage, setDisplayMsg, setCalledReducerType, resetCommonSlice } from '../common/CommonSlice';
 
 export const CustomAction = async (apiMethod: any, dispatch: any, reducerType: string | null = null, displayMsg: boolean = false, customMsg: string | null = null) => {
   dispatch(resetCommonSlice());
