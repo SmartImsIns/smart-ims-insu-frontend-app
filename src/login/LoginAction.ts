@@ -8,6 +8,10 @@ export const LoginSubmit = createAsyncThunk(
   "login",
   async (requestParams: ILoginRequestParams,{dispatch}) => {
     const data: any = await CustomAction(Post(API_POST_LOGIN_SUBMIT, requestParams), dispatch, 'login');
+    if (data) {
+      document.cookie = "authenticated=true";
+      document.cookie = "roleName=customer";
+    }
     return data; 
   }
 );
