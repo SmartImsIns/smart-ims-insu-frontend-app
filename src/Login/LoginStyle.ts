@@ -6,7 +6,7 @@ const LoginStyle = {
   },
   card: {
     maxWidth: 450,
-    margin: '10rem 24rem 10rem 24rem',
+    margin: '10rem 24rem 10rem 26rem',
     border: '3px solid lightgray',
     padding: '1rem',
   },

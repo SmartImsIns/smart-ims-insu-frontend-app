@@ -25,6 +25,6 @@ Api.interceptors.response.use((response) => {
 });
 
 export const Get = Api.get;
-export const Post = Api.get;
+export const Post = Api.post;
 
 export default Api;
