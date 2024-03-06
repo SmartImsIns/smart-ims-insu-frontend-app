@@ -26,8 +26,8 @@ const ApplicationRoutes = (props: any) => {
       navigate('/');
     }
     if (pathArray[3]) {
-      const isValidSalesPath = customerPath.some((path: string) => pathArray[2] === path);
-      if (isValidSalesPath) {
+      const isValidCustomerPath = customerPath.some((path: string) => pathArray[2] === path);
+      if (isValidCustomerPath) {
         navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
       }
     } else {
