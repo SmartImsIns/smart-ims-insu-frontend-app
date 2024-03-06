@@ -1,6 +1,6 @@
-import { createTheme } from "@mui/material/styles";
-import { red } from "@mui/material/colors";
-import themesVariables from "./themesVariables";
+import { createTheme } from '@mui/material/styles';
+import { red } from '@mui/material/colors';
+import themesVariables from './themesVariables';
 
 // A custom theme for this app
 const theme = createTheme({
@@ -9,7 +9,7 @@ const theme = createTheme({
       main: themesVariables.primaryBtnColor,
     },
     secondary: {
-      main: "#19857b",
+      main: '#19857b',
     },
     error: {
       main: red.A400,
@@ -32,10 +32,10 @@ const theme = createTheme({
     MuiMenuItem: {
       defaultProps: {
         style: {
-          backgroundColor: "transparent",
-          color: "#000",
-          width: "auto",
-        },
+         backgroundColor: 'transparent',
+         color: '#000',
+         width: 'auto',
+        }
       },
     },
     // MuiIconButton: {
@@ -51,33 +51,33 @@ const theme = createTheme({
     MuiBadge: {
       defaultProps: {
         style: {
-          marginLeft: ".5rem",
-        },
+         marginLeft: '.5rem',
+        }
       },
     },
     MuiTableSortLabel: {
       defaultProps: {
         style: {
-          backgroundColor: "transparent",
-          color: "#ffffff",
-        },
+          backgroundColor: 'transparent',
+          color: '#ffffff',
+        }
       },
       styleOverrides: {
         icon: {
           styles: {
-            color: "#ffffff",
-          },
+            color: '#ffffff',
+          }
         },
       },
     },
     MuiCheckbox: {
       defaultProps: {
         style: {
-          backgroundColor: "transparent",
+          backgroundColor: 'transparent',
           // color: '#00578d',
-          width: "auto",
+          width: 'auto',
           borderRadius: 0,
-        },
+        }
       },
     },
     // MuiToolbar: {
