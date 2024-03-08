@@ -3,7 +3,7 @@ import { IDashboardSlice } from '../../models/customers/dashboard/Dashboard';
 import { GetTestData } from './DashboardAction';
 
 const initialState: IDashboardSlice = {
-  testData: [],
+  dashboardData: null,
 };
 
 const DashboardSlice = createSlice({
@@ -13,7 +13,9 @@ const DashboardSlice = createSlice({
     extraReducers: (builder) => {
         // Add reducers for additional action types here, and handle loading state as needed
       builder.addCase(GetTestData.fulfilled, (state, action) => {
-        state.testData = action.payload;
+        if (action.payload.status === 200) {
+          state.dashboardData = action.payload.data;
+        }
       });
     },
 });
