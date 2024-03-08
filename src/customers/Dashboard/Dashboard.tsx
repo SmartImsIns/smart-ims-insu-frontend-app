@@ -19,13 +19,15 @@ import DashboardStyle from "./DashboardStyle";
 
 const Dashboard = () => {
   const dispatch = useAppDispatch();
-  const { testData } = useAppSelector((store: RootState) => store.dashboard);
+  const { dashboardData } = useAppSelector(
+    (store: RootState) => store.dashboard
+  );
 
   useEffect(() => {
     dispatch(GetTestData());
   }, [dispatch]);
 
-  console.log(testData);
+  console.log(dashboardData);
 
   const getPolicies = () => {
     const element = [
