@@ -30,7 +30,7 @@ const Dashboard = () => {
   }, [dispatch]);
 
   const getPolicies = () => {
-    return dashboardData?.PolicyList.map((Policy: IPolicy, index: number) => {
+    return dashboardData?.Policies.map((Policy: IPolicy, index: number) => {
       return (
         <Card
           sx={DashboardStyle.card}

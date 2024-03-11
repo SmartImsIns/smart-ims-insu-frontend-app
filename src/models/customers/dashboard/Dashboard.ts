@@ -1,7 +1,7 @@
 export interface IDashboard {
   PolicyCount: string;
   PolicyCustomerList: IPolicyCustomer[];
-  PolicyList: IPolicy[];
+  Policies: IPolicy[];
 }
 
 export interface IUser {
