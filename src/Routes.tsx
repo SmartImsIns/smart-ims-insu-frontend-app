@@ -10,7 +10,7 @@ import { RootState } from './store/store';
 import { getCookie } from './utils/Utility';
 import { customerPath } from './constants/Constants';
 import Footer from './common/Footer/Footer';
-import ImsDashboard from './ImsDashboard';
+import ImsDashboard from './ImsDashboard/ImsDashboard';
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -23,6 +23,7 @@ const ApplicationRoutes = (props: any) => {
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split('/');
     // console.log(pathArray)
+   
     if (pathArray[1] !== 'customer') {
       navigate('/');
     }
@@ -32,7 +33,11 @@ const ApplicationRoutes = (props: any) => {
         navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
       }
     } else {
-      navigate('/customer/dashboard');
+      if (pathArray[1] === 'ims-dashboard') {
+        navigate('/ims-dashboard');
+      } else{
+        navigate('/customer/dashboard');
+      }
     }
   }, [navigate, location.pathname]);
 
@@ -75,7 +80,7 @@ const ApplicationRoutes = (props: any) => {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/customer/*" element={<CustomerRoutes />} />
-        <Route path="/dashboard" element={<ImsDashboard />} />
+        <Route path="/ims-dashboard" element={<ImsDashboard />} />
         <Route path="*" element={<Error header={true} {...props} />} />      
       </Routes>
       <Footer />
