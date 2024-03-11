@@ -2,6 +2,8 @@ const DashboardStyle = {
   dashboard: {},
   left: {
     width: "75%",
+    display: "grid",
+    gap: "1rem",
     "@media(max-width: 780px)": {
       width: "100%",
     },
@@ -14,11 +16,11 @@ const DashboardStyle = {
       gap: 0,
     },
   },
-  name: {
+  loggedInUsername: {
     fontSize: "1.5rem",
     fontWeight: "bold",
   },
-  help: { fontSize: "1.5rem", fontWeight: "normal" },
+  NeedHelpText: { fontSize: "1.5rem", fontWeight: "normal" },
   policiesContainer: {},
   policiesHeadingContainer: {
     display: "flex",
