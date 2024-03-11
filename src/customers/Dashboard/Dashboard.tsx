@@ -30,90 +30,47 @@ const Dashboard = () => {
   }, [dispatch]);
 
   const getPolicies = () => {
-    return dashboardData?.Policies.map((Policy: IPolicy, index: number) => {
+    return dashboardData?.PolicyList.map((Policy: IPolicy, index: number) => {
       return (
         <Card
-          sx={DashboardStyle.card}
+          sx={DashboardStyle.policyCard}
           key={`${Policy.CarrierPolicyNo}_${index}`}
         >
           <CardMedia component="img" height="140" image="" alt="green iguana" />
-          <CardContent sx={{ height: 200, display: "grid", gap: "10px" }}>
-            <Typography sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
+          <CardContent sx={DashboardStyle.policyCardContent}>
+            <Typography sx={DashboardStyle.policyName}>
               {Policy.CarrierPolicyStatus}
             </Typography>
-            <Typography
-              sx={{ fontSize: "1rem", fontWeight: "bold", color: "grey" }}
-            >
+            <Typography sx={DashboardStyle.policyNumber}>
               {Policy.CarrierPolicyNo}
             </Typography>
-            <Box
-              sx={{
-                display: "grid",
-                alignItems: "center",
-                gridTemplateColumns: "1fr 1fr",
-              }}
-            >
-              <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <Box sx={DashboardStyle.policyDetails}>
+              <Box sx={DashboardStyle.policyDetail}>
                 <MoneyIcon /> ${Policy.DuePremium}
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+              <Box sx={DashboardStyle.policyDetail}>
                 <AccessTimeIcon /> {Policy.Tenure}{" "}
                 {parseInt(Policy.Tenure) > 1 ? "Years" : "Year"}
               </Box>
             </Box>
-            <Box
-              sx={{
-                display: "grid",
-                alignItems: "center",
-                gridTemplateColumns: "1fr 1fr",
-              }}
-            >
-              <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+            <Box sx={DashboardStyle.policyDetails}>
+              <Box sx={DashboardStyle.policyDetail}>
                 {Policy.LOBCode === "1" ? <DirectionsCarIcon /> : <HomeIcon />}{" "}
                 {Policy.RiskCount}
               </Box>
-              <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
+              <Box sx={DashboardStyle.policyDetail}>
                 <CheckCircleOutlineIcon /> {Policy.CarrierPolicyStatus}
               </Box>
             </Box>
-            <Typography sx={{ fontSize: "0.8rem", color: "#666666" }}>
+            <Typography sx={DashboardStyle.policyDescription}>
               {Policy.CarrierPolicyNo}
             </Typography>
           </CardContent>
-          <CardActions
-            sx={{
-              display: "flex",
-              justifyContent: "center",
-              padding: "1rem",
-            }}
-          >
-            <Button
-              sx={{
-                backgroundColor: "black",
-                color: "white",
-                fontSize: "0.7rem",
-                width: "50%",
-                borderRadius: "10px",
-                ":hover": {
-                  backgroundColor: "#000000",
-                },
-              }}
-            >
-              View Policy
-            </Button>
+          <CardActions sx={DashboardStyle.policyActions}>
+            <Button sx={DashboardStyle.policyActionButton}>View Policy</Button>
           </CardActions>
-          <IconButton
-            sx={{ position: "absolute", bottom: "12px", right: "0px" }}
-          >
-            <MoreHorizIcon
-              sx={{
-                border: "3px solid #000000",
-                borderRadius: "5rem",
-                padding: "2px",
-                fontSize: "1rem",
-                color: "#000000",
-              }}
-            />
+          <IconButton sx={DashboardStyle.policyIconButton}>
+            <MoreHorizIcon sx={DashboardStyle.policyMoreIcon} />
           </IconButton>
         </Card>
       );
@@ -121,56 +78,32 @@ const Dashboard = () => {
   };
 
   return (
-    <Box>
-      <Box>
-        <Typography>Good Morning</Typography>
-        <Typography></Typography>
-      </Box>
-      <Box
-        sx={{
-          width: "75%",
-          "@media(max-width: 780px)": {
-            width: "100%",
-          },
-        }}
-      >
-        <Box
-          sx={{
-            display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-          }}
-        >
-          <Typography sx={{ fontWeight: "bold", fontSize: "1.2rem" }}>
-            My Policies (05)
+    <Box sx={DashboardStyle.dashboard}>
+      <Box sx={DashboardStyle.left}>
+        <Box sx={DashboardStyle.welcome}>
+          <Typography sx={DashboardStyle.name}>
+            Good Morning, {dashboardData?.PolicyCustomerList[0]?.CustomerName} !{" "}
           </Typography>
-          <Box sx={{ display: "flex" }}>
-            <IconButton>
-              <AddCircleOutlineIcon sx={{ fontSize: "2rem", color: "black" }} />
-            </IconButton>
-            <Box sx={{ display: "flex", alignItems: "center" }}>
-              <Typography
-                sx={{ fontSize: "0.8rem", textDecorationLine: "underline" }}
-              >
-                View All
-              </Typography>
+          <Typography sx={DashboardStyle.help}>Need help today ?</Typography>
+        </Box>
+        <Box sx={DashboardStyle.policiesContainer}>
+          <Box sx={DashboardStyle.policiesHeadingContainer}>
+            <Typography sx={DashboardStyle.policiesHeading}>
+              My Policies ({dashboardData?.PolicyCount})
+            </Typography>
+            <Box sx={DashboardStyle.viewAllContainer}>
               <IconButton>
-                <ArrowRightAltIcon sx={{ fontSize: "1.5rem" }} />
+                <AddCircleOutlineIcon sx={DashboardStyle.addIcon} />
               </IconButton>
+              <Box sx={{ display: "flex", alignItems: "center" }}>
+                <Typography sx={DashboardStyle.viewAll}>View All</Typography>
+                <IconButton>
+                  <ArrowRightAltIcon sx={DashboardStyle.arrowIcon} />
+                </IconButton>
+              </Box>
             </Box>
           </Box>
-        </Box>
-        <Box
-          sx={{
-            display: "flex",
-            gap: "2%",
-            "@media(max-width: 780px)": {
-              flexDirection: "column",
-              gap: "2rem",
-            },
-          }}
-        >
-          {getPolicies()}
+          <Box sx={DashboardStyle.policies}>{getPolicies()}</Box>
         </Box>
       </Box>
     </Box>
