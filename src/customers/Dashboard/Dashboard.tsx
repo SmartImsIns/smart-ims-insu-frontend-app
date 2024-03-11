@@ -16,6 +16,8 @@ import AccessTimeIcon from "@mui/icons-material/AccessTime";
 import DirectionsCarIcon from "@mui/icons-material/DirectionsCar";
 import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import DashboardStyle from "./DashboardStyle";
+import { IPolicy } from "../../models/customers/dashboard/Dashboard";
+import HomeIcon from "@mui/icons-material/Home";
 
 const Dashboard = () => {
   const dispatch = useAppDispatch();
@@ -27,49 +29,22 @@ const Dashboard = () => {
     dispatch(GetTestData());
   }, [dispatch]);
 
-  console.log(dashboardData);
-
   const getPolicies = () => {
-    const element = [
-      {
-        policyName: "Auto_Garage101",
-        policyCode: "12AW1145G057",
-        amount: "821",
-        tenure: "02",
-        vehicles: "02",
-        status: "active",
-        description: "Policy will auto renew in 12 days. cancel auto renewal",
-      },
-      {
-        policyName: "House_02 Policy",
-        policyCode: "12AW1145G057",
-        amount: "821",
-        tenure: "01",
-        vehicles: "01",
-        status: "active",
-        description: "Policy will auto renew in 12 days. cancel auto renewal",
-      },
-      {
-        policyName: "Home Protection",
-        policyCode: "2Aa114530g7f",
-        amount: "821",
-        tenure: "01",
-        vehicles: "01",
-        status: "active",
-        description: "Policy will auto renew in 12 days. cancel auto renewal",
-      },
-    ].map((item: any, index: number) => {
+    return dashboardData?.PolicyList.map((Policy: IPolicy, index: number) => {
       return (
-        <Card sx={DashboardStyle.card} key={item.policyName}>
+        <Card
+          sx={DashboardStyle.card}
+          key={`${Policy.CarrierPolicyNo}_${index}`}
+        >
           <CardMedia component="img" height="140" image="" alt="green iguana" />
           <CardContent sx={{ height: 200, display: "grid", gap: "10px" }}>
             <Typography sx={{ fontSize: "1.2rem", fontWeight: "bold" }}>
-              {item.policyName}
+              {Policy.CarrierPolicyStatus}
             </Typography>
             <Typography
               sx={{ fontSize: "1rem", fontWeight: "bold", color: "grey" }}
             >
-              {item.policyCode}
+              {Policy.CarrierPolicyNo}
             </Typography>
             <Box
               sx={{
@@ -79,11 +54,11 @@ const Dashboard = () => {
               }}
             >
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <MoneyIcon /> ${item.amount}
+                <MoneyIcon /> ${Policy.DuePremium}
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <AccessTimeIcon /> {item.tenure}{" "}
-                {item.tenure > 1 ? "Years" : "Year"}
+                <AccessTimeIcon /> {Policy.Tenure}{" "}
+                {parseInt(Policy.Tenure) > 1 ? "Years" : "Year"}
               </Box>
             </Box>
             <Box
@@ -94,14 +69,15 @@ const Dashboard = () => {
               }}
             >
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <DirectionsCarIcon /> {item.vehicles}
+                {Policy.LOBCode === "1" ? <DirectionsCarIcon /> : <HomeIcon />}{" "}
+                {Policy.RiskCount}
               </Box>
               <Box sx={{ display: "flex", alignItems: "center", gap: "5px" }}>
-                <CheckCircleOutlineIcon /> {item.status}
+                <CheckCircleOutlineIcon /> {Policy.CarrierPolicyStatus}
               </Box>
             </Box>
             <Typography sx={{ fontSize: "0.8rem", color: "#666666" }}>
-              {item.description}
+              {Policy.CarrierPolicyNo}
             </Typography>
           </CardContent>
           <CardActions
@@ -142,7 +118,6 @@ const Dashboard = () => {
         </Card>
       );
     });
-    return element;
   };
 
   return (
@@ -188,9 +163,10 @@ const Dashboard = () => {
         <Box
           sx={{
             display: "flex",
-            gap: "2rem",
+            gap: "2%",
             "@media(max-width: 780px)": {
               flexDirection: "column",
+              gap: "2rem",
             },
           }}
         >
