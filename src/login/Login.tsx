@@ -54,62 +54,53 @@ const Login = () => {
   };
 
   return (
-    <Box>
-      <Card sx={LoginStyle.card}>
+    <Box sx={LoginStyle.loginContainer}>
+      <Card component={"form"} sx={LoginStyle.card}>
         <Typography sx={LoginStyle.heading}>Login</Typography>
-        <Box component="form" autoComplete="off">
-          <Box sx={{ padding: "1rem" }}>
-            <Box sx={LoginStyle.fieldSectionBox}>
-              {/* <Box sx={LoginStyle.labelBox}>
-              <Typography>Name: </Typography>
-            </Box> */}
-              <Box sx={LoginStyle.fieldBox}>
-                <TextField
-                  label="Name*"
-                  sx={LoginStyle.field}
-                  type="text"
-                  name="indexName"
-                  value={loginData.indexName}
-                  onChange={handleChange}
-                  autoComplete="off"
-                  // helperText="field can't be empty."
-                  variant="outlined"
-                  size="small"
-                />
-              </Box>
-            </Box>
-            <Box sx={LoginStyle.fieldSectionBox}>
-              {/* <Box sx={LoginStyle.labelBox}>
-              <Typography>Contact Number: </Typography>
-            </Box> */}
-              <Box sx={LoginStyle.fieldBox}>
-                <TextField
-                  label="Contact Number*"
-                  sx={LoginStyle.field}
-                  type="text"
-                  name="contactNumber"
-                  value={loginData.contactNumber}
-                  onChange={handleChange}
-                  autoComplete="off"
-                  // helperText="field can't be empty."
-                  variant="outlined"
-                  size="small"
-                />
-              </Box>
-            </Box>
-          </Box>
-
-          <Box sx={LoginStyle.btnBox}>
-            <Button
-              disabled={!validate()}
-              sx={LoginStyle.btn}
-              type="button"
-              onClick={handlSubmit}
-            >
-              Login
-            </Button>
-          </Box>
-        </Box>
+        <TextField
+          sx={LoginStyle.inputField}
+          label="Name*"
+          type="text"
+          name="indexName"
+          value={loginData.indexName}
+          onChange={handleChange}
+          autoComplete="off"
+          // helperText="field can't be empty."
+          variant="outlined"
+          size="small"
+        />
+        <TextField
+          sx={{ width: "100%" }}
+          label="Contact Number*"
+          type="text"
+          name="contactNumber"
+          value={loginData.contactNumber}
+          onChange={handleChange}
+          autoComplete="off"
+          // helperText="field can't be empty."
+          variant="outlined"
+          size="small"
+        />
+        <Button
+          disabled={!validate()}
+          sx={{
+            width: "115px",
+            border: "1px solid",
+            backgroundColor: "#000000",
+            color: "#ffffff",
+            borderRadius: "8px",
+            ":hover": {
+              backgroundColor: "#000000",
+            },
+            ":disabled": {
+              backgroundColor: "lightgrey",
+            },
+          }}
+          type="button"
+          onClick={handlSubmit}
+        >
+          Login
+        </Button>
       </Card>
     </Box>
   );

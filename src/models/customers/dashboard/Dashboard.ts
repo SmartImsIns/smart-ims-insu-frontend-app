@@ -1,8 +1,7 @@
 export interface IDashboard {
   PolicyCount: string;
-  PolicyCustomerList: IPolicyCustomerList[];
-  PolicyList: IPolicyList[];
-
+  PolicyCustomerList: IPolicyCustomer[];
+  Policies: IPolicy[];
 }
 
 export interface IUser {
@@ -12,13 +11,12 @@ export interface IUser {
   body: string;
 }
 
-export interface IPolicyCustomerList {
+export interface IPolicyCustomer {
   CustomerName: string;
   CustomerId: string;
-
 }
 
-export interface IPolicyList {
+export interface IPolicy {
   CarrierPolicyNo: string;
   CarrierPolicyStatus: string;
   Tenure: string;
@@ -26,7 +24,6 @@ export interface IPolicyList {
   DuePremium: number;
   LOBCode: string;
   PaymentFrequency: string;
-
 }
 
 export interface IDashboardSlice {
@@ -38,4 +35,3 @@ export interface IDashboardResponse {
   message: string;
   status: number;
 }
-
