@@ -6,7 +6,7 @@ const Api = axios.create({
 
 Api.interceptors.request.use((config) => {
   console.log('inside')
-  config.headers.genericKey = "someGenericValue";
+  config.headers.Authorization = 'Bearer MOATjhc9gBdfAY2UHLncrgres3f5R5Qs';
   return config;
 }, (error) => {
   return Promise.reject(error);
