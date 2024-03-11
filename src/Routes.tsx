@@ -10,6 +10,7 @@ import { RootState } from './store/store';
 import { getCookie } from './utils/Utility';
 import { customerPath } from './constants/Constants';
 import Footer from './common/Footer/Footer';
+import ImsDashboard from './ImsDashboard';
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -74,6 +75,7 @@ const ApplicationRoutes = (props: any) => {
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/customer/*" element={<CustomerRoutes />} />
+        <Route path="/dashboard" element={<ImsDashboard />} />
         <Route path="*" element={<Error header={true} {...props} />} />      
       </Routes>
       <Footer />
