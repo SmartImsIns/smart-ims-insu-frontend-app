@@ -9,9 +9,10 @@ import { useAppSelector } from './store/hooks';
 import { RootState } from './store/store';
 import { getCookie } from './utils/Utility';
 import { customerPath } from './constants/Constants';
-import Footer from './common/Footer/Footer';
 import ImsDashboard from './ImsDashboard/ImsDashboard';
-
+import Header from './ImsDashboard/Header/Header';
+import Footer from './ImsDashboard/Footer/Footer'
+import ReferenceBlogs from './ImsDashboard/ReferenceBlogs/ReferenceBlogs';
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -76,6 +77,7 @@ const ApplicationRoutes = (props: any) => {
       >
         <CircularProgress size="4rem" />
       </Dialog>
+      <Header></Header> 
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
