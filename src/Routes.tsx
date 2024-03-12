@@ -11,6 +11,7 @@ import { getCookie } from './utils/Utility';
 import { customerPath } from './constants/Constants';
 import Footer from './common/Footer/Footer';
 import ImsDashboard from './ImsDashboard/ImsDashboard';
+import Header from './common/Header/Header';
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -76,6 +77,7 @@ const ApplicationRoutes = (props: any) => {
       >
         <CircularProgress size="4rem" />
       </Dialog>
+      <Header/>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />

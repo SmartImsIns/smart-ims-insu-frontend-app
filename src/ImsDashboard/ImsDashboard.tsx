@@ -1,15 +1,18 @@
-import { Box, Typography } from '@mui/material'
-import star from "../assets/star.svg";
+import { Box } from "@mui/material";
+import WelcomeCard from "./ImsDashboardCards/WelcomeCard";
+import MyClaimsCard from "./ImsDashboardCards/MyClaimsCard";
+import AttentionCard from "./ImsDashboardCards/AttentionCard";
 
-type Props = {}
+type Props = {};
 
 const ImsDashboard = (props: Props) => {
   return (
     <Box>
-        <Typography>ims</Typography>
-        <img src={star} alt="star-icon" />
+      <WelcomeCard />
+      <AttentionCard />
+      <MyClaimsCard/>
     </Box>
-  )
-}
+  );
+};
 
-export default ImsDashboard
+export default ImsDashboard;

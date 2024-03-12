@@ -1,9 +1,13 @@
 import { memo } from "react";
-import { Box } from "@mui/material";
+import { AppBar, Card, Typography } from "@mui/material";
 
 const Header = memo(() => {
   return (
-    <Box>Header</Box>
+    <AppBar sx={{display:'flex',justifyContent:'center',alignItems:'center',position: "relative",}}>
+      <Card sx={{width:'100%', height:60}}>
+      <Typography>Header</Typography>
+      </Card>
+      </AppBar>
   );
 })
 
