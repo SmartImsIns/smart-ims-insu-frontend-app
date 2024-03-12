@@ -9,9 +9,9 @@ interface MyClaimCardItemProps {
 
 const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({ headText, contentText }) => {
   return (
-    <Box sx={ImsDashboardStyle}>
-      <Typography sx={ImsDashboardStyle} >{headText}</Typography>
-      <Typography>{contentText}</Typography>
+    <Box sx={ImsDashboardStyle.claimsData}>
+      <Typography sx={ImsDashboardStyle.HeadStyle} >{headText}</Typography>
+      <Typography sx={ImsDashboardStyle.ContentStyle}>{contentText}</Typography>
     </Box>
   );
 };

@@ -15,11 +15,11 @@ const AttentionCard = (props: Props) => {
     <Box sx={ImsDashboardStyle.imsDashbardContainer}>
     <DynamicTextDisplay text="Things needs your Attentions" />
     <Card sx={ImsDashboardStyle.AttentionCardStyles}>
-      <Box sx={ImsDashboardStyle.AttentionsCardTextStyle} >
+      <Box sx={ImsDashboardStyle.AttentionsCardBoxStyle} >
         <Box>
       <DashBoardCardItem src={attentionsIcon} alt="attentions-icon" text="" />
       </Box>
-      <Box>
+      <Box sx={ImsDashboardStyle.AttentionsCardTextStyle}>
         <Typography
           sx={ImsDashboardStyle.HeadStyle}
           >

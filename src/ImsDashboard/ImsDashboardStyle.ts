@@ -4,6 +4,12 @@ const ImsDashboardStyle = {
     paddingRight: '30px',
     marginTop: "40px"
   },
+  claimsData:{
+  gap:'3.89px',
+  display:'flex',
+  flexDirection:'column'
+
+  },
   welcomeCardStyles: {
     height: '100px',
     flexShrink: 0,
@@ -27,7 +33,9 @@ const ImsDashboardStyle = {
     justifyContent: 'space-between',
     marginTop: '22px',
     paddingRight: '42px',
-    paddingLeft: '23.63px'
+    paddingLeft: '23.63px',
+    border: '1px solid #C9E1EC',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
   },
   myClaimsCardStyles: {
     height: '112px',
@@ -35,10 +43,20 @@ const ImsDashboardStyle = {
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
-    justifyContent: 'space-between',
     marginTop: '22px',
     paddingRight: '42px',
-    paddingLeft: '29.85px'
+    paddingLeft: '29.85px',
+    border: '1px solid #C9E1EC',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+  },
+  ClaminsContent: {
+    display: "flex",
+    flexDirection: "row",
+    alignItems: "center",
+    justifyContent: 'space-between',
+    paddingRight: '42px',
+    paddingLeft: '37.79px',
+    width:'100%'
   },
   DashBoardCardItemStyles: {
     display: "flex",
@@ -67,7 +85,11 @@ const ImsDashboardStyle = {
   },
   AttentionsCardTextStyle: {
     display: 'flex',
-    // justifyContent: "space-between",
+    flexDirection: 'column',
+    gap:'17.5px'
+  },
+  AttentionsCardBoxStyle: {
+    display: 'flex',
     alignItems: "center",
   },
   ActionButtonStyles:{
