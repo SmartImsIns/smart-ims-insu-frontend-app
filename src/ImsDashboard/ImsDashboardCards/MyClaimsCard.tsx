@@ -15,9 +15,10 @@ const MyClaimsCard = (props: Props) => {
   return (
     <Box sx={ImsDashboardStyle.imsDashbardContainer}>
         <DynamicTextDisplay text="My Claims(01)" />
+        <Box>
         <Card sx={ImsDashboardStyle.myClaimsCardStyles}>
         <DashBoardCardItem src={myClaimsIcon} alt="new-claim-icon" text="" />
-          <Box sx={ImsDashboardStyle.ClaminsContent}>
+          <Box sx={ImsDashboardStyle.ClaminsContentStyles}>
           <MyClaimCardItem headText="Home_Protection" contentText="12AW1145G057" />
           <MyClaimCardItem headText="Verification" contentText="Claim Stage" />
           <MyClaimCardItem headText="15/02/2024" contentText="Updated On" />
@@ -25,8 +26,8 @@ const MyClaimsCard = (props: Props) => {
           <MyClaimCardItem headText="John Doe" contentText="Contact Person" />
           </Box>
           <ActionButton buttonText="Track Your Claim"  />
-
         </Card>
+        </Box>
       </Box>
   )
 }
