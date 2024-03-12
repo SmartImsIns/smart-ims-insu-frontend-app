@@ -4,6 +4,7 @@ import AttentionCard from "./ImsDashboardCards/AttentionCard";
 import { Box, Typography } from '@mui/material'
 import star from "../assets/star.svg";
 import PolicyContainer from './PoliciesList/PolicyContainer';
+import ReferenceBlogs from './ReferenceBlogs/ReferenceBlogs';
 
 
 type Props = {};
@@ -15,6 +16,7 @@ const ImsDashboard = (props: Props) => {
       <AttentionCard />
       <MyClaimsCard/>
         <PolicyContainer></PolicyContainer>
+        <ReferenceBlogs />
     </Box>
   );
 };
