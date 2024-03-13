@@ -14,14 +14,7 @@ const DashBoardCardItem : React.FC<DashBoardCardItemProps> = ({ text, src, alt }
       <img src={src} alt={alt} />
       {text.length > 0 &&
       <Typography
-        sx={{
-          marginLeft: "20.19px",
-          color: "#1D252B",
-          fontSize: "20px",
-          fontStyle: "normal",
-          fontWeight: 300,
-          lineHeight: "110%", // 22px
-        }}
+        sx={ImsDashboardStyle.TextCardStyles}
       >
         {text}
       </Typography>
