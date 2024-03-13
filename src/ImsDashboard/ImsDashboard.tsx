@@ -14,8 +14,8 @@ const ImsDashboard = (props: Props) => {
       <WelcomeCard />
       <AttentionCard />
       <MyClaimsCard/>
-        <PolicyContainer></PolicyContainer>
-        <ReferenceBlogs />
+      <PolicyContainer/>
+      <ReferenceBlogs />
     </Box>
   );
 };

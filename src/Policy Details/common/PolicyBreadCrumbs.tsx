@@ -18,14 +18,14 @@ const PolicyBreadCrumbs = () => {
   };
 
   const breadcrumbs = [
-    <Link underline="hover" key="1" color="inherit" onClick={handleClick}>
+    <Link underline="hover" key="1" color="inherit" >
       12AW1145G057 | Auto_Garage101
     </Link>,
   ];
   return (
-    <Box sx={PolicyDetailsStyles.PolicyBreadCrumbStyle}>
+    <Box onClick={(e:any) =>handleClick(e)} sx={PolicyDetailsStyles.PolicyBreadCrumbStyle}>
       <Box >
-        <img src={leftArrow} alt="leftArrow" />
+        <img  src={leftArrow} alt="leftArrow" />
       </Box>
       <Breadcrumbs
         separator={<NavigateNextIcon fontSize="small" />}

@@ -5,10 +5,12 @@ const PolicyDetailsStyles = {
         paddingLeft: '30px',
         paddingRight: '30px',
         marginTop: '40px',
+        height:'100vh'
     },
     PolicyBreadCrumbStyle: {
         display: 'inline-flex',
         gap: '10px',
+        cursor:'pointer'
     },
     BreadcrumbsText: {
         color: '#1D252B',
