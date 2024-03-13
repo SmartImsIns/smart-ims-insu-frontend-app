@@ -1,10 +1,12 @@
 import React from 'react';
-import {Box, Button, Card, Typography } from '@mui/material';
+import { Box, Button, Card, Typography } from '@mui/material';
 import PolicyStyles from './PolicyStyles';
 import EllipsisMenu from '../EllipsisMenu/EllipsisMenu';
+import car from '../../assets/car.svg';
+import home from '../../assets/home.svg';
 
 export interface PolicyData {
-    logo:any;
+    id: string;
     policyNumber: string;
     status: string;
     plan: string;
@@ -21,12 +23,25 @@ interface Props {
   data: PolicyData;
 }
 
+const getImage = (id: string) => {
+  switch (id) {
+    case '1':
+      return home;
+    case '2':
+      return car;
+    default:
+      return '';
+  }
+};
+
 const PolicyCard: React.FC<Props> = ({ data }) => {
+  const logo = getImage(data.id);
+
   return (
     <Card sx={PolicyStyles.oneCard}>
       <Box sx={PolicyStyles.card}>
         <Box sx={PolicyStyles.cardIcon}>
-          <img src={data.logo} alt="homeIcon" />
+          {logo && <img src={logo} alt="Policy Icon" />}
         </Box>
         <Box sx={PolicyStyles.cardTopLeft}>
           <Box>

@@ -10,12 +10,14 @@ interface MyClaimCardItemProps {
   headText: string;
   contentText: string;
   icon?: ReactNode;
+  classes?: object;
 }
 
 const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({
   headText,
   contentText,
   icon,
+  classes,
 }) => {
   return (
     <>
