@@ -1,5 +1,5 @@
 import React from 'react';
-import { Avatar, Box, Button, Card, Typography } from '@mui/material';
+import {Box, Button, Card, Typography } from '@mui/material';
 import PolicyStyles from './PolicyStyles';
 import EllipsisMenu from '../EllipsisMenu/EllipsisMenu';
 

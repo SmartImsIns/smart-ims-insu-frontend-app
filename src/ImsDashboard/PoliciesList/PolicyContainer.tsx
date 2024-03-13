@@ -50,7 +50,7 @@ const PolicyContainer: React.FC = () => {
     
   ];
 
-  const isMobile = useMediaQuery('(max-width:768px)');
+  const isMobile = useMediaQuery('(max-width:1024px)');
 
   return (
     <Box>

@@ -1,10 +1,10 @@
 import WelcomeCard from "./ImsDashboardCards/WelcomeCard";
 import MyClaimsCard from "./ImsDashboardCards/MyClaimsCard";
 import AttentionCard from "./ImsDashboardCards/AttentionCard";
-import { Box, Typography } from '@mui/material'
+import { Box, Typography } from "@mui/material";
 import star from "../assets/star.svg";
-import PolicyContainer from './PoliciesList/PolicyContainer';
-import ReferenceBlogs from './ReferenceBlogs/ReferenceBlogs';
+import PolicyContainer from "./PoliciesList/PolicyContainer";
+import ReferenceBlogs from "./ReferenceBlogs/ReferenceBlogs";
 import ImsDashboardStyle from "./ImsDashboardStyle";
 
 type Props = {};
@@ -14,9 +14,9 @@ const ImsDashboard = (props: Props) => {
     <Box sx={ImsDashboardStyle.container}>
       <WelcomeCard />
       <AttentionCard />
-      <MyClaimsCard/>
-        <PolicyContainer></PolicyContainer>
-        <ReferenceBlogs />
+      <MyClaimsCard />
+      <PolicyContainer></PolicyContainer>
+      <ReferenceBlogs />
     </Box>
   );
 };
