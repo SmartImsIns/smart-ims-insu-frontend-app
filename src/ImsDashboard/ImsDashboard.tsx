@@ -5,7 +5,7 @@ import { Box, Typography } from '@mui/material'
 import star from "../assets/star.svg";
 import PolicyContainer from './PoliciesList/PolicyContainer';
 import ReferenceBlogs from './ReferenceBlogs/ReferenceBlogs';
-
+import ImsDashboardStyle from "./ImsDashboardStyle";
 
 type Props = {};
 

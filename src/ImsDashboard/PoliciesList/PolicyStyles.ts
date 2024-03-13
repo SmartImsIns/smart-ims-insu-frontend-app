@@ -29,18 +29,19 @@ const PolicyStyles = {
         letterSpacing: "0em",
         textAlign: "left",
         color: "rgba(56, 61, 78, 1)",
-        "@media (max-width:768px)":{
-            marginLeft:"20px",
+        "@media(min-width: 360px) and (max-width: 599px)": {
+            // marginLeft:"20px",
+           
         }
     },
     AllCards:{
         display:"flex",
         width:"100%",
-        maxWidth:"1306px",
+        // maxWidth:"1306px",
         margin:"0px auto",
         gap:"30px",
 
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             width:"100%",
             maxWidth:"320px",
             margin:"0px auto",
@@ -49,14 +50,14 @@ const PolicyStyles = {
     },
     oneCard: {
         width:"100%",
-        // maxWidth: "46.6921%",
-        maxWidth:"638px",
+        maxWidth: "46.6921%",
+        // maxWidth:"638px",
         height: "367.47px",
         marginTop: "21.95px !important",
-        // margin : "auto",
+        margin : "auto",
         boxShadow: "20px 20px 57px 0px rgba(0, 0, 0, 0.08)",
 
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             width:"100%",
             maxWidth:"320px",
             margin:"auto",
@@ -71,7 +72,7 @@ const PolicyStyles = {
         marginTop: "40.03px",
         marginLeft: "40.02px",
 
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"30px",
             marginTop:"45.61px",
         }
@@ -79,7 +80,7 @@ const PolicyStyles = {
     cardTopLeft: {
         display: "flex",
         gap:"160.5px",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             display:"block"
         }
     },
@@ -96,7 +97,7 @@ const PolicyStyles = {
         lineHeight: "19.8px",
         letterSpacing: "0em",
         textAlign: "left",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"28.26px",
             marginTop:"45.61px",
         }
@@ -114,7 +115,7 @@ const PolicyStyles = {
         lineHeight: "22px",
         letterSpacing: "0em",
         textAlign: "left",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"28.26px",
         }
     },
@@ -131,7 +132,7 @@ const PolicyStyles = {
         lineHeight: "19.8px",
         letterSpacing: "0em",
         textAlign: "left",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"-57px",
             marginTop:"20.19px",
             height:"19.6px",
@@ -150,7 +151,7 @@ const PolicyStyles = {
         lineHeight: "22px",
         letterSpacing: "0em",
         textAlign: "left",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"-57px",
             width:"auto",
             heigth:"21.56px"
@@ -170,7 +171,7 @@ const PolicyStyles = {
         letterSpacing: "0em",
         textAlign: "left",
 
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"30px",
             marginTop:"107px",
             width:"230px",
@@ -181,7 +182,7 @@ const PolicyStyles = {
 
     autoDeduct:{
         display:"flex",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             display:"block",
         }
     },
@@ -195,10 +196,11 @@ const PolicyStyles = {
         marginLeft: "40px",
         color: "rgba(29, 37, 43, 1)",
 
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"30px",
             marginTop:"45px",
-            maxWidth:"246px",
+            maxWidth:"252px",
+            // border:"2px solid",
             heigth:"20px",
             lineHeight:"19.8px"
         }
@@ -209,14 +211,15 @@ const PolicyStyles = {
         width: "100%",
         // maxWidth: "auto",
         // height: "20px",
-        marginTop: "15px",
+        marginTop: "20px",
         marginLeft: "11px",
         color: "rgba(13, 171, 34, 1)",
-        "@media (max-width:768px)": {
+        "@media(min-width: 360px) and (max-width: 599px)": {
             maxWidth:"99px",
             height:"20px",
             marginLeft:"30px",
-            marginTop:"10px",
+            marginTop:"4px",
+            // border:"2px solid",
             lineHeight:"19.8px",
         }
     },
@@ -228,7 +231,7 @@ const PolicyStyles = {
         height: "20px",
         marginTop: "15px",
         marginLeft: "40px",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"30px",
             marginTop:"12px",
             width:"230px",
@@ -245,8 +248,8 @@ const PolicyStyles = {
         marginTop: "15px",
         // marginLeft: "9.55px",
         color: "rgba(217, 77, 46, 1)",
-        "@media (max-width:768px)":{
-            marginLeft:"-10px",
+        "@media(min-width: 360px) and (max-width: 599px)": {
+            marginLeft:"6px",
             marginTop:"15px",
             maxWidth:"72px",
             heigth:"52px",
@@ -261,7 +264,7 @@ const PolicyStyles = {
         height: "20px",
         marginTop: "15px",
         marginLeft: "40px",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"30px",
             marginTop:"15px",
             width:"250px",
@@ -274,7 +277,7 @@ const PolicyStyles = {
         maxwidth:"638px",
         display:"flex",
         justifyContent:"space-between",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             gap:"60px",
         }
 
@@ -291,7 +294,7 @@ const PolicyStyles = {
         backgroundColor: "rgba(63, 63, 63, 1)",
         boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
         textTransform: "none",
-        "@media (max-width:768px)":{
+        "@media(min-width: 360px) and (max-width: 599px)": {
             marginLeft:"30px",
             marginTop:"35.54px",
             width:"155px",
@@ -304,8 +307,8 @@ const PolicyStyles = {
         height:"25.7px",
         marginTop:"25.7px ",
         marginRight:"29px",
-        "@media (max-width:768px)":{
-           img:{ 
+        "@media(min-width: 360px) and (max-width: 599px)": {
+            img:{ 
             // marginLeft:"60px",
             marginTop:"25px",
             width:"40px",
