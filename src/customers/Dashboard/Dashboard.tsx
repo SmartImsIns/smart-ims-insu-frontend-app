@@ -18,6 +18,7 @@ import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 import DashboardStyle from "./DashboardStyle";
 import { IPolicy } from "../../models/customers/dashboard/Dashboard";
 import HomeIcon from "@mui/icons-material/Home";
+import QuickReferences from "./QuickReferences/QuickReferences";
 
 const Dashboard = () => {
   const dispatch = useAppDispatch();
@@ -81,10 +82,12 @@ const Dashboard = () => {
     <Box sx={DashboardStyle.dashboard}>
       <Box sx={DashboardStyle.left}>
         <Box sx={DashboardStyle.welcome}>
-          <Typography sx={DashboardStyle.name}>
+          <Typography sx={DashboardStyle.loggedInUsername}>
             Good Morning, {dashboardData?.PolicyCustomerList[0]?.CustomerName} !{" "}
           </Typography>
-          <Typography sx={DashboardStyle.help}>Need help today ?</Typography>
+          <Typography sx={DashboardStyle.NeedHelpText}>
+            Need help today ?
+          </Typography>
         </Box>
         <Box sx={DashboardStyle.policiesContainer}>
           <Box sx={DashboardStyle.policiesHeadingContainer}>
@@ -105,6 +108,7 @@ const Dashboard = () => {
           </Box>
           <Box sx={DashboardStyle.policies}>{getPolicies()}</Box>
         </Box>
+        <QuickReferences />
       </Box>
     </Box>
   );
