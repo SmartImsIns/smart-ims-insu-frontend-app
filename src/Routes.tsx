@@ -13,6 +13,7 @@ import ImsDashboard from './ImsDashboard/ImsDashboard';
 import Header from './ImsDashboard/Header/Header';
 import Footer from './ImsDashboard/Footer/Footer'
 import ReferenceBlogs from './ImsDashboard/ReferenceBlogs/ReferenceBlogs';
+import PolicyDetails from './Policy Details/PolicyDetails';
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -36,7 +37,9 @@ const ApplicationRoutes = (props: any) => {
     } else {
       if (pathArray[1] === 'ims-dashboard') {
         navigate('/ims-dashboard');
-      } else{
+      } else if(pathArray[1] === 'policy-details'){
+        navigate('/policy-details')
+      } else {
         navigate('/customer/dashboard');
       }
     }
@@ -83,6 +86,7 @@ const ApplicationRoutes = (props: any) => {
         <Route path="/login" element={<Login />} />
         <Route path="/customer/*" element={<CustomerRoutes />} />
         <Route path="/ims-dashboard" element={<ImsDashboard />} />
+        <Route path="/policy-details" element={<PolicyDetails />} />
         <Route path="*" element={<Error header={true} {...props} />} />      
       </Routes>
       <Footer />
