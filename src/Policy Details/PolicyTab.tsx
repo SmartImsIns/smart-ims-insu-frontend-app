@@ -21,8 +21,8 @@ const PolicyTab = () => {
     };
 
     const GetComponent = ({ index }: { index: number }) => {
-        const Component = TabComponents[index];
-        return <Component />;
+        const ComponentItem = TabComponents?.[index] ;
+        return TabComponents?.[index] ? <ComponentItem />: <Box>Create the component</Box>;
     }
 
     return (

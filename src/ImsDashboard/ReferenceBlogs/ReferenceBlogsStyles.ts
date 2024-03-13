@@ -3,9 +3,8 @@ const ReferenceBlogsStyles = {
     display: "flex",
     flexDirection: "column",
     gap: "20px",
-    width: "100%",
-    maxWidth: "1325.65px",
-    margin: "0px auto 0px auto",
+    paddingRight:'30px',
+    paddingLeft:'30px',    
     "@media(max-width: 780px)": {
       display: "none",
     },
@@ -22,9 +21,7 @@ const ReferenceBlogsStyles = {
     display: "flex",
     flexWrap: "wrap",
     gap: "40px",
-    width: "100%",
-    maxWidth: "1366.65px",
-    margin: "0px auto 0px auto",
+    justifyContent:'space-between'
   },
   containerHeading: {
     fontFamily: "Playfair Display",

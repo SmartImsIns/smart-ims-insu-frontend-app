@@ -53,7 +53,7 @@ const PolicyContainer: React.FC = () => {
   const isMobile = useMediaQuery('(max-width:768px)');
 
   return (
-    <Box sx={{backgroundColor:"#e6f7ff"}}>
+    <Box >
         <Box>
             <Typography sx={PolicyStyles.policyCardHeading}>Here is your list of policies</Typography>
         </Box>

@@ -33,7 +33,7 @@ const ReferenceBlogs: React.FC = () => {
   ];
 
   return (
-    <Box>
+    <Box sx={{marginTop:'31px'}}>
       <Box sx={ReferenceBlogsStyles.container}>
       <Typography sx={ReferenceBlogsStyles.containerHeading}>
           Quick References For You
