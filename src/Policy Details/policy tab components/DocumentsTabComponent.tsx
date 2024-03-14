@@ -1,10 +1,12 @@
+import { Box } from '@mui/material'
 import React from 'react'
+import PolicyDetailsStyles from '../PolicyDetailsStyles'
 
 type Props = {}
 
 const DocumentsTabComponent = (props: Props) => {
   return (
-    <div>DocumentsTabComponent</div>
+    <Box sx={PolicyDetailsStyles.PolicyDocumentTabStyles}>DocumentsTabComponent</Box>
   )
 }
 

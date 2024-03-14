@@ -34,19 +34,29 @@ const PolicyTab = () => {
         const ComponentItem = TabComponents?.[index] ;
         return TabComponents?.[index] ? <ComponentItem />: <Box>Create the component</Box>;
     }
+    
 
     return (
         <Box sx={PolicyDetailsStyles.PolicyTabsStyles}>
             <TabContext value={value}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider',  }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', }}>
                     <TabList onChange={handleChange} aria-label="">
                         {PolicyTabsLists.map((tabName, index) => (
-                            <Tab key={index} label={tabName} value={index.toString()} />
+                            <Tab sx={{
+                                marginRight: "38px",
+                                color: "#383D4E",
+                                fontFamily: "Playfair Display",
+                                fontSize: "20px",
+                                fontStyle: "normal",
+                                fontWeight: 400,
+                                lineHeight: "110%", 
+                                textTransform:'capitalize'
+                            }} key={index} label={tabName} value={index.toString()} />
                         ))}
                     </TabList>
                 </Box>
                 <Box sx={PolicyDetailsStyles.PolicyTabsComponentStyles}>
-                {PolicyTabsLists.map((tabName, index) => (
+                {PolicyTabsLists.map((_, index) => (
                     <TabPanel key={index} value={index.toString()}>
                         <GetComponent index={index} />
                     </TabPanel>
