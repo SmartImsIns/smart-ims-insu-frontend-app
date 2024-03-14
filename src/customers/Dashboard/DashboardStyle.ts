@@ -71,7 +71,9 @@ const DashboardStyle = {
     color: "white",
     fontSize: "0.7rem",
     width: "50%",
-    borderRadius: "10px",
+    borderRadius: "2rem",
+    boxShadow:
+      "0px 5px 9px 1px rgba(0,0,0,0.2), 4px 4px 4px 0px rgba(0,0,0,0.14), 4px 4px 5px -2px rgba(0,0,0,0.12)",
     ":hover": {
       backgroundColor: "#000000",
     },

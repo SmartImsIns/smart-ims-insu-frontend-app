@@ -1,10 +1,10 @@
 export interface ILogin {
-  indexName: string;
-  contactNumber: string;
+  customerName: string;
+  mobile: string;
 }
 
 export interface ILoginRequestParams {
-  data: ILogin
+  data: ILogin;
 }
 
 export interface IUserDetails {
