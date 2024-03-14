@@ -1,7 +1,4 @@
-const API_GET_TEST_DATA = 'posts';
-const API_POST_LOGIN_SUBMIT = 'login';
+const API_POST_TEST_DATA = "dashboard/customer/policies";
+const API_POST_LOGIN_SUBMIT = "login/user";
 
-export {
-  API_GET_TEST_DATA,
-  API_POST_LOGIN_SUBMIT
-};
+export { API_POST_TEST_DATA, API_POST_LOGIN_SUBMIT };
