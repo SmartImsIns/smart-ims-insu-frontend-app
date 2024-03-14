@@ -20,6 +20,7 @@ const QuickReferencesStyle = {
   },
   qucikReferencesCard: {
     width: "30%",
+    boxShadow: "5",
     "@media(max-width: 780px)": {
       width: "100%",
     },

@@ -1,7 +1,6 @@
 export interface IDashboard {
-  PolicyCount: string;
-  PolicyCustomerList: IPolicyCustomer[];
-  PolicyList: IPolicy[];
+  policyCount: string;
+  policyList: IPolicy[];
 }
 
 export interface IUser {
@@ -17,13 +16,14 @@ export interface IPolicyCustomer {
 }
 
 export interface IPolicy {
-  CarrierPolicyNo: string;
-  CarrierPolicyStatus: string;
-  Tenure: string;
-  RiskCount: string;
-  DuePremium: number;
-  LOBCode: string;
-  PaymentFrequency: string;
+  carrierPolicyNo: string;
+  carrierPolicyStatus: string;
+  duePremium: number;
+  policyRef: string;
+  productName: string;
+  riskCount: number;
+  tenure: string;
+  LOBCode?: string | null;
 }
 
 export interface IDashboardSlice {
