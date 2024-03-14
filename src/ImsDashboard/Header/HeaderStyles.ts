@@ -1,14 +1,11 @@
-import { SxProps, Theme } from "@mui/system";
 
-export interface HeaderStyleProps {
-  headerContainer: SxProps<Theme>;
-  logo: SxProps<Theme>;
-  headerItems: SxProps<Theme>;
-}
-
-const HeaderStyle: HeaderStyleProps = {
+const HeaderStyle = {
   headerContainer: {
     width: "100%",
+    position:"fixed",
+    zIndex:"1",
+    transition:"transform s ease",
+    top:"0",
     height: "60px",
     display: "flex",
     justifyContent: "space-between",

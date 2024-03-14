@@ -1,4 +1,7 @@
 const ImsDashboardStyle = {
+  container:{
+    paddingTop:"40px"
+  },
   imsDashbardContainer: {
     paddingLeft: '30px',
     paddingRight: '30px',

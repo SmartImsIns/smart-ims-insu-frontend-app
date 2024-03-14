@@ -11,7 +11,7 @@ type Props = {};
 
 const ImsDashboard = (props: Props) => {
   return (
-    <Box>
+    <Box sx={ImsDashboardStyle.container}>
       <WelcomeCard />
       <AttentionCard />
       <MyClaimsCard/>

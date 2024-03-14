@@ -77,7 +77,7 @@ const ApplicationRoutes = (props: any) => {
       >
         <CircularProgress size="4rem" />
       </Dialog>
-      <Header></Header> 
+      <Header /> 
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
