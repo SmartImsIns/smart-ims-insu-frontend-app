@@ -1,9 +1,8 @@
 import React from "react";
 import { Box, Button, Card, Typography } from "@mui/material";
 // import image1 from '../../assets/ReferenceBlogs/image1.jpg';
-import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
+// import PlayCircleFilledIcon from "@mui/icons-material/PlayCircleFilled";
 import ReferenceBlogsStyles from "./ReferenceBlogsStyles";
-import ReactDOM from "react-dom";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import playIcon from "../../assets/Group 5717.svg";
 export interface BlogData {

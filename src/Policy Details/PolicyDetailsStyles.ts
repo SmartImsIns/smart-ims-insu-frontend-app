@@ -5,10 +5,11 @@ const PolicyDetailsStyles = {
         paddingLeft: '30px',
         paddingRight: '30px',
         marginTop: '40px',
-        height:'100vh'
+        paddingBottom:'111px'
     },
     PolicyBreadCrumbStyle: {
         display: 'inline-flex',
+        alignItems:"center",
         gap: '10px',
         cursor:'pointer'
     },
@@ -22,7 +23,7 @@ const PolicyDetailsStyles = {
     },
     BasicInfoCard: {
         marginTop: '43px',
-        bgcolor:"#ece8e8",
+        background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
         height: '203px',
         display: 'flex',
         flexDirection: 'column',
@@ -34,6 +35,15 @@ const PolicyDetailsStyles = {
     },
     PolicyTabsStyles: {
         marginTop: '64px',
+    },
+    PolicyTabsComponentStyles: {
+        marginTop: '64.5px',
+        height:"611px",
+        fill: '#FFF',
+        strokeWidth: '1px',
+        stroke: '#C9E1EC',
+        background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
+        
     }
 };
 

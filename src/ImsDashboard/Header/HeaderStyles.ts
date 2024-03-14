@@ -7,6 +7,9 @@ const HeaderStyle = {
         justifyContent: "space-between",
         backgroundColor:"#FFFFFF",
         boxShadow:"0px 4px 14px 0px #00000014",
+        position:"sticky",
+        top:0,
+        zIndex:"2"
     },
     logo: {
         paddingLeft:"30px",
@@ -20,5 +23,7 @@ const HeaderStyle = {
     }
 
 };
+
+
 
 export default HeaderStyle;

@@ -1,5 +1,5 @@
 import React from "react";
-import { Avatar, Box, Button, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Typography } from "@mui/material";
 import PolicyStyles from "./PolicyStyles";
 import EllipsisMenu from "../EllipsisMenu/EllipsisMenu";
 import { useNavigate } from "react-router-dom";
@@ -26,7 +26,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/policy-details");
-    console.info("You clicked on policy");
+    // console.info("You clicked on policy");
   };
 
   return (

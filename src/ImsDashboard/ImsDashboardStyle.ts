@@ -38,9 +38,9 @@ const ImsDashboardStyle = {
     alignItems: "center",
     justifyContent: 'space-between',
     marginTop: '22px',
-    background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
+    fill: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
     filter: 'drop-shadow(20px 20px 57px rgba(0, 0, 0, 0.08))',
-    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.01)',
     paddingRight: '89.78px',
     paddingLeft: '35.08px',
     "@media (max-width: 599px)": {
@@ -51,8 +51,8 @@ const ImsDashboardStyle = {
       alignItems: "",
       gap:'10px',
       display: "grid",
-      gridTemplateColumns: '1fr 1fr', /* Equal width columns */
-      gridTemplateRows: '1fr 1fr', /* Equal height rows */
+      gridTemplateColumns: '1fr 1fr',
+      gridTemplateRows: '1fr 1fr', 
     }
   },
   DashBoardCardItemStyles: {
@@ -94,10 +94,9 @@ const ImsDashboardStyle = {
     paddingRight: '42px',
     paddingLeft: '23.63px',
     border: '1px solid #C9E1EC',
-    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.01)',
     "@media (max-width:599px)":{
       marginTop: '15px',
-      // width: '320px',
       height: '270px',
     flexDirection: "column",
     padding:'20px'
@@ -114,7 +113,7 @@ const ImsDashboardStyle = {
     paddingRight: '42px',
     paddingLeft: '29.85px',
     border: '1px solid #C9E1EC',
-    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.1)',
+    boxShadow: '0px 0px 10px 0px rgba(0, 0, 0, 0.01)',
     "@media (max-width:599px)":{
       marginTop: '15px',
       // width: '320px',
@@ -198,7 +197,6 @@ const ImsDashboardStyle = {
     color: 'var(--Default-White, #FFF)',
     fontWeight: 400,
     fontFamily: "Noto Sans",
-
     lineHeight: 1,
     letterSpacing: 0.5,
   }

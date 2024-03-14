@@ -14,7 +14,7 @@ const PolicyBreadCrumbs = () => {
   ) => {
     event.preventDefault();
     navigate("/ims-dashboard");
-    console.info("You clicked a breadcrumb.");
+    // console.info("You clicked a breadcrumb.");
   };
 
   const breadcrumbs = [

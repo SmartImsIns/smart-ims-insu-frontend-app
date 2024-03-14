@@ -1,10 +1,11 @@
 const ReferenceBlogsStyles = {
   container: {
+    marginTop:"31.08px",
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
     paddingRight:'30px',
-    paddingLeft:'30px',    
+    paddingLeft:'30px',
+    paddingBottom:'127px',   
     "@media(max-width: 780px)": {
       display: "none",
     },
@@ -18,6 +19,7 @@ const ReferenceBlogsStyles = {
     },
   },
   cardsContainer: {
+    marginTop:"20px",
     display: "flex",
     flexWrap: "wrap",
     gap: "40px",

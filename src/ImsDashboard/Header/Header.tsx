@@ -1,4 +1,4 @@
-import { Box, Typography } from "@mui/material"
+import { Box} from "@mui/material"
 import Logo from '../../assets/Layer 1 copy 1.svg'
 import notification from '../../assets/notification.svg'
 import displayPicture from '../../assets/Rectangle 41106.svg'
