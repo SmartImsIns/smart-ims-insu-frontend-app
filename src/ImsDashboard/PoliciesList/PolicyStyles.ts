@@ -99,7 +99,7 @@ const PolicyStyles = {
     },
     cardTopLeft: {
         display: "flex",
-        gap:"160.5px",
+        gap:"120.5px",
         "@media (min-width:360px) and (max-width:599px)":{
             display:"block",
             gap:"20px"
@@ -165,6 +165,7 @@ const PolicyStyles = {
         lineHeight: "19.8px",
         letterSpacing: "0em",
         textAlign: "left",
+        marginRight:"40px",
         "@media (min-width:360px) and (max-width:599px)":{
             marginLeft:"-57px",
             marginTop:"30.19px",
@@ -181,7 +182,8 @@ const PolicyStyles = {
     cardTopStatusDate: {
         ...font,
         width:"100%",
-        maxWidth: "203px",
+        // maxWidth: "203px",
+        maxWidth:"auto",
         height: "22px",
         marginTop: "2.89px",
         // marginLeft: "160.5px",
@@ -191,6 +193,7 @@ const PolicyStyles = {
         lineHeight: "22px",
         letterSpacing: "0em",
         textAlign: "left",
+        marginRight:"40px",
         "@media (min-width:360px) and (max-width:599px)":{
             marginLeft:"-57px",
             width:"auto",
