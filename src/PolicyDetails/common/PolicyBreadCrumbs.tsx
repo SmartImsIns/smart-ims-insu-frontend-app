@@ -2,9 +2,10 @@ import * as React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { useNavigate } from "react-router-dom";
+import leftArrow from "../../assets/leftArrow.svg";
 import { Box,Link } from "@mui/material";
-import PolicyDetailsStyles from "./PolicyDetailsStyles";
-import leftArrow from "../assets/leftArrow.svg"
+import PolicyDetailsStyles from "../PolicyDetailsStyles";
+
 const PolicyBreadCrumbs = () => {
   const navigate = useNavigate();
 

@@ -1,7 +1,7 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
 import PolicyDetailsStyles from "../PolicyDetailsStyles";
-import WhiteButton from "../common components/WhiteButton";
+import WhiteButton from "../commonComponents/WhiteButton";
 
 const ButtonText = [
   "File a claim",
