@@ -15,6 +15,6 @@ export const GetDashboardData = createAsyncThunk(
       dispatch,
       "cDashboard"
     );
-    return response.data;
+    return response;
   }
 );

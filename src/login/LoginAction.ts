@@ -22,6 +22,6 @@ export const LoginSubmit = createAsyncThunk(
       document.cookie = `customerName=${response.data.customerName}`;
       document.cookie = `customerId=${response.data.customerId}`;
     }
-    return response.data;
+    return response;
   }
 );

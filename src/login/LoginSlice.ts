@@ -16,9 +16,10 @@ const LoginSlice = createSlice({
   },
   extraReducers: (builder) => {
     builder.addCase(LoginSubmit.fulfilled, (state, action) => {
-      console.log(action.payload);
-      state.userDetails = action.payload;
-      state.isLogin = true;
+      if (action.payload.statusCode === 200) {
+        state.userDetails = action.payload.data;
+        state.isLogin = true;
+      }
     });
   },
 });
