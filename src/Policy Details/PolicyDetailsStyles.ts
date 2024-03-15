@@ -26,7 +26,6 @@ const PolicyDetailsStyles = {
         background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
         height: '203px',
         display: 'flex',
-        alignItems: 'center',
         justifyContent: 'space-between',
         border: '1px solid #C9E1EC',
         borderRadius:'10px'
@@ -54,24 +53,7 @@ const PolicyDetailsStyles = {
     PolicyTabsStyles: {
         marginTop: '64px',
     },
-    PolicyTabsComponentStyles: {
-        marginTop: '64.5px',
-        height: "611px",
-        fill: '#FFF',
-        strokeWidth: '1px',
-        stroke: '#C9E1EC',
-        background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
-    },
-    PolicyDocumentTabStyles: {
-        marginTop: '20.5px',
-        height: "423px",
-        border:"1px solid  #C9E1EC",
-        // fill: '#FFF',
-        // strokeWidth: '1px',
-        // stroke: '#C9E1EC',
-        background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
-    },
-    
+   
 };
 
 export default PolicyDetailsStyles;

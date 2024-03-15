@@ -9,10 +9,11 @@ import PolicyDetailsStyles from './PolicyDetailsStyles';
 import ActivityTabComponent from './policy tab components/ActivityTabComponent';
 import VehicleTabComponent from './policy tab components/VehicleTabComponent';
 import CoverageTabComponent from './policy tab components/CoverageTabComponent';
-import DocumentsTabComponent from './policy tab components/DocumentsTabComponent';
 import LienholderTabComponent from './policy tab components/LienholderTabComponent';
 import BillingTabComponent from './policy tab components/BillingTabComponent';
 import ClaimsTabComponent from './policy tab components/ClaimsTabComponent';
+import DocumentsTabComponent from './policy tab components/Document Tab /DocumentsTabComponent';
+
 
 const PolicyTab = () => {
     const [value, setValue] = React.useState('0');
@@ -55,13 +56,11 @@ const PolicyTab = () => {
                         ))}
                     </TabList>
                 </Box>
-                <Box sx={PolicyDetailsStyles.PolicyTabsComponentStyles}>
                 {PolicyTabsLists.map((_, index) => (
-                    <TabPanel key={index} value={index.toString()}>
+                    <TabPanel sx={{padding:"0px"}} key={index} value={index.toString()}>
                         <GetComponent index={index} />
                     </TabPanel>
                 ))}
-                </Box>
             </TabContext>
         </Box>
     )
