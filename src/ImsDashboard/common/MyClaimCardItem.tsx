@@ -10,17 +10,19 @@ interface MyClaimCardItemProps {
   headText: string;
   contentText: string;
   icon?: ReactNode;
-  classes?: object;
+  parentClasses?: Object;
 }
 
 const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({
   headText,
   contentText,
   icon,
-  classes,
+  parentClasses,
 }) => {
   return (
-    <>
+    <Box
+      sx={{ ...ImsDashboardStyle.claimsCardWrapperStyles, ...parentClasses }}
+    >
       {icon ? (
         <DashBoardCardItem src={myClaimsIcon} alt="new-claim-icon" text="" />
       ) : null}
@@ -30,7 +32,7 @@ const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({
           {contentText}
         </Typography>
       </Box>
-    </>
+    </Box>
   );
 };
 

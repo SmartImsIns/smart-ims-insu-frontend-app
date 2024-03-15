@@ -3,6 +3,9 @@ const ImsDashboardStyle = {
     paddingTop: "40px",
     background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)",
   },
+  flex1: {
+    flex: "1 1 0%",
+  },
   imsDashbardContainer: {
     paddingLeft: "30px",
     paddingRight: "30px",
@@ -28,7 +31,16 @@ const ImsDashboardStyle = {
     display: "flex",
     flexDirection: "column",
   },
-
+  claimsCardWrapperStyles: {
+    display: "flex",
+    gap: "22px",
+    marginRight: "86px",
+    padding: "15px",
+    "@media (max-width:599px)": {
+      marginRight: "0px",
+      minWidth: "135px",
+    },
+  },
   welcomeCardStyles: {
     height: "100px",
     flexShrink: 0,
@@ -102,30 +114,39 @@ const ImsDashboardStyle = {
     },
   },
   myClaimsCardStyles: {
-    height: "112px",
+    // height: "112px",
     flexShrink: 0,
     display: "flex",
     flexDirection: "row",
     alignItems: "center",
     marginTop: "22px",
-    paddingRight: "42px",
-    paddingLeft: "29.85px",
+    padding: "15px",
     border: "1px solid #C9E1EC",
+    flexWrap: "wrap",
     boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
     "@media (max-width:599px)": {
-      width: "100%",
-      maxWidth: "229px",
-      height: "272px",
-      lineHeight: "19.8px",
+      // width: "100%",
+      // maxWidth: "229px",
+      // height: "272px",
+      // lineHeight: "19.8px",
+      // marginRight: "0px",
+      justifyContent: "space-between",
     },
     "@media (min-width:600px) and (max-width:1024px)": {
-      width: "100%",
-      maxWidth: "229px",
-      height: "272px",
-      lineHeight: "19.8px",
+      // width: "100%",
+      // height: "272px",
+      // lineHeight: "19.8px",
     },
   },
-
+  myClaimsCardWithIconStyles: {
+    "@media (min-width:600px) and (max-width:1024px)": {
+      // width: "260px",
+      flex: "1 1 0%",
+    },
+  },
+  myClaimsCardButtonStyles: {
+    marginLeft: "auto",
+  },
   ClaminsContentStyles: {
     display: "flex",
     flexDirection: "row",
@@ -188,12 +209,10 @@ const ImsDashboardStyle = {
     fontStyle: "normal",
     fontWeight: "400",
     lineHeight: "110%", // 19.8px
+    whiteSpace: "nowrap",
     "@media (max-width:599px)": {
-      fontSize: "14px",
-      lineHeight: "24px",
-    },
-    "@media(min-width: 600px) and (max-width: 1023px)": {
-      fontSize: "14px",
+      fontSize: "16px",
+      fontWeight: "400",
     },
   },
 
@@ -205,12 +224,10 @@ const ImsDashboardStyle = {
     fontFamily: "Noto Sans",
     fontWeight: "300",
     lineHeight: "110%", // 19.8px
-    "@media (max-width:599px)": {
+    whiteSpace: "nowrap",
+    "@media(max-width:599px)": {
       fontSize: "16px",
-      lineHeight: "24px",
-    },
-    "@media(min-width: 600px) and (max-width: 1023px)": {
-      fontSize: "16px",
+      fontWeight: "300",
     },
   },
   AttentionsCardTextStyle: {
@@ -231,7 +248,8 @@ const ImsDashboardStyle = {
   },
   ActionButtonStyles: {
     display: "flex",
-    width: 155,
+    width: "fit-content",
+    minWidth: "155px",
     height: 40,
     padding: "16px 12px",
     justifyContent: "center",
