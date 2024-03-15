@@ -6,14 +6,14 @@ pipeline{
                   script {
        
                 sh 'tar -cvzf dist.tar.gz *'
-                sh 'scp dist.tar.gz jenkins@13.127.219.105:/var/www/html/demo/smartims'
-                sh 'ssh jenkins@13.127.219.105 "cd /var/www/html/demo/smartims && tar -xvzf dist.tar.gz"'
-                sh 'ssh jenkins@13.127.219.105 "cd /var/www/html/demo/smartims && sudo chown -R jenkins:jenkins *"'
-                sh 'ssh jenkins@13.127.219.105 "cd /var/www/html/demo/smartims && sudo docker build -t smartims$BUILD_NUMBER -f Dockerfile ."'
-                sh 'ssh jenkins@13.127.219.105 "sudo docker tag smartims$BUILD_NUMBER:latest sravyananduri/smartims$BUILD_NUMBER"' 
-                sh 'ssh jenkins@13.127.219.105 "sudo docker push sravyananduri/smartims$BUILD_NUMBER"'
-                sh 'ssh jenkins@13.127.219.105 " sudo docker ps -aqf "name=smartims*" | xargs -r sudo docker rm -f"'
-                sh 'ssh jenkins@13.127.219.105  "sudo docker run -td --name smartims$BUILD_NUMBER -p 9001:80 smartims$BUILD_NUMBER"'
+                sh 'scp dist.tar.gz jenkins@demo.divami.com:/var/www/html/demo/smartims'
+                sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && tar -xvzf dist.tar.gz"'
+                sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo chown -R jenkins:jenkins *"'
+                sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo docker build -t smartims$BUILD_NUMBER -f Dockerfile ."'
+                sh 'ssh jenkins@demo.divami.com "sudo docker tag smartims$BUILD_NUMBER:latest sravyananduri/smartims$BUILD_NUMBER"' 
+                sh 'ssh jenkins@demo.divami.com "sudo docker push sravyananduri/smartims$BUILD_NUMBER"'
+                sh 'ssh jenkins@demo.divami.com " sudo docker ps -aqf "name=smartims*" | xargs -r sudo docker rm -f"'
+                sh 'ssh jenkins@demo.divami.com  "sudo docker run -td --name smartims$BUILD_NUMBER -p 9001:80 smartims$BUILD_NUMBER"'
                   
                   }
                }
