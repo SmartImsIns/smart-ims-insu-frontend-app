@@ -25,7 +25,7 @@ const MyClaimsCard = (props: Props) => {
           <MyClaimCardItem headText="12/02/2024" contentText="Claim Initiated" />
           <MyClaimCardItem headText="John Doe" contentText="Contact Person" />
           </Box>
-          <ActionButton buttonText="Track Your Claim"  />
+          <ActionButton  buttonText="Track Your Claim"  />
         </Card>
         </Box>
       </Box>
