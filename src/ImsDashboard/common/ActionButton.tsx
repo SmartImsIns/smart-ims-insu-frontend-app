@@ -4,7 +4,7 @@ import ImsDashboardStyle from "../ImsDashboardStyle";
 
 interface ActionButtonProps {
   buttonText: string;
-  classes?: Object;
+  classes?: Record<string, string>;
 }
 
 const ActionButton: React.FC<ActionButtonProps> = ({ buttonText, classes }) => {
