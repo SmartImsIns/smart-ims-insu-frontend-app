@@ -6,7 +6,7 @@ export interface ILoginRequestParams {
 export interface ILoginResponse {
   data: IUserDetails;
   message: string;
-  status: number;
+  statusCode: number;
 }
 
 export interface IUserDetails {

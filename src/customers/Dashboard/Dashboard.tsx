@@ -23,6 +23,7 @@ import HomeIcon from "@mui/icons-material/Home";
 import QuickReferences from "./QuickReferences/QuickReferences";
 import CancelIcon from "@mui/icons-material/Cancel";
 import CheckCircleIcon from "@mui/icons-material/CheckCircle";
+import { getCookie } from "../../utils/Utility";
 
 const Dashboard = () => {
   const dispatch = useAppDispatch();
@@ -33,13 +34,11 @@ const Dashboard = () => {
   );
 
   useEffect(() => {
-    if (userDetails) {
-      const requiredParams: IDashboardRequestParams = {
-        customerId: userDetails.customerId,
-      };
-      dispatch(GetDashboardData(requiredParams));
-    }
-  }, [dispatch, userDetails]);
+    const requiredParams: IDashboardRequestParams = {
+      customerId: getCookie("customerId"),
+    };
+    dispatch(GetDashboardData(requiredParams));
+  }, [dispatch]);
 
   const getPolicies = () =>
     dashboardData?.policyList.map((Policy: IPolicy, index: number) => (
