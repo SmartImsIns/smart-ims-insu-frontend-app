@@ -47,7 +47,7 @@ const PolicyTab = () => {
                 </Box>
                 <Box sx={PolicyDetailsStyles.PolicyTabsComponentStyles}>
                 {PolicyTabsLists.map((tabName, index) => (
-                    <TabPanel key={index} value={index.toString()}>
+                    <TabPanel sx={{padding:"0px"}} key={index} value={index.toString()}>
                         <GetComponent index={index} />
                     </TabPanel>
                 ))}
