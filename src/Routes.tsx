@@ -5,6 +5,7 @@ import Dialog from '@mui/material/Dialog';
 import Error from './common/Error/Error';
 import Login from './login/Login';
 import CustomerRoutes from './customers/CustomerRoutes';
+import { Box, Typography } from "@mui/material";
 import { useAppSelector } from './store/hooks';
 import { RootState } from './store/store';
 import { getCookie } from './utils/Utility';
@@ -78,6 +79,7 @@ const ApplicationRoutes = (props: any) => {
         <CircularProgress size="4rem" />
       </Dialog>
       <Header /> 
+      <Box  sx={{ background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)"}}>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
@@ -85,6 +87,7 @@ const ApplicationRoutes = (props: any) => {
         <Route path="/ims-dashboard" element={<ImsDashboard />} />
         <Route path="*" element={<Error header={true} {...props} />} />      
       </Routes>
+      </Box>
       <Footer />
     </>
   );

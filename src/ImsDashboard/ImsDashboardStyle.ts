@@ -1,7 +1,9 @@
 const ImsDashboardStyle = {
   container: {
     paddingTop: "40px",
-    background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)",
+    maxWidth:"1920px",
+    margin:"0px auto 0px auto",
+
   },
   flex1: {
     flex: "1 1 0%",
