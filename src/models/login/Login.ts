@@ -1,15 +1,17 @@
-export interface ILogin {
+export interface ILoginRequestParams {
   customerName: string;
   mobile: string;
 }
 
-export interface ILoginRequestParams {
-  data: ILogin;
+export interface ILoginResponse {
+  data: IUserDetails;
+  message: string;
+  status: number;
 }
 
 export interface IUserDetails {
-  name: string;
-  contactNumber: string;
+  customerName: string;
+  customerId: string;
 }
 
 export interface ILoginSlice {
