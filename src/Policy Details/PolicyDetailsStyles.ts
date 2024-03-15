@@ -37,12 +37,13 @@ const PolicyDetailsStyles = {
         marginTop: '64px',
     },
     PolicyTabsComponentStyles: {
-        marginTop: '64.5px',
-        height:"611px",
+        // marginTop: '64.5px',
+        padding:"0px",
+        maxHeight:"1011px",
         fill: '#FFF',
         strokeWidth: '1px',
         stroke: '#C9E1EC',
-        background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
+        // background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
         
     }
 };

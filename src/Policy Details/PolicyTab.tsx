@@ -8,10 +8,10 @@ import PolicyTabsLists from "./policy tab components/PolicyTabsLists";
 import PolicyDetailsStyles from './PolicyDetailsStyles';
 import ActivityTabComponent from './policy tab components/ActivityTabComponent';
 import VehicleTabComponent from './policy tab components/VehicleTabComponent';
-import CoverageTabComponent from './policy tab components/CoverageTabComponent';
+import CoverageTabComponent from './policy tab components/CoverageTab/CoverageTabComponent';
 import DocumentsTabComponent from './policy tab components/DocumentsTabComponent';
 import LienholderTabComponent from './policy tab components/LienholderTabComponent';
-import BillingTabComponent from './policy tab components/BillingTabComponent';
+import BillingTabComponent from './policy tab components/BillingTab/BillingTabComponent';
 import ClaimsTabComponent from './policy tab components/ClaimsTabComponent';
 
 const PolicyTab = () => {
@@ -38,16 +38,16 @@ const PolicyTab = () => {
     return (
         <Box sx={PolicyDetailsStyles.PolicyTabsStyles}>
             <TabContext value={value}>
-                <Box sx={{ borderBottom: 1, borderColor: 'divider',  }}>
+                <Box sx={{ borderBottom: 1, borderColor: 'divider', }}>
                     <TabList onChange={handleChange} aria-label="">
                         {PolicyTabsLists.map((tabName, index) => (
                             <Tab key={index} label={tabName} value={index.toString()} />
                         ))}
                     </TabList>
                 </Box>
-                <Box sx={PolicyDetailsStyles.PolicyTabsComponentStyles}>
+                <Box>
                 {PolicyTabsLists.map((tabName, index) => (
-                    <TabPanel key={index} value={index.toString()}>
+                    <TabPanel sx={{padding:"0px"}} key={index} value={index.toString()}>
                         <GetComponent index={index} />
                     </TabPanel>
                 ))}
