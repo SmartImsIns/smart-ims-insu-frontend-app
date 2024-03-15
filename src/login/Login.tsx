@@ -12,15 +12,14 @@ const Login = () => {
 
   const [showMessage, setShowMessage] = useState<string | null>(null);
   const [loginData, setLoginData] = useState<ILoginRequestParams>({
-    customerName: "",
-    mobile: "",
+    customerName: "Craig Tommy",
+    mobile: "9879875667",
   });
 
   const { isError, calledReducerType } = useAppSelector(
     (store: RootState) => store.common
   );
-  console.log(isError);
-  console.log(calledReducerType);
+
   useEffect(() => {
     if (isError && calledReducerType === "login") {
       setShowMessage("Invalid Login details");

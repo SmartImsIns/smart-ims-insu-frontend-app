@@ -11,10 +11,9 @@ const DashboardSlice = createSlice({
   initialState: initialState,
   reducers: {},
   extraReducers: (builder) => {
-    // Add reducers for additional action types here, and handle loading state as needed
     builder.addCase(GetDashboardData.fulfilled, (state, action) => {
-      if (action.payload) {
-        state.dashboardData = action.payload;
+      if (action.payload.statusCode === 200) {
+        state.dashboardData = action.payload.data;
       }
     });
   },

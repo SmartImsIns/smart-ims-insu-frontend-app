@@ -30,5 +30,5 @@ export interface IDashboardRequestParams {
 export interface IDashboardResponse {
   data: IDashboard;
   message: string;
-  status: number;
+  statusCode: number;
 }
