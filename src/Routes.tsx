@@ -25,22 +25,23 @@ const ApplicationRoutes = (props: any) => {
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split('/');
     // console.log(pathArray)
+    navigate('/ims-dashboard');
    
-    if (pathArray[1] !== 'customer') {
-      navigate('/');
-    }
-    if (pathArray[3]) {
-      const isValidCustomerPath = customerPath.some((path: string) => pathArray[2] === path);
-      if (isValidCustomerPath) {
-        navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
-      }
-    } else {
-      if (pathArray[1] === 'ims-dashboard') {
-        navigate('/ims-dashboard');
-      } else{
-        navigate('/customer/dashboard');
-      }
-    }
+    // if (pathArray[1] !== 'customer') {
+    //   navigate('/');
+    // }
+    // if (pathArray[3]) {
+    //   const isValidCustomerPath = customerPath.some((path: string) => pathArray[2] === path);
+    //   if (isValidCustomerPath) {
+    //     navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
+    //   }
+    // } else {
+    //   if (pathArray[1] === 'ims-dashboard') {
+    //     navigate('/ims-dashboard');
+    //   } else{
+    //     navigate('/customer/dashboard');
+    //   }
+    // }
   }, [navigate, location.pathname]);
 
   const checkAuthentication = useCallback(() => {
