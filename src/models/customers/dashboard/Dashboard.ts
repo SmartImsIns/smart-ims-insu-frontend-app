@@ -3,13 +3,6 @@ export interface IDashboard {
   policyList: IPolicy[];
 }
 
-export interface IUser {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
 export interface IPolicyCustomer {
   CustomerName: string;
   CustomerId: string;
@@ -28,6 +21,10 @@ export interface IPolicy {
 
 export interface IDashboardSlice {
   dashboardData: IDashboard | null;
+}
+
+export interface IDashboardRequestParams {
+  customerId: string | null;
 }
 
 export interface IDashboardResponse {

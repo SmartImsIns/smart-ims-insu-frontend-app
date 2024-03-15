@@ -1,7 +1,13 @@
-import { configureStore, combineReducers, ThunkAction, Action, AnyAction } from '@reduxjs/toolkit';
-import DashboardSlice from '../customers/Dashboard/DashboardSlice';
-import CommonSlice from '../common/CommonSlice';
-import LoginSlice from '../login/LoginSlice';
+import {
+  configureStore,
+  combineReducers,
+  ThunkAction,
+  Action,
+  AnyAction,
+} from "@reduxjs/toolkit";
+import DashboardSlice from "../customers/Dashboard/DashboardSlice";
+import CommonSlice from "../common/CommonSlice";
+import LoginSlice from "../login/LoginSlice";
 
 const appReducer = combineReducers({
   dashboard: DashboardSlice,
@@ -10,11 +16,11 @@ const appReducer = combineReducers({
 });
 
 const reducerProxy = (state: any, action: AnyAction) => {
-  if(action.type === 'logout') {
+  if (action.type === "logout") {
     return appReducer(undefined, action);
   }
   return appReducer(state, action);
-}
+};
 
 export const store = configureStore({
   reducer: reducerProxy,
