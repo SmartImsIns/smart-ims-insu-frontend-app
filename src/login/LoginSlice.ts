@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { ILoginSlice } from "../models/login/Login";
+import { ILoginSlice, IUserDetails } from "../models/login/Login";
 import { LoginSubmit } from "./LoginAction";
 
 const initialState: ILoginSlice = {
@@ -10,11 +10,16 @@ const initialState: ILoginSlice = {
 const LoginSlice = createSlice({
   name: "login",
   initialState: initialState,
-  reducers: {},
+  reducers: {
+    setUserDetails: (state, action: PayloadAction<IUserDetails>) => {},
+    setIsLogin: (state, action: PayloadAction<boolean>) => {},
+  },
   extraReducers: (builder) => {
     builder.addCase(LoginSubmit.fulfilled, (state, action) => {
-      state.userDetails = action.payload;
-      state.isLogin = true;
+      if (action.payload.statusCode === 200) {
+        state.userDetails = action.payload.data;
+        state.isLogin = true;
+      }
     });
   },
 });
