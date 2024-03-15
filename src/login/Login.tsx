@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { Box, Button, TextField, Typography } from "@mui/material";
 import Card from "@mui/material/Card";
-import { ILogin, ILoginRequestParams } from "../models/login/Login";
+import { ILoginRequestParams } from "../models/login/Login";
 import { useAppDispatch, useAppSelector } from "../store/hooks";
 import { LoginSubmit } from "./LoginAction";
 import LoginStyle from "./LoginStyle";
@@ -11,8 +11,7 @@ const Login = () => {
   const dispatch = useAppDispatch();
 
   const [showMessage, setShowMessage] = useState<string | null>(null);
-
-  const [loginData, setLoginData] = useState<ILogin>({
+  const [loginData, setLoginData] = useState<ILoginRequestParams>({
     customerName: "",
     mobile: "",
   });
@@ -56,10 +55,7 @@ const Login = () => {
   };
 
   const handlSubmit = () => {
-    const requestParams: ILogin = {
-      customerName: loginData.customerName,
-      mobile: loginData.mobile,
-    };
+    const requestParams: ILoginRequestParams = loginData;
     dispatch(LoginSubmit(requestParams));
   };
 

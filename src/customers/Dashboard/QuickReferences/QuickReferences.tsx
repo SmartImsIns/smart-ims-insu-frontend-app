@@ -1,10 +1,13 @@
 import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
 import QuickReferencesStyle from "./QuickReferencesStyle";
 import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import img1 from "../../../assets/images/img1.jpg";
+import img2 from "../../../assets/images/img2.jpg";
+import img3 from "../../../assets/images/img3.jpg";
 
 const QuickReferences = () => {
   const getQuickReferences = () => {
-    return [1, 2, 3].map((item: number, index: number) => (
+    return [img1, img2, img3].map((item: any, index: number) => (
       <Card
         key={`QucikReference_${index}`}
         sx={QuickReferencesStyle.qucikReferencesCard}
@@ -12,7 +15,7 @@ const QuickReferences = () => {
         <CardMedia
           sx={QuickReferencesStyle.qucikReferencesCardMedia}
           component="img"
-          image=""
+          src={item}
           alt="green iguana"
         />
         <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
