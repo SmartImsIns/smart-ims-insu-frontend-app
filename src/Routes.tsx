@@ -13,6 +13,7 @@ import ImsDashboard from "./ImsDashboard/ImsDashboard";
 import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
 import PolicyDetails from "./PolicyDetails/PolicyDetails";
+import { Box } from "@mui/material";
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -42,7 +43,7 @@ const ApplicationRoutes = (props: any) => {
       } else if (pathArray[1] === "policy-details") {
         navigate("/policy-details");
       } else {
-        navigate("/ims-dashboard");
+        navigate("/customer/dashboard");
       }
     }
   }, [navigate, location.pathname]);
@@ -99,15 +100,19 @@ const ApplicationRoutes = (props: any) => {
         <CircularProgress size="4rem" />
       </Dialog>
       <Header />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/customer/*" element={<CustomerRoutes />} />
-        <Route path="/ims-dashboard" element={<ImsDashboard />} />
-        <Route path="/policy-details" element={<PolicyDetails />} />
-        <Route path="*" element={<Error header={true} {...props} />} />
-      </Routes>
-      {showFooter && <Footer />}
+      <Box
+        sx={{ background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)" }}
+      >
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/customer/*" element={<CustomerRoutes />} />
+          <Route path="/ims-dashboard" element={<ImsDashboard />} />
+          <Route path="/policy-details" element={<PolicyDetails />} />
+          <Route path="*" element={<Error header={true} {...props} />} />
+        </Routes>
+      </Box>
+      <Footer />
     </>
   );
 };

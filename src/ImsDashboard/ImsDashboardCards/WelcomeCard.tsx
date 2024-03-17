@@ -3,9 +3,10 @@ import { Box, Card } from "@mui/material";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import ImsDashboardStyle from "../ImsDashboardStyle";
 import roadsideAssistanceIcon from "../../assets/roadsideAssistanceIcon.svg";
-import paymentHistoryIcon from "../../assets/paymentHistoryIcon.svg";
+// import paymentHistoryIcon from "../../assets/paymentHistoryIcon.svg";
+import paymentHistoryIcon from "../../assets/Group 1000009236.svg";
 import star from "../../assets/star.svg";
-import learnAboutIcon from "../../assets/learnAboutIcon.svg";
+import learnAboutIcon from "../../assets/Group 1000009237.svg";
 import DashBoardCardItem from "../common/DashBoardCardItem";
 
 type Props = {};

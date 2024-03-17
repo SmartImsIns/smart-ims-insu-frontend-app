@@ -8,17 +8,22 @@ interface DashBoardCardItemProps {
   alt: string;
 }
 
-const DashBoardCardItem : React.FC<DashBoardCardItemProps> = ({ text, src, alt }) => {
+const DashBoardCardItem: React.FC<DashBoardCardItemProps> = ({
+  text,
+  src,
+  alt,
+}) => {
   return (
     <Box sx={ImsDashboardStyle.DashBoardCardItemStyles}>
       <img src={src} alt={alt} />
-      {text.length > 0 &&
-      <Typography
-        sx={ImsDashboardStyle.TextCardStyles}
-      >
-        {text}
-      </Typography>
-}
+      {text.length > 0 && (
+        <Typography
+        // sx={ImsDashboardStyle.TextCardStyles}
+        // sx={ImsDashboardStyle./customer/dashboard}
+        >
+          {text}
+        </Typography>
+      )}
     </Box>
   );
 };
