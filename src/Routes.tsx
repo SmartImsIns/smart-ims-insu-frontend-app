@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from 'react';
+import { useEffect, useCallback, useState } from 'react';
 import { Routes, Route, useNavigate, useLocation } from 'react-router-dom';
 import CircularProgress from '@mui/material/CircularProgress';
 import Dialog from '@mui/material/Dialog';
@@ -12,7 +12,8 @@ import { customerPath } from './constants/Constants';
 import ImsDashboard from './ImsDashboard/ImsDashboard';
 import Header from './ImsDashboard/Header/Header';
 import Footer from './ImsDashboard/Footer/Footer'
-import ReferenceBlogs from './ImsDashboard/ReferenceBlogs/ReferenceBlogs';
+import PolicyDetails from './Policy Details/PolicyDetails';
+
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -36,8 +37,10 @@ const ApplicationRoutes = (props: any) => {
     } else {
       if (pathArray[1] === 'ims-dashboard') {
         navigate('/ims-dashboard');
-      } else{
-        navigate('/customer/dashboard');
+      } else if(pathArray[1] === 'policy-details'){
+        navigate('/policy-details')
+      } else {
+        navigate('/ims-dashboard');
       }
     }
   }, [navigate, location.pathname]);
@@ -50,6 +53,8 @@ const ApplicationRoutes = (props: any) => {
     }
   }, [roleName, routeToCustomer]);
 
+  const [showFooter, setShowFooter] = useState(false);
+  
   useEffect(() => {
     checkAuthentication();
   }, [checkAuthentication]);
@@ -59,6 +64,19 @@ const ApplicationRoutes = (props: any) => {
       checkAuthentication();
     }
   }, [isLogin, authenticated, checkAuthentication]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+        const isBottom = window.innerHeight + window.scrollY >= document.body.offsetHeight;
+        setShowFooter(isBottom);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+        window.removeEventListener('scroll', handleScroll);
+    };
+}, []);
 
   return (
     <>
@@ -77,17 +95,20 @@ const ApplicationRoutes = (props: any) => {
       >
         <CircularProgress size="4rem" />
       </Dialog>
-      <Header /> 
+      <Header/>
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/login" element={<Login />} />
         <Route path="/customer/*" element={<CustomerRoutes />} />
         <Route path="/ims-dashboard" element={<ImsDashboard />} />
-        <Route path="*" element={<Error header={true} {...props} />} />      
+        <Route path="/policy-details" element={<PolicyDetails />} />
+        <Route path="*" element={<Error header={true} {...props} />} />   
       </Routes>
-      <Footer />
+      {showFooter && <Footer />}
     </>
   );
 }
 
 export default ApplicationRoutes;
+
+

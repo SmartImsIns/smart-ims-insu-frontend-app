@@ -36,10 +36,9 @@ const PolicyStyles = {
     },
     AllCards:{
         display:"flex",
-        width:"100%",
-        // maxWidth:"1306px",
-        margin:"0px auto",
-        gap:"30px",
+        paddingLeft: "30px",
+        paddingRight: "30px",
+        justifyContent:"space-between",
 
         "@media(min-width: 360px) and (max-width: 599px)": {
             width:"100%",
@@ -54,7 +53,8 @@ const PolicyStyles = {
         // maxWidth:"638px",
         height: "367.47px",
         marginTop: "21.95px !important",
-        margin : "auto",
+        // margin : "auto",
+        cursor: "pointer",
         boxShadow: "20px 20px 57px 0px rgba(0, 0, 0, 0.08)",
 
         "@media(min-width: 360px) and (max-width: 599px)": {

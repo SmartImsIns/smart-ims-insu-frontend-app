@@ -1,12 +1,12 @@
 const ReferenceBlogsStyles = {
   container: {
+    marginTop:"31.08px",
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
-    width: "100%",
-    // maxWidth: "1325.65px",
-    // margin: "0px auto 0px auto",
-    "@media(min-width: 360px) and (max-width: 599px)": {
+    paddingRight:'30px',
+    paddingLeft:'30px',
+    paddingBottom:'127px',   
+    "@media(max-width: 780px)": {
       display: "none",
     },
   },
@@ -25,19 +25,11 @@ const ReferenceBlogsStyles = {
     },
   },
   cardsContainer: {
+    marginTop:"20px",
     display: "flex",
     flexWrap: "wrap",
-    // justifyContent:"space-between",
-    gap:"40px",
-    width: "97%",
-    maxWidth: "100%",
-    paddingLeft:"30px",
-    "@media(min-width: 600px) and (max-width: 1023px)": {
-      paddingLeft:"20px",
-      gap:"10px",
-      justifyContent:"center"
-    },
-
+    gap: "40px",
+    justifyContent:'space-between'
   },
   containerHeading: {
     fontFamily: "Playfair Display",
