@@ -100,7 +100,7 @@ const ImsDashboardStyle = {
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: "22px",
-    paddingRight: "42px",
+    // paddingRight: "42px",
     paddingLeft: "23.63px",
     border: "1px solid #C9E1EC",
     boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
@@ -150,7 +150,7 @@ const ImsDashboardStyle = {
   myClaimsCardButtonStyles: {
     marginLeft: "auto",
     textTransform: "none",
-    marginRight: "38px",
+    marginRight: "26px",
   },
   ClaminsContentStyles: {
     display: "flex",
@@ -258,7 +258,7 @@ const ImsDashboardStyle = {
   },
   ActionButtonStyles: {
     textTransform: "none",
-    marginRight: "38px",
+    marginRight: "42px",
     display: "flex",
     width: "fit-content",
     minWidth: "155px",

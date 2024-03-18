@@ -7,7 +7,7 @@ const FooterStyle = {
     justifyContent: "space-between",
     borderTop: " 1px solid #D8D8D8",
     padding: "15px, 20px, 15px, 20px",
-    "@media(max-width: 780px)": {
+    "@media(max-width:599px)": {
       height: "104px",
       display: "flex",
       alignItems: "center",
@@ -20,7 +20,7 @@ const FooterStyle = {
     display: "flex",
     gap: "42px",
     marginRight: "20px",
-    "@media(max-width: 780px)": {
+    "@media(max-width:599px)": {
       width: "100%",
       maxWidth: "380px",
       margin: "15px auto 0px auto",
@@ -36,7 +36,7 @@ const FooterStyle = {
     marginTop: "15px",
     marginLeft: "32.11px",
     opacity: "75%",
-    "@media(max-width: 780px)": {
+    "@media(max-width:599px)": {
       width: "100%",
       maxWidth: "380px",
       margin: "0px auto 0px auto",
@@ -49,7 +49,7 @@ const FooterStyle = {
     lineHeight: "22px",
     textAlign: " left",
     marginTop: "15px",
-    "@media(max-width: 780px)": {
+    "@media(max-width:599px)": {
       marginTop: "0px",
     },
   },
