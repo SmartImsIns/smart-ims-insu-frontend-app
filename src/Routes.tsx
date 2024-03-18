@@ -1,4 +1,4 @@
-import { useEffect, useCallback, useState } from "react";
+import { useEffect, useCallback } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Dialog from "@mui/material/Dialog";
@@ -56,7 +56,7 @@ const ApplicationRoutes = (props: any) => {
     }
   }, [roleName, routeToCustomer]);
 
-  const [showFooter, setShowFooter] = useState(false);
+  // const [showFooter, setShowFooter] = useState(false);
 
   useEffect(() => {
     checkAuthentication();
@@ -68,19 +68,19 @@ const ApplicationRoutes = (props: any) => {
     }
   }, [isLogin, authenticated, checkAuthentication]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const isBottom =
-        window.innerHeight + window.scrollY >= document.body.offsetHeight;
-      setShowFooter(isBottom);
-    };
+  // useEffect(() => {
+  //   const handleScroll = () => {
+  //     const isBottom =
+  //       window.innerHeight + window.scrollY >= document.body.offsetHeight;
+  //     setShowFooter(isBottom);
+  //   };
 
-    window.addEventListener("scroll", handleScroll);
+  //   window.addEventListener("scroll", handleScroll);
 
-    return () => {
-      window.removeEventListener("scroll", handleScroll);
-    };
-  }, []);
+  //   return () => {
+  //     window.removeEventListener("scroll", handleScroll);
+  //   };
+  // }, []);
 
   return (
     <>

@@ -4,22 +4,8 @@ const PolicyDetailsStyles = {
         flexDirection: 'column',
         paddingLeft: '30px',
         paddingRight: '30px',
-        marginTop: '40px',
+        marginTop: '60px',
         paddingBottom: '111px'
-    },
-    PolicyBreadCrumbStyle: {
-        display: 'inline-flex',
-        alignItems: "center",
-        gap: '10px',
-        cursor: 'pointer'
-    },
-    BreadcrumbsText: {
-        color: '#1D252B',
-        fontFamily: 'Noto Sans',
-        fontSize: '18px',
-        fontStyle: 'normal',
-        fontWeight: 400,
-        lineHeight: '110%', /* 19.8px */
     },
     BasicInfoCard: {
         marginTop: '43px',

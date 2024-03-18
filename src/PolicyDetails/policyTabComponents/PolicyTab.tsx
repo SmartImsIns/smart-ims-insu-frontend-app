@@ -4,15 +4,10 @@ import Tab from "@mui/material/Tab";
 import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
-import PolicyTabsLists from "./policyTabComponents/PolicyTabsLists";
-import PolicyDetailsStyles from "./PolicyDetailsStyles";
-import ActivityTabComponent from "./policyTabComponents/ActivityTabComponent";
-import VehicleTabComponent from "./policyTabComponents/VehicleTabComponent";
-import CoverageTabComponent from "./policyTabComponents/CoverageTabComponent";
-import LienholderTabComponent from "./policyTabComponents/LienholderTabComponent";
-import BillingTabComponent from "./policyTabComponents/BillingTabComponent";
-import ClaimsTabComponent from "./policyTabComponents/ClaimsTabComponent";
-import DocumentsTabComponent from "./policyTabComponents/DocumentTab /DocumentsTabComponent";
+import PolicyTabsLists from "./PolicyTabsLists";
+import PolicyDetailsStyles from "../PolicyDetailsStyles";
+
+import DocumentsTabComponent from "./DocumentTab /DocumentsTabComponent";
 
 const PolicyTab = () => {
   const [value, setValue] = React.useState("0");
@@ -20,14 +15,8 @@ const PolicyTab = () => {
     setValue(newValue);
   };
 
-  const TabComponents: { [key: string]: React.ComponentType } = {
-    0: ActivityTabComponent,
-    1: CoverageTabComponent,
-    2: VehicleTabComponent,
+  const TabComponents: { [key: string]: React.ComponentType<any> } = {
     3: DocumentsTabComponent,
-    4: LienholderTabComponent,
-    5: BillingTabComponent,
-    6: ClaimsTabComponent,
   };
 
   const GetComponent = ({ index }: { index: number }) => {

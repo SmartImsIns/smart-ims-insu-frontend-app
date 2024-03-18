@@ -1,19 +1,21 @@
-import React from 'react'
-import { Box } from '@mui/material'
-import PolicyDetailsStyles from '../PolicyDetailsStyles'
-import BasicInfoCardQuickActions from './BasicInfoCardQuickActions'
-import BasicInfoCard from './BasicInfoCard'
+import React from "react";
+import { Box } from "@mui/material";
+import PolicyDetailsStyles from "../PolicyDetailsStyles";
+import BasicInfoCard from "./BasicInfoCard";
+import BasicInfoCardQuickActions from "./BasicInfoCardQuickActions";
 
-
-type Props = {}
+type Props = {};
 
 const BasicInfoCardComponent = (props: Props) => {
   return (
-    <Box sx={PolicyDetailsStyles.BasicInfoCard} aria-label='Basic Info card Container'>
+    <Box
+      sx={PolicyDetailsStyles.BasicInfoCard}
+      aria-label="Basic Info Container"
+    >
       <BasicInfoCard />
-      <BasicInfoCardQuickActions/>
+      <BasicInfoCardQuickActions />
     </Box>
-  )
-}
+  );
+};
 
-export default BasicInfoCardComponent
+export default BasicInfoCardComponent;

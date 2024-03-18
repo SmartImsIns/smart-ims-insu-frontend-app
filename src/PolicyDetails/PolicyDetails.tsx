@@ -1,11 +1,11 @@
 import React, { useEffect } from "react";
 import { Box } from "@mui/material";
-import PolicyBreadCrumbs from "./common/PolicyBreadCrumbs";
+import PolicyBreadCrumbs from "./BreadCrumb/PolicyBreadCrumbs";
 import PolicyDetailsStyles from "./PolicyDetailsStyles";
-import PolicyTab from "./PolicyTab";
-import BasicInfoCardComponent from "./basicCardInfo/BasicInfoCardComponent";
+import PolicyTab from "./PolicyTabComponents/PolicyTab";
+import BasicInfoCardComponent from "./BasicCardInfo/BasicInfoCardComponent";
 
-const PolicyDetails = () => {
+const PolicyDetails: React.FC = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);

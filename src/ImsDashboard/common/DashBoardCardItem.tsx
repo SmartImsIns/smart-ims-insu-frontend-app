@@ -17,12 +17,7 @@ const DashBoardCardItem: React.FC<DashBoardCardItemProps> = ({
     <Box sx={ImsDashboardStyle.DashBoardCardItemStyles}>
       <img src={src} alt={alt} />
       {text.length > 0 && (
-        <Typography
-        // sx={ImsDashboardStyle.TextCardStyles}
-        // sx={ImsDashboardStyle./customer/dashboard}
-        >
-          {text}
-        </Typography>
+        <Typography sx={ImsDashboardStyle.DashBoardCardText}>{text}</Typography>
       )}
     </Box>
   );
