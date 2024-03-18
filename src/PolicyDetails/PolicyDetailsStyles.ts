@@ -2,10 +2,8 @@ const PolicyDetailsStyles = {
     policyContainer: {
         display: 'flex',
         flexDirection: 'column',
-        paddingLeft: '30px',
-        paddingRight: '30px',
         marginTop: '60px',
-        paddingBottom: '111px'
+
     },
     BasicInfoCard: {
         marginTop: '43px',
