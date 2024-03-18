@@ -19,4 +19,9 @@ WORKDIR /var/www/html/
 
 COPY --from=dist /app/build/ ./
 
+COPY htaccess/ /var/www/html/.htaccess
+
+RUN a2enmod rewrite
+
+COPY 000-default.conf /etc/apache2/sites-available/
 EXPOSE 80
