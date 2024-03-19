@@ -107,7 +107,7 @@ const ApplicationRoutes = (props: any) => {
         <Route path="/policy-details" element={<PolicyDetails />} />
         <Route path="*" element={<Error header={true} {...props} />} />
       </Routes>
-      {/* {showFooter && <Footer />} */}
+      {showFooter && <Footer />}
     </>
   );
 };

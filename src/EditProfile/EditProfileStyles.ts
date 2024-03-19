@@ -1,8 +1,9 @@
 const EditProfileStyles = {
   editProfile: {
     width: "100%",
-    height: "100vh",
-    "@media (max-width:600px)": {
+    height: "auto",
+    marginTop: "50px",
+    "@media (max-width:1240px)": {
       height: "100%",
     },
   },
@@ -25,48 +26,69 @@ const EditProfileStyles = {
   fieldsFirstRow: {
     display: "flex",
     gap: "55px",
-    "@media (max-width:600px)": {
+    "@media (max-width:1240px)": {
       flexDirection: "column",
       gap: "0px",
     },
   },
+
+  profilePic: {
+    "@media (min-width:1240px)": {
+      position: "absolute",
+      width: "141px",
+      height: "141px",
+      top: "137px",
+      marginLeft: "57.83%",
+      // marginLeft: "28.917%",
+      gap: "0px",
+      borderImageSource: "linear-gradient(180deg, #FFA543 0%, #FFCC83 100%)",
+    },
+    "@media (max-width:1240px)": {
+      position: "relative",
+      top: "43px",
+      marginLeft: "30.55%",
+      marginBottom: "85px",
+    },
+  },
   title: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     top: "40px",
-    left: "30px",
-    "@media (max-width:600px)": {
-      width: "320px",
+    marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      width: "88.89%",
+      marginLeft: "20px",
     },
   },
   firstName: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     top: "40px",
-    "@media (max-width:600px)": {
-      marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      marginLeft: "20px",
       marginTop: "20.5px",
-      width: "320px",
+      width: "88.89%",
     },
   },
   lastName: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     top: "66.5px",
-    left: "30px",
-    "@media (max-width:600px)": {
+    marginLeft: "30px",
+    "@media (max-width:1240px)": {
       marginTop: "-5.5px",
-      width: "320px",
+      width: "88.89%",
+      marginLeft: "20px",
     },
   },
   dob: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     top: "66.5px",
-    "@media (max-width:600px)": {
-      marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      marginLeft: "20px",
       marginTop: "20.5px",
-      width: "320px",
+      width: "88.89%",
     },
   },
   contactHeading: {
@@ -79,27 +101,29 @@ const EditProfileStyles = {
     lineHeight: "18px",
     letterSpacing: "0em",
     textAlign: "left",
-    "@media (max-width:600px)": {
+    "@media (max-width:1240px)": {
       marginTop: "100.5px",
+      marginLeft: "20px",
     },
   },
   number: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     top: "25px",
-    left: "30px",
-    "@media(max-width:600px)": {
-      width: "320px",
+    marginLeft: "30px",
+    "@media(max-width:1240px)": {
+      width: "88.89%",
+      marginLeft: "20px",
     },
   },
   mail: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     top: "25px",
-    "@media (max-width:600px)": {
-      marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      marginLeft: "20px",
       marginTop: "20.5px",
-      width: "320px",
+      width: "88.89%",
     },
   },
   addressHeading: {
@@ -112,61 +136,103 @@ const EditProfileStyles = {
     lineHeight: "18px",
     letterSpacing: "0em",
     textAlign: "left",
-    "@media (max-width:600px)": {
+    "@media (max-width:1240px)": {
       marginTop: "60.5px",
+      marginLeft: "20px",
     },
   },
   address: {
-    width: "681px",
+    width: "52%",
     height: "55px",
     top: "25px",
-    left: "30px",
-    "@media (max-width:600px)": {
-      width: "320px",
+    marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      width: "88.89%",
       height: "55px",
       top: "20.5px",
       overFlow: "ellipsis",
+      marginLeft: "20px",
     },
   },
   zipCode: {
-    width: "328px",
+    width: "24%",
     height: "110px",
     marginTop: "50px",
-    left: "30px",
-    "@media (max-width:600px)": {
+    marginLeft: "30px",
+    "@media (max-width:1240px)": {
       top: "-10.5px",
-      width: "320px",
+      width: "88.89%",
+      marginLeft: "20px",
     },
   },
   city: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     marginTop: "50px",
-    "@media (max-width:600px)": {
-      marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      marginLeft: "20px",
       marginTop: "-45.5px",
-      width: "320px",
+      width: "88.89%",
     },
   },
   state: {
-    width: "328px",
+    width: "24%",
     height: "110px",
     marginTop: "-25px",
-    left: "30px",
-    "@media (max-width:600px)": {
+    marginLeft: "30px",
+    "@media (max-width:1240px)": {
       marginTop: "20.5px",
-      width: "320px",
+      width: "88.89%",
+      marginLeft: "20px",
     },
   },
   country: {
-    width: "328px",
+    width: "24%",
     height: "55px",
     marginTop: "-25px",
-    "@media (max-width:600px)": {
-      marginLeft: "30px",
+    "@media (max-width:1240px)": {
+      marginLeft: "20px",
       marginTop: "-30px",
-      width: "320px",
+      width: "88.89%",
     },
+  },
+  button: {
+    display: "flex",
+    gap: "20px",
+    marginLeft: "74.377%",
+    marginBottom: "82px",
+    marginRight: "2.196%",
+    "@media (max-width:1240px)": {
+      marginLeft: "25px",
+      marginTop: "70px",
+      width: "88.89%",
+      marginBottom: "144px",
+    },
+  },
+  whiteButton: {
+    width: "150px",
+    height: "40px",
+    top: "5px",
+    padding: "16px 12px 16px 12px",
+    gap: "0px",
+    borderRadius: "40px",
+    opacity: "0px",
+    border: "1px solid rgba(63, 63, 63, 1)",
+    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
+    textTransform: "none",
+  },
+  blackButton: {
+    width: "150px",
+    height: "40px",
+    top: "5px",
+    padding: "16px 12px 16px 12px",
+    gap: "0px",
+    borderRadius: "40px",
+    opacity: "0px",
+    background: "rgba(63, 63, 63, 1)",
+    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
+    textTransform: "none",
+    color: "white",
   },
 };
 export default EditProfileStyles;
