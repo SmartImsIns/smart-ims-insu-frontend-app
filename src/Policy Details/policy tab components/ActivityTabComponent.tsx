@@ -22,9 +22,9 @@ const ActivityTabComponent = (props: Props) => {
         <Box sx={ActivityTabStyles.active}>
           <ActivityContainer />
         </Box>
-        <Box sx={ActivityTabStyles.carrier}>
+        {/* <Box sx={ActivityTabStyles.carrier}>
           <CarrierDetailsContainer />
-        </Box>
+        </Box> */}
       </Card>
     </Box>
   );

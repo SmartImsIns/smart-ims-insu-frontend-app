@@ -21,17 +21,17 @@
         "id":4,
         "Heading":"Claim Closed",
         "Description":"",
-        "Claim Number": "C789" ,
-        "Closure Reason": "Repairs Completed",
+        "ClaimNumber": "C789" ,
+        "ClosureReason": "Repairs Completed",
         "date":"04 Nov’ 23"
     },
     {
         "id":5,
         "Heading":"Claim Approved",
         "Description":"",
-        "Claim Number": "C789" ,
-        "Closure Reason": "Repairs Completed",
-        "Payout Amount": "$2,50",
+        "ClaimNumber": "C789" ,
+        "ClosureReason": "Repairs Completed",
+        "PayoutAmount": "$2,50",
         "date":"04 Nov’ 23"
     }
 ]
