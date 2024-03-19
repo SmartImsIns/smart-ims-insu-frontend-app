@@ -13,6 +13,7 @@ import ImsDashboard from './ImsDashboard/ImsDashboard';
 import Header from './ImsDashboard/Header/Header';
 import Footer from './ImsDashboard/Footer/Footer'
 import PolicyDetails from './Policy Details/PolicyDetails';
+import ProfileDetailsComponent from './ProfileDetails/ProfileDetailsComponent';
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -102,6 +103,7 @@ const ApplicationRoutes = (props: any) => {
         <Route path="/customer/*" element={<CustomerRoutes />} />
         <Route path="/ims-dashboard" element={<ImsDashboard />} />
         <Route path="/policy-details" element={<PolicyDetails />} />
+        <Route path="/profile-details" element={<ProfileDetailsComponent />} />
         <Route path="*" element={<Error header={true} {...props} />} />   
       </Routes>
       {showFooter && <Footer />}

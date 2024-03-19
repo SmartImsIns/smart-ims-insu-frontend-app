@@ -8,7 +8,7 @@ const Footer = () => {
       </Box>
       <Box>
         <Box sx={FooterStyle.footerItems}>
-          <Typography sx={FooterStyle.rightText}>Terms of Service </Typography>
+          <Typography sx={FooterStyle.rightText}>Terms of Service</Typography>
           <Typography sx={FooterStyle.rightText}> Privacy Policy</Typography>
         </Box>
       </Box>

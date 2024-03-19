@@ -7,7 +7,7 @@ interface ActionButtonProps {
   
 }
 
-const ActionButton: React.FC<ActionButtonProps> = ({ buttonText }) => {
+const BlackButton: React.FC<ActionButtonProps> = ({ buttonText }) => {
   return (
     <Box >
       <Button
@@ -20,4 +20,4 @@ const ActionButton: React.FC<ActionButtonProps> = ({ buttonText }) => {
   );
 }
 
-export default ActionButton;
+export default BlackButton;
