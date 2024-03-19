@@ -38,28 +38,32 @@ const Header = () => {
       }}
     >
       <Box sx={HeaderStyle.logo}>
-        <img src={headerData[0].logo} alt="smart-ims logo" />
+        <img
+          src={headerData[0].logo}
+          style={{ cursor: "pointer" }}
+          alt="smart-ims logo"
+        />
       </Box>
       <Box sx={HeaderStyle.headerItems}>
         <Box>
           <img
             src={headerData[0].notification}
             alt="notification"
-            style={{ width: "36px", height: "auto" }}
+            style={{ width: "36px", height: "auto", cursor: "pointer" }}
           />
         </Box>
         <Box>
           <img
             src={headerData[0].displayPicture}
             alt="displayPicture"
-            style={{ width: "32px", height: "auto" }}
+            style={{ width: "32px", height: "auto", cursor: "pointer" }}
           />
         </Box>
         <Box>
           <img
             src={headerData[0].menu}
             alt="menu"
-            style={{ width: "40px", height: "auto" }}
+            style={{ width: "40px", height: "auto", cursor: "pointer" }}
           />
         </Box>
       </Box>

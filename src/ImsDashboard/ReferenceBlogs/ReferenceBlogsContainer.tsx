@@ -8,7 +8,7 @@ import image1 from "../../assets/ReferenceBlogImage1.svg";
 import image2 from "../../assets/ReferenceBlogImage2.svg";
 import image3 from "../../assets/ReferenceBlogImage3.svg";
 import image4 from "../../assets/ReferenceBlogImage4.svg";
-
+import ActionButton from "../common/ActionButton";
 export interface BlogData {
   id: string;
   image?: string;
@@ -19,9 +19,9 @@ export interface BlogData {
 const getImageForId = (id: string): string => {
   switch (id) {
     case "1":
-      return image1;
-    case "2":
       return image2;
+    case "2":
+      return image1;
     case "3":
       return image3;
     case "4":
@@ -39,20 +39,19 @@ const ReferenceBlogsContainer: React.FC<{ data: BlogData }> = ({ data }) => {
         <img src={imageSrc} alt="cardImage" />
       </Box>
       <Box sx={ReferenceBlogsStyles.cardDescription}>
-        <Typography>{data.description}</Typography>
+        <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>
+          {data.description}
+        </Typography>
         <Box sx={ReferenceBlogsStyles.cardButtonIcon}>
           {data.videoUrl ? (
             <Button sx={ReferenceBlogsStyles.playButton}>
               <img src={playIcon} alt="playIcon" />
             </Button>
           ) : (
-            <Button
-              variant="contained"
-              color="secondary"
-              sx={ReferenceBlogsStyles.cardBottomButton}
-            >
-              Read More
-            </Button>
+            <ActionButton
+              sx={ReferenceBlogsStyles.readMoreButton}
+              buttonText={"Read More"}
+            />
           )}
         </Box>
       </Box>

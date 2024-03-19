@@ -2,10 +2,10 @@ import React from "react";
 import { Box, Button, Card, Typography } from "@mui/material";
 import PolicyStyles from "./PolicyStyles";
 import EllipsisMenu from "../EllipsisMenu/EllipsisMenu";
-import { useNavigate } from "react-router-dom";
 import car from "../../assets/car.svg";
 import home from "../../assets/home.svg";
-
+import ActionButton from "../common/ActionButton";
+import { useNavigate } from "react-router-dom";
 export interface PolicyData {
   id: string;
   policyNumber: string;
@@ -52,7 +52,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         <Box sx={PolicyStyles.cardTopLeft}>
           <Box>
             <Typography variant="body1" sx={PolicyStyles.cardTopPolicyHeading}>
-              Policy Number
+              Policy number
             </Typography>
             <Typography variant="body1" sx={PolicyStyles.cardTopPolicyNumber}>
               {data.policyNumber}
@@ -101,13 +101,12 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         </Typography>
       </Box>
       <Box sx={PolicyStyles.button}>
-        <Button
-          variant="contained"
-          color="secondary"
-          sx={PolicyStyles.cardBottomButton}
-        >
-          Cancel Renewal
-        </Button>
+        <Box>
+          <ActionButton
+            sx={PolicyStyles.cardBottomButton}
+            buttonText={"Cancel Renewal"}
+          />
+        </Box>
         <Box sx={PolicyStyles.ellipsisButton}>
           <EllipsisMenu />
         </Box>

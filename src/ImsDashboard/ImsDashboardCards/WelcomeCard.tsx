@@ -13,7 +13,7 @@ type Props = {};
 
 const WelcomeCard = (props: Props) => {
   return (
-    <Box sx={ImsDashboardStyle.imsDashbardContainer}>
+    <Box sx={ImsDashboardStyle.welcomeCardsContainer}>
       <DynamicTextDisplay text="Good Morning, Mathew! Need help today?" />
       <Card sx={ImsDashboardStyle.welcomeCardStyles}>
         <DashBoardCardItem src={star} alt="new-claim-icon" text="New Claim" />
@@ -21,6 +21,7 @@ const WelcomeCard = (props: Props) => {
           src={paymentHistoryIcon}
           alt="payment-history-icon"
           text="Payment History"
+          // style={{ marginTop: "10px" }}
         />
         <DashBoardCardItem
           src={roadsideAssistanceIcon}

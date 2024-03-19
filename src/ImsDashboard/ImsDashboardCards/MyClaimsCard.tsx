@@ -1,10 +1,11 @@
 import React from "react";
-import { Box, Card } from "@mui/material";
+import { Box, Card, Typography } from "@mui/material";
 import ImsDashboardStyle from "../ImsDashboardStyle";
 import myClaimsIcon from "../../assets/myClaimsIcon.svg";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import MyClaimCardItem from "../common/MyClaimCardItem";
 import BlackButton from "../common/BlackButton";
+import ActionButton from "../common/ActionButton";
 
 type Props = {};
 
@@ -27,10 +28,17 @@ const MyClaimsCard = (props: Props) => {
             contentText="Claim Initiated"
           />
           <MyClaimCardItem headText="John Doe" contentText="Contact Person" />
-          <BlackButton
-            buttonText="Track Your Claim"
-            sx={ImsDashboardStyle.myClaimsCardButtonStyles}
-          />
+          <Box sx={ImsDashboardStyle.trackYourClaimButton}>
+            <ActionButton
+              buttonText="Track Your Claim"
+              sx={ImsDashboardStyle.myClaimsCardButtonStyles}
+            />
+          </Box>
+          <Box sx={ImsDashboardStyle.trackYourClaimText}>
+            <Typography sx={ImsDashboardStyle.trackYourClaim}>
+              Track Your Claim
+            </Typography>
+          </Box>
         </Card>
       </Box>
     </Box>

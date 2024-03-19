@@ -1,4 +1,3 @@
-
 const HeaderStyle = {
   headerContainer: {
     width: "100%",
@@ -18,7 +17,7 @@ const HeaderStyle = {
   },
   headerItems: {
     display: "flex",
-    gap: "12px",
+    gap: "20px",
     alignItems: "center",
     paddingRight: "34px",
   },

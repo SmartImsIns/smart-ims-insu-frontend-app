@@ -5,6 +5,7 @@ import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../common/DashBoardCardItem";
 import BlackButton from "../common/BlackButton";
+import ActionButton from "../common/ActionButton";
 
 type Props = {};
 
@@ -32,9 +33,9 @@ const AttentionCard = (props: Props) => {
           </Box>
         </Box>
         <Box sx={ImsDashboardStyle.ActionButton}>
-          <BlackButton
-            sx={ImsDashboardStyle.ActionButtonStyles}
-            buttonText={"Renew Now"}
+          <ActionButton
+            sx={ImsDashboardStyle.renewNowButton}
+            buttonText="Renew Now"
           />
         </Box>
       </Card>
