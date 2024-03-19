@@ -1,11 +1,10 @@
-
 const HeaderStyle = {
   headerContainer: {
     width: "100%",
-    position:"fixed",
-    zIndex:"1",
-    transition:"transform s ease",
-    top:"0",
+    position: "fixed",
+    zIndex: "1",
+    transition: "transform s ease",
+    top: "0",
     height: "60px",
     display: "flex",
     justifyContent: "space-between",
@@ -18,7 +17,7 @@ const HeaderStyle = {
   },
   headerItems: {
     display: "flex",
-    gap: "12px",
+    gap: "20px",
     alignItems: "center",
     paddingRight: "34px",
   },

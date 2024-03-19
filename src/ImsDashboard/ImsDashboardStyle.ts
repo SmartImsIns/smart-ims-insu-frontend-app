@@ -1,18 +1,38 @@
 const ImsDashboardStyle = {
   container: {
     paddingTop: "40px",
-    maxWidth:"1920px",
-    margin:"0px auto 0px auto",
-
+    maxWidth: "1920px",
+    margin: "0px auto 0px auto",
   },
   flex1: {
     flex: "1 1 0%",
+  },
+  welcomeCardsContainer: {
+    paddingLeft: "30px",
+    paddingRight: "30px",
+    marginTop: "60px",
+    "@media (max-width: 599px)": {
+      paddingLeft: "20px",
+      paddingRight: "20px",
+      marginTop: "40px",
+    },
+    "@media (min-width: 600px) and (max-width: 1024px)": {
+      paddingLeft: "25px",
+      paddingRight: "25px",
+      marginTop: "30px",
+    },
+    "@media (min-width: 1024px) and (max-width: 1920px)": {
+      paddingLeft: "30px",
+      paddingRight: "30px",
+      // marginTop: "40px",
+    },
   },
   imsDashbardContainer: {
     paddingTop: "40px",
     paddingLeft: "30px",
     paddingRight: "30px",
-    marginTop: "40px",
+    // marginTop: "40px",
+
     "@media (max-width: 599px)": {
       paddingLeft: "20px",
       paddingRight: "20px",
@@ -26,7 +46,7 @@ const ImsDashboardStyle = {
     "@media (min-width: 1024px) and (max-width: 1920px)": {
       paddingLeft: "30px",
       paddingRight: "30px",
-      marginTop: "40px",
+      // marginTop: "40px",
     },
   },
   claimsData: {
@@ -37,7 +57,7 @@ const ImsDashboardStyle = {
   claimsCardWrapperStyles: {
     display: "flex",
     gap: "22px",
-    marginRight: "57px",
+    // marginRight: "57px",
     padding: "15px",
     "@media (max-width:599px)": {
       marginRight: "0px",
@@ -79,16 +99,19 @@ const ImsDashboardStyle = {
     fontSize: "20px",
     fontStyle: "normal",
     fontWeight: 300,
-    lineHeight: "110%", // 22px
+    lineHeight: "22px", // 22px
     "@media (max-width: 599px)": {
       fontSize: "16px",
-      marginLeft: "10px",
-      maxWidth: "100px",
+      paddingLeft: "10px",
+      marginLeft: "0px",
+      textAlign: "center",
+      minWidth: "120px",
+      maxHeight: "36px",
     },
     "@media(min-width: 600px) and (max-width: 1023px)": {
       fontSize: "14px",
       marginLeft: "10px",
-      maxWidth: "100px",
+      maxWidth: "140px",
     },
   },
   AttentionCardStyles: {
@@ -112,10 +135,53 @@ const ImsDashboardStyle = {
       padding: "20px",
     },
   },
+  trackYourClaimButton: {
+    display: "block",
+    "@media (max-width:599px)": {
+      display: "none",
+    },
+  },
+  trackYourClaimText: {
+    display: "none",
+    marginLeft: "142px",
+    minWidth: "118px",
+    "@media (max-width:599px)": {
+      display: "block",
+    },
+  },
+  trackYourClaim: {
+    fontFamily: "Lato",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "16px",
+    letterSpacing: "0px",
+    textAlign: "left",
+    color: "rgba(44, 108, 231, 1)",
+  },
   ActionButton: {
     "@media (max-width:599px)": {
       marginTop: "10px",
     },
+  },
+  renewNowButton: {
+    textTransform: "none",
+    display: "flex",
+    width: "fit-content",
+    minWidth: "155px",
+    height: 40,
+    padding: "16px 12px",
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+    borderRadius: "40px",
+    backgroundColor: "#3F3F3F",
+    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
+    color: "var(--Default-White, #FFF)",
+    fontWeight: 400,
+    fontFamily: "Noto Sans",
+    lineHeight: 1,
+    letterSpacing: 0.5,
+    marginLeft: "auto",
   },
   myClaimsCardStyles: {
     // height: "112px",
@@ -127,13 +193,12 @@ const ImsDashboardStyle = {
     padding: "15px",
     border: "1px solid #C9E1EC",
     flexWrap: "wrap",
+    justifyContent: "space-between",
+    paddingRight: "42px",
     boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
     "@media (max-width:599px)": {
-      // width: "100%",
-      // maxWidth: "229px",
-      // height: "272px",
-      // lineHeight: "19.8px",
-      // marginRight: "0px",
+      height: "309px",
+      paddingRight: "0px",
       justifyContent: "space-between",
     },
     "@media (min-width:600px) and (max-width:1024px)": {
@@ -148,9 +213,25 @@ const ImsDashboardStyle = {
     },
   },
   myClaimsCardButtonStyles: {
-    marginLeft: "auto",
     textTransform: "none",
-    marginRight: "38px",
+    display: "flex",
+    width: "fit-content",
+    minWidth: "155px",
+    height: 40,
+    padding: "16px 12px",
+    justifyContent: "center",
+    alignItems: "center",
+    flexShrink: 0,
+    borderRadius: "40px",
+    backgroundColor: "#3F3F3F",
+    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
+    color: "var(--Default-White, #FFF)",
+    fontWeight: 400,
+    fontFamily: "Noto Sans",
+    lineHeight: 1,
+    letterSpacing: 0.5,
+    // marginRight: "28px",
+    marginLeft: "auto",
   },
   ClaminsContentStyles: {
     display: "flex",
@@ -191,6 +272,8 @@ const ImsDashboardStyle = {
     flexDirection: "row",
     justifyContent: "center",
     alignItems: "center",
+    cursor: "pointer",
+ 
     "@media (max-width: 599px)": {
       display: "inline-flex",
       flexDirection: "column",
@@ -198,6 +281,9 @@ const ImsDashboardStyle = {
       alignItems: "center",
       gap: "10px",
       height: "68px",
+      img: {
+        height: "40px",
+      },
     },
     "@media(min-width: 600px) and (max-width: 800px)": {
       maxWidth: "100px",
@@ -215,7 +301,7 @@ const ImsDashboardStyle = {
     lineHeight: "110%", // 19.8px
     // whiteSpace: "nowrap",
     "@media (max-width:599px)": {
-      fontSize: "16px",
+      fontSize: "14px",
       fontWeight: "400",
       maxWidth: "500px",
     },
@@ -228,14 +314,13 @@ const ImsDashboardStyle = {
     fontStyle: "normal",
     fontFamily: "Noto Sans",
     fontWeight: "300",
-    lineHeight: "110%", // 19.8px
-    // whiteSpace: "nowrap",
+    lineHeight: "19.8px", // 19.8px
     "@media(max-width:599px)": {
-      fontSize: "16px",
+      fontSize: "14px",
       fontWeight: "300",
-      // width: "300px",
-      height: "auto",
-      // border: "2px solid",
+      fontFamily: "Lato",
+      lineHeight: "24px",
+      color: "#1D252B",
     },
   },
   AttentionsCardTextStyle: {
@@ -255,9 +340,9 @@ const ImsDashboardStyle = {
       alignItems: "flex-start",
     },
   },
+
   ActionButtonStyles: {
     textTransform: "none",
-    marginRight: "38px",
     display: "flex",
     width: "fit-content",
     minWidth: "155px",
@@ -266,7 +351,7 @@ const ImsDashboardStyle = {
     justifyContent: "center",
     alignItems: "center",
     flexShrink: 0,
-    borderRadius: 40,
+    borderRadius: "40px",
     backgroundColor: "#3F3F3F",
     boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     color: "var(--Default-White, #FFF)",
@@ -283,6 +368,9 @@ const ImsDashboardStyle = {
     fontWeight: 400,
     fontFamily: "Playfair Display",
     lineHeight: "110%" /*22px*/,
+  },
+  secondCardItem: {
+    marginTop: "16px",
   },
 };
 export default ImsDashboardStyle;

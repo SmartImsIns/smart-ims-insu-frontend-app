@@ -34,7 +34,7 @@ const AttentionCard = (props: Props) => {
           </Box>
       </Box>
       <Box  sx={ImsDashboardStyle.ActionButton}>
-      <ActionButton buttonText="Renew Now"  />
+      <ActionButton sx={ImsDashboardStyle.renewNowButton} buttonText="Renew Now"  />
       </Box>
     </Card>
   </Box>
