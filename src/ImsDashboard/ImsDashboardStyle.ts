@@ -124,6 +124,7 @@ const ImsDashboardStyle = {
     justifyContent: "space-between",
     marginTop: "22px",
     paddingLeft: "23.63px",
+    paddingRight: "42px",
     border: "1px solid #C9E1EC",
     boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
     "@media (max-width:599px)": {
