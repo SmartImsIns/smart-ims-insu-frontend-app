@@ -1,7 +1,17 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import {
+  Badge,
+  Box,
+  ThemeProvider,
+  Typography,
+  createTheme,
+} from "@mui/material";
 import car from "../../assets/car.svg";
 import tickIcon from "../../assets/tick.svg";
+import basicInfoCardStyles, {
+  BasicInfoCardStyles,
+} from "./BasicInfoCardStyles";
+import DividerDot from "./DividerDot";
 
 interface BasicInfoMockProp {
   headName?: string;
@@ -12,136 +22,136 @@ interface BasicInfoMockProp {
   annaulPrice?: string;
   term?: string;
   vaild?: string;
+  status?: string;
 }
 
 const BasicInfoMock = {
   policyDetailsHead: "Policy Details",
-  vechileName: "Elena Rodriguez",
+  vehicleName: "Elena Rodriguez",
   numberOfVEchiles: "2",
   billingHead: "Billing Details",
   price: "821.00 ",
   dueDate: "01 Mar’24",
-  premiumHead: "Premium & term  Details",
+  premiumHead: "Premium & Term Details",
   annaulPrice: "2917.00",
   term: "1 Year",
   vaild: "02 Mar ‘23 - 01 Mar’24",
-};
-
-const styles = {
-  head: {
-    fontSize: "18px",
-    fontWeight: "300",
-    fontFamily: "Noto sans",
-    color: "#1D252B",
-  },
-  content: {
-    fontSize: "20px",
-    fontWeight: "400",
-    fontFamily: "Noto sans",
-    color: "#1D252B",
-  },
-  box: {
-    marginLeft: "67.55px",
-    paddingTop: "27px",
-    paddingBottom: "42px",
-    display: "grid",
-    gridTemplateColumns: "repeat(2,1fr)",
-    overflow: "hidden",
-    rowGap: "30px",
-  },
+  status: "Active",
 };
 
 const BasicInfoCard: React.FC<BasicInfoMockProp> = () => {
+  const {
+    container,
+    box,
+    head,
+    content,
+    logoContainer,
+    imageBox,
+    statusText,
+  }: BasicInfoCardStyles = basicInfoCardStyles;
+
+  const theme = createTheme({
+    palette: {
+      primary: {
+        main: "#000",
+      },
+    },
+  });
+
   return (
-    <Box
-      sx={{ justifyContent: "space-between", display: "flex" }}
-      aria-label="Basic card info details"
-    >
-      <Box sx={{ paddingLeft: "30px", paddingTop: "31px" }}>
-        <img src={car} alt="car-logo" />
-        <Box sx={{ display: "flex", gap: "6.5px", marginTop: "14.79px" }}>
-          <img src={tickIcon} alt="car-logo" />
-          <Typography
-            color="#56CF66"
-            fontSize={"16px"}
-            fontWeight={400}
-            fontFamily={"Noto Sans"}
+    <ThemeProvider theme={theme}>
+      <Box sx={container} aria-label="Basic card info details container">
+        <Box sx={logoContainer}>
+          <img src={car} alt="car-logo" style={{ width: "64.449px" }} />
+          <Box sx={imageBox}>
+            <img src={tickIcon} alt="tick-logo" />
+            <Typography sx={statusText}>{BasicInfoMock.status}</Typography>
+          </Box>
+        </Box>
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "column",
+            marginLeft: "67.55px",
+            "@media (max-width: 599px)": {
+              marginLeft: "20.55px",
+              marginTop: "20px",
+            },
+          }}
+        >
+          <Box sx={box} aria-label="Basic card info details">
+            <Box
+              sx={{
+                paddingRight: "101px",
+                display: "flex",
+                gap: "10px",
+                flexDirection: "column",
+              }}
+              aria-label="Basic details"
+            >
+              <Typography sx={head}>
+                {BasicInfoMock.policyDetailsHead}
+              </Typography>
+              <Box sx={{ display: "flex" }}>
+                <Typography sx={content}>
+                  {BasicInfoMock.vehicleName}{" "}
+                </Typography>
+                <Typography sx={{ paddingLeft: "20px", ...content }}>
+                  • {BasicInfoMock.numberOfVEchiles} {"vehicles"}
+                </Typography>
+              </Box>
+            </Box>
+            <Box sx={{ display: "flex", gap: "10px", flexDirection: "column" }}>
+              <Typography sx={head}>{BasicInfoMock.billingHead}</Typography>
+              <Box sx={{ display: "flex" }}>
+                <Typography sx={content}>$ {BasicInfoMock.price} </Typography>
+                <Typography sx={{ paddingLeft: "20px", ...content }}>
+                  • {"Due on"} {BasicInfoMock.dueDate}
+                </Typography>
+              </Box>
+            </Box>
+          </Box>
+          <Box
+            sx={{
+              display: "flex",
+              gap: "10px",
+              flexDirection: "column",
+              "@media (max-width: 599px)": {
+                gap: "15px",
+              },
+            }}
           >
-            {"Active"}
-          </Typography>
-        </Box>
-      </Box>
-      <Box sx={styles.box}>
-        <Box>
-          <Typography sx={styles.head}>{BasicInfoMock.premiumHead}</Typography>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={styles.content}>
-              {BasicInfoMock.vechileName}{" "}
-            </Typography>
-            <ul
-              style={{
-                margin: 0,
+            <Typography sx={head}>{BasicInfoMock.premiumHead}</Typography>
+            <Box
+              sx={{
                 display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
+                "@media (max-width: 599px)": {
+                  flexDirection: "column",
+                },
               }}
             >
-              <li>
-                <Typography sx={styles.content}>
-                  {BasicInfoMock.numberOfVEchiles} vehicles
-                </Typography>
-              </li>
-            </ul>
-          </Box>
-        </Box>
-        <Box>
-          <Typography sx={styles.head}>{BasicInfoMock.billingHead}</Typography>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={styles.content}>
-              $ {BasicInfoMock.price}{" "}
-            </Typography>
-            <ul
-              style={{
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <li>
-                <Typography sx={styles.content}>
-                  {" "}
-                  Due on {BasicInfoMock.dueDate}
-                </Typography>
-              </li>
-            </ul>
-          </Box>
-        </Box>
-        <Box>
-          <Typography sx={styles.head}>{BasicInfoMock.premiumHead}</Typography>
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <Typography sx={styles.content}>
-              $ {BasicInfoMock.annaulPrice} / {BasicInfoMock.term}{" "}
-            </Typography>
-            <ul
-              style={{
-                margin: 0,
-                display: "flex",
-                flexDirection: "column",
-                alignItems: "center",
-              }}
-            >
-              <li>
-                <Typography sx={styles.content}>
-                  {" "}
-                  {BasicInfoMock.vaild}
-                </Typography>
-              </li>
-            </ul>
+              <Typography sx={content}>
+                $ {BasicInfoMock.annaulPrice} / {BasicInfoMock.term}{" "}
+              </Typography>
+              {/* <Badge
+                color="primary"
+                variant="dot"
+                sx={{ display: "flex" }}
+              ></Badge> */}
+              {/* <DividerDot /> */}
+              <Typography
+                sx={{
+                  paddingLeft: "20px",
+                  ...content,
+                }}
+              >
+                • {BasicInfoMock.vaild}
+              </Typography>
+            </Box>
           </Box>
         </Box>
       </Box>
-    </Box>
+    </ThemeProvider>
   );
 };
 

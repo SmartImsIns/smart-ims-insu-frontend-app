@@ -2,9 +2,7 @@ import { SxProps } from '@mui/system';
 
 export const policyBreadCrumbStyle: SxProps = {
     display: 'inline-flex',
-    alignItems: "center",
     gap: '10px',
-    cursor: 'pointer',
     "@media (max-width: 599px)": {
         paddingLeft: "20px",
         marginTop: "20px",
@@ -15,7 +13,6 @@ export const policyBreadCrumbStyle: SxProps = {
     },
     "@media (min-width: 1024px) and (max-width: 1920px)": {
         paddingLeft: "30px",
-        paddingRight: "30px",
         marginTop: "40.23px",
     },
 };

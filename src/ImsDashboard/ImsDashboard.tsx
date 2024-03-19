@@ -12,7 +12,7 @@ const ImsDashboard = (props: Props) => {
   return (
     <Box sx={ImsDashboardStyle.container}>
       <WelcomeCard />
-      <AttentionCard />z
+      <AttentionCard />
       <MyClaimsCard />
       <PolicyContainer />
       <ReferenceBlogs />

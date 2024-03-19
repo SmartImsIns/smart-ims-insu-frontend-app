@@ -1,9 +1,10 @@
 import React from "react";
-import { Box, Typography } from "@mui/material";
+import { Box, Button, Typography, useMediaQuery } from "@mui/material";
 import PolicyDetailsStyles from "../PolicyDetailsStyles";
 import WhiteButton from "../commonComponents/WhiteButton";
+import verticalEllipse from "../../assets/vertical_ellipse.svg";
 
-const ButtonText = [
+const buttonText = [
   "File a claim",
   "Contact Agent",
   "Enable Auto Pay",
@@ -22,6 +23,7 @@ const buttonStyles = {
   lineHeight: "110%",
   fontWeight: 300,
   fontStyle: "normal",
+  "@media (max-width: 599px)": {},
 };
 
 const quickStyle = {
@@ -34,25 +36,60 @@ const quickStyle = {
   fontWeight: 300,
   lineHeight: "110%", // 19.8px
   marginBottom: "13px",
+
+  "@media (max-width: 599px)": {
+    display: "none",
+  },
+  "@media (min-width: 600px) and (max-width: 1024px)": {},
+  "@media (min-width: 1024px) and (max-width: 1920px)": {},
 };
 
-function BasicInfoCardQuickActions() {
+const BasicInfoCardQuickActions: React.FC = () => {
+  const isMobile = useMediaQuery("(max-width:599px)");
+
   return (
-    <Box sx={PolicyDetailsStyles.BasicInfoQuickActionContainer}>
-      <Box>
-        <Typography sx={quickStyle}>Quick actions</Typography>
-      </Box>
-      <Box sx={PolicyDetailsStyles.BasicInfoQuickActionCard}>
-        {ButtonText?.map((text, index) => (
-          <WhiteButton
-            key={index}
-            buttonText={text}
-            buttonStyles={buttonStyles}
-          />
-        ))}
-      </Box>
+    <Box
+      sx={PolicyDetailsStyles.BasicInfoQuickActionContainer}
+      aria-label="Quick Actions Container"
+    >
+      {isMobile ? (
+        <Box
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            marginTop: "15px",
+            marginBottom: "15px",
+            marginLeft: "20px",
+            marginRight: "20px",
+            justifyContent: "space-between",
+          }}
+        >
+          <Box>
+            <WhiteButton
+              buttonText={"File a claim"}
+              buttonStyles={buttonStyles}
+            />
+          </Box>
+          <Box>
+            <img src={verticalEllipse} alt="vertical_ellipse" />
+          </Box>
+        </Box>
+      ) : (
+        <>
+          <Typography sx={quickStyle}>Quick actions</Typography>
+          <Box sx={PolicyDetailsStyles.BasicInfoQuickActionCard}>
+            {buttonText.map((text, index) => (
+              <WhiteButton
+                key={index}
+                buttonText={text}
+                buttonStyles={buttonStyles}
+              />
+            ))}
+          </Box>
+        </>
+      )}
     </Box>
   );
-}
+};
 
 export default BasicInfoCardQuickActions;

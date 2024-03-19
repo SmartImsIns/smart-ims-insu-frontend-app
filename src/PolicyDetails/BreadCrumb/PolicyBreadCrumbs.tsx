@@ -24,8 +24,16 @@ const PolicyBreadCrumbs = () => {
   );
 
   return (
-    <Box onClick={(e: any) => handleClick(e)} sx={policyBreadCrumbStyle}>
-      <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+    <Box sx={policyBreadCrumbStyle}>
+      <Box
+        onClick={(e: any) => handleClick(e)}
+        sx={{
+          display: "flex",
+          alignItems: "center",
+          gap: "10px",
+          cursor: "pointer",
+        }}
+      >
         <img src={leftArrowIcon} alt="leftArrow" />
         <Breadcrumbs
           separator={<NavigateNextIcon fontSize="small" />}
