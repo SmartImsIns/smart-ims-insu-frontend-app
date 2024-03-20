@@ -5,7 +5,7 @@ const ReferenceBlogsStyles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "8.09px",
+    gap: "20.09px",
     width: "100%",
     "@media(min-width: 360px) and (max-width: 599px)": {
       display: "none",
@@ -29,10 +29,11 @@ const ReferenceBlogsStyles = {
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    gap: "40px",
-    width: "97%",
+    gap: "40.18px",
+    width: "96%",
     maxWidth: "100%",
-    paddingLeft: "30px",
+    padding: " 0px 30px",
+
     "@media(min-width: 600px) and (max-width: 1023px)": {
       paddingLeft: "20px",
       gap: "10px",
@@ -147,17 +148,15 @@ const ReferenceBlogsStyles = {
     display: "flex",
     width: "fit-content",
     minWidth: "150px",
-    height: 40,
     padding: "16px 12px",
     justifyContent: "center",
     alignItems: "center",
-    flexShrink: 0,
     borderRadius: "40px",
     backgroundColor: "#FFFFFF",
     color: "rgba(63, 63, 63, 1)",
     border: "1px solid rgba(63, 63, 63, 1)",
-    fontWeight: 400,
-    fontFamily: "Noto Sans",
+    fontWeight: "400",
+    fontFamily: "Lato",
     lineHeight: 1,
     letterSpacing: 0.5,
     marginLeft: "-4px",
@@ -190,6 +189,10 @@ const ReferenceBlogsStyles = {
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
+
+    "@media(min-width: 600px) and (max-width: 700px)": {
+      fontSize: "14px",
+    },
   },
   cardButtonIcon: {
     position: "absolute",

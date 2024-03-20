@@ -388,7 +388,8 @@ const PolicyStyles = {
     justifyContent: "space-between",
   },
   cardBottomButton: {
-    ...font,
+    fontFamily: "Lato",
+    fontWeight:"400",
     width: "100%",
     maxWidth: "155px",
     height: "40px",
