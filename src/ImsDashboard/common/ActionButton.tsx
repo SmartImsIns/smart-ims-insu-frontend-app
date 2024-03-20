@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, SxProps, Button } from "@mui/material";
-import ImsDashboardStyle from "../ImsDashboardStyle";
 
 interface ActionButtonProps {
   buttonText: string;

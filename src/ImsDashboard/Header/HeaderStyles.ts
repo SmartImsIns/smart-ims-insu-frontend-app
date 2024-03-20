@@ -11,6 +11,21 @@ const HeaderStyle = {
     backgroundColor: "#FFFFFF",
     boxShadow: "0px 4px 14px 0px #00000014",
   },
+  menuIcon: {
+    width: "40px",
+    height: "auto",
+    cursor: "pointer",
+  },
+  displayPicture: {
+    width: "32px",
+    height: "auto",
+    cursor: "pointer",
+  },
+  notificationIcon: {
+    width: "36px",
+    height: "auto",
+    cursor: "pointer",
+  },
   logo: {
     paddingLeft: "30px",
     paddingTop: "9.77px",

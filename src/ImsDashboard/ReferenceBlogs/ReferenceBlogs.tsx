@@ -3,13 +3,12 @@ import ReferenceBlogsContainer from "./ReferenceBlogsContainer";
 import { Box, Typography } from "@mui/material";
 import ReferenceBlogsStyles from "./ReferenceBlogsStyles";
 import { Carousel } from "react-responsive-carousel";
-// import Carousel from '@mui/lab/Carousel';
 import viewAllArrow from "../../assets/viewAllArrow.svg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import * as blogsData from "../../mockJson/CustomerDashboard/ReferenceBlogsData.json";
-
+import { quickReferences,viewAll } from "../../constants/Constants";
 const ReferenceBlogs: React.FC = () => {
-  const parsedBlogsData = JSON.parse(JSON.stringify(blogsData)); // Parse JSON data
+  const parsedBlogsData = JSON.parse(JSON.stringify(blogsData));
   const dataArray = Object.values(parsedBlogsData);
   console.log(dataArray);
   const maxItemsToMap = dataArray.length - 2;
@@ -19,11 +18,11 @@ const ReferenceBlogs: React.FC = () => {
       <Box sx={ReferenceBlogsStyles.container}>
         <Box sx={ReferenceBlogsStyles.innerContainer}>
           <Typography sx={ReferenceBlogsStyles.containerHeading}>
-            Quick References For You
+            {quickReferences}
           </Typography>
           <Box sx={ReferenceBlogsStyles.policyCardViewAllBox}>
             <Typography sx={ReferenceBlogsStyles.policyCardViewAll}>
-              View All
+            {viewAll}
             </Typography>
             <img src={viewAllArrow} alt="view-all-arrow" />
           </Box>
@@ -36,7 +35,7 @@ const ReferenceBlogs: React.FC = () => {
       </Box>
       <Box sx={ReferenceBlogsStyles.carouselContainer}>
         <Typography sx={ReferenceBlogsStyles.containerHeading}>
-          Quick References For You
+          {quickReferences}
         </Typography>
         <Box sx={ReferenceBlogsStyles.carousel}>
           <Carousel
