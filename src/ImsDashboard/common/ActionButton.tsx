@@ -9,10 +9,6 @@ interface ActionButtonProps {
 
 const ActionButton: React.FC<ActionButtonProps> = ({ buttonText, sx }) => {
   return (
-    // <Button
-    //   variant="contained"
-      // sx={{ ...ImsDashboardStyle.ActionButtonStyles, ...classes }}
-    // >
     <Button variant="contained" sx={{ ...sx }}>
       {buttonText}
     </Button>

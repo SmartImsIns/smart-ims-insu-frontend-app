@@ -18,7 +18,7 @@ const PolicyStyles = {
   policyCardHeading: {
     ...font,
     width: "100%",
-    maxWidth: "237px",
+    maxWidth: "257px",
     height: "22px",
     marginTop: "38.78px",
     marginLeft: "30px",
@@ -42,10 +42,6 @@ const PolicyStyles = {
   AllCards: {
     display: "flex",
     width: "100%",
-    // maxWidth:"1306px",
-    // margin:"0px auto 0px 30px",
-    // gap:"30px",
-
     "@media (min-width:360px) and (max-width:599px)": {
       width: "100%",
       maxWidth: "320px",
@@ -220,7 +216,7 @@ const PolicyStyles = {
     color: "rgba(29, 37, 43, 1)",
     fontSize: "20px",
     fontWeight: "400",
-    lineHeight: "22px",
+    lineHeight: "17px",
     letterSpacing: "0em",
     textAlign: "left",
 
@@ -305,7 +301,7 @@ const PolicyStyles = {
     ...font,
     ...commonStyles,
     width: "100%",
-    maxWidth: "186px",
+    maxWidth: "200px",
     height: "20px",
     marginTop: "11px",
     marginLeft: "40px",

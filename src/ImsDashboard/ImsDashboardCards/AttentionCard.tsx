@@ -13,7 +13,7 @@ const AttentionCard = (props: Props) => {
 
   return (
     <Box sx={ImsDashboardStyle.imsDashbardContainer}>
-    <DynamicTextDisplay text="Things needs your Attentions" />
+    <DynamicTextDisplay text="Things Needs Your Attentions" />
     <Card sx={ImsDashboardStyle.AttentionCardStyles}>
       <Box sx={ImsDashboardStyle.AttentionsCardBoxStyle} >
         <Box>
@@ -28,8 +28,8 @@ const AttentionCard = (props: Props) => {
         <Typography
           sx={ImsDashboardStyle.ContentStyle}
           >
-          Renewal amount : $821 | due date : 22 Mar 2024 : Tax and Fee may
-          apply.
+          Renewal Amount : $821 | Due Date : 22 Mar 2024 : Tax and Fee May
+          Apply.
         </Typography>
           </Box>
       </Box>
