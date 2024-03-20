@@ -273,7 +273,7 @@ const ImsDashboardStyle = {
     justifyContent: "center",
     alignItems: "center",
     cursor: "pointer",
- 
+
     "@media (max-width: 599px)": {
       display: "inline-flex",
       flexDirection: "column",
@@ -298,7 +298,7 @@ const ImsDashboardStyle = {
     fontFamily: "Noto Sans",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "110%", // 19.8px
+    lineHeight: "111.5%", // 19.8px
     // whiteSpace: "nowrap",
     "@media (max-width:599px)": {
       fontSize: "14px",

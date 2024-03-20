@@ -17,13 +17,7 @@ const ReferenceBlogs: React.FC = () => {
   return (
     <Box sx={ReferenceBlogsStyles.referenceBlogContainer}>
       <Box sx={ReferenceBlogsStyles.container}>
-        <Box
-          sx={{
-            display: "flex",
-            flexDirection: "row",
-            justifyContent: "space-between",
-          }}
-        >
+        <Box sx={ReferenceBlogsStyles.innerContainer}>
           <Typography sx={ReferenceBlogsStyles.containerHeading}>
             Quick References For You
           </Typography>

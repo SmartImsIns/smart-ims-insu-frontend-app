@@ -5,7 +5,7 @@ const ReferenceBlogsStyles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
+    gap: "20.49px",
     width: "100%",
     "@media(min-width: 360px) and (max-width: 599px)": {
       display: "none",
@@ -104,6 +104,12 @@ const ReferenceBlogsStyles = {
       margin: "30px",
     },
   },
+  innerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
   carousel: {
     // border: "2px solid",
     width: "295.81px",

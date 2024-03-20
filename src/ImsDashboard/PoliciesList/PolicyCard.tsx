@@ -46,7 +46,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         <Box sx={PolicyStyles.cardTopLeft}>
           <Box>
             <Typography variant="body1" sx={PolicyStyles.cardTopPolicyHeading}>
-              Policy number
+              Policy Number
             </Typography>
             <Typography variant="body1" sx={PolicyStyles.cardTopPolicyNumber}>
               {data.policyNumber}
@@ -68,7 +68,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         </Typography>
         <Box sx={PolicyStyles.autoDeduct}>
           <Typography variant="body1" sx={PolicyStyles.cardBodyPremium}>
-            premium: {data.premium} | term: {data.term}
+            Premium: {data.premium} | Term: {data.term}
           </Typography>
           <Box sx={PolicyStyles.cardBodyPremiumAuto}>
             <Typography component="span" variant="body1">
@@ -78,7 +78,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         </Box>
         <Box sx={PolicyStyles.card}>
           <Typography variant="body1" sx={PolicyStyles.cardBodyDueDate}>
-            due date: {data.dueDate}
+            Due Date: {data.dueDate}
           </Typography>
           {Number(data.days) <= 15 && (
             <Typography
