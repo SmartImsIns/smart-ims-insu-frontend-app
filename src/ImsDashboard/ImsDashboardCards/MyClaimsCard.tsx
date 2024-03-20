@@ -45,6 +45,7 @@ const MyClaimsCard: React.FC = () => {
   return (
     <Box sx={ImsDashboardStyle.imsDashbardContainer}>
       <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
+
       {claimdata?.map((claim, id) => (
         <Box key={id}>
           <Card sx={ImsDashboardStyle.myClaimsCardStyles}>

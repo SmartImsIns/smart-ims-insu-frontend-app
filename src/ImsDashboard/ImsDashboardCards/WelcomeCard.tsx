@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card } from "@mui/material";
+import { Box } from "@mui/material";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import ImsDashboardStyle from "../ImsDashboardStyle";
 import DashBoardCardItem from "../common/DashBoardCardItem";
@@ -12,15 +12,14 @@ import {
   PAYMENT_ICON,
   roadSideAssistance,
   STAR_ICON,
+  name,
 } from "../../constants/Constants";
 
-type Props = {};
-
-const WelcomeCard: React.FC = (props: Props) => {
+const WelcomeCard: React.FC = () => {
   return (
     <Box sx={ImsDashboardStyle.welcomeCardsContainer}>
-      <DynamicTextDisplay text="Good Morning, Mathew! Need help today?" />
-      <Card sx={ImsDashboardStyle.welcomeCardStyles}>
+      <DynamicTextDisplay text={`Good Morning, ${name}! Need Help Today?`} />
+      <Box sx={ImsDashboardStyle.welcomeCardStyles}>
         <DashBoardCardItem
           src={STAR_ICON}
           alt="new-claim-icon"
@@ -30,7 +29,6 @@ const WelcomeCard: React.FC = (props: Props) => {
           src={PAYMENT_ICON}
           alt="payment-history-icon"
           text={paymentHistory}
-          // style={{ marginTop: "10px" }}
         />
         <DashBoardCardItem
           src={ASSISTANCE_ICON}
@@ -42,7 +40,7 @@ const WelcomeCard: React.FC = (props: Props) => {
           alt="Learn-About-icon"
           text={learnAbout}
         />
-      </Card>
+      </Box>
     </Box>
   );
 };

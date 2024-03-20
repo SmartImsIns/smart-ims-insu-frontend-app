@@ -23,6 +23,7 @@ export const newClaim = "New Claim";
 export const paymentHistory = "Payment History";
 export const roadSideAssistance = "Roadside Assistance";
 export const learnAbout = "Learn about Insurance";
+export const name = "Mathew";
 
 export const MYCLAIM_ICON = myClaimsIcon;
 export const CAR_ICON = carIcon;

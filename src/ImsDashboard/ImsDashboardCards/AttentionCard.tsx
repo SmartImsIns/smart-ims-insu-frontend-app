@@ -21,7 +21,7 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
 }) => {
   return (
     <Box sx={ImsDashboardStyle.imsDashbardContainer}>
-      <DynamicTextDisplay text="Things needs your Attentions" />
+      <DynamicTextDisplay text="Things Need Your Attention" />
       <Card sx={ImsDashboardStyle.AttentionCardStyles}>
         <Box sx={ImsDashboardStyle.AttentionsCardBoxStyle}>
           <Box>
