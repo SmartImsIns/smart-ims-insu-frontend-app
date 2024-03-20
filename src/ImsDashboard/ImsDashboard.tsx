@@ -1,6 +1,6 @@
 import WelcomeCard from "./ImsDashboardCards/WelcomeCard";
 import MyClaimsCard from "./ImsDashboardCards/MyClaimsCard";
-import AttentionCard from "./ImsDashboardCards/AttentionCard";
+import AttentionCardContainer from "./ImsDashboardCards/AttensionCardContainer";
 import { Box } from "@mui/material";
 import PolicyContainer from "./PoliciesList/PolicyContainer";
 import ReferenceBlogs from "./ReferenceBlogs/ReferenceBlogs";
@@ -12,7 +12,7 @@ const ImsDashboard = (props: Props) => {
   return (
     <Box sx={ImsDashboardStyle.container}>
       <WelcomeCard />
-      <AttentionCard />
+      <AttentionCardContainer />
       <MyClaimsCard />
       <PolicyContainer />
       <ReferenceBlogs />

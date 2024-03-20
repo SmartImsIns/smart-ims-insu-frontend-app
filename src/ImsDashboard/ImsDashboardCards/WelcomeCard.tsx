@@ -2,35 +2,45 @@ import React from "react";
 import { Box, Card } from "@mui/material";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import ImsDashboardStyle from "../ImsDashboardStyle";
-import roadsideAssistanceIcon from "../../assets/roadsideAssistanceIcon.svg";
-// import paymentHistoryIcon from "../../assets/paymentHistoryIcon.svg";
-import paymentHistoryIcon from "../../assets/Group 1000009236.svg";
-import star from "../../assets/star.svg";
-import learnAboutIcon from "../../assets/Group 1000009237.svg";
 import DashBoardCardItem from "../common/DashBoardCardItem";
+import {
+  ASSISTANCE_ICON,
+  LEARN_ABOUT,
+  LEARN_ICON,
+  NEW_CLAIM,
+  PAYMENT_HISTORY,
+  PAYMENT_ICON,
+  ROADSIDE_ASSISATANCE,
+  STAR_ICON,
+} from "../../constants/Constants";
 
 type Props = {};
 
-const WelcomeCard = (props: Props) => {
+const WelcomeCard: React.FC = (props: Props) => {
   return (
     <Box sx={ImsDashboardStyle.welcomeCardsContainer}>
-      <DynamicTextDisplay text="Good Morning, Mathew! Need Help Today?" />
+      <DynamicTextDisplay text="Good Morning, Mathew! Need help today?" />
       <Card sx={ImsDashboardStyle.welcomeCardStyles}>
-        <DashBoardCardItem src={star} alt="new-claim-icon" text="New Claim" />
         <DashBoardCardItem
-          src={paymentHistoryIcon}
+          src={STAR_ICON}
+          alt="new-claim-icon"
+          text={NEW_CLAIM}
+        />
+        <DashBoardCardItem
+          src={PAYMENT_ICON}
           alt="payment-history-icon"
-          text="Payment History"
+          text={PAYMENT_HISTORY}
+          // style={{ marginTop: "10px" }}
         />
         <DashBoardCardItem
-          src={roadsideAssistanceIcon}
+          src={ASSISTANCE_ICON}
           alt="roadside-assistance-icon"
-          text="Roadside Assistance"
+          text={ROADSIDE_ASSISATANCE}
         />
         <DashBoardCardItem
-          src={learnAboutIcon}
+          src={LEARN_ICON}
           alt="Learn-About-icon"
-          text="Learn About Insurance"
+          text={LEARN_ABOUT}
         />
       </Card>
     </Box>
