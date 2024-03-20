@@ -127,9 +127,13 @@ const ImsDashboardStyle = {
     boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
     "@media (max-width:599px)": {
       paddingRight: "38px",
-      height: "182px",
+      height: "270px",
       flexDirection: "column",
       padding: "20px",
+    },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      height: "150px",
+      padding: "10px",
     },
   },
   trackYourClaimButton: {
@@ -143,8 +147,13 @@ const ImsDashboardStyle = {
     marginLeft: "172px",
     minWidth: "118px",
     "@media (max-width:599px)": {
-      display: "block",
+      display: "flex",
+      alignItem: "center"
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+
+    },
+
   },
   trackYourClaim: {
     fontFamily: "Lato",
@@ -295,6 +304,9 @@ const ImsDashboardStyle = {
       fontStyle: 'normal',
       lineHeight: '24px',
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      fontSize: '17px',
+    },
   },
 
   ContentStyle: {
@@ -320,10 +332,18 @@ const ImsDashboardStyle = {
     flexDirection: "column",
     gap: "17.5px",
     paddingLeft: "25.41px",
+    paddingRight: "20px",
     "@media (max-width:599px)": {
       gap: "24px",
       flexWrap: "wrap",
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      gap: "15x",
+      flexWrap: "wrap",
+      // marginTop: "20px"
+    },
+
+
   },
   AttentionsCardBoxStyle: {
     display: "flex",
@@ -331,6 +351,7 @@ const ImsDashboardStyle = {
     "@media (max-width:599px)": {
       alignItems: "flex-start",
     },
+
   },
 
   ActionButtonStyles: {
