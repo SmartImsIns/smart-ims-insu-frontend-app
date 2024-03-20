@@ -29,13 +29,14 @@ const ReferenceBlogsStyles = {
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
+    flexStart: "start",
     gap: "40px",
     width: "97%",
     maxWidth: "100%",
     paddingLeft: "30px",
     "@media(min-width: 600px) and (max-width: 1023px)": {
       paddingLeft: "20px",
-      gap: "10px",
+      gap: "0px",
       justifyContent: "center",
     },
   },
@@ -88,19 +89,20 @@ const ReferenceBlogsStyles = {
     backgroundColor: "rgba(255, 255, 255, 1)",
     border: "1px solid rgba(175, 175, 175, 1)",
     borderRadius: "10px",
+    boxShadow: "0px 0px 0px 0px",
     "@media(min-width: 600px) and (max-width: 700px)": {
-      maxWidth: "205px",
+      maxWidth: "255px",
       margin: "30px",
     },
     "@media(min-width: 701px) and (max-width: 1023px)": {
       maxWidth: "255px",
-      margin: "30px",
+      margin: "10px",
     },
 
-    "@media(min-width: 901px) and (max-width: 1023px)": {
-      maxWidth: "299.8px",
-      margin: "30px",
-    },
+    // "@media(min-width: 901px) and (max-width: 1023px)": {
+    //   maxWidth: "299.8px",
+    //   // margin: "30px",
+    // },
   },
   innerContainer: {
     display: "flex",
@@ -161,6 +163,7 @@ const ReferenceBlogsStyles = {
     lineHeight: 1,
     letterSpacing: 0.5,
     marginLeft: "-4px",
+    boxShadow: "0px 0px 0px 0px",
     "&:hover": {
       backgroundColor: "#FFFFFF",
       color: "rgba(63, 63, 63, 1)",
@@ -177,7 +180,7 @@ const ReferenceBlogsStyles = {
     textAlign: "left",
     margin: "20px auto 0px auto",
     "@media(min-width: 600px) and (max-width: 700px)": {
-      marginLeft: "15px",
+      // marginLeft: "20px",
       maxWidth: "190px",
     },
   },
@@ -190,10 +193,18 @@ const ReferenceBlogsStyles = {
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
+    "@media(min-width: 600px) and (max-width: 1360px)": {
+      marginLeft: "20px",
+      maxWidth: "200px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+    },
   },
   cardButtonIcon: {
     position: "absolute",
     top: "270px",
+    left: "20px",
   },
   playButton: {
     width: "40px",
@@ -205,6 +216,12 @@ const ReferenceBlogsStyles = {
     },
     "@media(min-width: 600px) and (max-width: 700px)": {
       marginLeft: "15px",
+    },
+  },
+  rightarrow: {
+    img: {
+      width: "15px",
+      marginBottom: "2px",
     },
   },
 };

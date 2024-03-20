@@ -24,7 +24,9 @@ const ReferenceBlogs: React.FC = () => {
             <Typography sx={ReferenceBlogsStyles.policyCardViewAll}>
             {viewAll}
             </Typography>
-            <img src={viewAllArrow} alt="view-all-arrow" />
+            <Box sx={ReferenceBlogsStyles.rightarrow}>
+              <img src={viewAllArrow} alt="view-all-arrow" />
+            </Box>
           </Box>
         </Box>
         <Box sx={ReferenceBlogsStyles.cardsContainer}>
