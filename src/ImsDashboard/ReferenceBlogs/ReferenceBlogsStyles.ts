@@ -29,12 +29,13 @@ const ReferenceBlogsStyles = {
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    gap: "40.18px",
+    justifyContent: "space-between",
+    gap: "10px",
     width: "96%",
     maxWidth: "100%",
     padding: " 0px 30px",
 
-    "@media(min-width: 600px) and (max-width: 1023px)": {
+    "@media(min-width: 600px) and (max-width: 865px)": {
       paddingLeft: "20px",
       gap: "0px",
       justifyContent: "center",
@@ -156,6 +157,8 @@ const ReferenceBlogsStyles = {
     lineHeight: 1,
     letterSpacing: 0.5,
     marginLeft: "-4px",
+    marginTop: "2px",
+    height: "40px",
     boxShadow: "0px 0px 0px 0px",
     "&:hover": {
       backgroundColor: "#FFFFFF",
@@ -177,8 +180,8 @@ const ReferenceBlogsStyles = {
     },
   },
   cardDescriptionText: {
-    marginTop: "-9px",
-    marginLeft: "-5px",
+    marginTop: "-5px",
+    marginLeft: "-3px",
     fontFamily: "Noto Sans",
     fontSize: " 18px",
     fontColor: "rgba(29, 37, 43, 1)",
@@ -220,7 +223,6 @@ const ReferenceBlogsStyles = {
       marginBottom: "2px",
     },
   },
-}
-
+};
 
 export default ReferenceBlogsStyles;

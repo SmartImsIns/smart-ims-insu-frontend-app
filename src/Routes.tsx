@@ -79,6 +79,7 @@ const ApplicationRoutes = (props: any) => {
       >
         <CircularProgress size="4rem" />
       </Dialog>
+      <div className='wrapper'>
       <Header /> 
       <Box  sx={{ background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)"}}>
       <Routes>
@@ -90,6 +91,7 @@ const ApplicationRoutes = (props: any) => {
       </Routes>
       </Box>
       <Footer />
+      </div>
     </>
   );
 }
