@@ -84,7 +84,7 @@ const ReferenceBlogsStyles = {
   },
   card: {
     width: "100%",
-    maxWidth: "295.82px",
+    maxWidth: "293px",
     height: "331px",
     position: "relative",
     backgroundColor: "rgba(255, 255, 255, 1)",
@@ -116,15 +116,46 @@ const ReferenceBlogsStyles = {
       margin: "0px auto",
       marginTop: "19.51px",
     },
-    ".carousel-slider": {
-      overflow: "visible",
-    },
-    ".control-dots": {
-      bottom: "-40px",
-    },
-    ".dot": {
-      backgroundColor: "black",
-    },
+    // ".carousel-slider": {
+    //   overflow: "visible",
+    // },
+    // ".control-dots": {
+    //   bottom: "-40px",
+    // },
+    // ".dot": {
+    //   background: "black",
+    // },
+    ".slickDots": {
+      verticalAlign: "middle",
+      margin: "auto",
+      padding: "0",
+      textAlign: "center",
+      marginTop: "19px",
+      "li": {
+        listStyle: "none",
+        cursor: "pointer",
+        display: "inline-block",
+        margin: "0 3px",
+        padding: "0px",
+        "&.slick-active button":{
+          width: "21px",
+          height: "9px",
+          borderRadius: "30px",
+          backgroundColor:  "#3F3F3F",
+        },
+        "button": {
+          border: "none",
+          background: "#D9D9D9",
+          color: "transparent",
+          cursor: "pointer",
+          display: "block",
+          padding: "0px",
+          height: "9px",
+          width: "9px",
+          borderRadius: "50%",
+        }
+      }
+    }
   },
   policyCardViewAllBox: {
     display: "flex",
