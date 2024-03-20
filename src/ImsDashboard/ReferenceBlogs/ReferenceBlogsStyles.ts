@@ -5,7 +5,7 @@ const ReferenceBlogsStyles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "20.49px",
+    gap: "20.09px",
     width: "100%",
     "@media(min-width: 360px) and (max-width: 599px)": {
       display: "none",
@@ -29,11 +29,11 @@ const ReferenceBlogsStyles = {
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    flexStart: "start",
-    gap: "40px",
-    width: "97%",
+    gap: "40.18px",
+    width: "96%",
     maxWidth: "100%",
-    paddingLeft: "30px",
+    padding: " 0px 30px",
+
     "@media(min-width: 600px) and (max-width: 1023px)": {
       paddingLeft: "20px",
       gap: "0px",
@@ -98,11 +98,6 @@ const ReferenceBlogsStyles = {
       maxWidth: "255px",
       margin: "10px",
     },
-
-    // "@media(min-width: 901px) and (max-width: 1023px)": {
-    //   maxWidth: "299.8px",
-    //   // margin: "30px",
-    // },
   },
   innerContainer: {
     display: "flex",
@@ -149,17 +144,15 @@ const ReferenceBlogsStyles = {
     display: "flex",
     width: "fit-content",
     minWidth: "150px",
-    height: 40,
     padding: "16px 12px",
     justifyContent: "center",
     alignItems: "center",
-    flexShrink: 0,
     borderRadius: "40px",
     backgroundColor: "#FFFFFF",
     color: "rgba(63, 63, 63, 1)",
     border: "1px solid rgba(63, 63, 63, 1)",
-    fontWeight: 400,
-    fontFamily: "Noto Sans",
+    fontWeight: "400",
+    fontFamily: "Lato",
     lineHeight: 1,
     letterSpacing: 0.5,
     marginLeft: "-4px",
@@ -180,7 +173,6 @@ const ReferenceBlogsStyles = {
     textAlign: "left",
     margin: "20px auto 0px auto",
     "@media(min-width: 600px) and (max-width: 700px)": {
-      // marginLeft: "20px",
       maxWidth: "190px",
     },
   },
@@ -200,6 +192,9 @@ const ReferenceBlogsStyles = {
       textOverflow: "ellipsis",
       whiteSpace: "nowrap",
     },
+    "@media(min-width: 600px) and (max-width: 700px)": {
+      fontSize: "14px",
+    },
   },
   cardButtonIcon: {
     position: "absolute",
@@ -207,10 +202,11 @@ const ReferenceBlogsStyles = {
     left: "20px",
   },
   playButton: {
-    width: "40px",
+    width: "30px",
     height: "40px",
     left: "-11px",
     top: "7px",
+    borderRadius: "50%",
     "&:hover": {
       background: "transparent",
     },
@@ -224,6 +220,7 @@ const ReferenceBlogsStyles = {
       marginBottom: "2px",
     },
   },
-};
+}
+
 
 export default ReferenceBlogsStyles;

@@ -16,6 +16,9 @@ const HeaderStyle = {
     height: "auto",
     cursor: "pointer",
   },
+  simsLogo: {
+    cursor: "pointer",
+  },
   displayPicture: {
     width: "32px",
     height: "auto",
@@ -34,7 +37,8 @@ const HeaderStyle = {
     display: "flex",
     gap: "20px",
     alignItems: "center",
-    paddingRight: "34px",
+    paddingRight: "19px",
+    paddingTop:"3px"
   },
 };
 

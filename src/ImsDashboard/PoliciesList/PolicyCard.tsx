@@ -39,6 +39,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
 
   return (
     <Card sx={PolicyStyles.oneCard}>
+      <Box sx={PolicyStyles.oneCardTopSection}>
       <Box sx={PolicyStyles.card}>
         <Box sx={PolicyStyles.cardIcon}>
           {logo && <img src={logo} alt="Policy Icon" />}
@@ -93,6 +94,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         <Typography variant="body1" sx={PolicyStyles.cardBodyInsure}>
           {data.type} | {data.insurance}
         </Typography>
+      </Box>
       </Box>
       <Box sx={PolicyStyles.button}>
         <Box>

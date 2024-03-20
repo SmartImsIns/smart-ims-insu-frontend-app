@@ -54,7 +54,6 @@ const PolicyStyles = {
   oneCard: {
     width: "100%",
     maxWidth: "46.6921%",
-    cursor: "pointer",
     height: "367.47px",
     marginLeft: "30px",
     marginTop: "5.75px",
@@ -151,7 +150,6 @@ const PolicyStyles = {
     maxWidth: "51px",
     height: "20px",
     marginTop: "48.69px",
-    // marginLeft: "160.5px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "18px",
     fontWeight: "300",
@@ -175,11 +173,9 @@ const PolicyStyles = {
   cardTopStatusDate: {
     ...font,
     width: "100%",
-    // maxWidth: "203px",
     maxWidth: "auto",
     height: "22px",
     marginTop: "2.89px",
-    // marginLeft: "160.5px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "20px",
     fontWeight: "400",
@@ -332,6 +328,9 @@ const PolicyStyles = {
       heigth: "52px",
       lineHeight: "19.8px",
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      marginTop: "14.3px",
+    },
   },
   cardBodyInsure: {
     ...font,
@@ -391,7 +390,8 @@ const PolicyStyles = {
     justifyContent: "space-between",
   },
   cardBottomButton: {
-    ...font,
+    fontFamily: "Lato",
+    fontWeight:"400",
     width: "100%",
     maxWidth: "155px",
     height: "40px",
@@ -421,11 +421,12 @@ const PolicyStyles = {
 
   ellipsisButton: {
     height: "25.7px",
-    marginTop: "25.7px ",
+    marginTop: "5px ",
     marginRight: "29px",
     "@media (min-width:360px) and (max-width:599px)": {
+      marginTop: "28px ",
       img: {
-        marginTop: "40px",
+        marginTop: "0px",
         width: "40px",
         height: "40px",
         lineHeight: "19.8px",
@@ -445,7 +446,10 @@ const PolicyStyles = {
       width: "15px",
       marginBottom: "2px",
     },
-  },
-};
+},
+oneCardTopSection: {
+  cursor: "pointer",
+},
+}
 
 export default PolicyStyles;
