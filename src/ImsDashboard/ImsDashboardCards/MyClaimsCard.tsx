@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card } from "@mui/material";
+import { Box, Card,Typography } from "@mui/material";
 import ImsDashboardStyle from "../ImsDashboardStyle";
 import myClaimsIcon from "../../assets/myClaimsIcon.svg";
 import ActionButton from "../common/ActionButton";
@@ -27,10 +27,15 @@ const MyClaimsCard = (props: Props) => {
             contentText="Claim Initiated"
           />
           <MyClaimCardItem headText="John Doe" contentText="Contact Person" />
+          <Box sx={ImsDashboardStyle.trackYourClaimButton}>
           <ActionButton
             buttonText="Track Your Claim"
-            classes={ImsDashboardStyle.myClaimsCardButtonStyles}
+            sx={ImsDashboardStyle.myClaimsCardButtonStyles}
           />
+          </Box>
+          <Box sx={ImsDashboardStyle.trackYourClaimText}>
+            <Typography sx={ImsDashboardStyle.trackYourClaim}>Track Your Claim</Typography>
+          </Box>
         </Card>
       </Box>
     </Box>
