@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 import viewAllArrow from "../../assets/viewAllArrow.svg";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import * as blogsData from "../../mockJson/CustomerDashboard/ReferenceBlogsData.json";
-import { quickReferences,viewAll } from "../../constants/Constants";
+import { quickReferences, viewAll } from "../../constants/Constants";
 const ReferenceBlogs: React.FC = () => {
   const parsedBlogsData = JSON.parse(JSON.stringify(blogsData));
   const dataArray = Object.values(parsedBlogsData);
@@ -20,12 +20,6 @@ const ReferenceBlogs: React.FC = () => {
           <Typography sx={ReferenceBlogsStyles.containerHeading}>
             {quickReferences}
           </Typography>
-          <Box sx={ReferenceBlogsStyles.policyCardViewAllBox}>
-            <Typography sx={ReferenceBlogsStyles.policyCardViewAll}>
-            {viewAll}
-            </Typography>
-            <img src={viewAllArrow} alt="view-all-arrow" />
-          </Box>
         </Box>
         <Box sx={ReferenceBlogsStyles.cardsContainer}>
           {dataArray.slice(0, maxItemsToMap).map((blog: any, index: number) => (

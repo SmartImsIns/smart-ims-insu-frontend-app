@@ -40,8 +40,9 @@ const Header = () => {
       <Box sx={HeaderStyle.logo}>
         <img
           src={headerData[0].logo}
-          style={{ cursor: "pointer" }}
+          style={HeaderStyle.simsLogo}
           alt="smart-ims logo"
+          onClick={()=>window.location.reload()}
         />
       </Box>
       <Box sx={HeaderStyle.headerItems}>
