@@ -9,7 +9,7 @@ import ProfileDetailsStyles from "./ProfileDetailsStyles";
 const ProfileDetails = () => {
   return (
     <Box sx={ProfileDetailsStyles.container}>
-      <Typography></Typography>
+      
       {profileDetailsData.map((e, index) => (
         <Box key={index}>
           <Box sx={ProfileDetailsStyles.profileContainer}>

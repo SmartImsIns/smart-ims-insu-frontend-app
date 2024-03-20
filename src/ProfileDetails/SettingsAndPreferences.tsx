@@ -1,5 +1,11 @@
 import React, { useState } from "react";
-import { Box, MenuItem, Typography } from "@mui/material";
+import {
+  Box,
+  MenuItem,
+  Typography,
+  FormControlLabel,
+  Switch,
+} from "@mui/material";
 import {
   SETTINGS_AND_PREFERENCES,
   NOTIFICATIONS,
@@ -80,6 +86,14 @@ const SettingsAndPreferences = () => {
       </Box>
       <Box>
         <Table>
+          <Box>
+            <FormControlLabel
+              value="Enable All"
+              control={<Switch color="primary" />}
+              label={<Typography sx={ProfileDetailsStyles.labelStyle}>Enable All</Typography>}
+              labelPlacement="start"
+            />
+          </Box>
           <TableHead>
             <TableRow>
               {tableHeaders &&
@@ -104,7 +118,9 @@ const SettingsAndPreferences = () => {
                         {row[key as keyof TableData] ? (
                           row[key as keyof TableData]
                         ) : (
-                          <Checkbox />
+                          <Checkbox
+                          // sx={ProfileDetailsStyles.checkBox}
+                          ></Checkbox>
                         )}
                       </TableCell>
                     ))}

@@ -1,7 +1,7 @@
 const ProfileDetailsStyles = {
   profileDetailsContainer: {
     display: "flex",
-    marginTop: "72px",
+    marginTop: "20px",
     "@media(max-width:1024px)": {
       display: "block",
     },
@@ -22,14 +22,37 @@ const ProfileDetailsStyles = {
       margin: "0px auto",
     },
   },
+  profileDetailsHeading: {
+    width: "127px",
+    height: "22px",
+    marginTop: "30px",
+    marginLeft: "30px",
+    gap: "0px",
+    opacity: "0px",
+    fontSize: "20px",
+    fontWeight: "400",
+    lineHeight: "22px",
+    textAlign: "left",
+  },
+  labelStyle: {
+    width: "65px",
+    height: "15px",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "15.4px",
+    textAlign: "left",
+  },
   tableHead: {
+    marginLeft: "49px",
     fontFamily: "Noto Sans",
+    marginRight: "10px",
     fontSize: "14px",
     fontWeight: "400",
     lineHeight: "24px",
     letterSpacing: "0px",
     textAlign: "left",
     opacity: "70%",
+    width: "auto",
   },
   tableCells: {
     padding: "2px",
@@ -40,6 +63,9 @@ const ProfileDetailsStyles = {
     lineHeight: "24px",
     letterSpacing: "0px",
     textAlign: "left",
+  },
+  checkBox: {
+    marginLeft: "-97px",
   },
   profileContainer: {
     width: "100%",
