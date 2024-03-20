@@ -305,7 +305,17 @@ const ImsDashboardStyle = {
       lineHeight: '24px',
     },
     "@media (min-width:600px) and (max-width:1024px)": {
-      fontSize: '17px',
+      maxWidth: "200px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+    },
+    "@media (min-width: 1025px) and (max-width: 1366px)": {
+      maxWidth: "500px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+
     },
   },
 
@@ -325,6 +335,15 @@ const ImsDashboardStyle = {
       fontFamily: '"Noto Sans"',
       fontStyle: 'normal',
       fontWeight: 300,
+      maxWidth: "200px",
+      whiteSpace: "nowrap",
+    },
+    "@media (min-width: 1025px) and (max-width: 1366px)": {
+      maxWidth: "500px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+
     },
   },
   AttentionsCardTextStyle: {

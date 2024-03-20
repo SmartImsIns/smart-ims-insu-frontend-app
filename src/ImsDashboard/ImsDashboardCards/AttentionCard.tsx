@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Card, Tooltip, Typography } from "@mui/material";
 import ImsDashboardStyle from "../ImsDashboardStyle";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
@@ -32,7 +32,11 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
             />
           </Box>
           <Box sx={ImsDashboardStyle.AttentionsCardTextStyle}>
-            <Typography sx={ImsDashboardStyle.HeadStyle}>{headText}</Typography>
+            <Tooltip title={headText}>
+              <Typography sx={ImsDashboardStyle.HeadStyle}>
+                {headText}
+              </Typography>
+            </Tooltip>
             <Box>
               <Typography sx={ImsDashboardStyle.ContentStyle}>
                 {renewalAmount} {renewalPrice} | {duesDate} {dueDate}
