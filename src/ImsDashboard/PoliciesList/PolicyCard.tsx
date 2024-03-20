@@ -5,6 +5,7 @@ import EllipsisMenu from "../EllipsisMenu/EllipsisMenu";
 import car from "../../assets/car.svg";
 import home from "../../assets/home.svg";
 import ActionButton from "../commonComponents/ActionButton";
+
 export interface PolicyData {
   id: string;
   policyNumber: string;

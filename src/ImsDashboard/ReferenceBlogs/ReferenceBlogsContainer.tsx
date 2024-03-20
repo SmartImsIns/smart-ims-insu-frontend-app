@@ -8,6 +8,7 @@ import image2 from "../../assets/ReferenceBlogImage2.svg";
 import image3 from "../../assets/ReferenceBlogImage3.svg";
 import image4 from "../../assets/ReferenceBlogImage4.svg";
 import ActionButton from "../commonComponents/ActionButton";
+
 export interface BlogData {
   id: string;
   image?: string;
