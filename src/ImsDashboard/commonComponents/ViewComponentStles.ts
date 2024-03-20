@@ -1,32 +1,29 @@
-export const MyClaimCardStyles = {
-
+export const ViewComponentStyles = {
     box: {
-
         display: "flex",
         gap: "5px",
         alignItems: "center",
-        height: "15px",
-        padding: "16px 12px 16px 12px",
+        height: "20px",
+        cursor: "pointer",
+        "@media (min-width:360px) and (max-width:599px)": {
+            height: "15px"
+        },
     },
     headTypo: {
-
         fontFamily: "Noto Sans",
         fontSize: "18px",
         fontWeight: "400",
-        lineHeight: "19.8px",
-        textAlign: "left",
-        cursor: "pointer",
+        lineHeight: "110%",
+        fontStyle: "normal",
+        color: "#000",
         "@media (min-width:360px) and (max-width:599px)": {
             fontSize: "14px",
-            maxWidth: "290px",
-            marginTop: "3px",
         },
 
     },
     arrowImgBox: {
         img: {
-            width: "15px",
-            marginBottom: "2px",
+            width: "10.5px",
         },
     }
 }

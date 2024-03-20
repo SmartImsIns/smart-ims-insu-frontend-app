@@ -4,7 +4,7 @@ import PolicyStyles from "./PolicyStyles";
 import EllipsisMenu from "../EllipsisMenu/EllipsisMenu";
 import car from "../../assets/car.svg";
 import home from "../../assets/home.svg";
-import ActionButton from "../common/ActionButton";
+import ActionButton from "../commonComponents/ActionButton";
 export interface PolicyData {
   id: string;
   policyNumber: string;
@@ -40,64 +40,70 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
   return (
     <Card sx={PolicyStyles.oneCard}>
       <Box sx={PolicyStyles.oneCardTopSection}>
-      <Box sx={PolicyStyles.card}>
-        <Box sx={PolicyStyles.cardIcon}>
-          {logo && <img src={logo} alt="Policy Icon" />}
-        </Box>
-        <Box sx={PolicyStyles.cardTopLeft}>
-          <Box>
-            <Typography variant="body1" sx={PolicyStyles.cardTopPolicyHeading}>
-              Policy Number
-            </Typography>
-            <Typography variant="body1" sx={PolicyStyles.cardTopPolicyNumber}>
-              {data.policyNumber}
-            </Typography>
-          </Box>
-          <Box>
-            <Typography variant="body1" sx={PolicyStyles.cardTopStatusHeading}>
-              Status
-            </Typography>
-            <Typography variant="body1" sx={PolicyStyles.cardTopStatusDate}>
-              {data.status}
-            </Typography>
-          </Box>
-        </Box>
-      </Box>
-      <Box>
-        <Tooltip title={data.plan}>
-          <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
-            {data.plan}
-          </Typography>
-        </Tooltip>
-
-        <Box sx={PolicyStyles.autoDeduct}>
-          <Typography variant="body1" sx={PolicyStyles.cardBodyPremium}>
-            Premium: {data.premium} | Term: {data.term}
-          </Typography>
-          <Box sx={PolicyStyles.cardBodyPremiumAuto}>
-            <Typography component="span" variant="body1">
-              {data.autoDeduct ? "auto deduct" : ""}
-            </Typography>
-          </Box>
-        </Box>
         <Box sx={PolicyStyles.card}>
-          <Typography variant="body1" sx={PolicyStyles.cardBodyDueDate}>
-            Due Date: {data.dueDate}
-          </Typography>
-          {Number(data.days) <= 15 && (
-            <Typography
-              component="span"
-              variant="body1"
-              sx={PolicyStyles.cardBodyDay}
-            >
-              in {data.days} days
-            </Typography>
-          )}
+          <Box sx={PolicyStyles.cardIcon}>
+            {logo && <img src={logo} alt="Policy Icon" />}
+          </Box>
+          <Box sx={PolicyStyles.cardTopLeft}>
+            <Box>
+              <Typography
+                variant="body1"
+                sx={PolicyStyles.cardTopPolicyHeading}
+              >
+                Policy Number
+              </Typography>
+              <Typography variant="body1" sx={PolicyStyles.cardTopPolicyNumber}>
+                {data.policyNumber}
+              </Typography>
+            </Box>
+            <Box>
+              <Typography
+                variant="body1"
+                sx={PolicyStyles.cardTopStatusHeading}
+              >
+                Status
+              </Typography>
+              <Typography variant="body1" sx={PolicyStyles.cardTopStatusDate}>
+                {data.status}
+              </Typography>
+            </Box>
+          </Box>
         </Box>
-        <Typography variant="body1" sx={PolicyStyles.cardBodyInsure}>
-          {data.type} | {data.insurance}
-        </Typography>
-      </Box>
+        <Box>
+          <Tooltip title={data.plan}>
+            <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
+              {data.plan}
+            </Typography>
+          </Tooltip>
+
+          <Box sx={PolicyStyles.autoDeduct}>
+            <Typography variant="body1" sx={PolicyStyles.cardBodyPremium}>
+              Premium: {data.premium} | Term: {data.term}
+            </Typography>
+            <Box sx={PolicyStyles.cardBodyPremiumAuto}>
+              <Typography component="span" variant="body1">
+                {data.autoDeduct ? "auto deduct" : ""}
+              </Typography>
+            </Box>
+          </Box>
+          <Box sx={PolicyStyles.card}>
+            <Typography variant="body1" sx={PolicyStyles.cardBodyDueDate}>
+              Due Date: {data.dueDate}
+            </Typography>
+            {Number(data.days) <= 15 && (
+              <Typography
+                component="span"
+                variant="body1"
+                sx={PolicyStyles.cardBodyDay}
+              >
+                in {data.days} days
+              </Typography>
+            )}
+          </Box>
+          <Typography variant="body1" sx={PolicyStyles.cardBodyInsure}>
+            {data.type} | {data.insurance}
+          </Typography>
+        </Box>
       </Box>
       <Box sx={PolicyStyles.button}>
         <Box>

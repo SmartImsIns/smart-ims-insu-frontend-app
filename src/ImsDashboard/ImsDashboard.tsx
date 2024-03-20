@@ -1,14 +1,14 @@
-import WelcomeCard from "./ImsDashboardCards/WelcomeCard";
-import AttentionCardContainer from "./ImsDashboardCards/AttensionCardContainer";
+import WelcomeCard from "./WelcomeCard/WelcomeCard";
+import AttentionCardContainer from "./AttentionCard/AttensionCardContainer";
 import { Box } from "@mui/material";
 import PolicyContainer from "./PoliciesList/PolicyContainer";
 import ReferenceBlogs from "./ReferenceBlogs/ReferenceBlogs";
 import ImsDashboardStyle from "./ImsDashboardStyle";
-import MyClaimsCard from "./ImsDashboardCards/MyClaimsCard";
+import MyClaimsCard from "./MyClaimsCard/MyClaimsCard";
 
 type Props = {};
 
-const ImsDashboard = (props: Props) => {
+const ImsDashboard: React.FC = () => {
   return (
     <Box sx={ImsDashboardStyle.container}>
       <WelcomeCard />
