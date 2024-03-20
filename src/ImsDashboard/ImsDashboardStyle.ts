@@ -180,6 +180,7 @@ const ImsDashboardStyle = {
     lineHeight: "14px",
     letterSpacing: "0.5px",
     marginLeft: "auto",
+    fontSize: "14px"
   },
   myClaimsCardStyles: {
     flexShrink: 0,
