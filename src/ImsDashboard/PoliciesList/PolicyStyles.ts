@@ -231,6 +231,8 @@ const PolicyStyles = {
     },
   },
 
+  
+
   autoDeduct: {
     display: "flex",
     "@media (min-width:360px) and (max-width:599px)": {
@@ -391,7 +393,7 @@ const PolicyStyles = {
   },
   cardBottomButton: {
     fontFamily: "Lato",
-    fontWeight:"400",
+    fontWeight: "400",
     width: "100%",
     maxWidth: "155px",
     height: "40px",
@@ -446,10 +448,10 @@ const PolicyStyles = {
       width: "15px",
       marginBottom: "2px",
     },
-},
-oneCardTopSection: {
-  cursor: "pointer",
-},
-}
+  },
+  oneCardTopSection: {
+    cursor: "pointer",
+  },
+};
 
 export default PolicyStyles;

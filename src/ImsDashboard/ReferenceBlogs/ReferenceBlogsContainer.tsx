@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Tooltip, Typography } from "@mui/material";
 import ReferenceBlogsStyles from "./ReferenceBlogsStyles";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import playIcon from "../../assets/Group 5717.svg";
@@ -38,7 +38,10 @@ const ReferenceBlogsContainer: React.FC<{ data: BlogData }> = ({ data }) => {
         <img src={imageSrc} alt="cardImage" />
       </Box>
       <Box sx={ReferenceBlogsStyles.cardDescription}>
-        <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>{data.description}</Typography>
+        <Tooltip title={data.description}>
+          <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>{data.description}</Typography>
+        </Tooltip>
+        
         <Box sx={ReferenceBlogsStyles.cardButtonIcon}>
           {data.videoUrl ? (
             <Button sx={ReferenceBlogsStyles.playButton}>
