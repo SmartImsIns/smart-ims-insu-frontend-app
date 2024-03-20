@@ -3,8 +3,6 @@ import React, { ReactNode } from "react";
 import ImsDashboardStyle from "../ImsDashboardStyle";
 import DashBoardCardItem from "./DashBoardCardItem";
 import myClaimsIcon from "../../assets/myClaimsIcon.svg";
-import { SxProps } from "@mui/system";
-import { Theme } from "@mui/material/styles";
 
 interface MyClaimCardItemProps {
   headText: string;

@@ -29,7 +29,6 @@ const ReferenceBlogsStyles = {
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
-    // justifyContent:"space-between",
     gap: "40px",
     width: "97%",
     maxWidth: "100%",
@@ -65,7 +64,6 @@ const ReferenceBlogsStyles = {
     padding: "16px 12px",
     borderRadius: "40px",
     backgroundColor: "rgba(255, 255, 255, 1)",
-    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     border: " 1px solid rgba(63, 63, 63, 1)",
     color: "rgba(63, 63, 63, 1)",
     textTransform: "none",
@@ -111,7 +109,6 @@ const ReferenceBlogsStyles = {
   },
 
   carousel: {
-    // border: "2px solid",
     width: "295.81px",
     margin: "0px auto",
     marginLeft: "32px",
@@ -128,7 +125,7 @@ const ReferenceBlogsStyles = {
       bottom: "-40px",
     },
     ".dot": {
-      background: "black",
+      backgroundColor: "black",
     },
   },
   policyCardViewAllBox: {
@@ -157,7 +154,6 @@ const ReferenceBlogsStyles = {
     flexShrink: 0,
     borderRadius: "40px",
     backgroundColor: "#FFFFFF",
-    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     color: "rgba(63, 63, 63, 1)",
     border: "1px solid rgba(63, 63, 63, 1)",
     fontWeight: 400,
