@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Box, Button, Card, Tooltip, Typography } from "@mui/material";
 import PolicyStyles from "./PolicyStyles";
 import EllipsisMenu from "../EllipsisMenu/EllipsisMenu";
 import car from "../../assets/car.svg";
@@ -39,6 +39,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
 
   return (
     <Card sx={PolicyStyles.oneCard}>
+      <Box sx={PolicyStyles.oneCardTopSection}>
       <Box sx={PolicyStyles.card}>
         <Box sx={PolicyStyles.cardIcon}>
           {logo && <img src={logo} alt="Policy Icon" />}
@@ -63,9 +64,12 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         </Box>
       </Box>
       <Box>
-        <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
-          {data.plan}
-        </Typography>
+        <Tooltip title={data.plan}>
+          <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
+            {data.plan}
+          </Typography>
+        </Tooltip>
+
         <Box sx={PolicyStyles.autoDeduct}>
           <Typography variant="body1" sx={PolicyStyles.cardBodyPremium}>
             Premium: {data.premium} | Term: {data.term}
@@ -93,6 +97,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         <Typography variant="body1" sx={PolicyStyles.cardBodyInsure}>
           {data.type} | {data.insurance}
         </Typography>
+      </Box>
       </Box>
       <Box sx={PolicyStyles.button}>
         <Box>

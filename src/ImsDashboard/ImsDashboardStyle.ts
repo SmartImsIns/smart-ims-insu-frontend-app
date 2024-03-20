@@ -19,7 +19,7 @@ const ImsDashboardStyle = {
     "@media (min-width: 600px) and (max-width: 1024px)": {
       paddingLeft: "25px",
       paddingRight: "25px",
-      marginTop: "30px",
+      marginTop: "50px",
     },
     "@media (min-width: 1024px) and (max-width: 1920px)": {
       paddingLeft: "30px",
@@ -27,7 +27,7 @@ const ImsDashboardStyle = {
     },
   },
   imsDashbardContainer: {
-    paddingTop: "40px",
+    paddingTop: "40.23px",
     paddingLeft: "30px",
     paddingRight: "30px",
     "@media (max-width: 599px)": {
@@ -67,11 +67,11 @@ const ImsDashboardStyle = {
     alignItems: "center",
     justifyContent: "space-between",
     marginTop: "22px",
-    background: "linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)",
-    filter: "drop-shadow(20px 20px 57px rgba(0, 0, 0, 0.08))",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
+    backgroundImage: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
+    filter: 'drop-shadow(20px 20px 57px rgba(0, 0, 0, 0.08))',
     paddingRight: "89.78px",
     paddingLeft: "35.08px",
+    borderRadius: "10px",
     "@media (max-width: 599px)": {
       height: "258px",
       paddingRight: "38px",
@@ -80,12 +80,12 @@ const ImsDashboardStyle = {
       alignItems: "center",
       gap: "10px",
       display: "grid",
-      gridTemplateColumns: "1fr 1fr" ,
-      gridTemplateRows: "1fr 1fr" ,
+      gridTemplateColumns: "1fr 1fr",
+      gridTemplateRows: "1fr 1fr",
     },
     "@media(min-width: 600px) and (max-width: 880px)": {
-      paddingLeft: "10px",
-      paddingRight: "40px",
+      paddingLeft: "25px",
+      paddingRight: "50px",
     },
   },
   DashBoardCardText: {
@@ -94,9 +94,10 @@ const ImsDashboardStyle = {
     fontSize: "20px",
     fontStyle: "normal",
     fontWeight: 300,
-    lineHeight: "22px", 
+    lineHeight: "22px",
+    fontFamily: "Noto Sans",
     "@media (max-width: 599px)": {
-      fontSize: "16px",
+      fontSize: "14px",
       paddingLeft: "10px",
       marginLeft: "0px",
       textAlign: "center",
@@ -104,7 +105,7 @@ const ImsDashboardStyle = {
       maxHeight: "36px",
     },
     "@media(min-width: 600px) and (max-width: 1023px)": {
-      fontSize: "14px",
+      fontSize: "16px",
       marginLeft: "10px",
       maxWidth: "140px",
     },
@@ -121,12 +122,18 @@ const ImsDashboardStyle = {
     paddingRight: "42px",
     paddingLeft: "23.63px",
     border: "1px solid #C9E1EC",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
+    borderRadius: "10px",
+    borderShadow: "none",
+    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
     "@media (max-width:599px)": {
       paddingRight: "38px",
-      height: "182px",
+      height: "270px",
       flexDirection: "column",
       padding: "20px",
+    },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      height: "150px",
+      padding: "10px",
     },
   },
   trackYourClaimButton: {
@@ -137,11 +144,16 @@ const ImsDashboardStyle = {
   },
   trackYourClaimText: {
     display: "none",
-    marginLeft: "142px",
+    marginLeft: "172px",
     minWidth: "118px",
     "@media (max-width:599px)": {
-      display: "block",
+      display: "flex",
+      alignItem: "center"
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+
+    },
+
   },
   trackYourClaim: {
     fontFamily: "Lato",
@@ -162,7 +174,7 @@ const ImsDashboardStyle = {
     display: "flex",
     width: "fit-content",
     minWidth: "155px",
-    height: 40,
+    height: "40px",
     padding: "16px 12px",
     justifyContent: "center",
     alignItems: "center",
@@ -172,10 +184,12 @@ const ImsDashboardStyle = {
     boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     color: "var(--Default-White, #FFF)",
     fontWeight: 400,
-    fontFamily: "Noto Sans",
-    lineHeight: 1,
-    letterSpacing: 0.5,
+    fontFamily: "Lato",
+    fontStyle: "normal",
+    lineHeight: "14px",
+    letterSpacing: "0.5px",
     marginLeft: "auto",
+    fontSize: "14px"
   },
   myClaimsCardStyles: {
     flexShrink: 0,
@@ -188,7 +202,8 @@ const ImsDashboardStyle = {
     flexWrap: "wrap",
     justifyContent: "space-between",
     paddingRight: "42px",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
+    borderRadius: "10px",
+    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
     "@media (max-width:599px)": {
       height: "309px",
       paddingRight: "0px",
@@ -215,10 +230,11 @@ const ImsDashboardStyle = {
     boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     color: "var(--Default-White, #FFF)",
     fontWeight: 400,
-    fontFamily: "Noto Sans",
-    lineHeight: 1,
+    fontFamily: "Lato",
+    lineHeight: "14px",
     letterSpacing: 0.5,
     marginLeft: "auto",
+    fontSize: "14px"
   },
   ClaminsContentStyles: {
     display: "flex",
@@ -275,11 +291,31 @@ const ImsDashboardStyle = {
     fontFamily: "Noto Sans",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "111.5%", 
+    lineHeight: "20px",
+    textOverflow: 'ellipsis',
     "@media (max-width:599px)": {
-      fontSize: "14px",
       fontWeight: "400",
       maxWidth: "500px",
+      overflow: 'hidden',
+      color: '#1D252B',
+      textOverflow: 'ellipsis',
+      fontFamily: 'Noto Sans',
+      fontSize: '16px',
+      fontStyle: 'normal',
+      lineHeight: '24px',
+    },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      maxWidth: "200px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+    },
+    "@media (min-width: 1025px) and (max-width: 1366px)": {
+      maxWidth: "500px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+
     },
   },
 
@@ -289,13 +325,25 @@ const ImsDashboardStyle = {
     fontStyle: "normal",
     fontFamily: "Noto Sans",
     fontWeight: "300",
-    lineHeight: "19.8px", 
+    lineHeight: "20px",
     "@media(max-width:599px)": {
       fontSize: "14px",
-      fontWeight: "300",
-      fontFamily: "Lato",
       lineHeight: "24px",
       color: "#1D252B",
+      overflow: 'hidden',
+      textOverflow: 'ellipsis',
+      fontFamily: '"Noto Sans"',
+      fontStyle: 'normal',
+      fontWeight: 300,
+      maxWidth: "200px",
+      whiteSpace: "nowrap",
+    },
+    "@media (min-width: 1025px) and (max-width: 1366px)": {
+      maxWidth: "500px",
+      overflow: "hidden",
+      textOverflow: "ellipsis",
+      whiteSpace: "nowrap",
+
     },
   },
   AttentionsCardTextStyle: {
@@ -303,10 +351,18 @@ const ImsDashboardStyle = {
     flexDirection: "column",
     gap: "17.5px",
     paddingLeft: "25.41px",
+    paddingRight: "20px",
     "@media (max-width:599px)": {
       gap: "24px",
       flexWrap: "wrap",
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      gap: "15x",
+      flexWrap: "wrap",
+      // marginTop: "20px"
+    },
+
+
   },
   AttentionsCardBoxStyle: {
     display: "flex",
@@ -314,6 +370,7 @@ const ImsDashboardStyle = {
     "@media (max-width:599px)": {
       alignItems: "flex-start",
     },
+
   },
 
   ActionButtonStyles: {
@@ -342,7 +399,7 @@ const ImsDashboardStyle = {
     fontStyle: "normal",
     fontWeight: 400,
     fontFamily: "Playfair Display",
-    lineHeight: "110%",
+    lineHeight: "22px",
   },
   secondCardItem: {
     marginTop: "16px",
