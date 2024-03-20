@@ -14,19 +14,19 @@ export const privatePolicy = "Privacy Policy";
 export const viewAllPolicy = "View All Policy";
 export const viewAll = "View All"
 
+
+export const renewalAmount = "Renewal amount :";
+export const duesDate = "due date :";
+export const terms = " : Tax and Fee may apply.";
+
+export const newClaim = "New Claim";
+export const paymentHistory = "Payment History";
+export const roadSideAssistance = "Roadside Assistance";
+export const learnAbout = "Learn about Insurance";
+
 export const MYCLAIM_ICON = myClaimsIcon;
 export const CAR_ICON = carIcon;
-
 export const STAR_ICON = starIcon;
 export const PAYMENT_ICON = paymentHistoryIcon;
 export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
-
-export const RENEWAL_AMOUNT = "Renewal amount :";
-export const DUE_DATE = "due date :";
-export const TERMS = " : Tax and Fee may apply.";
-
-export const NEW_CLAIM = "New Claim";
-export const PAYMENT_HISTORY = "Payment History";
-export const ROADSIDE_ASSISATANCE = "Roadside Assistance";
-export const LEARN_ABOUT = "Learn about Insurance";

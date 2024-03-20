@@ -5,7 +5,7 @@ import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../common/DashBoardCardItem";
 import ActionButton from "../common/ActionButton";
-import { DUE_DATE, RENEWAL_AMOUNT, TERMS } from "../../constants/Constants";
+import { renewalAmount, duesDate, terms } from "../../constants/Constants";
 
 interface AttentionCardProps {
   headText: string;
@@ -35,8 +35,8 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
             <Typography sx={ImsDashboardStyle.HeadStyle}>{headText}</Typography>
             <Box>
               <Typography sx={ImsDashboardStyle.ContentStyle}>
-                {RENEWAL_AMOUNT} {renewalPrice} | {DUE_DATE} {dueDate}
-                {TERMS}
+                {renewalAmount} {renewalPrice} | {duesDate} {dueDate}
+                {terms}
               </Typography>
             </Box>
           </Box>

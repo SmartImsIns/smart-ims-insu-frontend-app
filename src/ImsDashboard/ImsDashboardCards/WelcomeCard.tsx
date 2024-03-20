@@ -5,12 +5,12 @@ import ImsDashboardStyle from "../ImsDashboardStyle";
 import DashBoardCardItem from "../common/DashBoardCardItem";
 import {
   ASSISTANCE_ICON,
-  LEARN_ABOUT,
+  learnAbout,
   LEARN_ICON,
-  NEW_CLAIM,
-  PAYMENT_HISTORY,
+  newClaim,
+  paymentHistory,
   PAYMENT_ICON,
-  ROADSIDE_ASSISATANCE,
+  roadSideAssistance,
   STAR_ICON,
 } from "../../constants/Constants";
 
@@ -24,23 +24,23 @@ const WelcomeCard: React.FC = (props: Props) => {
         <DashBoardCardItem
           src={STAR_ICON}
           alt="new-claim-icon"
-          text={NEW_CLAIM}
+          text={newClaim}
         />
         <DashBoardCardItem
           src={PAYMENT_ICON}
           alt="payment-history-icon"
-          text={PAYMENT_HISTORY}
+          text={paymentHistory}
           // style={{ marginTop: "10px" }}
         />
         <DashBoardCardItem
           src={ASSISTANCE_ICON}
           alt="roadside-assistance-icon"
-          text={ROADSIDE_ASSISATANCE}
+          text={roadSideAssistance}
         />
         <DashBoardCardItem
           src={LEARN_ICON}
           alt="Learn-About-icon"
-          text={LEARN_ABOUT}
+          text={learnAbout}
         />
       </Card>
     </Box>
