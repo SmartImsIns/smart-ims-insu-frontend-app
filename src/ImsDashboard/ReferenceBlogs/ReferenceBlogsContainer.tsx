@@ -7,7 +7,7 @@ import image1 from "../../assets/ReferenceBlogImage1.svg";
 import image2 from "../../assets/ReferenceBlogImage2.svg";
 import image3 from "../../assets/ReferenceBlogImage3.svg";
 import image4 from "../../assets/ReferenceBlogImage4.svg";
-import ActionButton from "../common/ActionButton";
+import ActionButton from "../commonComponents/ActionButton";
 export interface BlogData {
   id: string;
   image?: string;
@@ -39,9 +39,11 @@ const ReferenceBlogsContainer: React.FC<{ data: BlogData }> = ({ data }) => {
       </Box>
       <Box sx={ReferenceBlogsStyles.cardDescription}>
         <Tooltip title={data.description}>
-          <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>{data.description}</Typography>
+          <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>
+            {data.description}
+          </Typography>
         </Tooltip>
-        
+
         <Box sx={ReferenceBlogsStyles.cardButtonIcon}>
           {data.videoUrl ? (
             <Button sx={ReferenceBlogsStyles.playButton}>

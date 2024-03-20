@@ -1,8 +1,8 @@
 import React from "react";
 import { Box } from "@mui/material";
-import DynamicTextDisplay from "../common/DynamicTextDisplay";
-import ImsDashboardStyle from "../ImsDashboardStyle";
-import DashBoardCardItem from "../common/DashBoardCardItem";
+import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
+import DashBoardCardItem from "../commonComponents/DashBoardCardItem";
+import { WelcomeCardStyles } from "./WelcomCardStyles";
 import {
   ASSISTANCE_ICON,
   learnAbout,
@@ -17,9 +17,12 @@ import {
 
 const WelcomeCard: React.FC = () => {
   return (
-    <Box sx={ImsDashboardStyle.welcomeCardsContainer}>
+    <Box
+      sx={WelcomeCardStyles.welcomeCardContainer}
+      aria-label="welcome Card Container"
+    >
       <DynamicTextDisplay text={`Good Morning, ${name}! Need Help Today?`} />
-      <Box sx={ImsDashboardStyle.welcomeCardStyles}>
+      <Box sx={WelcomeCardStyles.welcomeCardStyles} aria-label="welcome Card">
         <DashBoardCardItem
           src={STAR_ICON}
           alt="new-claim-icon"
