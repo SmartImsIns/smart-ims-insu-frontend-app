@@ -23,7 +23,7 @@ export const breadcrumbsText: SxProps = {
     fontSize: '18px',
     fontStyle: 'normal',
     fontWeight: 400,
-    lineHeight: '110%', /* 19.8px */
+    lineHeight: '20px',
     "@media (max-width: 599px)": {
         fontSize: '14px',
     },

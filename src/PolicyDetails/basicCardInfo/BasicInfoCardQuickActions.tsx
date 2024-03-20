@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Button, Typography, useMediaQuery } from "@mui/material";
+import { Box, Typography, useMediaQuery } from "@mui/material";
 import PolicyDetailsStyles from "../PolicyDetailsStyles";
 import WhiteButton from "../commonComponents/WhiteButton";
 import verticalEllipse from "../../assets/vertical_ellipse.svg";
@@ -20,7 +20,7 @@ const buttonStyles = {
   borderRadius: "20px",
   bgcolor: "#FFF",
   fontFamily: "Noto Sans",
-  lineHeight: "110%",
+  lineHeight: "18px",
   fontWeight: 300,
   fontStyle: "normal",
   "@media (max-width: 599px)": {},
@@ -34,7 +34,7 @@ const quickStyle = {
   fontSize: "18px",
   fontStyle: "normal",
   fontWeight: 300,
-  lineHeight: "110%", // 19.8px
+  lineHeight: "20px",
   marginBottom: "13px",
 
   "@media (max-width: 599px)": {

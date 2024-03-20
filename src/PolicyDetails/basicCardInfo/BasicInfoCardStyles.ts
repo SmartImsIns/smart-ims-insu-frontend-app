@@ -4,7 +4,6 @@ export interface BasicInfoCardStyles {
     container: SxProps,
     head: SxProps,
     content: SxProps,
-    // imageStyle?: CSSProperties,
     box: SxProps,
     imageBox: SxProps,
     logoContainer: SxProps,
@@ -45,10 +44,9 @@ const basicInfoCardStles = {
         display: "flex",
         alignItems: "center",
         fontStyle: "normal",
-        lineHeight: "110%", /* 19.8px */
+        lineHeight: "20px",
         "@media (max-width: 599px)": {
             fontSize: "14px",
-            // display: "flex",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
             fontSize: "16px",
@@ -61,7 +59,7 @@ const basicInfoCardStles = {
         fontWeight: "400",
         fontFamily: "Noto sans",
         color: "#1D252B",
-        lineHeight: "110%",/* 22px */
+        lineHeight: "22px",
         "@media (max-width: 599px)": {
             fontSize: "14px",
             paddingLeft: 0,

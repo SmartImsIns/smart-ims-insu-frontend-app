@@ -24,14 +24,12 @@ const ImsDashboardStyle = {
     "@media (min-width: 1024px) and (max-width: 1920px)": {
       paddingLeft: "30px",
       paddingRight: "30px",
-      // marginTop: "40px",
     },
   },
   imsDashbardContainer: {
     paddingTop: "40px",
     paddingLeft: "30px",
     paddingRight: "30px",
-    // marginTop: "40px",
 
     "@media (max-width: 599px)": {
       paddingLeft: "20px",
@@ -46,7 +44,6 @@ const ImsDashboardStyle = {
     "@media (min-width: 1024px) and (max-width: 1920px)": {
       paddingLeft: "30px",
       paddingRight: "30px",
-      // marginTop: "40px",
     },
   },
   claimsData: {
@@ -57,11 +54,12 @@ const ImsDashboardStyle = {
   claimsCardWrapperStyles: {
     display: "flex",
     gap: "22px",
-    // marginRight: "57px",
+
     padding: "15px",
     "@media (max-width:599px)": {
       marginRight: "0px",
       minWidth: "114px",
+      alignItems: "center"
     },
   },
   welcomeCardStyles: {
@@ -256,16 +254,6 @@ const ImsDashboardStyle = {
       lineHeight: "15.8px",
     },
   },
-  // ClaminsIconContent:{
-  //     display:"flex",
-  //     gap:"20px",
-  //     marginLeft:"-33px",
-  //     "@media (min-width:360px) and (max-width:599px)":{
-  //       marginTop:"0px",
-  //       width:"100%"
-  //     },
-  // },
-
   DashBoardCardItemStyles: {
     display: "flex",
     flexDirection: "row",
@@ -293,13 +281,11 @@ const ImsDashboardStyle = {
   HeadStyle: {
     overflow: "hidden",
     color: "#1D252B",
-    // textOverflow: "ellipsis",
     fontSize: "18px",
     fontFamily: "Noto Sans",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "110%", // 19.8px
-    // whiteSpace: "nowrap",
+    lineHeight: "20px",
     "@media (max-width:599px)": {
       fontSize: "14px",
       fontWeight: "400",
@@ -366,7 +352,7 @@ const ImsDashboardStyle = {
     fontStyle: "normal",
     fontWeight: 400,
     fontFamily: "Playfair Display",
-    lineHeight: "110%" /*22px*/,
+    lineHeight: "22px",
   },
   secondCardItem: {
     marginTop: "16px",

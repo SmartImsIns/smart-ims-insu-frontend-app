@@ -9,6 +9,7 @@ interface MyClaimCardItemProps {
   contentText: string;
   icon?: ReactNode;
   parentClasses?: Object;
+  icons: string;
 }
 
 const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({
@@ -16,13 +17,14 @@ const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({
   contentText,
   icon,
   parentClasses,
+  icons,
 }) => {
   return (
     <Box
       sx={{ ...ImsDashboardStyle.claimsCardWrapperStyles, ...parentClasses }}
     >
       {icon ? (
-        <DashBoardCardItem src={myClaimsIcon} alt="new-claim-icon" text="" />
+        <DashBoardCardItem src={icons} alt="new-claim-icon" text="" />
       ) : null}
       <Box sx={ImsDashboardStyle.claimsData}>
         <Typography sx={ImsDashboardStyle.HeadStyle}>{headText}</Typography>

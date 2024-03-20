@@ -31,6 +31,15 @@ const documentTabStyles = {
         border: "1px solid #C9E1EC",
         maxWidth: "327px",
         borderRadius: "10px",
+        "@media (max-width: 599px)": {
+            marginTop: "20px"
+        },
+        "@media (min-width: 600px) and (max-width: 1024px)": {
+            fontSize: "16px",
+        },
+        "@media (min-width: 1024px) and (max-width: 1920px)": {
+            fontSize: "18px",
+        },
     },
     imageContainer: {
         height: "265px",

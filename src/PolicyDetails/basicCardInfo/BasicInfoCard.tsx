@@ -1,17 +1,11 @@
 import React from "react";
-import {
-  Badge,
-  Box,
-  ThemeProvider,
-  Typography,
-  createTheme,
-} from "@mui/material";
+import { Box, ThemeProvider, Typography, createTheme } from "@mui/material";
 import car from "../../assets/car.svg";
 import tickIcon from "../../assets/tick.svg";
 import basicInfoCardStyles, {
   BasicInfoCardStyles,
 } from "./BasicInfoCardStyles";
-import DividerDot from "./DividerDot";
+// import DividerDot from "./DividerDot";
 
 interface BasicInfoMockProp {
   headName?: string;

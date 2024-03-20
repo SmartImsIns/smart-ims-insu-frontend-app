@@ -1,6 +1,5 @@
 import React from "react";
-import { Box, SxProps, Button } from "@mui/material";
-import ImsDashboardStyle from "../ImsDashboardStyle";
+import { SxProps, Button } from "@mui/material";
 
 interface ActionButtonProps {
   buttonText: string;
@@ -9,10 +8,6 @@ interface ActionButtonProps {
 
 const ActionButton: React.FC<ActionButtonProps> = ({ buttonText, sx }) => {
   return (
-    // <Button
-    //   variant="contained"
-      // sx={{ ...ImsDashboardStyle.ActionButtonStyles, ...classes }}
-    // >
     <Button variant="contained" sx={{ ...sx }}>
       {buttonText}
     </Button>

@@ -4,12 +4,22 @@ import ImsDashboardStyle from "../ImsDashboardStyle";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../common/DashBoardCardItem";
-import BlackButton from "../common/BlackButton";
 import ActionButton from "../common/ActionButton";
+import { DUE_DATE, RENEWAL_AMOUNT, TERMS } from "../../constants/Constants";
 
-type Props = {};
+interface AttentionCardProps {
+  headText: string;
+  renewalPrice: string;
+  dueDate: string;
+  contentText: string;
+}
 
-const AttentionCard = (props: Props) => {
+const AttentionCard: React.FC<AttentionCardProps> = ({
+  headText,
+  renewalPrice,
+  dueDate,
+  contentText,
+}) => {
   return (
     <Box sx={ImsDashboardStyle.imsDashbardContainer}>
       <DynamicTextDisplay text="Things needs your Attentions" />
@@ -23,13 +33,13 @@ const AttentionCard = (props: Props) => {
             />
           </Box>
           <Box sx={ImsDashboardStyle.AttentionsCardTextStyle}>
-            <Typography sx={ImsDashboardStyle.HeadStyle}>
-              Smart IMS life online saving plan child solutions
-            </Typography>
-            <Typography sx={ImsDashboardStyle.ContentStyle}>
-              Renewal amount : $821 | due date : 22 Mar 2024 : Tax and Fee may
-              apply.
-            </Typography>
+            <Typography sx={ImsDashboardStyle.HeadStyle}>{headText}</Typography>
+            <Box>
+              <Typography sx={ImsDashboardStyle.ContentStyle}>
+                {RENEWAL_AMOUNT} {renewalPrice} | {DUE_DATE} {dueDate}
+                {TERMS}
+              </Typography>
+            </Box>
           </Box>
         </Box>
         <Box sx={ImsDashboardStyle.ActionButton}>

@@ -1,45 +1,43 @@
 import React from "react";
-import { Box, Button, Card, Typography } from "@mui/material";
-import billImage from "../../../assets/bill.png";
-import smartPhoneIcon from "../../../assets/smart_phone.svg";
-import downloadIcon from "../../../assets/download.svg";
+import { Box, useMediaQuery } from "@mui/material";
 
 import documentTabStyles, { DocumentTabStyles } from "./DocumentTabStyles";
+import DocumentTabComponentItem from "./DocumentTabComponentItem";
+import WhiteButton from "../../commonComponents/WhiteButton";
 
 const DocumentsTabComponent: React.FC = () => {
-  const {
-    container,
-    imageContainer,
-    buttonGroup,
-    downloadButton,
-    imageStyle,
-    card,
-    walletButton,
-    documentContainer,
-  }: DocumentTabStyles = documentTabStyles;
+  const { container }: DocumentTabStyles = documentTabStyles;
+
+  const isMobile = useMediaQuery("(max-width:1024px)");
 
   return (
-    <Box sx={container}>
-      <Box aria-label="Policy Document" sx={documentContainer}>
-        <Box sx={imageContainer}>
-          <img src={billImage} alt="Bill" style={imageStyle} />
-        </Box>
-        <Card sx={card}>
-          <Typography>Geico Insurance</Typography>
-          <Box sx={buttonGroup} aria-label="Add to wallet">
-            <Button sx={walletButton}>
-              <img src={smartPhoneIcon} alt="smart Phone Icon" />
-              {"Add to wallet"}
-            </Button>
-
-            <Button sx={downloadButton} aria-label="Download">
-              <img src={downloadIcon} alt="download Icon" />
-              {"Download"}
-            </Button>
+    <>
+      {isMobile ? (
+        <>
+          <Box>
+            <DocumentTabComponentItem />
+            <DocumentTabComponentItem />
+            <WhiteButton
+              buttonStyles={{
+                display: "flex",
+                width: "294px",
+                height: "40px",
+                padding: "16px 12px",
+                justifyContent: "center",
+                alignItems: "center",
+                flexShrink: 0,
+              }}
+              buttonText={"Download Policy"}
+            />
           </Box>
-        </Card>
-      </Box>
-    </Box>
+        </>
+      ) : (
+        <Box sx={container}>
+          <DocumentTabComponentItem />
+          <DocumentTabComponentItem />
+        </Box>
+      )}
+    </>
   );
 };
 

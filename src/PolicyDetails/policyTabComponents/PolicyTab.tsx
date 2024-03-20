@@ -50,7 +50,7 @@ const PolicyTab = () => {
               border: "none",
               boxShadow: "none",
               outline: "none",
-              "&:focus": {
+              "&.MuiSelect-select:focus": {
                 backgroundColor: "transparent",
               },
               "&:after": {
@@ -76,7 +76,16 @@ const PolicyTab = () => {
       ) : (
         <TabContext value={value}>
           <Box sx={{ borderBottom: 1, borderColor: "divider" }}>
-            <TabList onChange={handleChange} aria-label="Tab List">
+            <TabList
+              sx={{
+                "& .MuiTabs-indicator": {
+                  height: "5px",
+                  borderRadius: "5px",
+                },
+              }}
+              onChange={handleChange}
+              aria-label="Tab List"
+            >
               {PolicyTabsLists.map((tabName, index) => (
                 <Tab
                   key={index}
@@ -87,8 +96,12 @@ const PolicyTab = () => {
                     fontSize: "20px",
                     fontStyle: "normal",
                     fontWeight: 400,
-                    lineHeight: "110%",
-                    padding: "18px",
+                    lineHeight: "22px",
+                    paddingX: "0px",
+                    paddingY: "0px",
+                    paddingBottom: "18.5px",
+                    marginRight: "70px",
+                    minWidth: "0px ",
                   }}
                   value={index.toString()}
                 />

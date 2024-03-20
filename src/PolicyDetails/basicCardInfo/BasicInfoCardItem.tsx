@@ -27,7 +27,7 @@ const BasicInfoCardItem: React.FC<BasicInfoCardItemProps> = ({
             fontSize: "18px",
             fontStyle: "normal",
             fontWeight: 300,
-            lineHeight: "110%",
+            lineHeight: "20px",
           }}
         >
           {headText}

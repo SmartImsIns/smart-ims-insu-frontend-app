@@ -4,9 +4,7 @@ import PolicyDetailsStyles from "../PolicyDetailsStyles";
 import BasicInfoCard from "./BasicInfoCard";
 import BasicInfoCardQuickActions from "./BasicInfoCardQuickActions";
 
-type Props = {};
-
-const BasicInfoCardComponent = (props: Props) => {
+const BasicInfoCardComponent: React.FC = () => {
   return (
     <Box
       sx={PolicyDetailsStyles.BasicInfoCard}
