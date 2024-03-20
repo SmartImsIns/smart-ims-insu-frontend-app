@@ -90,7 +90,7 @@ const ReferenceBlogsStyles = {
     backgroundColor: "rgba(255, 255, 255, 1)",
     border: "1px solid rgba(175, 175, 175, 1)",
     borderRadius: "10px",
-    boxShadow: "0px 0px 0px 0px",
+    boxShadow: "none",
     "@media(min-width: 600px) and (max-width: 700px)": {
       maxWidth: "255px",
       margin: "30px",
@@ -131,19 +131,19 @@ const ReferenceBlogsStyles = {
       padding: "0",
       textAlign: "center",
       marginTop: "19px",
-      "li": {
+      li: {
         listStyle: "none",
         cursor: "pointer",
         display: "inline-block",
         margin: "0 3px",
         padding: "0px",
-        "&.slick-active button":{
+        "&.slick-active button": {
           width: "21px",
           height: "9px",
           borderRadius: "30px",
-          backgroundColor:  "#3F3F3F",
+          backgroundColor: "#3F3F3F",
         },
-        "button": {
+        button: {
           border: "none",
           background: "#D9D9D9",
           color: "transparent",
@@ -153,9 +153,9 @@ const ReferenceBlogsStyles = {
           height: "9px",
           width: "9px",
           borderRadius: "50%",
-        }
-      }
-    }
+        },
+      },
+    },
   },
   policyCardViewAllBox: {
     display: "flex",
