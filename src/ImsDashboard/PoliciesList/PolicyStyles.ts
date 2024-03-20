@@ -31,7 +31,9 @@ const PolicyStyles = {
     textAlign: "left",
     color: "rgba(56, 61, 78, 1)",
     "@media (min-width:360px) and (max-width:599px)": {
-      marginLeft: "20px",
+      marginLeft: "25px",
+      marginBottom: "10px",
+      maxWidth: "130px",
     },
     "@media (min-width:600px) and (max-width:1024px)": {
       marginLeft: "32px",
@@ -372,6 +374,11 @@ const PolicyStyles = {
     lineHeight: "19.8px",
     textAlign: "left",
     cursor: "pointer",
+    "@media (min-width:360px) and (max-width:599px)": {
+      fontSize: "14px",
+      maxWidth: "290px",
+      marginTop: "3px",
+    },
   },
   policyCardViewAllBox: {
     display: "flex",

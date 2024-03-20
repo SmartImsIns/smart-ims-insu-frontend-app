@@ -115,6 +115,15 @@ const ReferenceBlogsStyles = {
       margin: "0px auto",
       marginTop: "19.51px",
     },
+    ".carousel-slider": {
+      overflow: "visible",
+    },
+    ".control-dots": {
+      bottom: "-40px",
+    },
+    ".dot": {
+      background: "black",
+    },
   },
   policyCardViewAllBox: {
     display: "flex",

@@ -13,7 +13,7 @@ const PolicyContainer: React.FC = () => {
             <Typography sx={PolicyStyles.policyCardHeading}>Here is your list of policies</Typography>
             <Box sx={PolicyStyles.policyCardViewAllBox}>
               <Typography sx={PolicyStyles.policyCardViewAll}>View All Policy</Typography> 
-              <img src={viewAllArrow} alt="view-all-arrow" />
+              <img style={{ width: "10px" }}  src={viewAllArrow} alt="view-all-arrow" />
             </Box>
         </Box>
         <Box sx={PolicyStyles.AllCards}>
