@@ -8,6 +8,7 @@ import claimsData from "../../mockJson/CustomerDashboard/MyClaimsData.json";
 import { formatNumber } from "../../utils/Utility";
 import { MYCLAIM_ICON, CAR_ICON } from "../../constants/Constants";
 import viewAllArrow from "../../assets/viewAllArrow.svg";
+import { MyClaimCardStyles } from "./MyClaimsCardStyles";
 interface claimsData {
   houseLoanData?: {
     data: {
@@ -52,40 +53,11 @@ const MyClaimsCard: React.FC = () => {
         }}
       >
         <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
-        <Box
-          sx={{
-            display: "flex",
-            gap: "5px",
-            alignItems: "center",
-            height: "15px",
-            padding: "16px 12px 16px 12px",
-          }}
-        >
-          <Typography
-            sx={{
-              fontFamily: "Noto Sans",
-              fontSize: "18px",
-              fontWeight: "400",
-              lineHeight: "19.8px",
-              textAlign: "left",
-              cursor: "pointer",
-              "@media (min-width:360px) and (max-width:599px)": {
-                fontSize: "14px",
-                maxWidth: "290px",
-                marginTop: "3px",
-              },
-            }}
-          >
+        <Box sx={MyClaimCardStyles.box}>
+          <Typography sx={MyClaimCardStyles.headTypo}>
             {"View Past Claims"}
           </Typography>
-          <Box
-            sx={{
-              img: {
-                width: "15px",
-                marginBottom: "2px",
-              },
-            }}
-          >
+          <Box sx={MyClaimCardStyles.arrowImgBox}>
             <img src={viewAllArrow} alt="view-all-arrow" />
           </Box>
         </Box>
