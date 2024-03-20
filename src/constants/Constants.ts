@@ -5,4 +5,5 @@ export const footerLeftText="© 2024 Smart IMS. All rights reserved.";
 export const termsAndService="Terms of Service";
 export const privatePolicy="Privacy Policy";
 export const viewAllPolicy="View All Policy";
-export const viewAll="View All"
+export const viewAll="View All";
+export const trackYourClaim="Track Your Claim"

@@ -5,7 +5,7 @@ const ReferenceBlogsStyles = {
   container: {
     display: "flex",
     flexDirection: "column",
-    gap: "20.49px",
+    gap: "8.09px",
     width: "100%",
     "@media(min-width: 360px) and (max-width: 599px)": {
       display: "none",
@@ -196,10 +196,11 @@ const ReferenceBlogsStyles = {
     top: "270px",
   },
   playButton: {
-    width: "40px",
+    width: "30px",
     height: "40px",
     left: "-11px",
     top: "7px",
+    borderRadius: "50%",
     "&:hover": {
       background: "transparent",
     },

@@ -5,7 +5,7 @@ import myClaimsIcon from "../../assets/myClaimsIcon.svg";
 import ActionButton from "../common/ActionButton";
 import DynamicTextDisplay from "../common/DynamicTextDisplay";
 import MyClaimCardItem from "../common/MyClaimCardItem";
-
+import {trackYourClaim} from '../../constants/Constants'
 type Props = {};
 
 const MyClaimsCard = (props: Props) => {
@@ -34,7 +34,7 @@ const MyClaimsCard = (props: Props) => {
           />
           </Box>
           <Box sx={ImsDashboardStyle.trackYourClaimText}>
-            <Typography sx={ImsDashboardStyle.trackYourClaim}>Track Your Claim</Typography>
+            <Typography sx={ImsDashboardStyle.trackYourClaim}>{trackYourClaim}</Typography>
           </Box>
         </Card>
       </Box>
