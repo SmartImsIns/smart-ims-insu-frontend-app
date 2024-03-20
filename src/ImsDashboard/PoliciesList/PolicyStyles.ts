@@ -59,7 +59,7 @@ const PolicyStyles = {
   oneCard: {
     width: "100%",
     maxWidth: "46.6921%",
-    cursor: "pointer",
+    // cursor: "pointer",
     // maxWidth:"638px",
     height: "367.47px",
     marginTop: "21.95px !important",
@@ -267,7 +267,7 @@ const PolicyStyles = {
       marginLeft: "40px",
       marginTop: "10px",
       width: "100%",
-      maxWidth: "252px",
+      maxWidth: "352px",
     },
   },
   cardBodyPremiumAuto: {
@@ -334,6 +334,9 @@ const PolicyStyles = {
       maxWidth: "72px",
       heigth: "52px",
       lineHeight: "19.8px",
+    },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      marginTop: "14.3px",
     },
   },
   cardBodyInsure: {
@@ -415,11 +418,12 @@ const PolicyStyles = {
 
   ellipsisButton: {
     height: "25.7px",
-    marginTop: "25.7px ",
+    marginTop: "5px ",
     marginRight: "29px",
     "@media (min-width:360px) and (max-width:599px)": {
+      marginTop: "28px ",
       img: {
-        marginTop: "40px",
+        marginTop: "0px",
         width: "40px",
         height: "40px",
         lineHeight: "19.8px",
@@ -433,6 +437,9 @@ const PolicyStyles = {
         lineHeight: "19.8px",
       },
     },
+  },
+  oneCardTopSection: {
+    cursor: "pointer",
   },
 };
 

@@ -19,7 +19,7 @@ const ImsDashboardStyle = {
     "@media (min-width: 600px) and (max-width: 1024px)": {
       paddingLeft: "25px",
       paddingRight: "25px",
-      marginTop: "30px",
+      marginTop: "40px",
     },
     "@media (min-width: 1024px) and (max-width: 1920px)": {
       paddingLeft: "30px",
@@ -80,8 +80,8 @@ const ImsDashboardStyle = {
       alignItems: "center",
       gap: "10px",
       display: "grid",
-      gridTemplateColumns: "1fr 1fr" ,
-      gridTemplateRows: "1fr 1fr" ,
+      gridTemplateColumns: "1fr 1fr",
+      gridTemplateRows: "1fr 1fr",
     },
     "@media(min-width: 600px) and (max-width: 880px)": {
       paddingLeft: "10px",
@@ -94,7 +94,7 @@ const ImsDashboardStyle = {
     fontSize: "20px",
     fontStyle: "normal",
     fontWeight: 300,
-    lineHeight: "22px", 
+    lineHeight: "22px",
     "@media (max-width: 599px)": {
       fontSize: "16px",
       paddingLeft: "10px",
@@ -137,7 +137,7 @@ const ImsDashboardStyle = {
   },
   trackYourClaimText: {
     display: "none",
-    marginLeft: "142px",
+    marginLeft: "172px",
     minWidth: "118px",
     "@media (max-width:599px)": {
       display: "block",
@@ -275,7 +275,7 @@ const ImsDashboardStyle = {
     fontFamily: "Noto Sans",
     fontStyle: "normal",
     fontWeight: "400",
-    lineHeight: "111.5%", 
+    lineHeight: "111.5%",
     "@media (max-width:599px)": {
       fontSize: "14px",
       fontWeight: "400",
@@ -289,7 +289,7 @@ const ImsDashboardStyle = {
     fontStyle: "normal",
     fontFamily: "Noto Sans",
     fontWeight: "300",
-    lineHeight: "19.8px", 
+    lineHeight: "19.8px",
     "@media(max-width:599px)": {
       fontSize: "14px",
       fontWeight: "300",
