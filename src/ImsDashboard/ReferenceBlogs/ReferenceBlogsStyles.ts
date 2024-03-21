@@ -230,6 +230,11 @@ const ReferenceBlogsStyles = {
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    display: "-webkit-box",
+    WebkitLineClamp: "2",
+    WebkitBoxOrient: "vertical",
     "@media(min-width: 600px) and (max-width: 700px)": {
       fontSize: "14px",
       maxWidth: "200px",

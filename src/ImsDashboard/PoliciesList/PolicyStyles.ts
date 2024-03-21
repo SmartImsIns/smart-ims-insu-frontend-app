@@ -51,13 +51,21 @@ const PolicyStyles = {
     borderRadius: "10px",
     boxShadow: "20px 20px 57px 0px rgba(0, 0, 0, 0.08)",
 
-    "@media (min-width:360px) and (max-width:767px)": {
+    "@media (min-width:360px) and (max-width:460px)": {
       width: "100%",
       maxWidth: "88.889%",
       marginLeft: "20px",
       marginTop: "15.95px",
       height: "584.42px",
     },
+    "@media (min-width:461px) and (max-width:758px)": {
+      width: "100%",
+      maxWidth: "92.889%",
+      marginLeft: "20px",
+      marginTop: "15.95px",
+      height: "584.42px",
+    },
+
     "@media (min-width: 768px) and (max-width: 1024px)": {
       width: "100%",
       maxWidth: "44.4%",
@@ -123,7 +131,7 @@ const PolicyStyles = {
     ...font,
     width: "100%",
     maxWidth: "149px",
-    height: "22px",
+    height: "21px",
     marginTop: "3.89px",
     marginLeft: "18.22px",
     color: "rgba(29, 37, 43, 1)",
@@ -189,7 +197,7 @@ const PolicyStyles = {
   cardBodyHeading: {
     ...font,
     width: "100%",
-    maxWidth: "400px",
+    maxWidth: "450px",
     height: "22px",
     marginTop: "50.5px",
     marginLeft: "40px",
@@ -237,8 +245,8 @@ const PolicyStyles = {
   },
   cardBodyPremium: {
     ...font,
-    width: "100%",
-    maxWidth: "255px",
+    width: "140%",
+    maxWidth: "266px",
     height: "20px",
     marginTop: "15px",
     marginLeft: "40px",
@@ -267,6 +275,7 @@ const PolicyStyles = {
     fontFamily: "Noto Sans",
     fontSize: "18px",
     fontWeight: "300",
+    width: "auto",
   },
   cardBodyPremiumAuto: {
     width: "100%",
@@ -460,7 +469,7 @@ const PolicyStyles = {
       width: "10.5px",
       "@media (min-width:360px) and (max-width:599px)": {
         width: "10.5px",
-        marginTop: "10px",
+        marginTop: "9px",
       },
     },
   },
