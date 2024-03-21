@@ -1,9 +1,9 @@
 pipeline{
     agent any
-        stages{
-            stage('deployment'){         
-                steps{
-                  script {
+        // stages{
+        //     stage('deployment'){         
+        //         steps{
+        //           script {
        
                 // sh 'tar -cvzf dist.tar.gz *'
                 // sh 'scp dist.tar.gz jenkins@demo.divami.com:/var/www/html/demo/smartims'
@@ -15,9 +15,9 @@ pipeline{
                 // sh 'ssh jenkins@demo.divami.com " sudo docker ps -aqf "name=smartims*" | xargs -r sudo docker rm -f"'
                 // sh 'ssh jenkins@demo.divami.com  "sudo docker run -td --name smartims$BUILD_NUMBER -p 9001:80 smartims$BUILD_NUMBER"'
                   
-                  }
-               }
-            }
+            //       }
+            //    }
+            // }
         }
     post{
         success{     
