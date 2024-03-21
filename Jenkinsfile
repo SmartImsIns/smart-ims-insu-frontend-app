@@ -28,7 +28,7 @@ pipeline{
                   googlechatnotification message: "Project Name: ${JOB_NAME} Build ${BUILD_NUMBER} from Branch ${Branch_name} is failed: Check output logs at  ${RUN_DISPLAY_URL}"  , url: "https://chat.googleapis.com/v1/spaces/AAAAvmWzxx0/messages?key=AIzaSyDdI0hCZtE6vySjMm-WEfRq3CPzqKqqsHI&token=n318miDqwYX2otX9-2am3W-7I3X64ERl5b1eSy-32yw"                           
               }
         always {
-                  cleanWs()
+                  cleanWS()
               }
     }
 }
