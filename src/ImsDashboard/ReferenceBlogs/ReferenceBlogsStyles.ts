@@ -37,17 +37,17 @@ const ReferenceBlogsStyles = {
     padding: "0px 30px",
 
     "@media(min-width: 600px) and (max-width: 865px)": {
-      paddingLeft: "0px",
+      paddingLeft: "20px",
       width: "91%",
       gap: "10px",
       justifyContent: "center",
     },
     "@media(min-width: 866px) and (max-width: 1023px)": {
-      paddingLeft: "0px",
+      paddingLeft: "20px",
       width: "92%",
     },
     "@media(min-width: 1023px) and (max-width: 1365px)": {
-      paddingLeft: "0px",
+      paddingLeft: "20px",
       width: "94%",
     },
   },
@@ -230,12 +230,12 @@ const ReferenceBlogsStyles = {
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
-    "@media(min-width: 600px) and (max-width: 1360px)": {
-      marginLeft: "20px",
-      maxWidth: "200px",
-    },
     "@media(min-width: 600px) and (max-width: 700px)": {
       fontSize: "14px",
+      maxWidth: "200px",
+    },
+    "@media(min-width: 800px) and (max-width: 1023px)": {
+      marginLeft: "20px",
     },
   },
   cardButtonIcon: {
