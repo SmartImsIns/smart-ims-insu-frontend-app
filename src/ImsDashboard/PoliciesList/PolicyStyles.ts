@@ -131,7 +131,7 @@ const PolicyStyles = {
     ...font,
     width: "100%",
     maxWidth: "149px",
-    height: "22px",
+    height: "21px",
     marginTop: "3.89px",
     marginLeft: "18.22px",
     color: "rgba(29, 37, 43, 1)",
@@ -197,7 +197,7 @@ const PolicyStyles = {
   cardBodyHeading: {
     ...font,
     width: "100%",
-    maxWidth: "400px",
+    maxWidth: "450px",
     height: "22px",
     marginTop: "50.5px",
     marginLeft: "40px",
