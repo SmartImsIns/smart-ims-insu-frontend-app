@@ -34,8 +34,9 @@ export const DashBoardCardItemStyles = {
     marginLeft: "auto",
     "@media (max-width: 599px)": {
       fontSize: "16px",
-      fontFamily: "Lato",
       lineHeight: "110%",
+      paddingLeft: "10px",
+      marginLeft: "0px",
       textAlign: "center",
     },
     "@media(min-width: 600px) and (max-width: 1023px)": {

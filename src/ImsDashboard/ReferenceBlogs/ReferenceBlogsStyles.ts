@@ -234,6 +234,9 @@ const ReferenceBlogsStyles = {
       fontSize: "14px",
       maxWidth: "200px",
     },
+    "@media(min-width: 701px) and (max-width: 800px)": {
+      margin: "0px 20px 0px 20px",
+    },
     "@media(min-width: 800px) and (max-width: 1023px)": {
       marginLeft: "20px",
     },
