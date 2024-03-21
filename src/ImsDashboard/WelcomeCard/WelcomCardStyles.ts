@@ -46,7 +46,7 @@ export const WelcomeCardStyles = {
             paddingRight: "89.78px",
         },
 
-        "@media(min-width: 1024px) and (max-width: 1990px)": {
+        "@media(min-width: 1024px) and (max-width: 1365px)": {
             paddingLeft: "25px",
             paddingRight: "89.78px",
         },
