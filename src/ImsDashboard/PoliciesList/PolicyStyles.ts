@@ -453,7 +453,6 @@ const PolicyStyles = {
   rightArrow: {
     img: {
       width: "10.5px",
-      marginBottom: "3px",
       "@media (min-width:360px) and (max-width:599px)": {
         width: "10.5px",
         marginTop: "10px",

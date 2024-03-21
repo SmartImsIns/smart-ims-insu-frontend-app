@@ -19,7 +19,6 @@ export const AttentionCardStyles = {
         },
     },
     AttentionCardStyles: {
-        height: "118.988px",
         flexShrink: 0,
         display: "flex",
         flexDirection: "row",
@@ -43,15 +42,18 @@ export const AttentionCardStyles = {
         "@media (min-width:600px) and (max-width:799px)": {
             paddingRight: "38px",
             flexDirection: "column",
-            padding: "15px",
+            padding: "20px 15px 20px 20px",
         },
         "@media (min-width:800px) and (max-width:1024px)": {
-            paddingRight: "38px",
-            padding: "15px",
+            padding: "20px 15px 20px 20px",
         },
         "@media (min-width:390px) and (max-width:599px)": {
             gap: "20px",
             height: "215px"
+        },
+        "@media (min-width:1024px)": {
+            gap: "20px",
+            height: "118.988px",
         }
 
     },
@@ -123,12 +125,8 @@ export const AttentionCardStyles = {
             fontStyle: 'normal',
             fontWeight: 300,
         },
-        "@media (min-width: 1025px) and (max-width: 1366px)": {
-            maxWidth: "900px",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-
+        "@media (min-width: 600px) and (max-width:1024px)": {
+            lineHeight: "26px",
         },
     },
     ActionButton: {
