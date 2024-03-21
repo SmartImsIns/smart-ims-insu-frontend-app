@@ -1,22 +1,21 @@
-import WelcomeCard from "./ImsDashboardCards/WelcomeCard";
-import MyClaimsCard from "./ImsDashboardCards/MyClaimsCard";
-import AttentionCard from "./ImsDashboardCards/AttentionCard";
-import { Box, Typography } from '@mui/material'
-import star from "../assets/star.svg";
-import PolicyContainer from './PoliciesList/PolicyContainer';
-import ReferenceBlogs from './ReferenceBlogs/ReferenceBlogs';
-
+import WelcomeCard from "./WelcomeCard/WelcomeCard";
+import AttentionCardContainer from "./AttentionCard/AttensionCardContainer";
+import { Box } from "@mui/material";
+import PolicyContainer from "./PoliciesList/PolicyContainer";
+import ReferenceBlogs from "./ReferenceBlogs/ReferenceBlogs";
+import ImsDashboardStyle from "./ImsDashboardStyle";
+import MyClaimsCard from "./MyClaimsCard/MyClaimsCard";
 
 type Props = {};
 
-const ImsDashboard = (props: Props) => {
+const ImsDashboard: React.FC = () => {
   return (
-    <Box>
+    <Box sx={ImsDashboardStyle.container}>
       <WelcomeCard />
-      <AttentionCard />
-      <MyClaimsCard/>
-        <PolicyContainer></PolicyContainer>
-        <ReferenceBlogs />
+      <AttentionCardContainer />
+      <MyClaimsCard />
+      <PolicyContainer />
+      <ReferenceBlogs />
     </Box>
   );
 };
