@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, SxProps, Button } from "@mui/material";
+import { SxProps, Button } from "@mui/material";
 
 interface ActionButtonProps {
   buttonText: string;

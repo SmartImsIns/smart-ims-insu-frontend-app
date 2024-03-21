@@ -1,7 +1,6 @@
-
 import React from "react";
 import { Box, SxProps, Typography } from "@mui/material";
-import ImsDashboardStyle from "../ImsDashboardStyle";
+import { DashBoardCardItemStyles } from "./DashBoardCardItemStyles";
 
 interface DashBoardCardItemProps {
   text: string;
@@ -17,10 +16,12 @@ const DashBoardCardItem: React.FC<DashBoardCardItemProps> = ({
   style,
 }) => {
   return (
-    <Box sx={ImsDashboardStyle.DashBoardCardItemStyles}>
+    <Box sx={DashBoardCardItemStyles.DashBoardCardItemStyles}>
       <img src={src} alt={alt} />
       {text.length > 0 && (
-        <Typography sx={{ ...style, ...ImsDashboardStyle.DashBoardCardText }}>
+        <Typography
+          sx={{ ...style, ...DashBoardCardItemStyles.DashBoardCardText }}
+        >
           {text}
         </Typography>
       )}
