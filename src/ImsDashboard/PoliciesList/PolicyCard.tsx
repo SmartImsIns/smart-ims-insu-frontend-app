@@ -83,7 +83,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
             </Typography>
             <Box sx={PolicyStyles.cardBodyPremiumAuto}>
               <Typography component="span" variant="body1">
-                {data.autoDeduct ? "auto deduct" : ""}
+                {data.autoDeduct ? "Auto Deduct" : ""}
               </Typography>
             </Box>
           </Box>

@@ -218,20 +218,15 @@ const PolicyStyles = {
       marginLeft: "40px",
       marginTop: "90px",
       width: "350px",
+      maxWidth: "250px",
       height: "auto",
       lineHeight: "26px",
-      overFlow: "hidden",
-      textOverflow: "ellipsis",
+      
     },
     "@media (min-width: 1025px) and (max-width: 1366px)": {
-      maxWidth: "290px",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-      whiteSpace: "nowrap",
+      maxWidth: "290pxp"
     },
   },
-
-  
 
   autoDeduct: {
     display: "flex",

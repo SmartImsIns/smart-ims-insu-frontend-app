@@ -192,9 +192,6 @@ const ReferenceBlogsStyles = {
     "@media(min-width: 600px) and (max-width: 1360px)": {
       marginLeft: "20px",
       maxWidth: "200px",
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-      whiteSpace: "nowrap",
     },
     "@media(min-width: 600px) and (max-width: 700px)": {
       fontSize: "14px",
