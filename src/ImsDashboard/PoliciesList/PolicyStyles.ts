@@ -45,7 +45,7 @@ const PolicyStyles = {
   oneCard: {
     width: "100%",
     maxWidth: "46.6921%",
-    height: "547.47px",
+    height: "367.47px",
     marginLeft: "30px",
     marginTop: "5.75px",
     borderRadius: "10px",
@@ -61,7 +61,8 @@ const PolicyStyles = {
     "@media (min-width: 768px) and (max-width: 1024px)": {
       width: "100%",
       maxWidth: "44.4%",
-      height: "540.42px",
+      height: "565.42px",
+      position: "relative",
     },
   },
   cardIcon: {
@@ -362,6 +363,10 @@ const PolicyStyles = {
     justifyContent: "space-between",
     "@media (min-width:360px) and (max-width:599px)": {
       gap: "60px",
+    },
+    "@media (min-width: 768px) and (max-width: 1024px)": {
+      position: "absolute",
+      bottom: "30.88px",
     },
   },
   policyCardViewAll: {

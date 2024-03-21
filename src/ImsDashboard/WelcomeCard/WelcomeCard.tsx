@@ -22,7 +22,7 @@ const WelcomeCard: React.FC = () => {
       aria-label="welcome Card Container"
     >
       <DynamicTextDisplay text={`Good Morning, ${name}! Need Help Today?`} />
-      <Box sx={WelcomeCardStyles.welcomeCardStyles} aria-label="welcome Card">
+      <Box sx={WelcomeCardStyles.WelcomeCard} aria-label="welcome Card">
         <DashBoardCardItem
           src={STAR_ICON}
           alt="new-claim-icon"

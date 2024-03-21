@@ -7,6 +7,7 @@ export const DashBoardCardItemStyles = {
       display: "inline-flex",
       flexDirection: "column",
       justifyContent: "center",
+      gap:"10px",
       alignItems: "center",
       height: "68px",
       img: {

@@ -17,6 +17,7 @@ const ReferenceBlogsStyles = {
     img: {
       maxWidth: "295.82px",
       height: "169.01px",
+      borderRadius: "10 10px 0 0px",
       objectFit: "cover",
       "@media(min-width: 600px) and (max-width: 1023px)": {
         maxWidth: "255px",
@@ -33,7 +34,7 @@ const ReferenceBlogsStyles = {
     gap: "10px",
     width: "95.5%",
     maxWidth: "100%",
-    padding: " 0px 30px",
+    padding: "0px 30px",
 
     "@media(min-width: 600px) and (max-width: 865px)": {
       paddingLeft: "0px",
