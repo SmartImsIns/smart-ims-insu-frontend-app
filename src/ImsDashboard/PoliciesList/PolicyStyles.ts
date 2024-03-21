@@ -92,7 +92,7 @@ const PolicyStyles = {
       display: "block",
       gap: "40px",
     },
-    "@media (min-width: 1025px) and (max-width: 1366px)": {
+    "@media (min-width: 1025px) and (max-width: 1365px)": {
       display: "flex",
       gap: "80px",
     },
@@ -264,9 +264,9 @@ const PolicyStyles = {
     },
   },
   cardAutoText: {
-    fontFamily:"Noto Sans",
-    fontSize:"18px",
-    fontWeight:"300"
+    fontFamily: "Noto Sans",
+    fontSize: "18px",
+    fontWeight: "300",
   },
   cardBodyPremiumAuto: {
     width: "100%",
