@@ -270,7 +270,6 @@ const PolicyStyles = {
   },
   cardBodyPremiumAuto: {
     width: "100%",
-    maxWidth: "110px",
     marginTop: "13px",
     marginLeft: "5px",
     fontSize: "20px",
@@ -280,7 +279,6 @@ const PolicyStyles = {
 
     color: "rgba(13, 171, 34, 1)",
     "@media (min-width:360px) and (max-width:599px)": {
-      maxWidth: "99px",
       height: "20px",
       marginLeft: "30px",
       marginTop: "12px",
