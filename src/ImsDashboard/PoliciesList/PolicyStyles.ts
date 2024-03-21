@@ -436,7 +436,7 @@ const PolicyStyles = {
   ellipsisButton: {
     height: "25.7px",
     marginTop: "7px",
-    marginRight: "40px",
+    marginRight: "30px",
     "@media (min-width:360px) and (max-width:600px)": {
       marginTop: "28px ",
       width: "40px",
