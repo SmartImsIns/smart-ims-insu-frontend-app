@@ -1,14 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Box, Card, Typography } from "@mui/material";
-import ImsDashboardStyle from "../ImsDashboardStyle";
 import claimsData from "../../mockJson/CustomerDashboard/MyClaimsData.json";
 import { formatNumber } from "../../utils/Utility";
-import { MYCLAIM_ICON, CAR_ICON } from "../../constants/Constants";
-import viewAllArrow from "../../assets/viewAllArrow.svg";
+import {
+  MYCLAIM_ICON,
+  CAR_ICON,
+  viewPast,
+  VIEW_ARROW,
+} from "../../constants/Constants";
 import { MyClaimCardStyles } from "./MyClaimsCardStyles";
 import ActionButton from "../commonComponents/ActionButton";
 import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
 import MyClaimCardItem from "../commonComponents/MyClaimCardItem";
+import ViewComponent from "../commonComponents/ViewComponent";
 interface claimsData {
   houseLoanData?: {
     data: {
@@ -53,14 +57,7 @@ const MyClaimsCard: React.FC = () => {
         }}
       >
         <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
-        <Box sx={MyClaimCardStyles.box}>
-          <Typography sx={MyClaimCardStyles.headTypo}>
-            {"View Past Claims"}
-          </Typography>
-          <Box sx={MyClaimCardStyles.arrowImgBox}>
-            <img src={viewAllArrow} alt="view-all-arrow" />
-          </Box>
-        </Box>
+        <ViewComponent src={VIEW_ARROW} viewText={viewPast} />
       </Box>
       {claimdata?.map((claim, id) => (
         <Box key={id}>
