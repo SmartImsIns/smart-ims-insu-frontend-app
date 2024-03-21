@@ -1,12 +1,3 @@
-const commonStyles = {
-  fontFamily: "Noto Sans",
-  fontSize: "18px",
-  fontWeight: "300",
-  lineHeight: "20px",
-  letterSpacing: "0em",
-  textAlign: "left",
-};
-
 const font = {
   fontFamily: "Noto Sans",
 };
@@ -221,10 +212,9 @@ const PolicyStyles = {
       maxWidth: "250px",
       height: "auto",
       lineHeight: "26px",
-      
     },
     "@media (min-width: 1025px) and (max-width: 1366px)": {
-      maxWidth: "290pxp"
+      maxWidth: "290pxp",
     },
   },
 
@@ -239,13 +229,17 @@ const PolicyStyles = {
   },
   cardBodyPremium: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "255px",
     height: "20px",
     marginTop: "15px",
     marginLeft: "40px",
     color: "rgba(29, 37, 43, 1)",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
 
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
@@ -263,7 +257,6 @@ const PolicyStyles = {
   },
   cardBodyPremiumAuto: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "110px",
     marginTop: "13px",
@@ -290,12 +283,16 @@ const PolicyStyles = {
   },
   cardBodyDueDate: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "200px",
     height: "20px",
     marginTop: "11px",
     marginLeft: "40px",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "12px",
@@ -313,12 +310,16 @@ const PolicyStyles = {
   },
   cardBodyDay: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "72px",
     height: "20px",
     marginTop: "11px",
     color: "rgba(217, 77, 46, 1)",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
     "@media (min-width:360px) and (max-width:599px)": {
       marginTop: "15px",
       maxWidth: "72px",
@@ -331,12 +332,16 @@ const PolicyStyles = {
   },
   cardBodyInsure: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "auto",
     height: "20px",
     marginTop: "15px",
     marginLeft: "45px",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "15px",
@@ -418,24 +423,19 @@ const PolicyStyles = {
 
   ellipsisButton: {
     height: "25.7px",
-    marginTop: "5px ",
-    marginRight: "20px",
-    "@media (min-width:360px) and (max-width:599px)": {
+    marginTop: "7px",
+    marginRight: "40px",
+    "@media (min-width:360px) and (max-width:600px)": {
       marginTop: "28px ",
-      img: {
-        marginTop: "0px",
-        width: "40px",
-        height: "40px",
-        lineHeight: "19.8px",
-      },
+      width: "40px",
+      height: "40px",
+      lineHeight: "19.8px",
     },
-    "@media (min-width:600px) and (max-width:1024px)": {
-      img: {
-        marginTop: "50px",
-        width: "40px",
-        height: "40px",
-        lineHeight: "19.8px",
-      },
+    "@media (min-width:601px) and (max-width:1024px)": {
+      marginTop: "30px",
+      width: "40px",
+      height: "40px",
+      lineHeight: "19.8px",
     },
   },
   rightArrow: {
