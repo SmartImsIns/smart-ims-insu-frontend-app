@@ -214,7 +214,7 @@ const PolicyStyles = {
     "@media (min-width: 600px) and (max-width: 1024px)": {
       marginLeft: "40px",
       marginTop: "90px",
-      width: "329px",
+      width: "300px",
       height: "auto",
       lineHeight: "26px",
       marginRight: "30px",
@@ -226,6 +226,8 @@ const PolicyStyles = {
 
   autoDeduct: {
     display: "flex",
+    ...font,
+
     "@media (min-width:360px) and (max-width:599px)": {
       display: "block",
     },
@@ -261,8 +263,12 @@ const PolicyStyles = {
       maxWidth: "auto",
     },
   },
+  cardAutoText: {
+    fontFamily:"Noto Sans",
+    fontSize:"18px",
+    fontWeight:"300"
+  },
   cardBodyPremiumAuto: {
-    ...font,
     width: "100%",
     maxWidth: "110px",
     marginTop: "13px",
@@ -271,6 +277,7 @@ const PolicyStyles = {
     fontWeight: "300",
     lineHeight: "19.8px",
     textAlign: "left",
+
     color: "rgba(13, 171, 34, 1)",
     "@media (min-width:360px) and (max-width:599px)": {
       maxWidth: "99px",

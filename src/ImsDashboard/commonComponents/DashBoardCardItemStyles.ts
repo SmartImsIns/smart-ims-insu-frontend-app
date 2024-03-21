@@ -27,7 +27,6 @@ export const DashBoardCardItemStyles = {
     fontFamily: "Noto Sans",
     "@media (max-width: 599px)": {
       fontSize: "16px",
-      fontFamily: "Lato",
       paddingLeft: "10px",
       lineHeight: "17.6px",
       marginLeft: "0px",
