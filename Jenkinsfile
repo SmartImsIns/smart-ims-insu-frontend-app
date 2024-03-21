@@ -7,7 +7,7 @@ pipeline{
                 echo "sravya"
        
                 sh 'tar -cvzf dist.tar.gz *'
-                // sh 'ssh jenkins@demo.divami.com "sudo rm -rf /var/www/html/demo/smartims/*"'
+                sh 'ssh jenkins@demo.divami.com "sudo rm -rf /var/www/html/demo/smartims/*"'
                 sh 'scp dist.tar.gz jenkins@demo.divami.com:/var/www/html/demo/smartims'
                 sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && tar -xvzf dist.tar.gz"'
                 sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo chown -R jenkins:jenkins *"'
