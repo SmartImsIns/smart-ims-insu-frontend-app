@@ -3,6 +3,7 @@ export const MyClaimCardItemStyles = {
         display: "flex",
         gap: "22px",
         padding: "15px",
+        alignItems: "center",
         "@media (max-width:599px)": {
             marginRight: "0px",
             minWidth: "114px",
