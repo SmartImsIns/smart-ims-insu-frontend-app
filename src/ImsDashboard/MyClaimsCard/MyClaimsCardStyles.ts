@@ -120,7 +120,16 @@ export const MyClaimCardStyles = {
     },
     arrowImgBox: {
         img: {
+          width: "10.5px",
+          marginBottom: "2px",
+          "@media (min-width:360px) and (max-width:599px)": {
             width: "10.5px",
+            marginBottom: "2px",
+          },
+          "@media (min-width:600px) and (max-width:1023px)": {
+            width: "10.5px",
+            marginBottom: "1px",
+          },
         },
-    }
+      },
 }

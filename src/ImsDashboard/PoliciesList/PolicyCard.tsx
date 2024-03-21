@@ -72,7 +72,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         </Box>
         <Box>
           <Tooltip title={data.plan}>
-            <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
+            <Typography variant="body1" sx={PolicyStyles.cardBodyHeading}>
               {data.plan}
             </Typography>
           </Tooltip>
@@ -83,7 +83,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
             </Typography>
             <Box sx={PolicyStyles.cardBodyPremiumAuto}>
               <Typography component="span" variant="body1">
-                {data.autoDeduct ? "auto deduct" : ""}
+                {data.autoDeduct ? "Auto Deduct" : ""}
               </Typography>
             </Box>
           </Box>
