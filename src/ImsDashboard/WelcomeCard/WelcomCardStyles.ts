@@ -41,6 +41,11 @@ export const WelcomeCardStyles = {
             justifyItems: "center",
             alignItems: "center",
         },
+        "@media(min-width: 800px) and (max-width: 1023px)": {
+            paddingLeft: "25px",
+            paddingRight: "89.78px",
+        },
+
         "@media(min-width: 1024px) and (max-width: 1990px)": {
             paddingLeft: "25px",
             paddingRight: "89.78px",
