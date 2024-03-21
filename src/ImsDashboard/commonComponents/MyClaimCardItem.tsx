@@ -1,6 +1,5 @@
 import { Box, Typography } from "@mui/material";
 import React, { ReactNode } from "react";
-import ImsDashboardStyle from "../ImsDashboardStyle";
 import DashBoardCardItem from "./DashBoardCardItem";
 import { MyClaimCardItemStyles } from "./MyClaimCardItemStyles";
 

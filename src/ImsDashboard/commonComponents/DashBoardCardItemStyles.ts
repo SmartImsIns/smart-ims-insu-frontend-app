@@ -1,8 +1,6 @@
 export const DashBoardCardItemStyles = {
     DashBoardCardItemStyles: {
         display: "flex",
-        flexDirection: "row",
-        justifyContent: "center",
         alignItems: "center",
         cursor: "pointer",
         "@media (max-width: 599px)": {
@@ -10,7 +8,6 @@ export const DashBoardCardItemStyles = {
             flexDirection: "column",
             justifyContent: "center",
             alignItems: "center",
-            gap: "10px",
             height: "68px",
             img: {
                 height: "40px",
@@ -21,12 +18,11 @@ export const DashBoardCardItemStyles = {
         },
     },
     DashBoardCardText: {
-        marginLeft: "20.19px",
         color: "#1D252B",
         fontSize: "20px",
         fontStyle: "normal",
         fontWeight: 300,
-        lineHeight: "22px",
+        lineHeight: "110px",
         fontFamily: "Noto Sans",
         "@media (max-width: 599px)": {
             fontSize: "14px",

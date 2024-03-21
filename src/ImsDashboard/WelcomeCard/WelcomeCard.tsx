@@ -27,21 +27,25 @@ const WelcomeCard: React.FC = () => {
           src={STAR_ICON}
           alt="new-claim-icon"
           text={newClaim}
+          style={WelcomeCardStyles.startIconText}
         />
         <DashBoardCardItem
           src={PAYMENT_ICON}
           alt="payment-history-icon"
           text={paymentHistory}
+          style={WelcomeCardStyles.paymentIconText}
         />
         <DashBoardCardItem
           src={ASSISTANCE_ICON}
           alt="roadside-assistance-icon"
           text={roadSideAssistance}
+          style={WelcomeCardStyles.roadSideIconText}
         />
         <DashBoardCardItem
           src={LEARN_ICON}
           alt="Learn-About-icon"
           text={learnAbout}
+          style={WelcomeCardStyles.learnIconText}
         />
       </Box>
     </Box>

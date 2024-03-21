@@ -48,4 +48,16 @@ export const WelcomeCardStyles = {
             paddingRight: "50px",
         },
     },
+    startIconText: {
+        paddingLeft: "20.19px"
+    },
+    paymentIconText: {
+        paddingLeft: "16.36px"
+    },
+    roadSideIconText: {
+        paddingLeft: "16.36px"
+    },
+    learnIconText: {
+        paddingLeft: "13.19px"
+    }
 }

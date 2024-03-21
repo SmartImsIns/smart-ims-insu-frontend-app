@@ -1,21 +1,21 @@
 export const AttentionCardStyles = {
     Container: {
-        paddingTop: "40.23px",
-        paddingLeft: "30px",
-        paddingRight: "30px",
+        marginTop: "40.23px",
+        marginLeft: "30px",
+        marginRight: "30px",
         "@media (max-width: 599px)": {
-            paddingLeft: "20px",
-            paddingRight: "20px",
+            marginLeft: "20px",
+            marginRight: "20px",
             marginTop: "20px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            paddingLeft: "25px",
-            paddingRight: "25px",
+            marginLeft: "25px",
+            marginRight: "25px",
             marginTop: "30px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
-            paddingLeft: "30px",
-            paddingRight: "30px",
+            marginLeft: "30px",
+            marginRight: "30px",
         },
     },
     AttentionCardStyles: {
