@@ -80,7 +80,7 @@ export const AttentionCardStyles = {
             lineHeight: '24px',
         },
         "@media (min-width:600px) and (max-width:1024px)": {
-            maxWidth: "500px",
+            maxWidth: "80%",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
