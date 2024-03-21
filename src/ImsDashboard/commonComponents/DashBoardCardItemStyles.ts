@@ -7,6 +7,7 @@ export const DashBoardCardItemStyles = {
             display: "inline-flex",
             flexDirection: "column",
             justifyContent: "center",
+            gap: "10px",
             alignItems: "center",
             height: "68px",
             img: {
@@ -15,6 +16,7 @@ export const DashBoardCardItemStyles = {
         },
         "@media(min-width: 600px) and (max-width: 800px)": {
             maxWidth: "100px",
+            fontSize: "10px",
         },
     },
     DashBoardCardText: {
@@ -22,7 +24,7 @@ export const DashBoardCardItemStyles = {
         fontSize: "20px",
         fontStyle: "normal",
         fontWeight: 300,
-        lineHeight: "110px",
+        lineHeight: "110%",
         fontFamily: "Noto Sans",
         "@media (max-width: 599px)": {
             fontSize: "14px",
@@ -34,7 +36,6 @@ export const DashBoardCardItemStyles = {
         },
         "@media(min-width: 600px) and (max-width: 1023px)": {
             fontSize: "16px",
-            marginLeft: "10px",
             maxWidth: "140px",
         },
     },

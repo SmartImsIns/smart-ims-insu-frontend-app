@@ -19,11 +19,10 @@ export const WelcomeCardStyles = {
             paddingRight: "30px",
         },
     },
-    welcomeCardStyles: {
+    WelcomeCard: {
         height: "100px",
         flexShrink: 0,
         display: "flex",
-        flexDirection: "row",
         alignItems: "center",
         justifyContent: "space-between",
         marginTop: "22px",
@@ -32,24 +31,25 @@ export const WelcomeCardStyles = {
         paddingRight: "89.78px",
         paddingLeft: "35.08px",
         borderRadius: "10px",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 768px)": {
             height: "258px",
             paddingRight: "38px",
             paddingLeft: "35.08px",
-            justifyContent: "center",
-            alignItems: "center",
-            gap: "10px",
             display: "grid",
             gridTemplateColumns: "1fr 1fr",
             gridTemplateRows: "1fr 1fr",
+            justifyItems: "center",
+            alignItems: "center",
         },
-        "@media(min-width: 600px) and (max-width: 880px)": {
+        "@media(min-width: 1024px) and (max-width: 1990px)": {
             paddingLeft: "25px",
-            paddingRight: "50px",
+            paddingRight: "89.78px",
         },
     },
     startIconText: {
-        paddingLeft: "20.19px"
+        paddingLeft: "20.19px",
+        "@media (max-width: 599px)": {
+        },
     },
     paymentIconText: {
         paddingLeft: "16.36px"

@@ -38,11 +38,22 @@ export const AttentionCardStyles = {
             height: "270px",
             flexDirection: "column",
             padding: "20px",
+            gap: "46px"
         },
-        "@media (min-width:600px) and (max-width:1024px)": {
-            height: "150px",
-            padding: "10px",
+        "@media (min-width:600px) and (max-width:799px)": {
+            paddingRight: "38px",
+            flexDirection: "column",
+            padding: "15px",
         },
+        "@media (min-width:800px) and (max-width:1024px)": {
+            paddingRight: "38px",
+            padding: "15px",
+        },
+        "@media (min-width:390px) and (max-width:599px)": {
+            gap: "20px",
+            height: "215px"
+        }
+
     },
     AttentionsCardBoxStyle: {
         display: "flex",
@@ -62,23 +73,20 @@ export const AttentionCardStyles = {
         textOverflow: 'ellipsis',
         "@media (max-width:599px)": {
             fontWeight: "400",
-            maxWidth: "500px",
-            overflow: 'hidden',
             color: '#1D252B',
-            textOverflow: 'ellipsis',
             fontFamily: 'Noto Sans',
             fontSize: '16px',
             fontStyle: 'normal',
             lineHeight: '24px',
         },
         "@media (min-width:600px) and (max-width:1024px)": {
-            maxWidth: "200px",
+            maxWidth: "500px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
         },
         "@media (min-width: 1025px) and (max-width: 1366px)": {
-            maxWidth: "500px",
+            maxWidth: "900px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
@@ -111,16 +119,12 @@ export const AttentionCardStyles = {
             fontSize: "14px",
             lineHeight: "24px",
             color: "#1D252B",
-            overflow: 'hidden',
-            textOverflow: 'ellipsis',
             fontFamily: '"Noto Sans"',
             fontStyle: 'normal',
             fontWeight: 300,
-            maxWidth: "200px",
-            whiteSpace: "nowrap",
         },
         "@media (min-width: 1025px) and (max-width: 1366px)": {
-            maxWidth: "500px",
+            maxWidth: "900px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
@@ -131,6 +135,10 @@ export const AttentionCardStyles = {
         "@media (max-width:599px)": {
             marginTop: "10px",
         },
+        "@media (min-width:600px) and (max-width:1024px)": {
+            marginLeft: "auto"
+        },
+
     },
     renewNowButton: {
         textTransform: "none",

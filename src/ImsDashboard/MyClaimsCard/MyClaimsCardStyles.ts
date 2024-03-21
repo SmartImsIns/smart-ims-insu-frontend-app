@@ -6,7 +6,6 @@ export const MyClaimCardStyles = {
         "@media (max-width: 599px)": {
             paddingLeft: "20px",
             paddingRight: "20px",
-            marginTop: "20px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
             paddingLeft: "25px",
@@ -28,6 +27,9 @@ export const MyClaimCardStyles = {
         "@media (max-width:599px)": {
             display: "none",
         },
+        "@media (min-width: 600px) and (max-width: 1070px)": {
+            marginLeft: "auto",
+        }
     },
     trackYourClaim: {
         fontFamily: "Lato",
@@ -77,6 +79,10 @@ export const MyClaimCardStyles = {
             paddingRight: "0px",
             justifyContent: "space-between",
         },
+        "@media (min-width: 600px) and (max-width: 1024px)": {
+            paddingRight: "15px",
+
+        }
     },
     trackYourClaimText: {
         display: "none",
@@ -84,12 +90,11 @@ export const MyClaimCardStyles = {
         minWidth: "118px",
         "@media (max-width:599px)": {
             display: "flex",
-            alignItem: "center"
-        },
-        "@media (min-width:600px) and (max-width:1024px)": {
-
-        },
-
+            alignItem: "center",
+            justifyContent: "flex-end",
+            marginLeft: "auto",
+            marginRight: "30px"
+        }
     },
     box: {
         display: "flex",

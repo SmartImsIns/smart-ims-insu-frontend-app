@@ -32,11 +32,9 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
             />
           </Box>
           <Box sx={AttentionCardStyles.AttentionsCardTextStyle}>
-            <Tooltip title={headText}>
-              <Typography sx={AttentionCardStyles.HeadStyle}>
-                {headText}
-              </Typography>
-            </Tooltip>
+            <Typography sx={AttentionCardStyles.HeadStyle}>
+              {headText}
+            </Typography>
             <Box>
               <Typography sx={AttentionCardStyles.ContentStyle}>
                 {renewalAmount} {renewalPrice} | {duesDate} {dueDate}
