@@ -231,8 +231,6 @@ const PolicyStyles = {
     },
   },
 
-  
-
   autoDeduct: {
     display: "flex",
     "@media (min-width:360px) and (max-width:599px)": {
@@ -366,6 +364,7 @@ const PolicyStyles = {
     lineHeight: "19.8px",
     textAlign: "left",
     cursor: "pointer",
+    marginLeft: "0px",
     "@media (min-width:360px) and (max-width:599px)": {
       fontSize: "14px",
       maxWidth: "290px",
@@ -375,12 +374,12 @@ const PolicyStyles = {
   policyCardViewAllBox: {
     display: "flex",
     gap: "5px",
-    marginRight: "45px",
     marginTop: "25.78px",
     width: "90px",
     height: "15px",
-    padding: "16px 12px 16px 12px",
+    padding: "16px 30px 16px 12px",
     borderRadius: "30px",
+    justifyContent: "flex-end",
     opacity: "0px",
     "@media (min-width:360px) and (max-width:599px)": {
       marginRight: "0px",
@@ -405,6 +404,7 @@ const PolicyStyles = {
     boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     textTransform: "none",
     fontSize: "16px",
+    lineHeight:"24px",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "45.54px",
@@ -445,8 +445,12 @@ const PolicyStyles = {
   },
   rightArrow: {
     img: {
-      width: "15px",
-      marginBottom: "2px",
+      width: "10.5px",
+      marginBottom: "3px",
+      "@media (min-width:360px) and (max-width:599px)": {
+        width: "10.5px",
+        marginTop: "10px",
+      },
     },
   },
   oneCardTopSection: {

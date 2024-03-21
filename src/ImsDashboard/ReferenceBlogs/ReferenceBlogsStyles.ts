@@ -31,14 +31,23 @@ const ReferenceBlogsStyles = {
     flexWrap: "wrap",
     justifyContent: "space-between",
     gap: "10px",
-    width: "96%",
+    width: "95.5%",
     maxWidth: "100%",
     padding: " 0px 30px",
 
     "@media(min-width: 600px) and (max-width: 865px)": {
-      paddingLeft: "20px",
-      gap: "0px",
+      paddingLeft: "0px",
+      width: "91%",
+      gap: "10px",
       justifyContent: "center",
+    },
+    "@media(min-width: 866px) and (max-width: 1023px)": {
+      paddingLeft: "0px",
+      width: "92%",
+    },
+    "@media(min-width: 1023px) and (max-width: 1365px)": {
+      paddingLeft: "0px",
+      width: "94%",
     },
   },
   containerHeading: {
