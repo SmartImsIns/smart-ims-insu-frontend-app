@@ -7,10 +7,11 @@ pipeline{
                 echo "sravya"
        
                 sh 'tar -cvzf dist.tar.gz *'
+                sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo rm -rf *"'
                 sh 'scp dist.tar.gz jenkins@demo.divami.com:/var/www/html/demo/smartims'
                 sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && tar -xvzf dist.tar.gz"'
                 sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo chown -R jenkins:jenkins *"'
-                sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo rm -rf *"'
+                
                 sh 'ssh jenkins@demo.divami.com "cd /var/www/html/demo/smartims && sudo docker build -t smartims$BUILD_NUMBER -f Dockerfile ."'
                 //sh 'ssh jenkins@demo.divami.com "sudo docker tag smartims$BUILD_NUMBER:latest sravyananduri/smartims$BUILD_NUMBER"' 
                 //sh 'ssh jenkins@demo.divami.com "sudo docker push sravyananduri/smartims$BUILD_NUMBER"'
