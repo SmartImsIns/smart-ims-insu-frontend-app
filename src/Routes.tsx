@@ -5,12 +5,17 @@ import Dialog from "@mui/material/Dialog";
 import Error from "./common/Error/Error";
 import Login from "./login/Login";
 import CustomerRoutes from "./customers/CustomerRoutes";
+import { Box } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { RootState } from "./store/store";
 import { getCookie } from "./utils/Utility";
 import { customerPath } from "./constants/Constants";
+import ImsDashboard from "./ImsDashboard/ImsDashboard";
+// import Header from "./ImsDashboard/Header/Header";
+// import Footer from "./ImsDashboard/Footer/Footer";
 import Footer from "./common/Footer/Footer";
 import Header from "./common/Header/Header";
+import { ContainerStyles } from "./Styles";
 import { setIsLogin, setUserDetails } from "./login/LoginSlice";
 
 const ApplicationRoutes = (props: any) => {
@@ -25,9 +30,7 @@ const ApplicationRoutes = (props: any) => {
   const customerName = getCookie("customerName");
 
   const { isLoading } = useAppSelector((store: RootState) => store.common);
-  const { isLogin, userDetails } = useAppSelector(
-    (store: RootState) => store.login
-  );
+  const { isLogin } = useAppSelector((store: RootState) => store.login);
 
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split("/");
@@ -39,11 +42,12 @@ const ApplicationRoutes = (props: any) => {
         (path: string) => pathArray[2] === path
       );
       if (isValidCustomerPath) {
-        // navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
+        navigate(location.pathname);
       }
     } else {
       navigate("/customer/dashboard");
     }
+
   }, [navigate, location.pathname]);
 
   const checkAuthentication = useCallback(() => {
@@ -55,17 +59,17 @@ const ApplicationRoutes = (props: any) => {
   }, [roleName, routeToCustomer]);
 
   useEffect(() => {
-    if (authenticated === "true" && customerId && customerName) {
+    if (authenticated && customerId && customerName) {
       dispatch(setIsLogin(true));
       dispatch(setUserDetails({ customerId, customerName }));
     }
   }, [authenticated, customerId, customerName, dispatch]);
 
   useEffect(() => {
-    if (isLogin && userDetails) {
+    if (isLogin || authenticated) {
       checkAuthentication();
     }
-  }, [isLogin, userDetails, checkAuthentication, navigate]);
+  }, [isLogin, authenticated, checkAuthentication, navigate]);
 
   return (
     <>
@@ -85,12 +89,15 @@ const ApplicationRoutes = (props: any) => {
         <CircularProgress size="4rem" />
       </Dialog>
       <Header />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/customer/*" element={<CustomerRoutes />} />
-        <Route path="*" element={<Error header={true} {...props} />} />
-      </Routes>
+      <Box sx={ContainerStyles}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/customer/*" element={<CustomerRoutes />} />
+          <Route path="/ims-dashboard" element={<ImsDashboard />} />
+          <Route path="*" element={<Error header={true} {...props} />} />
+        </Routes>
+      </Box>
       <Footer />
     </>
   );

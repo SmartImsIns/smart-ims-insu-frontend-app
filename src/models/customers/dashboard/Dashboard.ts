@@ -12,6 +12,7 @@ export interface IPolicy {
   carrierQuoteNumber: string;
   tenure: string;
   riskCount: number;
+  basePrimium: string;
   writtenPremium: string;
   writtenFeeAmt: string;
   productName: string;

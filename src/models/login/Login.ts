@@ -16,6 +16,5 @@ export interface IUserDetails {
 
 export interface ILoginSlice {
   isLogin: boolean;
-  roleName: string | null;
   userDetails: IUserDetails | null;
 }

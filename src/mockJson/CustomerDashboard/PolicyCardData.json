@@ -1,0 +1,42 @@
+[
+    {
+        "id":"1",
+      "policyNumber": "12AW1145G057",
+      "status": "Active till 22 Feb 2025",
+      "plan": "Smart IMS life online saving plan",
+      "premium": "$821",
+      "term": "2 years",
+      "autoDeduct": true,
+      "dueDate": "22 Mar 2024",
+      "days": "8",
+      "type": "01 House",
+      "insurance": "Carrier Abc Insure"
+    },
+    {
+      "id":"2",
+      "policyNumber": "12AW1145G057",
+      "status": "Active till 22 Feb 2025",
+      "plan": "Smart IMS life online saving plan child solutions",
+      "premium": "$821",
+      "term": "2 years",
+      "autoDeduct": false,
+      "dueDate": "22 Mar 2024",
+      "days": "19",
+      "type": "02 Vehicles",
+      "insurance": "Carrier Abc Insure"
+    },
+    {
+      "id":"3",
+      "policyNumber": "12AW1145G057",
+      "status": "Active till 22 Feb 2025",
+      "plan": "Smart IMS life online saving plan child solutions",
+      "premium": "$821",
+      "term": "2 years",
+      "autoDeduct": true,
+      "dueDate": "22 Mar 2024",
+      "days": "8",
+      "type": "02 vehicles",
+      "insurance": "Carrier Abc Insure"
+    }
+  ]
+  
