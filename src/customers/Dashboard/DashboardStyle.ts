@@ -1,25 +1,11 @@
 const DashboardStyle = {
-  dashboard: {},
-  left: {
-    width: "75%",
-    display: "grid",
-    gap: "1rem",
-    "@media(max-width: 780px)": {
-      width: "100%",
-    },
-  },
-  welcome: {
+  dashboard: {
+    padding: "40px 0px",
     display: "flex",
-    gap: "1rem",
-    "@media(max-width: 780px)": {
-      flexDirection: "column",
-      gap: 0,
-    },
+    flexDirection: "column",
+    gap: "40px",
   },
-  loggedInUsername: {
-    fontSize: "1.5rem",
-    fontWeight: "bold",
-  },
+
   NeedHelpText: { fontSize: "1.5rem", fontWeight: "normal" },
   policiesContainer: {},
   policiesHeadingContainer: {

@@ -1,0 +1,24 @@
+{
+  "data": {
+    "vehicleDetails": [
+      {
+        "vehIdentificationNumber": "1G1ZT51806F128009",
+        "manufacturer": "CHEVROLET",
+        "model": "MALIBU LT",
+        "modelYr": "2006",
+        "status": "Active",
+        "typeCd": "PrivatePassengerAuto"
+      },
+      {
+        "vehIdentificationNumber": "1HGCP2F78BA066724",
+        "manufacturer": "HONDA",
+        "model": "ACCORD EX",
+        "modelYr": "2011",
+        "status": "Active",
+        "typeCd": "PrivatePassengerAuto"
+      }
+    ]
+  },
+  "statusCode": 200,
+  "message": ""
+}

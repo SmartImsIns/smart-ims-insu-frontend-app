@@ -1,22 +1,22 @@
 export interface IDashboard {
-  policyCount: string;
-  policyList: IPolicy[];
-}
-
-export interface IPolicyCustomer {
-  CustomerName: string;
-  CustomerId: string;
+  policyCount: string | null;
+  policyList: IPolicy[] | null;
 }
 
 export interface IPolicy {
+  policyRef: string;
+  lineCode: string;
+  carrierCode: string;
   carrierPolicyNo: string;
   carrierPolicyStatus: string;
-  duePremium: number;
-  policyRef: string;
-  productName: string;
-  riskCount: number;
+  carrierQuoteNumber: string;
   tenure: string;
-  LOBCode?: string | null;
+  riskCount: number;
+  basePrimium: string;
+  duePremium: string;
+  productName: string;
+  effectiveDate: string;
+  expiryDate: string;
 }
 
 export interface IDashboardSlice {
@@ -24,11 +24,11 @@ export interface IDashboardSlice {
 }
 
 export interface IDashboardRequestParams {
-  customerId: string | null;
+  customerId: string;
 }
 
 export interface IDashboardResponse {
-  data: IDashboard;
+  data: IDashboard | null;
   message: string;
   statusCode: number;
 }

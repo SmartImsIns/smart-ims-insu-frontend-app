@@ -1,1 +1,1 @@
-export const customerPath = [];
+export const customerPath = ["policyDetails", "dashboard"];
