@@ -1,25 +1,11 @@
 const DashboardStyle = {
-  dashboard: {},
-  left: {
-    width: "75%",
-    display: "grid",
-    gap: "1rem",
-    "@media(max-width: 780px)": {
-      width: "100%",
-    },
-  },
-  welcome: {
+  dashboard: {
+    padding: "40px 0px",
     display: "flex",
-    gap: "1rem",
-    "@media(max-width: 780px)": {
-      flexDirection: "column",
-      gap: 0,
-    },
+    flexDirection: "column",
+    gap: "40px",
   },
-  loggedInUsername: {
-    fontSize: "1.5rem",
-    fontWeight: "bold",
-  },
+
   NeedHelpText: { fontSize: "1.5rem", fontWeight: "normal" },
   policiesContainer: {},
   policiesHeadingContainer: {
@@ -46,6 +32,7 @@ const DashboardStyle = {
   policyCard: {
     position: "relative",
     width: "30%",
+    boxShadow: 5,
     "@media(max-width: 780px)": {
       width: "100%",
     },
@@ -70,7 +57,9 @@ const DashboardStyle = {
     color: "white",
     fontSize: "0.7rem",
     width: "50%",
-    borderRadius: "10px",
+    borderRadius: "2rem",
+    boxShadow:
+      "0px 5px 9px 1px rgba(0,0,0,0.2), 4px 4px 4px 0px rgba(0,0,0,0.14), 4px 4px 5px -2px rgba(0,0,0,0.12)",
     ":hover": {
       backgroundColor: "#000000",
     },

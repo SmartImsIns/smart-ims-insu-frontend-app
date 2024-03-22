@@ -1,15 +1,17 @@
-export interface ILogin {
-  indexName: string;
-  contactNumber: string;
+export interface ILoginRequestParams {
+  customerName: string;
+  mobile: string;
 }
 
-export interface ILoginRequestParams {
-  data: ILogin
+export interface ILoginResponse {
+  data: IUserDetails | null;
+  message: string;
+  statusCode: number;
 }
 
 export interface IUserDetails {
-  name: string;
-  contactNumber: string;
+  customerName: string;
+  customerId: string;
 }
 
 export interface ILoginSlice {

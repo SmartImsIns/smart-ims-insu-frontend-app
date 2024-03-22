@@ -1,10 +1,49 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
 import QuickReferencesStyle from "./QuickReferencesStyle";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import img1 from "../../../assets/svgs/group1.svg";
+import img2 from "../../../assets/svgs/group2.svg";
+import img3 from "../../../assets/svgs/group3.svg";
+import img4 from "../../../assets/svgs/group4.svg";
+import playIcon from "../../../assets/svgs/playIcon.svg";
+
+interface quickReference {
+  imgSrc: string;
+  description: string;
+  type: string;
+}
 
 const QuickReferences = () => {
   const getQuickReferences = () => {
-    return [1, 2, 3].map((item: number, index: number) => (
+    return [
+      {
+        imgSrc: img1,
+        description: "When to make an insurance claim?",
+        type: "video",
+      },
+      {
+        imgSrc: img2,
+        description:
+          "Which type of insurance is best for your automobile life.",
+        type: "",
+      },
+      {
+        imgSrc: img3,
+        description: "How to create your first proposal?",
+        type: "video",
+      },
+      {
+        imgSrc: img4,
+        description: "Make your insurance effective",
+        type: "",
+      },
+    ].map((item: quickReference, index: number) => (
       <Card
         key={`QucikReference_${index}`}
         sx={QuickReferencesStyle.qucikReferencesCard}
@@ -12,16 +51,22 @@ const QuickReferences = () => {
         <CardMedia
           sx={QuickReferencesStyle.qucikReferencesCardMedia}
           component="img"
-          image=""
+          src={item.imgSrc}
           alt="green iguana"
         />
         <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
-          <Typography sx={QuickReferencesStyle.quickReferencesContentText}>
-            When to make an insurance claim?{" "}
+          <Typography sx={QuickReferencesStyle.quickReferencesCardContentText}>
+            {item.description}
           </Typography>
-          <Typography sx={QuickReferencesStyle.quickReferencesContentText}>
-            05min
-          </Typography>
+          {item.type === "video" ? (
+            <Button>
+              <img src={playIcon} alt="" />
+            </Button>
+          ) : (
+            <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
+              Read More
+            </Button>
+          )}
         </CardContent>
       </Card>
     ));
@@ -29,15 +74,9 @@ const QuickReferences = () => {
 
   return (
     <Box sx={QuickReferencesStyle.quickReferences}>
-      <Box sx={QuickReferencesStyle.quickReferencesHeadingContainer}>
-        <Typography sx={QuickReferencesStyle.quickReferencesHeading}>
-          QuickReferences
-        </Typography>
-        <Box sx={QuickReferencesStyle.viewAllContainer}>
-          <Typography sx={QuickReferencesStyle.viewAll}>View All</Typography>
-          <ArrowRightAltIcon sx={QuickReferencesStyle.rightIcon} />
-        </Box>
-      </Box>
+      <Typography sx={QuickReferencesStyle.quickReferencesHeading}>
+        Quick References For You
+      </Typography>
       <Box sx={QuickReferencesStyle.qucikReferencesCards}>
         {getQuickReferences()}
       </Box>

@@ -7,7 +7,7 @@ import learnAboutIcon from "../assets/Group 1000009237.svg";
 import viewAllArrow from "../assets/viewAllArrow.svg";
 
 
-export const customerPath = [];
+export const customerPath = ["policyDetails", "dashboard"];
 export const policiesHeading = "Here Is Your List Of Policies";
 export const quickReferences = "Quick References For You";
 export const footerLeftText = "© 2024 Smart IMS. All rights reserved.";
@@ -30,4 +30,4 @@ export const STAR_ICON = starIcon;
 export const PAYMENT_ICON = paymentHistoryIcon;
 export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
-export const VIEW_ARROW = viewAllArrow
+export const VIEW_ARROW = viewAllArrow;
