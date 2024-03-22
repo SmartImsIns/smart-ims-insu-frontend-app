@@ -1,14 +1,15 @@
 const QuickReferencesStyle = {
-  quickReferences: {},
-  quickReferencesHeadingContainer: {
-    display: "flex",
-    alignItems: "center",
-    justifyContent: "space-between",
+  quickReferences: {
+    padding: "0px 100px",
+    display: "grid",
+    gap: "20px",
   },
-  quickReferencesHeading: { fontSize: "1.5rem", fontWeight: "bold" },
-  viewAllContainer: { display: "flex", alignItems: "center", gap: "0.5rem" },
-  viewAll: { fontSize: "0.8rem", textDecorationLine: "underline" },
-  rightIcon: { color: "#666666" },
+  quickReferencesHeading: {
+    fontFamily: "Playfair Display",
+    fontSize: "20px",
+    fontWeight: "500",
+    lineHeight: "22px",
+  },
   qucikReferencesCards: {
     display: "flex",
     alignItems: "center",
@@ -21,18 +22,31 @@ const QuickReferencesStyle = {
   qucikReferencesCard: {
     width: "30%",
     boxShadow: "5",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    border: "1px solid rgba(175, 175, 175, 1)",
+    borderRadius: "10px",
     "@media(max-width: 780px)": {
       width: "100%",
     },
   },
-  qucikReferencesCardMedia: { height: 140 },
+  qucikReferencesCardMedia: { height: 160 },
   quickReferencesCardContent: {
+    height: "160px",
     display: "flex",
-    alignItems: "center",
+    flexDirection: "column",
     justifyContent: "space-between",
-    backgroundColor: "#cccccc",
+    alignItems: "center",
   },
-  quickReferencesContentText: { fontSize: "0.9rem" },
+  quickReferencesCardContentText: { fontSize: "0.9rem" },
+  readMoreBtn: {
+    width: "150px",
+    height: "40px",
+    borderRadius: "40px",
+    backgroundColor: "rgba(255, 255, 255, 1)",
+    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
+    border: " 1px solid rgba(63, 63, 63, 1)",
+    color: "rgba(63, 63, 63, 1)",
+  },
 };
 
 export default QuickReferencesStyle;

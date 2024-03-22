@@ -8,11 +8,13 @@ import {
 import DashboardSlice from "../customers/Dashboard/DashboardSlice";
 import CommonSlice from "../common/CommonSlice";
 import LoginSlice from "../login/LoginSlice";
+import PolicyDetailsSlice from "../customers/PolicyDetails/PolicyDetailsSlice";
 
 const appReducer = combineReducers({
-  dashboard: DashboardSlice,
   common: CommonSlice,
   login: LoginSlice,
+  dashboard: DashboardSlice,
+  policyDetails: PolicyDetailsSlice,
 });
 
 const reducerProxy = (state: any, action: AnyAction) => {
