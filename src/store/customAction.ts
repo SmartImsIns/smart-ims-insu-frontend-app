@@ -19,7 +19,7 @@ export const CustomAction = async (
   dispatch(setIsLoading(true));
   try {
     const { data } = await apiMethod;
-    if (data.status === "success") {
+    if (data.statusCode === 200) {
       dispatch(setIsSuccess(true));
     } else {
       dispatch(setIsError(true));
