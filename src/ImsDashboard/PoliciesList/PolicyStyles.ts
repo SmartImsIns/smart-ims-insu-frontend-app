@@ -1,12 +1,3 @@
-const commonStyles = {
-  fontFamily: "Noto Sans",
-  fontSize: "18px",
-  fontWeight: "300",
-  lineHeight: "20px",
-  letterSpacing: "0em",
-  textAlign: "left",
-};
-
 const font = {
   fontFamily: "Noto Sans",
 };
@@ -14,13 +5,14 @@ const font = {
 const PolicyStyles = {
   card: {
     display: "flex",
+    gap: "0px",
   },
   policyCardHeading: {
     ...font,
     width: "100%",
-    maxWidth: "237px",
+    maxWidth: "257px",
     height: "22px",
-    marginTop: "38.78px",
+    marginTop: "35.78px",
     marginLeft: "30px",
     marginRight: "auto",
     fontFamily: "Playfair Display",
@@ -31,7 +23,9 @@ const PolicyStyles = {
     textAlign: "left",
     color: "rgba(56, 61, 78, 1)",
     "@media (min-width:360px) and (max-width:599px)": {
-      marginLeft: "20px",
+      marginLeft: "25px",
+      marginBottom: "10px",
+      maxWidth: "150px",
     },
     "@media (min-width:600px) and (max-width:1024px)": {
       marginLeft: "32px",
@@ -40,46 +34,35 @@ const PolicyStyles = {
   AllCards: {
     display: "flex",
     width: "100%",
-    // maxWidth:"1306px",
-    // margin:"0px auto 0px 30px",
-    // gap:"30px",
-
-    "@media (min-width:360px) and (max-width:599px)": {
+    "@media (min-width:360px) and (max-width:767px)": {
+      flexDirection: "column",
       width: "100%",
-      maxWidth: "320px",
-      margin: "0px auto",
-      gap: "20px",
     },
-    "@media (min-width: 600px) and (max-width: 1024px)": {
+    "@media (min-width: 768px) and (max-width: 1024px)": {
       width: "100%",
-      maxWidth: "960px",
-      margin: "0px auto",
-      gap: "30px",
     },
   },
   oneCard: {
     width: "100%",
     maxWidth: "46.6921%",
-    cursor: "pointer",
-    // maxWidth:"638px",
     height: "367.47px",
-    marginTop: "21.95px !important",
     marginLeft: "30px",
+    marginTop: "5.75px",
     borderRadius: "10px",
     boxShadow: "20px 20px 57px 0px rgba(0, 0, 0, 0.08)",
 
-    "@media (min-width:360px) and (max-width:599px)": {
+    "@media (min-width:360px) and (max-width:767px)": {
       width: "100%",
-      maxWidth: "320px",
-      margin: "auto",
+      maxWidth: "88.889%",
+      marginLeft: "20px",
+      marginTop: "15.95px",
       height: "584.42px",
     },
-    "@media (min-width: 600px) and (max-width: 1024px)": {
+    "@media (min-width: 768px) and (max-width: 1024px)": {
       width: "100%",
-      maxWidth: "541px",
-      // margin:"auto",
-      height: "540.42px",
-      margin: "0px auto",
+      maxWidth: "44.4%",
+      height: "565.42px",
+      position: "relative",
     },
   },
   cardIcon: {
@@ -109,7 +92,7 @@ const PolicyStyles = {
       display: "block",
       gap: "40px",
     },
-    "@media (min-width: 1025px) and (max-width: 1366px)": {
+    "@media (min-width: 1025px) and (max-width: 1365px)": {
       display: "flex",
       gap: "80px",
     },
@@ -119,7 +102,7 @@ const PolicyStyles = {
     width: "100%",
     maxWidth: "auto",
     height: "20px",
-    marginTop: "47.61px",
+    marginTop: "50.61px",
     marginLeft: "18.22px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "18px",
@@ -158,8 +141,7 @@ const PolicyStyles = {
     width: "100%",
     maxWidth: "51px",
     height: "20px",
-    marginTop: "48.69px",
-    // marginLeft: "160.5px",
+    marginTop: "53.69px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "18px",
     fontWeight: "300",
@@ -183,11 +165,9 @@ const PolicyStyles = {
   cardTopStatusDate: {
     ...font,
     width: "100%",
-    // maxWidth: "203px",
     maxWidth: "auto",
     height: "22px",
     marginTop: "2.89px",
-    // marginLeft: "160.5px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "20px",
     fontWeight: "400",
@@ -208,38 +188,46 @@ const PolicyStyles = {
   },
   cardBodyHeading: {
     ...font,
-    width: "100%",
-    maxWidth: "448px",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
+    width: "%",
+    maxWidth: "400px",
     height: "22px",
     marginTop: "50.5px",
     marginLeft: "40px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "20px",
     fontWeight: "400",
-    lineHeight: "22px",
+    lineHeight: "17px",
     letterSpacing: "0em",
     textAlign: "left",
-
+    overflow: "hidden",
+    textOverflow: "ellipsis",
+    display: "-webkit-box",
+    WebkitLineClamp: "2",
+    WebkitBoxOrient: "vertical",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "107px",
-      width: "230px",
+      width: "250px",
       height: "52px",
       lineHeight: "26px",
     },
     "@media (min-width: 600px) and (max-width: 1024px)": {
       marginLeft: "40px",
       marginTop: "90px",
-      width: "auto",
+      width: "300px",
       height: "auto",
       lineHeight: "26px",
+      marginRight: "30px",
+    },
+    "@media (min-width: 1025px) and (max-width: 1366px)": {
+      maxWidth: "220pxp",
     },
   },
 
   autoDeduct: {
     display: "flex",
+    ...font,
+
     "@media (min-width:360px) and (max-width:599px)": {
       display: "block",
     },
@@ -249,18 +237,22 @@ const PolicyStyles = {
   },
   cardBodyPremium: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "255px",
     height: "20px",
     marginTop: "15px",
     marginLeft: "40px",
     color: "rgba(29, 37, 43, 1)",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
 
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "15px",
-      maxWidth: "252px",
+      maxWidth: "282px",
       heigth: "20px",
       lineHeight: "19.8px",
     },
@@ -268,14 +260,16 @@ const PolicyStyles = {
       marginLeft: "40px",
       marginTop: "10px",
       width: "100%",
-      maxWidth: "252px",
+      maxWidth: "auto",
     },
   },
+  cardAutoText: {
+    fontFamily: "Noto Sans",
+    fontSize: "18px",
+    fontWeight: "300",
+  },
   cardBodyPremiumAuto: {
-    ...font,
-    ...commonStyles,
     width: "100%",
-    maxWidth: "110px",
     marginTop: "13px",
     marginLeft: "5px",
     fontSize: "20px",
@@ -285,7 +279,6 @@ const PolicyStyles = {
 
     color: "rgba(13, 171, 34, 1)",
     "@media (min-width:360px) and (max-width:599px)": {
-      maxWidth: "99px",
       height: "20px",
       marginLeft: "30px",
       marginTop: "12px",
@@ -301,23 +294,26 @@ const PolicyStyles = {
   },
   cardBodyDueDate: {
     ...font,
-    ...commonStyles,
     width: "100%",
-    maxWidth: "186px",
+    maxWidth: "200px",
     height: "20px",
     marginTop: "11px",
     marginLeft: "40px",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "12px",
       width: "230px",
       heigth: "52px",
       lineHeight: "26px",
-      // fontSize:"14px"
     },
     "@media (min-width:600px) and (max-width:1024px)": {
       marginLeft: "40px",
-      marginTop: "12px",
+      marginTop: "10px",
       width: "230px",
       heigth: "52px",
       lineHeight: "26px",
@@ -325,29 +321,38 @@ const PolicyStyles = {
   },
   cardBodyDay: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "72px",
     height: "20px",
     marginTop: "11px",
-    marginLeft: "9.55px",
     color: "rgba(217, 77, 46, 1)",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
     "@media (min-width:360px) and (max-width:599px)": {
-      marginLeft: "15px",
       marginTop: "15px",
       maxWidth: "72px",
       heigth: "52px",
       lineHeight: "19.8px",
     },
+    "@media (min-width:600px) and (max-width:1024px)": {
+      marginTop: "14.3px",
+    },
   },
   cardBodyInsure: {
     ...font,
-    ...commonStyles,
     width: "100%",
     maxWidth: "auto",
     height: "20px",
     marginTop: "15px",
     marginLeft: "45px",
+    fontSize: "18px",
+    fontWeight: "300",
+    lineHeight: "20px",
+    letterSpacing: "0em",
+    textAlign: "left",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "15px",
@@ -364,6 +369,10 @@ const PolicyStyles = {
     "@media (min-width:360px) and (max-width:599px)": {
       gap: "60px",
     },
+    "@media (min-width: 768px) and (max-width: 1024px)": {
+      position: "absolute",
+      bottom: "30.88px",
+    },
   },
   policyCardViewAll: {
     fontFamily: "Noto Sans",
@@ -372,19 +381,35 @@ const PolicyStyles = {
     lineHeight: "19.8px",
     textAlign: "left",
     cursor: "pointer",
+    marginLeft: "0px",
+    "@media (min-width:360px) and (max-width:599px)": {
+      fontSize: "14px",
+      maxWidth: "290px",
+      marginTop: "3px",
+    },
   },
   policyCardViewAllBox: {
     display: "flex",
     gap: "5px",
-    marginRight: "45px",
-    marginTop: "42.78px",
+    marginTop: "25.78px",
+    width: "90px",
+    height: "15px",
+    padding: "16px 30px 16px 12px",
+    borderRadius: "30px",
+    justifyContent: "flex-end",
+    opacity: "0px",
+    "@media (min-width:360px) and (max-width:599px)": {
+      marginRight: "0px",
+      marginTop: "35.78px",
+    },
   },
   policyCardHead: {
     display: "flex",
     justifyContent: "space-between",
   },
   cardBottomButton: {
-    ...font,
+    fontFamily: "Lato",
+    fontWeight: "400",
     width: "100%",
     maxWidth: "155px",
     height: "40px",
@@ -396,6 +421,7 @@ const PolicyStyles = {
     boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     textTransform: "none",
     fontSize: "16px",
+    lineHeight: "24px",
     "@media (min-width:360px) and (max-width:599px)": {
       marginLeft: "30px",
       marginTop: "45.54px",
@@ -414,26 +440,32 @@ const PolicyStyles = {
 
   ellipsisButton: {
     height: "25.7px",
-    marginTop: "25.7px ",
-    marginRight: "29px",
-    "@media (min-width:360px) and (max-width:599px)": {
-      img: {
-        // marginLeft:"60px",
-        marginTop: "40px",
-        width: "40px",
-        height: "40px",
-        lineHeight: "19.8px",
+    marginTop: "7px",
+    marginRight: "30px",
+    "@media (min-width:360px) and (max-width:600px)": {
+      marginTop: "28px ",
+      width: "40px",
+      height: "40px",
+      lineHeight: "19.8px",
+    },
+    "@media (min-width:601px) and (max-width:1024px)": {
+      marginTop: "30px",
+      width: "40px",
+      height: "40px",
+      lineHeight: "19.8px",
+    },
+  },
+  rightArrow: {
+    img: {
+      width: "10.5px",
+      "@media (min-width:360px) and (max-width:599px)": {
+        width: "10.5px",
+        marginTop: "10px",
       },
     },
-    "@media (min-width:600px) and (max-width:1024px)": {
-      img: {
-        // marginLeft:"60px",
-        marginTop: "50px",
-        width: "40px",
-        height: "40px",
-        lineHeight: "19.8px",
-      },
-    },
+  },
+  oneCardTopSection: {
+    cursor: "pointer",
   },
 };
 

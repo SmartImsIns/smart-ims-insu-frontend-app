@@ -6,7 +6,7 @@ const ReferenceBlogsStyles = {
     marginTop: "31.08px",
     display: "flex",
     flexDirection: "column",
-    gap: "20px",
+    gap: "20.09px",
     width: "100%",
     "@media(min-width: 360px) and (max-width: 599px)": {
       display: "none",
@@ -18,6 +18,7 @@ const ReferenceBlogsStyles = {
     img: {
       maxWidth: "295.82px",
       height: "169.01px",
+      borderRadius: "10 10px 0 0px",
       objectFit: "cover",
       "@media(min-width: 600px) and (max-width: 1023px)": {
         maxWidth: "255px",
@@ -31,15 +32,25 @@ const ReferenceBlogsStyles = {
     marginTop: "20px",
     display: "flex",
     flexWrap: "wrap",
-    // justifyContent:"space-between",
-    gap: "40px",
-    width: "97%",
+    justifyContent: "space-between",
+    gap: "10px",
+    width: "95.5%",
     maxWidth: "100%",
-    paddingLeft: "30px",
-    "@media(min-width: 600px) and (max-width: 1023px)": {
+    padding: "0px 30px",
+
+    "@media(min-width: 600px) and (max-width: 865px)": {
       paddingLeft: "20px",
+      width: "91%",
       gap: "10px",
       justifyContent: "center",
+    },
+    "@media(min-width: 866px) and (max-width: 1023px)": {
+      paddingLeft: "20px",
+      width: "92%",
+    },
+    "@media(min-width: 1023px) and (max-width: 1365px)": {
+      paddingLeft: "20px",
+      width: "94%",
     },
   },
   containerHeading: {
@@ -67,7 +78,6 @@ const ReferenceBlogsStyles = {
     padding: "16px 12px",
     borderRadius: "40px",
     backgroundColor: "rgba(255, 255, 255, 1)",
-    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     border: " 1px solid rgba(63, 63, 63, 1)",
     color: "rgba(63, 63, 63, 1)",
     textTransform: "none",
@@ -86,28 +96,29 @@ const ReferenceBlogsStyles = {
   },
   card: {
     width: "100%",
-    maxWidth: "295.82px",
+    maxWidth: "293px",
     height: "331px",
     position: "relative",
     backgroundColor: "rgba(255, 255, 255, 1)",
     border: "1px solid rgba(175, 175, 175, 1)",
     borderRadius: "10px",
+    boxShadow: "none",
     "@media(min-width: 600px) and (max-width: 700px)": {
-      maxWidth: "205px",
+      maxWidth: "255px",
       margin: "30px",
     },
     "@media(min-width: 701px) and (max-width: 1023px)": {
       maxWidth: "255px",
-      margin: "30px",
-    },
-
-    "@media(min-width: 901px) and (max-width: 1023px)": {
-      maxWidth: "299.8px",
-      margin: "30px",
+      margin: "10px",
     },
   },
+  innerContainer: {
+    display: "flex",
+    flexDirection: "row",
+    justifyContent: "space-between",
+  },
+
   carousel: {
-    // border: "2px solid",
     width: "295.81px",
     margin: "0px auto",
     marginLeft: "32px",
@@ -116,6 +127,46 @@ const ReferenceBlogsStyles = {
       display: "block",
       margin: "0px auto",
       marginTop: "19.51px",
+    },
+    // ".carousel-slider": {
+    //   overflow: "visible",
+    // },
+    // ".control-dots": {
+    //   bottom: "-40px",
+    // },
+    // ".dot": {
+    //   background: "black",
+    // },
+    ".slickDots": {
+      verticalAlign: "middle",
+      margin: "auto",
+      padding: "0",
+      textAlign: "center",
+      marginTop: "19px",
+      li: {
+        listStyle: "none",
+        cursor: "pointer",
+        display: "inline-block",
+        margin: "0 3px",
+        padding: "0px",
+        "&.slick-active button": {
+          width: "21px",
+          height: "9px",
+          borderRadius: "30px",
+          backgroundColor: "#3F3F3F",
+        },
+        button: {
+          border: "none",
+          background: "#D9D9D9",
+          color: "transparent",
+          cursor: "pointer",
+          display: "block",
+          padding: "0px",
+          height: "9px",
+          width: "9px",
+          borderRadius: "50%",
+        },
+      },
     },
   },
   policyCardViewAllBox: {
@@ -137,23 +188,24 @@ const ReferenceBlogsStyles = {
     display: "flex",
     width: "fit-content",
     minWidth: "150px",
-    height: 40,
     padding: "16px 12px",
     justifyContent: "center",
     alignItems: "center",
-    flexShrink: 0,
     borderRadius: "40px",
     backgroundColor: "#FFFFFF",
-    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
     color: "rgba(63, 63, 63, 1)",
     border: "1px solid rgba(63, 63, 63, 1)",
-    fontWeight: 400,
-    fontFamily: "Noto Sans",
+    fontWeight: "400",
+    fontFamily: "Lato",
     lineHeight: 1,
     letterSpacing: 0.5,
-    marginLeft: "-4px",
+    marginLeft: "2px",
+    marginTop: "2px",
+    height: "40px",
+    boxShadow: "0px 0px 0px 0px",
+    fontSize: "14px",
     "&:hover": {
-      backgroundColor: "#FFFFFF",
+      background: "transparent",
       color: "rgba(63, 63, 63, 1)",
     },
   },
@@ -168,34 +220,51 @@ const ReferenceBlogsStyles = {
     textAlign: "left",
     margin: "20px auto 0px auto",
     "@media(min-width: 600px) and (max-width: 700px)": {
-      marginLeft: "15px",
       maxWidth: "190px",
     },
   },
   cardDescriptionText: {
-    marginTop: "-9px",
-    marginLeft: "-5px",
+    marginTop: "-5px",
+    marginLeft: "-3px",
     fontFamily: "Noto Sans",
     fontSize: " 18px",
     fontColor: "rgba(29, 37, 43, 1)",
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
+    "@media(min-width: 600px) and (max-width: 700px)": {
+      fontSize: "14px",
+      maxWidth: "200px",
+    },
+    "@media(min-width: 701px) and (max-width: 800px)": {
+      margin: "0px 20px 0px 20px",
+    },
+    "@media(min-width: 800px) and (max-width: 1023px)": {
+      marginLeft: "20px",
+    },
   },
   cardButtonIcon: {
     position: "absolute",
     top: "270px",
+    left: "20px",
   },
   playButton: {
-    width: "40px",
+    width: "30px",
     height: "40px",
     left: "-11px",
     top: "7px",
+    borderRadius: "50%",
     "&:hover": {
       background: "transparent",
     },
     "@media(min-width: 600px) and (max-width: 700px)": {
       marginLeft: "15px",
+    },
+  },
+  rightarrow: {
+    img: {
+      width: "15px",
+      marginBottom: "2px",
     },
   },
 };

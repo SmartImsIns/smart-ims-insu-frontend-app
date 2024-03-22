@@ -1,8 +1,7 @@
 import { Box, Typography } from "@mui/material";
 import React, { ReactNode } from "react";
-import ImsDashboardStyle from "../ImsDashboardStyle";
 import DashBoardCardItem from "./DashBoardCardItem";
-import myClaimsIcon from "../../assets/myClaimsIcon.svg";
+import { MyClaimCardItemStyles } from "./MyClaimCardItemStyles";
 
 interface MyClaimCardItemProps {
   headText: string;
@@ -21,14 +20,17 @@ const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({
 }) => {
   return (
     <Box
-      sx={{ ...ImsDashboardStyle.claimsCardWrapperStyles, ...parentClasses }}
+      sx={{
+        ...MyClaimCardItemStyles.claimsCardWrapperStyles,
+        ...parentClasses,
+      }}
     >
       {icon ? (
-        <DashBoardCardItem src={icons} alt="new-claim-icon" text="" />
+        <DashBoardCardItem src={icons} alt={"new-claim-icon"} text="" />
       ) : null}
-      <Box sx={ImsDashboardStyle.claimsData}>
-        <Typography sx={ImsDashboardStyle.HeadStyle}>{headText}</Typography>
-        <Typography sx={ImsDashboardStyle.ContentStyle}>
+      <Box sx={MyClaimCardItemStyles.claimsData}>
+        <Typography sx={MyClaimCardItemStyles.HeadStyle}>{headText}</Typography>
+        <Typography sx={MyClaimCardItemStyles.ContentStyle}>
           {contentText}
         </Typography>
       </Box>

@@ -40,8 +40,9 @@ const Header = () => {
       <Box sx={HeaderStyle.logo}>
         <img
           src={headerData[0].logo}
-          style={{ cursor: "pointer" }}
+          style={HeaderStyle.simsLogo}
           alt="smart-ims logo"
+          onClick={()=>window.location.reload()}
         />
       </Box>
       <Box sx={HeaderStyle.headerItems}>
@@ -49,21 +50,21 @@ const Header = () => {
           <img
             src={headerData[0].notification}
             alt="notification"
-            style={{ width: "36px", height: "auto", cursor: "pointer" }}
+            style={HeaderStyle.notificationIcon}
           />
         </Box>
         <Box>
           <img
             src={headerData[0].displayPicture}
             alt="displayPicture"
-            style={{ width: "32px", height: "auto", cursor: "pointer" }}
+            style={HeaderStyle.displayPicture}
           />
         </Box>
         <Box>
           <img
             src={headerData[0].menu}
             alt="menu"
-            style={{ width: "40px", height: "auto", cursor: "pointer" }}
+            style={HeaderStyle.menuIcon}
           />
         </Box>
       </Box>

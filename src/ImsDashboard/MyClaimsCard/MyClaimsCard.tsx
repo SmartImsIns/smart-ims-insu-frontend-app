@@ -1,13 +1,18 @@
 import React, { useEffect, useState } from "react";
 import { Box, Card, Typography } from "@mui/material";
-import ImsDashboardStyle from "../ImsDashboardStyle";
-import DynamicTextDisplay from "../common/DynamicTextDisplay";
-import MyClaimCardItem from "../common/MyClaimCardItem";
-import ActionButton from "../common/ActionButton";
 import claimsData from "../../mockJson/CustomerDashboard/MyClaimsData.json";
 import { formatNumber } from "../../utils/Utility";
-import { MYCLAIM_ICON, CAR_ICON } from "../../constants/Constants";
-
+import {
+  MYCLAIM_ICON,
+  CAR_ICON,
+  viewPast,
+  VIEW_ARROW,
+} from "../../constants/Constants";
+import { MyClaimCardStyles } from "./MyClaimsCardStyles";
+import ActionButton from "../commonComponents/ActionButton";
+import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
+import MyClaimCardItem from "../commonComponents/MyClaimCardItem";
+import ViewComponent from "../commonComponents/ViewComponent";
 interface claimsData {
   houseLoanData?: {
     data: {
@@ -43,11 +48,20 @@ const MyClaimsCard: React.FC = () => {
   const formattedClaimCount = formatNumber(claimdata.length);
 
   return (
-    <Box sx={ImsDashboardStyle.imsDashbardContainer}>
-      <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
+    <Box sx={MyClaimCardStyles.Container} aria-label="MyClaims Card Container">
+      <Box
+        sx={{
+          display: "flex",
+          justifyContent: "space-between",
+          alignItems: "center",
+        }}
+      >
+        <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
+        <ViewComponent src={VIEW_ARROW} viewText={viewPast} />
+      </Box>
       {claimdata?.map((claim, id) => (
         <Box key={id}>
-          <Card sx={ImsDashboardStyle.myClaimsCardStyles}>
+          <Card sx={MyClaimCardStyles.myClaimsCardStyles}>
             {claim?.houseLoanData?.data?.map((item: any, index: number) => (
               <MyClaimCardItem
                 key={index}
@@ -57,7 +71,7 @@ const MyClaimsCard: React.FC = () => {
                 icon={index === 0 ? MYCLAIM_ICON : undefined}
                 parentClasses={
                   index === 0
-                    ? ImsDashboardStyle.myClaimsCardWithIconStyles
+                    ? MyClaimCardStyles.myClaimsCardWithIconStyles
                     : "none"
                 }
               />
@@ -71,19 +85,19 @@ const MyClaimsCard: React.FC = () => {
                 icon={index === 0 ? CAR_ICON : undefined}
                 parentClasses={
                   index === 0
-                    ? ImsDashboardStyle.myClaimsCardWithIconStyles
+                    ? MyClaimCardStyles.myClaimsCardWithIconStyles
                     : "none"
                 }
               />
             ))}
-            <Box sx={ImsDashboardStyle.trackYourClaimButton}>
+            <Box sx={MyClaimCardStyles.trackYourClaimButton}>
               <ActionButton
                 buttonText="Track Your Claim"
-                sx={ImsDashboardStyle.myClaimsCardButtonStyles}
+                sx={MyClaimCardStyles.myClaimsCardButtonStyles}
               />
             </Box>
-            <Box sx={ImsDashboardStyle.trackYourClaimText}>
-              <Typography sx={ImsDashboardStyle.trackYourClaim}>
+            <Box sx={MyClaimCardStyles.trackYourClaimText}>
+              <Typography sx={MyClaimCardStyles.trackYourClaim}>
                 Track Your Claim
               </Typography>
             </Box>

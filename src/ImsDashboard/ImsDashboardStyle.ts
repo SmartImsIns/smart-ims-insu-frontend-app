@@ -7,30 +7,10 @@ const ImsDashboardStyle = {
   flex1: {
     flex: "1 1 0%",
   },
-  welcomeCardsContainer: {
+  imsDashbardcContainer: {
+    paddingTop: "40.23px",
     paddingLeft: "30px",
     paddingRight: "30px",
-    marginTop: "60px",
-    "@media (max-width: 599px)": {
-      paddingLeft: "20px",
-      paddingRight: "20px",
-      marginTop: "40px",
-    },
-    "@media (min-width: 600px) and (max-width: 1024px)": {
-      paddingLeft: "25px",
-      paddingRight: "25px",
-      marginTop: "30px",
-    },
-    "@media (min-width: 1024px) and (max-width: 1920px)": {
-      paddingLeft: "30px",
-      paddingRight: "30px",
-    },
-  },
-  imsDashbardContainer: {
-    paddingTop: "40px",
-    paddingLeft: "30px",
-    paddingRight: "30px",
-
     "@media (max-width: 599px)": {
       paddingLeft: "20px",
       paddingRight: "20px",
@@ -45,190 +25,6 @@ const ImsDashboardStyle = {
       paddingLeft: "30px",
       paddingRight: "30px",
     },
-  },
-  claimsData: {
-    gap: "12px",
-    display: "flex",
-    flexDirection: "column",
-  },
-  claimsCardWrapperStyles: {
-    display: "flex",
-    gap: "22px",
-
-    padding: "15px",
-    "@media (max-width:599px)": {
-      marginRight: "0px",
-      minWidth: "114px",
-      alignItems: "center"
-    },
-  },
-  welcomeCardStyles: {
-    height: "100px",
-    flexShrink: 0,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginTop: "22px",
-    background: "linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)",
-    filter: "drop-shadow(20px 20px 57px rgba(0, 0, 0, 0.08))",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
-    paddingRight: "89.78px",
-    paddingLeft: "35.08px",
-    "@media (max-width: 599px)": {
-      height: "258px",
-      paddingRight: "38px",
-      paddingLeft: "35.08px",
-      justifyContent: "center",
-      alignItems: "center",
-      gap: "10px",
-      display: "grid",
-      gridTemplateColumns: "1fr 1fr" /* Equal width columns */,
-      gridTemplateRows: "1fr 1fr" /* Equal height rows */,
-    },
-    "@media(min-width: 600px) and (max-width: 880px)": {
-      paddingLeft: "10px",
-      paddingRight: "40px",
-    },
-  },
-  DashBoardCardText: {
-    marginLeft: "20.19px",
-    color: "#1D252B",
-    fontSize: "20px",
-    fontStyle: "normal",
-    fontWeight: 300,
-    lineHeight: "22px", // 22px
-    "@media (max-width: 599px)": {
-      fontSize: "16px",
-      paddingLeft: "10px",
-      marginLeft: "0px",
-      textAlign: "center",
-      minWidth: "120px",
-      maxHeight: "36px",
-    },
-    "@media(min-width: 600px) and (max-width: 1023px)": {
-      fontSize: "14px",
-      marginLeft: "10px",
-      maxWidth: "140px",
-    },
-  },
-  AttentionCardStyles: {
-    height: "118.988px",
-    flexShrink: 0,
-    display: "flex",
-    flexDirection: "row",
-    maxWidth: "100%",
-    alignItems: "center",
-    justifyContent: "space-between",
-    marginTop: "22px",
-    paddingLeft: "23.63px",
-    paddingRight: "42px",
-    border: "1px solid #C9E1EC",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
-    "@media (max-width:599px)": {
-      paddingRight: "38px",
-      height: "182px",
-      flexDirection: "column",
-      padding: "20px",
-    },
-  },
-  trackYourClaimButton: {
-    display: "block",
-    "@media (max-width:599px)": {
-      display: "none",
-    },
-  },
-  trackYourClaimText: {
-    display: "none",
-    marginLeft: "142px",
-    minWidth: "118px",
-    "@media (max-width:599px)": {
-      display: "block",
-    },
-  },
-  trackYourClaim: {
-    fontFamily: "Lato",
-    fontSize: "16px",
-    fontWeight: "400",
-    lineHeight: "16px",
-    letterSpacing: "0px",
-    textAlign: "left",
-    color: "rgba(44, 108, 231, 1)",
-  },
-  ActionButton: {
-    "@media (max-width:599px)": {
-      marginTop: "10px",
-    },
-  },
-  renewNowButton: {
-    textTransform: "none",
-    display: "flex",
-    width: "fit-content",
-    minWidth: "155px",
-    height: 40,
-    padding: "16px 12px",
-    justifyContent: "center",
-    alignItems: "center",
-    flexShrink: 0,
-    borderRadius: "40px",
-    backgroundColor: "#3F3F3F",
-    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
-    color: "var(--Default-White, #FFF)",
-    fontWeight: 400,
-    fontFamily: "Noto Sans",
-    lineHeight: 1,
-    letterSpacing: 0.5,
-    marginLeft: "auto",
-  },
-  myClaimsCardStyles: {
-    // height: "112px",
-    flexShrink: 0,
-    display: "flex",
-    flexDirection: "row",
-    alignItems: "center",
-    marginTop: "22px",
-    padding: "15px",
-    border: "1px solid #C9E1EC",
-    flexWrap: "wrap",
-    justifyContent: "space-between",
-    paddingRight: "42px",
-    boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.1)",
-    "@media (max-width:599px)": {
-      height: "309px",
-      paddingRight: "0px",
-      justifyContent: "space-between",
-    },
-    "@media (min-width:600px) and (max-width:1024px)": {
-      // width: "100%",
-      // height: "272px",
-      // lineHeight: "19.8px",
-    },
-  },
-  myClaimsCardWithIconStyles: {
-    "@media (min-width:360px) and (max-width:1024px)": {
-      width: "100%",
-    },
-  },
-  myClaimsCardButtonStyles: {
-    textTransform: "none",
-    display: "flex",
-    width: "fit-content",
-    minWidth: "155px",
-    height: 40,
-    padding: "16px 12px",
-    justifyContent: "center",
-    alignItems: "center",
-    flexShrink: 0,
-    borderRadius: "40px",
-    backgroundColor: "#3F3F3F",
-    boxShadow: "0px 6px 10px 0px rgba(63, 63, 63, 0.3)",
-    color: "var(--Default-White, #FFF)",
-    fontWeight: 400,
-    fontFamily: "Noto Sans",
-    lineHeight: 1,
-    letterSpacing: 0.5,
-    // marginRight: "28px",
-    marginLeft: "auto",
   },
   ClaminsContentStyles: {
     display: "flex",
@@ -254,79 +50,6 @@ const ImsDashboardStyle = {
       lineHeight: "15.8px",
     },
   },
-  DashBoardCardItemStyles: {
-    display: "flex",
-    flexDirection: "row",
-    justifyContent: "center",
-    alignItems: "center",
-    cursor: "pointer",
-
-    "@media (max-width: 599px)": {
-      display: "inline-flex",
-      flexDirection: "column",
-      justifyContent: "center",
-      alignItems: "center",
-      gap: "10px",
-      height: "68px",
-      img: {
-        height: "40px",
-      },
-    },
-    "@media(min-width: 600px) and (max-width: 800px)": {
-      maxWidth: "100px",
-    },
-  },
-
-
-  HeadStyle: {
-    overflow: "hidden",
-    color: "#1D252B",
-    fontSize: "18px",
-    fontFamily: "Noto Sans",
-    fontStyle: "normal",
-    fontWeight: "400",
-    lineHeight: "20px",
-    "@media (max-width:599px)": {
-      fontSize: "14px",
-      fontWeight: "400",
-      maxWidth: "500px",
-    },
-  },
-
-  ContentStyle: {
-    // textOverflow: "ellipsis",
-    color: "#1D252B",
-    fontSize: "18px",
-    fontStyle: "normal",
-    fontFamily: "Noto Sans",
-    fontWeight: "300",
-    lineHeight: "19.8px", // 19.8px
-    "@media(max-width:599px)": {
-      fontSize: "14px",
-      fontWeight: "300",
-      fontFamily: "Lato",
-      lineHeight: "24px",
-      color: "#1D252B",
-    },
-  },
-  AttentionsCardTextStyle: {
-    display: "flex",
-    flexDirection: "column",
-    gap: "17.5px",
-    paddingLeft: "25.41px",
-    "@media (max-width:599px)": {
-      gap: "24px",
-      flexWrap: "wrap",
-    },
-  },
-  AttentionsCardBoxStyle: {
-    display: "flex",
-    alignItems: "center",
-    "@media (max-width:599px)": {
-      alignItems: "flex-start",
-    },
-  },
-
   ActionButtonStyles: {
     textTransform: "none",
     display: "flex",
@@ -346,16 +69,9 @@ const ImsDashboardStyle = {
     lineHeight: 1,
     letterSpacing: 0.5,
   },
-  welcomeTextStyle: {
-    color: "#383D4E",
-    fontSize: "20px",
-    fontStyle: "normal",
-    fontWeight: 400,
-    fontFamily: "Playfair Display",
-    lineHeight: "22px",
-  },
   secondCardItem: {
     marginTop: "16px",
   },
 };
+
 export default ImsDashboardStyle;

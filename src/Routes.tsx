@@ -5,6 +5,7 @@ import Dialog from "@mui/material/Dialog";
 import Error from "./common/Error/Error";
 import Login from "./login/Login";
 import CustomerRoutes from "./customers/CustomerRoutes";
+import { Box } from "@mui/material";
 import { useAppSelector } from "./store/hooks";
 import { RootState } from "./store/store";
 import { getCookie } from "./utils/Utility";
@@ -12,9 +13,7 @@ import { customerPath } from "./constants/Constants";
 import ImsDashboard from "./ImsDashboard/ImsDashboard";
 import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
-import PolicyDetails from "./PolicyDetails/PolicyDetails";
-import { Box } from "@mui/material";
-
+import { ContainerStyles } from "./Styles";
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -68,20 +67,6 @@ const ApplicationRoutes = (props: any) => {
     }
   }, [isLogin, authenticated, checkAuthentication]);
 
-  // useEffect(() => {
-  //   const handleScroll = () => {
-  //     const isBottom =
-  //       window.innerHeight + window.scrollY >= document.body.offsetHeight;
-  //     setShowFooter(isBottom);
-  //   };
-
-  //   window.addEventListener("scroll", handleScroll);
-
-  //   return () => {
-  //     window.removeEventListener("scroll", handleScroll);
-  //   };
-  // }, []);
-
   return (
     <>
       <Dialog
@@ -100,15 +85,12 @@ const ApplicationRoutes = (props: any) => {
         <CircularProgress size="4rem" />
       </Dialog>
       <Header />
-      <Box
-        sx={{ background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)" }}
-      >
+      <Box sx={ContainerStyles}>
         <Routes>
           <Route path="/" element={<Login />} />
           <Route path="/login" element={<Login />} />
           <Route path="/customer/*" element={<CustomerRoutes />} />
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
-          <Route path="/policy-details" element={<PolicyDetails />} />
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>
