@@ -1,33 +1,27 @@
 {
   "data": {
     "PolicyCount": "2",
-    "PolicyCustomerList": [
-      {
-        "CustomerName": "Elena",
-        "CustomerId": ""
-      }
-    ],
     "PolicyList": [
       {
-        "CarrierPolicyNo": "ANC76QWE",
-        "CarrierPolicyStatus": "Xyz Insure",
-        "Tenure": "1",
-        "RiskCount": "02",
-        "DuePremium": 801,
-        "LOBCode": "1",
-        "PaymentFrequency": "Annual"
+        "carrierPolicyNo": "ANC76QWE",
+        "carrierPolicyStatus": "Xyz Insure",
+        "tenure": "1",
+        "riskCount": "02",
+        "duePremium": 801,
+        "lineCode": "1",
+        "paymentFrequency": "Annual"
       },
       {
-        "CarrierPolicyNo": "ANC76QWE",
-        "CarrierPolicyStatus": "Xyz Insure",
-        "Tenure": "1",
-        "RiskCount": "02",
-        "DuePremium": 801,
-        "LOBCode": "1",
-        "PaymentFrequency": "Annual"
+        "carrierPolicyNo": "ANC76QWE",
+        "carrierPolicyStatus": "Xyz Insure",
+        "tenure": "1",
+        "riskCount": "02",
+        "duePremium": 801,
+        "lineCode": "1",
+        "paymentFrequency": "Annual"
       }
     ]
   },
   "message": "",
-  "status": 200
+  "statusCode": 200
 }

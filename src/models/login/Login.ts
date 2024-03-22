@@ -4,7 +4,7 @@ export interface ILoginRequestParams {
 }
 
 export interface ILoginResponse {
-  data: IUserDetails;
+  data: IUserDetails | null;
   message: string;
   statusCode: number;
 }

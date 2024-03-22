@@ -3,16 +3,17 @@ const LoginStyle = {
     display: "flex",
     justifyContent: "center",
     alignItems: "center",
-    minHeight: "90vh",
+    minHeight: "84.5vh",
     "@media(max-width: 780px)": {
       padding: "2rem",
+      minHeight: "77.8vh",
     },
   },
   card: {
     display: "grid",
     placeItems: "center",
     gap: "2rem",
-    width: "30%",
+    width: "35%",
     padding: "2rem",
     boxShadow: "5",
     "@media(max-width: 780px)": {

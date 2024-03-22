@@ -1,65 +1,45 @@
 import { memo } from "react";
 import { Box } from "@mui/material";
-import NotificationsNoneIcon from "@mui/icons-material/NotificationsNone";
-import AccountCircleIcon from "@mui/icons-material/AccountCircle";
-import DensityMediumIcon from "@mui/icons-material/DensityMedium";
-import Logo from "../../assets/images/smartimslogo.jpg";
-import SearchIcon from "@mui/icons-material/Search";
+import HeaderStyles from "./HeaderStyles";
+import logo from "../../assets/svgs/logo.svg";
+import notification from "../../assets/svgs/notification.svg";
+import displayPicture from "../../assets/svgs/displayPicture.svg";
+import menu from "../../assets/svgs/menu.svg";
+import { useNavigate } from "react-router-dom";
+import { useAppSelector } from "../../store/hooks";
 
 const Header = memo(() => {
+  const navigate = useNavigate();
+  const { isLogin } = useAppSelector((store) => store.login);
   return (
-    <Box
-      sx={{
-        height: "4rem",
-        display: "grid",
-        gridTemplateColumns: "1fr 5fr 1fr",
-        padding: "0.5rem",
-        alignItems: "center",
-        justifyContent: "center",
-      }}
-    >
-      <Box
-        sx={{ display: "flex", alignItems: "center", justifyContent: "center" }}
-      >
-        <img
-          src={Logo}
-          alt=""
-          style={{
-            width: "70%",
-            WebkitFilter: "grayscale(100%)",
-            filter: "grayscale(100%)",
-          }}
-        />
-      </Box>
-      <Box
-        sx={{ display: "flex", justifyContent: "center", alignItems: "center" }}
-      >
-        <input
-          type="text"
-          style={{
-            width: "50%",
-            padding: "0.8rem 0.8rem 0.8rem 3rem",
-            border: "none",
-            borderRadius: "0.5rem",
-            backgroundColor: "#f1f1f1",
-            outline: "none",
-            position: "relative",
-          }}
-          placeholder="Search by Policy name, Type, Number, and more !"
-        />
-        <SearchIcon sx={{ position: "absolute", left: "485px" }} />
-      </Box>
-      <Box
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "space-between",
-        }}
-      >
-        <NotificationsNoneIcon sx={{ fontSize: "2rem" }} />
-        <AccountCircleIcon sx={{ fontSize: "2rem" }} />
-        <DensityMediumIcon sx={{ fontSize: "2rem" }} />
-      </Box>
+    <Box sx={HeaderStyles.headerContainer}>
+      <img
+        src={logo}
+        alt="smart-ims logo"
+        onClick={() => navigate("/customer/dashboard")}
+        style={{ cursor: "pointer" }}
+      />
+      {isLogin ? (
+        <Box sx={HeaderStyles.headerItems}>
+          <img
+            src={notification}
+            alt="notification"
+            style={{ width: "36px", height: "auto" }}
+          />
+          <img
+            src={displayPicture}
+            alt="displayPicture"
+            style={{ width: "32px", height: "auto" }}
+          />
+          <img
+            src={menu}
+            alt="menu"
+            style={{ width: "40px", height: "auto" }}
+          />
+        </Box>
+      ) : (
+        <></>
+      )}
     </Box>
   );
 });

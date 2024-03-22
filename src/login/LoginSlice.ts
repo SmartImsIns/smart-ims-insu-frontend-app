@@ -11,8 +11,12 @@ const LoginSlice = createSlice({
   name: "login",
   initialState: initialState,
   reducers: {
-    setUserDetails: (state, action: PayloadAction<IUserDetails>) => {},
-    setIsLogin: (state, action: PayloadAction<boolean>) => {},
+    setIsLogin: (state, { payload }: PayloadAction<boolean>) => {
+      state.isLogin = payload;
+    },
+    setUserDetails: (state, { payload }: PayloadAction<IUserDetails>) => {
+      state.userDetails = payload;
+    },
   },
   extraReducers: (builder) => {
     builder.addCase(LoginSubmit.fulfilled, (state, action) => {
@@ -25,3 +29,4 @@ const LoginSlice = createSlice({
 });
 
 export default LoginSlice.reducer;
+export const { setIsLogin, setUserDetails } = LoginSlice.actions;
