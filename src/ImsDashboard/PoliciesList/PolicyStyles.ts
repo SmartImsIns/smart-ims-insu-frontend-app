@@ -45,7 +45,7 @@ const PolicyStyles = {
   oneCard: {
     width: "100%",
     maxWidth: "46.6921%",
-    height: "367.47px",
+    minHeight: "367.47px",
     marginLeft: "30px",
     marginTop: "5.75px",
     borderRadius: "10px",
@@ -196,20 +196,19 @@ const PolicyStyles = {
   },
   cardBodyHeading: {
     ...font,
-
-    maxWidth: "60%",
-    height: "22px",
+    width: "100%",
+    maxWidth: "450px",
+    // height: "22px",
     marginTop: "50.5px",
     marginLeft: "40px",
     color: "rgba(29, 37, 43, 1)",
     fontSize: "20px",
     fontWeight: "400",
-    lineHeight: "17px",
+    lineHeight: "30px",
     letterSpacing: "0em",
     textAlign: "left",
     overflow: "hidden",
     textOverflow: "ellipsis",
-    whiteSpace: "nowrap",
     display: "-webkit-box",
     WebkitLineClamp: "2",
     WebkitBoxOrient: "vertical",
@@ -376,6 +375,7 @@ const PolicyStyles = {
     maxwidth: "638px",
     display: "flex",
     justifyContent: "space-between",
+    marginBottom: "30px",
     "@media (min-width:360px) and (max-width:599px)": {
       gap: "60px",
     },
@@ -468,6 +468,7 @@ const PolicyStyles = {
   rightArrow: {
     img: {
       width: "10.5px",
+      marginBottom: "3px",
       "@media (min-width:360px) and (max-width:599px)": {
         width: "10.5px",
         marginTop: "9px",
