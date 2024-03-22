@@ -37,7 +37,7 @@ const ApplicationRoutes = (props: any) => {
         (path: string) => pathArray[2] === path
       );
       if (isValidCustomerPath) {
-        // navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
+        navigate(location.pathname);
       }
     } else {
       navigate("/customer/dashboard");
