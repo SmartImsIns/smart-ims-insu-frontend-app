@@ -61,7 +61,6 @@ export const MyClaimCardItemStyles = {
         "@media(max-width:599px)": {
             fontSize: "14px",
             lineHeight: "18px",
-            color: "#8F939B",
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             fontFamily: '"Noto Sans"',

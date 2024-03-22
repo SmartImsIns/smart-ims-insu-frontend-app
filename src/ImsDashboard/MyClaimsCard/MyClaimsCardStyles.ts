@@ -10,7 +10,7 @@ export const MyClaimCardStyles = {
             paddingRight: "25px",
             marginTop: "30px",
         },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (min-width: 1024px)": {
             paddingLeft: "30px",
             paddingRight: "30px",
             marginTop: "40.23px",

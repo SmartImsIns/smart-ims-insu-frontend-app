@@ -78,17 +78,21 @@ export const AttentionCardStyles = {
             lineHeight: '24px',
         },
         "@media (min-width:600px) and (max-width:1024px)": {
-            maxWidth: "500px",
+            maxWidth: "450px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
         },
         "@media (min-width: 1025px) and (max-width: 1366px)": {
+            maxWidth: "650px",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+        }, "@media (min-width: 1366px)": {
             maxWidth: "900px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
-
         },
     },
     AttentionsCardTextStyle: {
@@ -153,5 +157,8 @@ export const AttentionCardStyles = {
         marginLeft: "auto",
         fontSize: "14px"
     },
+    icon: {
+        marginBottom: "19.6px"
+    }
 
 }
