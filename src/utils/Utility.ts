@@ -8,3 +8,7 @@ export const getCookie = (name: string) => {
   });
   return cookieValue;
 }
+
+export const formatNumber: (number: number | undefined) => string = (number) => {
+  return number?.toLocaleString("en-US", { minimumIntegerDigits: 2, useGrouping: false }) || "";
+};

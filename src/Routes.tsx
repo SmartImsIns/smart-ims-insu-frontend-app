@@ -5,12 +5,15 @@ import Dialog from "@mui/material/Dialog";
 import Error from "./common/Error/Error";
 import Login from "./login/Login";
 import CustomerRoutes from "./customers/CustomerRoutes";
+import { Box, Typography } from "@mui/material";
 import { useAppDispatch, useAppSelector } from "./store/hooks";
 import { RootState } from "./store/store";
 import { getCookie } from "./utils/Utility";
 import { customerPath } from "./constants/Constants";
-import Footer from "./common/Footer/Footer";
-import Header from "./common/Header/Header";
+import ImsDashboard from "./ImsDashboard/ImsDashboard";
+import Header from "./ImsDashboard/Header/Header";
+import Footer from "./ImsDashboard/Footer/Footer";
+import { ContainerStyles } from "./Styles";
 import { setIsLogin, setUserDetails } from "./login/LoginSlice";
 
 const ApplicationRoutes = (props: any) => {
@@ -40,8 +43,9 @@ const ApplicationRoutes = (props: any) => {
         navigate(location.pathname);
       }
     } else {
-      navigate("/customer/dashboard");
+      navigate("/ims-dashboard");
     }
+
   }, [navigate, location.pathname]);
 
   const checkAuthentication = useCallback(() => {
@@ -83,12 +87,15 @@ const ApplicationRoutes = (props: any) => {
         <CircularProgress size="4rem" />
       </Dialog>
       <Header />
-      <Routes>
-        <Route path="/" element={<Login />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/customer/*" element={<CustomerRoutes />} />
-        <Route path="*" element={<Error header={true} {...props} />} />
-      </Routes>
+      <Box sx={ContainerStyles}>
+        <Routes>
+          <Route path="/" element={<Login />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/customer/*" element={<CustomerRoutes />} />
+          <Route path="/ims-dashboard" element={<ImsDashboard />} />
+          <Route path="*" element={<Error header={true} {...props} />} />
+        </Routes>
+      </Box>
       <Footer />
     </>
   );
