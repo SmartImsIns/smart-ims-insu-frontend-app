@@ -12,8 +12,8 @@ export interface IPolicy {
   carrierQuoteNumber: string;
   tenure: string;
   riskCount: number;
-  basePrimium: string;
-  duePremium: string;
+  writtenPremium: string;
+  writtenFeeAmt: string;
   productName: string;
   effectiveDate: string;
   expiryDate: string;

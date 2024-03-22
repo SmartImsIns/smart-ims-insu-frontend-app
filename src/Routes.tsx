@@ -25,7 +25,9 @@ const ApplicationRoutes = (props: any) => {
   const customerName = getCookie("customerName");
 
   const { isLoading } = useAppSelector((store: RootState) => store.common);
-  const { isLogin } = useAppSelector((store: RootState) => store.login);
+  const { isLogin, userDetails } = useAppSelector(
+    (store: RootState) => store.login
+  );
 
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split("/");
@@ -53,17 +55,17 @@ const ApplicationRoutes = (props: any) => {
   }, [roleName, routeToCustomer]);
 
   useEffect(() => {
-    if (authenticated && customerId && customerName) {
+    if (authenticated === "true" && customerId && customerName) {
       dispatch(setIsLogin(true));
       dispatch(setUserDetails({ customerId, customerName }));
     }
   }, [authenticated, customerId, customerName, dispatch]);
 
   useEffect(() => {
-    if (isLogin || authenticated) {
+    if (isLogin && userDetails) {
       checkAuthentication();
     }
-  }, [isLogin, authenticated, checkAuthentication, navigate]);
+  }, [isLogin, userDetails, checkAuthentication, navigate]);
 
   return (
     <>

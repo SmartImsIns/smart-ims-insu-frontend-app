@@ -3,8 +3,9 @@ import { ILoginSlice, IUserDetails } from "../models/login/Login";
 import { LoginSubmit } from "./LoginAction";
 
 const initialState: ILoginSlice = {
-  userDetails: null,
   isLogin: false,
+  roleName: null,
+  userDetails: null,
 };
 
 const LoginSlice = createSlice({

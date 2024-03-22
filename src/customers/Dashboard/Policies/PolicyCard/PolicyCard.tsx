@@ -49,8 +49,14 @@ const PolicyCard: FC<props> = ({ policy }) => {
       <Box sx={PolicyCardStyles.premium}>
         <Typography sx={PolicyCardStyles.cardBodyPremium}>
           Premium:{" "}
-          <span style={{ fontWeight: "bold" }}>$ {policy.duePremium}</span> |
-          Term: <span style={{ fontWeight: "bold" }}>{policy.tenure}</span>
+          <span style={{ fontWeight: "bold" }}>
+            $
+            {Math.floor(
+              parseFloat(policy.writtenFeeAmt) +
+                parseFloat(policy.writtenPremium)
+            )}
+          </span>{" "}
+          | Term: <span style={{ fontWeight: "bold" }}>{policy.tenure}</span>
         </Typography>
         <Box>
           <Typography sx={PolicyCardStyles.cardBodyPremiumAuto}>
