@@ -39,9 +39,11 @@ const ReferenceBlogsContainer: React.FC<{ data: BlogData }> = ({ data }) => {
         <img src={imageSrc} alt="cardImage" />
       </Box>
       <Box sx={ReferenceBlogsStyles.cardDescription}>
-        <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>
-          {data.description}
-        </Typography>
+        <Tooltip title={data.description}>
+          <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>
+            {data.description}
+          </Typography>
+        </Tooltip>
 
         <Box sx={ReferenceBlogsStyles.cardButtonIcon}>
           {data.videoUrl ? (
