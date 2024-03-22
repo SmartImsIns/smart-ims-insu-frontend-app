@@ -11,6 +11,7 @@ const ActivityStyles = {
   },
 
   oneCard: {
+    position: "relative",
     height: "auto",
     width: "100%",
     display: "flex",
@@ -18,8 +19,9 @@ const ActivityStyles = {
     border: "0px",
     boxShadow: "0",
     borderBottom: "1px solid rgba(201, 225, 236, 1)",
+    background: "rgba(255, 255, 255, 1)",
     "@media (min-width: 360px) and (max-width: 600px)": {
-      width: "96.02%",
+      width: "99.02%",
       height: "auto",
       border: "1px solid rgba(201, 225, 236, 1)",
       borderColor: "rgba(201, 225, 236, 1)",
@@ -188,8 +190,9 @@ const ActivityStyles = {
     "@media (min-width: 360px) and (max-width: 600px)": {
       position: "absolute",
       display: "block",
-      marginTop: "20px",
-      marginLeft: "72%",
+      top: "20px",
+      left: "91%",
+      right: "5.55%",
     },
   },
 };
