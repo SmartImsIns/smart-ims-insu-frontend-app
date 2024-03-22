@@ -31,6 +31,7 @@ export const WelcomeCardStyles = {
       gridTemplateRows: "1fr 1fr",
       justifyItems: "center",
       alignItems: "center",
+      marginTop: "15px"
     },
     "@media (min-width: 600px) and (max-width: 1024px)": {
       paddingLeft: "20px",
@@ -46,10 +47,7 @@ export const WelcomeCardStyles = {
       paddingRight: "89.78px",
     },
   },
-  startIconText: {
-    "@media(min-width: 805px) and (max-width: 1023px)": {
-      paddingLeft: "10px",
-    },
+  IconText: {
     "@media(min-width: 600px) and (max-width: 800px)": {
       paddingLeft: "10px",
     },
@@ -57,37 +55,9 @@ export const WelcomeCardStyles = {
       paddingLeft: "16px",
     },
   },
-  paymentIconText: {
-    "@media(min-width: 805px) and (max-width: 1023px)": {
-      paddingLeft: "10px",
+  IconBox: {
+    "@media(max-width: 420px)": {
+      width: "120px"
     },
-    "@media(min-width: 600px) and (max-width: 800px)": {
-      paddingLeft: "10px",
-    },
-    "@media(min-width: 800px)": {
-      paddingLeft: "16px",
-    },
-  },
-  roadSideIconText: {
-    "@media(min-width: 805px) and (max-width: 1023px)": {
-      paddingLeft: "10px",
-    },
-    "@media(min-width: 600px) and (max-width: 800px)": {
-      paddingLeft: "10px",
-    },
-    "@media(min-width: 800px)": {
-      paddingLeft: "16px",
-    },
-  },
-  learnIconText: {
-    "@media(min-width: 805px) and (max-width: 1023px)": {
-      paddingLeft: "10px",
-    },
-    "@media(min-width: 600px) and (max-width: 800px)": {
-      paddingLeft: "10px",
-    },
-    "@media(min-width: 800px)": {
-      paddingLeft: "16px",
-    },
-  },
+  }
 }
