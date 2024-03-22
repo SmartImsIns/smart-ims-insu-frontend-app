@@ -31,7 +31,6 @@ export const WelcomeCardStyles = {
       gridTemplateRows: "1fr 1fr",
       justifyItems: "center",
       alignItems: "center",
-      padding: "30px",
       marginTop: "15px"
     },
     "@media (min-width: 600px) and (max-width: 1024px)": {
