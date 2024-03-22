@@ -196,8 +196,8 @@ const PolicyStyles = {
   },
   cardBodyHeading: {
     ...font,
-    width: "100%",
-    maxWidth: "450px",
+
+    maxWidth: "60%",
     height: "22px",
     marginTop: "50.5px",
     marginLeft: "40px",
@@ -209,6 +209,7 @@ const PolicyStyles = {
     textAlign: "left",
     overflow: "hidden",
     textOverflow: "ellipsis",
+    whiteSpace: "nowrap",
     display: "-webkit-box",
     WebkitLineClamp: "2",
     WebkitBoxOrient: "vertical",
