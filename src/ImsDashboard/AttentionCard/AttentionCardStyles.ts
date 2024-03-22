@@ -6,12 +6,12 @@ export const AttentionCardStyles = {
         "@media (max-width: 599px)": {
             marginLeft: "20px",
             marginRight: "20px",
-            marginTop: "20px",
+            marginTop: "40px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
             marginLeft: "25px",
             marginRight: "25px",
-            marginTop: "30px",
+            marginTop: "40px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             marginLeft: "30px",
@@ -34,7 +34,7 @@ export const AttentionCardStyles = {
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
         "@media (max-width:599px)": {
             paddingRight: "38px",
-            height: "270px",
+            // height: "228px",
             flexDirection: "column",
             padding: "20px",
             gap: "46px"
@@ -47,13 +47,9 @@ export const AttentionCardStyles = {
         "@media (min-width:800px) and (max-width:1024px)": {
             padding: "20px 15px 20px 20px",
         },
-        "@media (min-width:390px) and (max-width:599px)": {
-            gap: "20px",
-            height: "215px"
-        },
         "@media (min-width:1024px)": {
             gap: "20px",
-            height: "118.988px",
+            height: "118px",
         }
 
     },
@@ -71,7 +67,7 @@ export const AttentionCardStyles = {
         fontFamily: "Noto Sans",
         fontStyle: "normal",
         fontWeight: "400",
-        lineHeight: "20px",
+        lineHeight: "22px",
         textOverflow: 'ellipsis',
         "@media (max-width:599px)": {
             fontWeight: "400",
@@ -98,7 +94,7 @@ export const AttentionCardStyles = {
     AttentionsCardTextStyle: {
         display: "flex",
         flexDirection: "column",
-        gap: "17.5px",
+        gap: "17.54px",
         paddingLeft: "25.41px",
         paddingRight: "20px",
         "@media (max-width:599px)": {
@@ -130,9 +126,6 @@ export const AttentionCardStyles = {
         },
     },
     ActionButton: {
-        "@media (max-width:599px)": {
-            marginTop: "10px",
-        },
         "@media (min-width:600px) and (max-width:1024px)": {
             marginLeft: "auto"
         },

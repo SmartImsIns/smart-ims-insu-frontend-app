@@ -24,7 +24,7 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
       <DynamicTextDisplay text="Things Need Your Attention" />
       <Card sx={AttentionCardStyles.AttentionCardStyles}>
         <Box sx={AttentionCardStyles.AttentionsCardBoxStyle}>
-          <Box sx={{ marginBottom: "19px" }}>
+          <Box sx={{ marginBottom: "19.6px" }}>
             <DashBoardCardItem
               src={attentionsIcon}
               alt="attentions-icon"
