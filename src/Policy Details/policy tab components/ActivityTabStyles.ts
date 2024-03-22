@@ -3,7 +3,7 @@ const ActivityTabStyles = {
     // display:"flex",
     background: "rgba(255, 255, 255, 1)",
     padding: "0px !important",
-    marginTop: "24.5px",
+    margin: "24.5px 0px 0px 0px",
     "@media (min-width:360px) and (max-width:1240px)": {
       background: "none",
       boxShadow: "none",
@@ -22,7 +22,7 @@ const ActivityTabStyles = {
     gap: "10px",
     alignItems: "center",
     marginTop: "20.5px",
-    marginLeft: "95%",
+    marginLeft: "94.5%",
 
     "@media (max-width:599px)": {
       // marginRight: "5%",

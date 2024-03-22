@@ -189,7 +189,7 @@ const ActivityStyles = {
       position: "absolute",
       display: "block",
       marginTop: "20px",
-      marginLeft: "80%",
+      marginLeft: "72%",
     },
   },
 };
