@@ -42,7 +42,7 @@ const Header = () => {
           src={headerData[0].logo}
           style={HeaderStyle.simsLogo}
           alt="smart-ims logo"
-          onClick={()=>window.location.reload()}
+          onClick={() => window.location.reload()}
         />
       </Box>
       <Box sx={HeaderStyle.headerItems}>

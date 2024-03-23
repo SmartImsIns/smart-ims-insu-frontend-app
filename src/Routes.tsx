@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Dialog from "@mui/material/Dialog";
@@ -14,6 +14,8 @@ import ImsDashboard from "./ImsDashboard/ImsDashboard";
 import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
 import { ContainerStyles } from "./Styles";
+import PolicyDetails from "./PolicyDetails/PolicyDetails";
+
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -55,8 +57,6 @@ const ApplicationRoutes = (props: any) => {
     }
   }, [roleName, routeToCustomer]);
 
-  // const [showFooter, setShowFooter] = useState(false);
-
   useEffect(() => {
     checkAuthentication();
   }, [checkAuthentication]);
@@ -91,6 +91,7 @@ const ApplicationRoutes = (props: any) => {
           <Route path="/login" element={<Login />} />
           <Route path="/customer/*" element={<CustomerRoutes />} />
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
+          <Route path="/policy-details" element={<PolicyDetails />} />
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>

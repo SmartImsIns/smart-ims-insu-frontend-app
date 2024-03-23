@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import PolicyCard, { PolicyData } from "./PolicyCard";
-import { Box, Typography, useMediaQuery } from "@mui/material";
+import React from "react";
+import PolicyCard from "./PolicyCard";
+import { Box, Typography } from "@mui/material";
 import PolicyStyles from "./PolicyStyles";
 import policyData from "../../mockJson/CustomerDashboard/PolicyCardData.json";
 import viewAllArrow from "../../assets/viewAllArrow.svg";
@@ -13,7 +13,6 @@ const PolicyContainer: React.FC = () => {
         <Typography sx={PolicyStyles.policyCardHeading}>
           {policiesHeading}
         </Typography>
-
         {policyData.length > 2 && (
           <Box sx={PolicyStyles.policyCardViewAllBox}>
             <Typography sx={PolicyStyles.policyCardViewAll}>
