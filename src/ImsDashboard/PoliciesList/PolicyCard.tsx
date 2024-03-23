@@ -40,12 +40,11 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
   const navigate = useNavigate();
   const handleClick = () => {
     navigate("/policy-details");
-    // console.info("You clicked on policy");
   };
   const logo = getImage(data.id);
 
   return (
-    <Card sx={PolicyStyles.oneCard}>
+    <Card sx={PolicyStyles.oneCard} onClick={handleClick}>
       <Box sx={PolicyStyles.oneCardTopSection}>
         <Box sx={PolicyStyles.card}>
           <Box sx={PolicyStyles.cardIcon}>

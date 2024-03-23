@@ -9,13 +9,13 @@ import PolicyDetailsStyles from "../PolicyDetailsStyles";
 import DocumentsTabComponent from "./DocumentTab /DocumentsTabComponent";
 import { MenuItem, Select, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
+import ActivityContainer from "./ActivityTab/ActivityContainer";
 
-// Define TabComponents outside the PolicyTab component
 const TabComponents: { [key: string]: React.ComponentType<any> } = {
+  0: ActivityContainer,
   3: DocumentsTabComponent,
 };
 
-// Define getComponent function outside the PolicyTab component
 const getComponent = ({ index }: { index: number }) => {
   const ComponentItem = TabComponents[index.toString()];
   return ComponentItem ? (

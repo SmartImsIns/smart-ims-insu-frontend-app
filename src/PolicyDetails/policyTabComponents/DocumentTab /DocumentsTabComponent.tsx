@@ -1,6 +1,5 @@
 import React from "react";
 import { Box, useMediaQuery } from "@mui/material";
-
 import documentTabStyles, { DocumentTabStyles } from "./DocumentTabStyles";
 import DocumentTabComponentItem from "./DocumentTabComponentItem";
 import WhiteButton from "../../commonComponents/WhiteButton";

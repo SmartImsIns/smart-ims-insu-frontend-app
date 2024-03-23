@@ -3,7 +3,7 @@ import { Box } from "@mui/material";
 import PolicyBreadCrumbs from "./BreadCrumb/PolicyBreadCrumbs";
 import PolicyDetailsStyles from "./PolicyDetailsStyles";
 import PolicyTab from "./PolicyTabComponents/PolicyTab";
-import BasicInfoCardComponent from "./basicCardInfo/BasicInfoCardComponent";
+import BasicInfoCardComponent from "./BasicCardInfo/BasicInfoCardComponent";
 
 const PolicyDetails: React.FC = () => {
   useEffect(() => {

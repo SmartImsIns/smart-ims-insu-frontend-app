@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Card, Typography } from "@mui/material";
+import { Box, Card, Tooltip, Typography } from "@mui/material";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../commonComponents/DashBoardCardItem";
 import ActionButton from "../commonComponents/ActionButton";
@@ -35,7 +35,7 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
             />
           </Box>
           <Box sx={AttentionCardStyles.AttentionsCardTextStyle}>
-            <Tooltip title={headText}>
+            <Tooltip title={headText} className="toolTip">
               <Typography sx={AttentionCardStyles.HeadStyle}>
                 {headText}
               </Typography>

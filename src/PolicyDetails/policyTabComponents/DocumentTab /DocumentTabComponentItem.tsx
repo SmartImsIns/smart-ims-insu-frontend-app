@@ -2,7 +2,7 @@ import React from "react";
 import { Box, Button, Card, Typography } from "@mui/material";
 import billImage from "../../../assets/Bill.png";
 import smartPhoneIcon from "../../../assets/smart_phone.svg";
-import downloadIcon from "../../../assets/download.svg";
+import downloadIcon from "../../../assets/Download.svg";
 import documentTabStyles, { DocumentTabStyles } from "./DocumentTabStyles";
 
 const {
