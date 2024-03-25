@@ -10,20 +10,6 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
 
-const TabComponents: { [key: string]: React.ComponentType<any> } = {
-  // 0: ActivityContainer,
-  3: DocumentsTabComponent,
-};
-
-const getComponent = ({ index }: { index: number }) => {
-  const ComponentItem = TabComponents[index.toString()];
-  return ComponentItem ? (
-    <ComponentItem />
-  ) : (
-    <Box>Missing component for this tab</Box>
-  );
-};
-
 const PolicyTab = () => {
   const [value, setValue] = useState("0");
   const [selected, setSelected] = useState("0");
@@ -32,7 +18,21 @@ const PolicyTab = () => {
     setValue(newValue);
   };
 
-  const isMobile = useMediaQuery("(max-width:599px)");
+  const TabComponents: { [key: string]: React.ComponentType<any> } = {
+    // 0: ActivityContainer,
+    3: DocumentsTabComponent,
+  };
+
+  const getComponent = ({ index }: { index: number }) => {
+    const ComponentItem = TabComponents[index.toString()];
+    return ComponentItem ? (
+      <ComponentItem />
+    ) : (
+      <Box>Missing component for this tab</Box>
+    );
+  };
+
+  const isMobile = useMediaQuery("(max-width:601px)");
 
   return (
     <Box sx={PolicyTabStyles.PolicyTabsStyles}>
