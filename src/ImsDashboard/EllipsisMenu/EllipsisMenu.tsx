@@ -4,7 +4,7 @@ import circle from "../../assets/circle.svg";
 
 function EllipsisMenu() {
   return (
-    <Button sx={EllipsisStyles.button}>
+    <Button disableRipple sx={EllipsisStyles.button}>
       <img src={circle} alt="dots" />
     </Button>
   );
