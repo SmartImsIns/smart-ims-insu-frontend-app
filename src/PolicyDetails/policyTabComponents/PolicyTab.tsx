@@ -5,13 +5,14 @@ import TabContext from "@mui/lab/TabContext";
 import TabList from "@mui/lab/TabList";
 import TabPanel from "@mui/lab/TabPanel";
 import PolicyTabsLists from "./PolicyTabsLists";
-import PolicyDetailsStyles from "../PolicyDetailsStyles";
 import { MenuItem, Select, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
+import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
 
 const TabComponents: { [key: string]: React.ComponentType<any> } = {
   // 0: ActivityContainer,
+  3: DocumentsTabComponent,
 };
 
 const getComponent = ({ index }: { index: number }) => {
@@ -31,7 +32,7 @@ const PolicyTab = () => {
     setValue(newValue);
   };
 
-  const isMobile = useMediaQuery("(max-width:601px)");
+  const isMobile = useMediaQuery("(max-width:599px)");
 
   return (
     <Box sx={PolicyTabStyles.PolicyTabsStyles}>
@@ -44,54 +45,13 @@ const PolicyTab = () => {
             value={selected}
             IconComponent={KeyboardArrowDownIcon}
             onChange={(event) => setSelected(event.target.value)}
-            sx={{
-              border: "none",
-              boxShadow: "none",
-              outline: "none",
-              cursor: "pointer",
-              "&.MuiSelect-select:focus": {
-                backgroundColor: "transparent",
-              },
-              "& .MuiInput-input": {
-                display: "flex",
-                color: "#383D4E",
-                fontFamily: "Playfair Display",
-                fontSize: "16px",
-                fontStyle: "normal",
-                fontWeight: 400,
-                lineHeight: "110%",
-              },
-              "& .css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input":
-                {
-                  padding: "0 34px 0 0",
-                },
-              "&:after": {
-                display: "none",
-                boxShadow: "none",
-                outline: "none",
-              },
-              "&:before": {
-                display: "none",
-                boxShadow: "none",
-                outline: "none",
-              },
-              "& .MuiInput-input:focus": {
-                backgroundColor: "transparent",
-              },
-            }}
+            sx={PolicyTabStyles.selectStyles}
           >
             {PolicyTabsLists.map((tabName, index) => (
               <MenuItem
                 key={index}
                 value={index.toString()}
-                sx={{
-                  color: "#383D4E",
-                  fontFamily: "Playfair Display",
-                  fontSize: "16px",
-                  fontStyle: "normal",
-                  fontWeight: 400,
-                  lineHeight: "110%",
-                }}
+                sx={PolicyTabStyles.menuStyles}
               >
                 {tabName}
               </MenuItem>
@@ -101,39 +61,9 @@ const PolicyTab = () => {
         </Box>
       ) : (
         <TabContext value={value}>
-          <Box
-            sx={{
-              borderBottom: "1px solid #94ABB6",
-              position: "relative",
-            }}
-          >
+          <Box>
             <TabList
-              sx={{
-                display: "flex",
-                minHeight: "auto",
-                position: "relative",
-                justifyContent: "space-between",
-                "& .MuiTabs-indicator": {
-                  height: "5px",
-                  borderRadius: "5px",
-                  padding: "0px 2px 0px 2px",
-                  bottom: "-1px",
-                  position: "absolute",
-                  left: 0,
-                  width: "50%",
-                  transform: "translateX(0)",
-                },
-                "& .css-heg063-MuiTabs-flexContainer": {
-                  display: "flex",
-                  justifyContent: "space-between",
-                  "@media (min-width: 600px) and (max-width: 1024px)": {
-                    paddingRight: "166px",
-                  },
-                  "@media (min-width: 1024px) and (max-width: 1920px)": {
-                    paddingRight: "336px",
-                  },
-                },
-              }}
+              sx={PolicyTabStyles.tabList}
               onChange={handleChange}
               aria-label="Tab List"
             >
@@ -141,25 +71,7 @@ const PolicyTab = () => {
                 <Tab
                   key={index}
                   label={tabName}
-                  sx={{
-                    margin: "0px",
-                    minWidth: "auto",
-                    width: "auto",
-                    padding: "0px 0px 18.5px 0px",
-                    color: "#383D4E",
-                    fontFamily: "Playfair Display",
-                    fontStyle: "normal",
-                    fontWeight: 400,
-                    lineHeight: "110%",
-                    textTransform: "none",
-                    minHeight: "auto",
-                    "@media (min-width: 600px) and (max-width: 1024px)": {
-                      fontSize: "16px",
-                    },
-                    "@media (min-width: 1024px) and (max-width: 1920px)": {
-                      fontSize: "20px",
-                    },
-                  }}
+                  sx={PolicyTabStyles.tab}
                   value={index.toString()}
                 />
               ))}
@@ -167,13 +79,7 @@ const PolicyTab = () => {
           </Box>
           {PolicyTabsLists.map((_, index) => (
             <TabPanel
-              sx={{
-                padding: "0",
-                margin: "0",
-                minWidth: "auto",
-                width: "auto",
-                minHeight: "auto",
-              }}
+              sx={PolicyTabStyles.tabPanel}
               key={index}
               value={index.toString()}
             >
