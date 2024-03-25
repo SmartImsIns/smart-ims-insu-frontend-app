@@ -50,7 +50,10 @@ export const BasicInfoCardStyles = {
         gap: "6.5px",
         maxHeight: "18px",
         marginTop: "10.79px",
-        alignItems: "center"
+        alignItems: "center",
+        img: {
+            maxWidth: "10.5px"
+        }
     },
     head: {
         fontWeight: "300",
@@ -137,7 +140,7 @@ export const BasicInfoCardStyles = {
             marginTop: "30px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
-            margin: "27px 0px 42px 67.55px",
+            margin: "27px 0px 42px 67.65px",
         },
     },
     container2: {
