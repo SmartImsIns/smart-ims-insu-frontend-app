@@ -16,6 +16,10 @@ export const MyClaimCardStyles = {
             marginTop: "40px",
         },
     },
+    imgStyle: {
+        paddingTop: "5px",
+        height: "39px",
+    },
     container1: {
         display: "flex",
         justifyContent: "space-between",
@@ -71,7 +75,7 @@ export const MyClaimCardStyles = {
         flexDirection: "row",
         alignItems: "center",
         marginTop: "22px",
-        padding: "15.66px 42px 12.34px 15px",
+        padding: "14.56px 42px 13.34px 15px",
         border: "1px solid #C9E1EC",
         flexWrap: "wrap",
         justifyContent: "space-between",

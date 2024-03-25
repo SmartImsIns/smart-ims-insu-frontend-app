@@ -2,7 +2,7 @@ export const MyClaimCardItemStyles = {
     claimsCardWrapperStyles: {
         display: "flex",
         gap: "37.79px",
-        padding: "15px",
+        padding: "15px 15px 15px 15px",
         alignItems: "center",
         "@media (max-width:599px)": {
             marginRight: "0px",
