@@ -10,25 +10,25 @@ import { MenuItem, Select, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 
-const TabComponents: { [key: string]: React.ComponentType<any> } = {
-  // 0: ActivityContainer,
-};
-
-const getComponent = ({ index }: { index: number }) => {
-  const ComponentItem = TabComponents[index.toString()];
-  return ComponentItem ? (
-    <ComponentItem />
-  ) : (
-    <Box>Missing component for this tab</Box>
-  );
-};
-
 const PolicyTab = () => {
   const [value, setValue] = useState("0");
   const [selected, setSelected] = useState("0");
 
   const handleChange = (event: React.SyntheticEvent, newValue: string) => {
     setValue(newValue);
+  };
+
+  const TabComponents: { [key: string]: React.ComponentType<any> } = {
+    // 0: ActivityContainer,
+  };
+
+  const getComponent = ({ index }: { index: number }) => {
+    const ComponentItem = TabComponents[index.toString()];
+    return ComponentItem ? (
+      <ComponentItem />
+    ) : (
+      <Box>Missing component for this tab</Box>
+    );
   };
 
   const isMobile = useMediaQuery("(max-width:601px)");
