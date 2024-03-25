@@ -69,7 +69,6 @@ const PolicyStyles = {
       marginTop: "15.95px",
       height: "584.42px",
     },
-
     "@media (min-width: 768px) and (max-width: 1024px)": {
       width: "100%",
       maxWidth: "44.4%",
@@ -223,7 +222,7 @@ const PolicyStyles = {
     "@media (min-width: 600px) and (max-width: 1024px)": {
       marginLeft: "40px",
       marginTop: "90px",
-      width: "300px",
+      width: "310px",
       height: "auto",
       lineHeight: "26px",
       marginRight: "30px",
@@ -377,7 +376,7 @@ const PolicyStyles = {
     },
   },
   button: {
-    minWidth: "638px",
+    minWidth: "fit-content",
     display: "flex",
     justifyContent: "space-between",
     marginBottom: "20px",
@@ -387,7 +386,7 @@ const PolicyStyles = {
     "@media (min-width: 768px) and (max-width: 1024px)": {
       position: "absolute",
       bottom: "30.88px",
-      // gap: "60px",
+      gap: "60px",
     },
   },
   policyCardViewAll: {

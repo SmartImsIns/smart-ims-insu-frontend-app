@@ -2,6 +2,7 @@ import React from "react";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../commonComponents/DashBoardCardItem";
 import ActionButton from "../commonComponents/ActionButton";
+import { Box,Card,Typography,Tooltip  } from "@mui/material";
 import {
   renewalAmount,
   duesDate,
