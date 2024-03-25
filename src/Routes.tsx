@@ -1,4 +1,4 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Dialog from "@mui/material/Dialog";
@@ -13,8 +13,8 @@ import { customerPath } from "./constants/Constants";
 import ImsDashboard from "./ImsDashboard/ImsDashboard";
 import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
-import ReferenceBlogs from "./ImsDashboard/ReferenceBlogs/ReferenceBlogs";
 import { ContainerStyles } from "./Styles";
+
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -26,23 +26,26 @@ const ApplicationRoutes = (props: any) => {
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split("/");
     // console.log(pathArray)
-    navigate("/ims-dashboard");
 
-    // if (pathArray[1] !== 'customer') {
-    //   navigate('/');
-    // }
-    // if (pathArray[3]) {
-    //   const isValidCustomerPath = customerPath.some((path: string) => pathArray[2] === path);
-    //   if (isValidCustomerPath) {
-    //     navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
-    //   }
-    // } else {
-    //   if (pathArray[1] === 'ims-dashboard') {
-    //     navigate('/ims-dashboard');
-    //   } else{
-    //     navigate('/customer/dashboard');
-    //   }
-    // }
+    if (pathArray[1] !== "customer") {
+      navigate("/");
+    }
+    if (pathArray[3]) {
+      const isValidCustomerPath = customerPath.some(
+        (path: string) => pathArray[2] === path
+      );
+      if (isValidCustomerPath) {
+        navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
+      }
+    } else {
+      if (pathArray[1] === "ims-dashboard") {
+        navigate("/ims-dashboard");
+      } else if (pathArray[1] === "policy-details") {
+        navigate("/policy-details");
+      } else {
+        navigate("/ims-dashboard");
+      }
+    }
   }, [navigate, location.pathname]);
 
   const checkAuthentication = useCallback(() => {
@@ -53,6 +56,8 @@ const ApplicationRoutes = (props: any) => {
     }
   }, [roleName, routeToCustomer]);
 
+  const [showFooter, setShowFooter] = useState(false);
+
   useEffect(() => {
     checkAuthentication();
   }, [checkAuthentication]);
@@ -62,6 +67,20 @@ const ApplicationRoutes = (props: any) => {
       checkAuthentication();
     }
   }, [isLogin, authenticated, checkAuthentication]);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const isBottom =
+        window.innerHeight + window.scrollY >= document.body.offsetHeight;
+      setShowFooter(isBottom);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
     <>

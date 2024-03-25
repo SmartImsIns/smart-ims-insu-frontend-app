@@ -3,6 +3,7 @@ const ReferenceBlogsStyles = {
     paddingBottom: "70.49px",
   },
   container: {
+    marginTop:"31.08px",
     display: "flex",
     flexDirection: "column",
     gap: "20.09px",
@@ -28,6 +29,7 @@ const ReferenceBlogsStyles = {
     },
   },
   cardsContainer: {
+    marginTop:"20px",
     display: "flex",
     flexWrap: "wrap",
     justifyContent: "space-between",
