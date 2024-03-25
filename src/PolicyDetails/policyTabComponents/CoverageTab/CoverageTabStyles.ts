@@ -63,7 +63,7 @@ const CoverageTabStyles = {
     fontWeight: "400",
     lineHeight: "17.6px",
     textAlign: "left",
-    border: "1px solid #3F3F3F",
+    borderBottom: "1px solid #3F3F3F",
   },
   coveragesTextHeading: {
     fontFamily: "Noto Sans",
@@ -98,6 +98,10 @@ const CoverageTabStyles = {
     border: "1px solid #C9E1EC",
     padding: "0px 10px",
     borderRadius: "2px solid",
+  },
+  discountHeadText:{
+    display:"flex",
+    justifyContent:"space-between"
   },
   cardpremiums: {
     display: "flex",
