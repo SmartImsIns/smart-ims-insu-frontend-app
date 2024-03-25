@@ -27,9 +27,6 @@ export const BasicInfoCardStyles = {
     container: {
         display: "flex",
     },
-    "@media (max-width: 599px)": {
-
-    },
     logoContainer: {
         "@media (max-width: 599px)": {
             marginLeft: "20px",
@@ -44,6 +41,9 @@ export const BasicInfoCardStyles = {
             marginTop: "30px",
             maxWidth: "64.44px",
         },
+        img: {
+            width: "64.449px"
+        }
     },
     imageBox: {
         display: "flex",
@@ -60,6 +60,7 @@ export const BasicInfoCardStyles = {
         alignItems: "center",
         fontStyle: "normal",
         lineHeight: "110%",
+        whiteSpace: "pre",
         "@media (max-width: 599px)": {
             fontSize: "14px",
         },
@@ -75,6 +76,7 @@ export const BasicInfoCardStyles = {
         fontFamily: "Noto sans",
         color: "#1D252B",
         lineHeight: "110%",
+        whiteSpace: "pre",
         "@media (max-width: 599px)": {
             fontSize: "14px",
             paddingLeft: 0,
@@ -101,30 +103,33 @@ export const BasicInfoCardStyles = {
         "@media (max-width: 599px)": {
             display: "none"
         },
-    },
-    BasicInfoQuickActionContainer: {
-        boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset',
-        color: '#1D252B',
-        background: "#FCFEFF",
-        borderRadius: '0 10px 10px 0',
-        "@media (max-width: 599px)": {
-            borderRadius: '0 0 10px 10px',
+        "@media (min-width: 600px) and (max-width: 1024px)": {
+            gap: "55px",
         },
-        "@media (min-width: 605px) and (max-width: 1364px)": {
-            padding: "13px 15px 9.5px 15px",
-        },
-        "@media (min-width: 1365px) and (max-width: 1920px)": {
-            padding: "26px 30px 19px 30px",
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-around',
+        "@media (min-width: 1024px) and (max-width: 1920px)": {
+            gap: "101px",
         },
     },
-    BasicInfoQuickActionCard: {
-
+    quickStyle: {
+        color: "#1D252B",
+        fontFamily: "Noto Sans",
+        fontSize: "18px",
+        fontStyle: "normal",
+        fontWeight: 300,
+        lineHeight: "110%",
+        marginBottom: "13px",
         "@media (max-width: 599px)": {
-            display: "flex",
-
+            display: "none",
+        },
+        "@media (min-width: 600px) and (max-width: 1024px)": {},
+        "@media (min-width: 1024px) and (max-width: 1920px)": {},
+    },
+    container1: {
+        display: "flex",
+        flexDirection: "column",
+        "@media (max-width: 599px)": {
+            marginLeft: "20.55px",
+            marginTop: "20px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
             paddingLeft: "25px",
@@ -132,12 +137,37 @@ export const BasicInfoCardStyles = {
             marginTop: "30px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gridAutoRows: "minmax(10px, auto)",
-            gap: "10px",
-            columnGap: '20px',
+            margin: "27px 0px 42px 67.55px",
         },
-
     },
+    container2: {
+        display: "flex",
+        gap: "10px",
+        flexDirection: "column",
+    },
+    container3: {
+        display: "flex",
+        gap: "15px"
+    },
+    container4: {
+        display: "flex",
+        gap: "10px",
+        flexDirection: "column",
+        "@media (max-width: 599px)": {
+            gap: "15px",
+        }
+    },
+    container5: {
+        display: "flex",
+        gap: "15px",
+        "@media (max-width: 599px)": {
+            flexDirection: "column",
+            gap: "0px",
+        },
+    },
+    container6: {
+        "@media (max-width: 599px)": {
+            display: "none",
+        },
+    }
 };

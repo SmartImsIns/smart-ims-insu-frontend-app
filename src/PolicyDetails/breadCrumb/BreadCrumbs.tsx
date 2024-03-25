@@ -17,15 +17,7 @@ const BreadCrumb: React.FC<BreadCrumbProps> = ({ breadCrumbText }) => {
 
   return (
     <Box sx={BreadCrumbStyles.container}>
-      <Box
-        onClick={(e: any) => handleClick(e)}
-        sx={{
-          display: "flex",
-          alignItems: "center",
-          gap: "8px",
-          cursor: "pointer",
-        }}
-      >
+      <Box onClick={(e: any) => handleClick(e)} sx={BreadCrumbStyles.box}>
         <img src={LEFT_ARROW} alt={leftArrowText} />
         <Breadcrumbs
           separator={<NavigateNextIcon fontSize="small" />}

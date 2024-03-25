@@ -17,6 +17,12 @@ export const BreadCrumbStyles = {
 
         },
     },
+    box: {
+        display: "flex",
+        alignItems: "center",
+        gap: "8px",
+        cursor: "pointer",
+    },
     breadcrumbsText: {
         color: '#1D252B',
         fontFamily: 'Noto Sans',
