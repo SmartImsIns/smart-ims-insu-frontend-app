@@ -134,7 +134,6 @@ const CoverageTabStyles = {
     maxWidth: "40px",
   },
   premiumFirstTitle: {
-    border: "2px solid",
     // paddingTop: "8px",
     // paddingLeft: "-5px",
     fontFamily: "Playfair Display",
