@@ -10,9 +10,6 @@ export const DashBoardCardItemStyles = {
       gap: "10px",
       alignItems: "center",
       height: "68px",
-      img: {
-        height: "40px",
-      },
     },
     "@media(min-width: 600px) and (max-width: 1024px)": {
       display: "flex",
@@ -31,7 +28,7 @@ export const DashBoardCardItemStyles = {
     lineHeight: "110%",
     fontFamily: "Noto Sans",
     "@media (max-width: 599px)": {
-      fontSize: "16px",
+      fontSize: "14px",
       textAlign: "center",
     },
     "@media(min-width: 600px) and (max-width: 1023px)": {

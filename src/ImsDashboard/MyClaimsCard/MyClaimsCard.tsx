@@ -13,6 +13,7 @@ import ActionButton from "../commonComponents/ActionButton";
 import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
 import MyClaimCardItem from "../commonComponents/MyClaimCardItem";
 import ViewComponent from "../commonComponents/ViewComponent";
+import { CSSProperties } from "@mui/material/styles/createMixins";
 interface claimsData {
   houseLoanData?: {
     data: {
@@ -62,6 +63,7 @@ const MyClaimsCard: React.FC = () => {
                 headText={item.headText}
                 contentText={item.contentText}
                 icons={index === 0 ? MYCLAIM_ICON : "image not found"}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 icon={index === 0 ? MYCLAIM_ICON : undefined}
                 parentClasses={
                   index === 0
@@ -77,6 +79,7 @@ const MyClaimsCard: React.FC = () => {
                 contentText={item.contentText}
                 icons={index === 0 ? CAR_ICON : "image not found"}
                 icon={index === 0 ? CAR_ICON : undefined}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 parentClasses={
                   index === 0
                     ? MyClaimCardStyles.myClaimsCardWithIconStyles

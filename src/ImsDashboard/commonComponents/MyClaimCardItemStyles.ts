@@ -2,7 +2,7 @@ export const MyClaimCardItemStyles = {
   claimsCardWrapperStyles: {
     display: "flex",
     gap: "37.79px",
-    padding: "15px",
+    padding: "15px 15px 15px 15px",
     alignItems: "center",
     "@media (max-width:599px)": {
       marginRight: "0px",
@@ -33,7 +33,7 @@ export const MyClaimCardItemStyles = {
       color: "#1D252B",
       textOverflow: "ellipsis",
       fontFamily: "Noto Sans",
-      fontSize: "14px",
+      fontSize: "16px",
       fontStyle: "normal",
       lineHeight: "24px",
     },

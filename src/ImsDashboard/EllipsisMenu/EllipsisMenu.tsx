@@ -1,13 +1,13 @@
-import { Button } from '@mui/material';
-import EllipsisStyles from './EllipsisStyles';
-import circle from '../../assets/circle.svg'
+import { Button } from "@mui/material";
+import EllipsisStyles from "./EllipsisStyles";
+import circle from "../../assets/circle.svg";
 
 function EllipsisMenu() {
   return (
     <Button sx={EllipsisStyles.button}>
-        <img src={circle} alt="dots" />
+      <img src={circle} alt="dots" />
     </Button>
-  )
+  );
 }
 
-export default EllipsisMenu
+export default EllipsisMenu;
