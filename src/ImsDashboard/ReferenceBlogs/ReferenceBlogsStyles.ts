@@ -233,11 +233,11 @@ const ReferenceBlogsStyles = {
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
-    "@media(min-width: 600px) and (max-width: 700px)": {
+    "@media(min-width: 600px) and (max-width: 699px)": {
       fontSize: "14px",
       maxWidth: "200px",
     },
-    "@media(min-width: 800px) and (max-width: 1023px)": {
+    "@media(min-width: 700px) and (max-width: 1023px)": {
       marginLeft: "20px",
     },
   },
