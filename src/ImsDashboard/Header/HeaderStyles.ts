@@ -37,7 +37,7 @@ const HeaderStyle = {
     display: "flex",
     gap: "20px",
     alignItems: "center",
-    paddingRight: "19px",
+    paddingRight: "34px",
     paddingTop: "3px",
   },
 };

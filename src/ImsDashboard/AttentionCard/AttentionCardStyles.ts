@@ -6,12 +6,12 @@ export const AttentionCardStyles = {
         "@media (max-width: 599px)": {
             marginLeft: "20px",
             marginRight: "20px",
-            marginTop: "20px",
+            marginTop: "40px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
             marginLeft: "25px",
             marginRight: "25px",
-            marginTop: "30px",
+            marginTop: "40px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             marginLeft: "30px",
@@ -19,7 +19,6 @@ export const AttentionCardStyles = {
         },
     },
     AttentionCardStyles: {
-        height: "118.988px",
         flexShrink: 0,
         display: "flex",
         flexDirection: "row",
@@ -35,7 +34,7 @@ export const AttentionCardStyles = {
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
         "@media (max-width:599px)": {
             paddingRight: "38px",
-            height: "270px",
+            // height: "228px",
             flexDirection: "column",
             padding: "20px",
             gap: "46px"
@@ -43,15 +42,14 @@ export const AttentionCardStyles = {
         "@media (min-width:600px) and (max-width:799px)": {
             paddingRight: "38px",
             flexDirection: "column",
-            padding: "15px",
+            padding: "20px 15px 20px 20px",
         },
         "@media (min-width:800px) and (max-width:1024px)": {
-            paddingRight: "38px",
-            padding: "15px",
+            padding: "20px 15px 20px 20px",
         },
-        "@media (min-width:390px) and (max-width:599px)": {
+        "@media (min-width:1024px)": {
             gap: "20px",
-            height: "215px"
+            height: "118px",
         }
 
     },
@@ -69,7 +67,7 @@ export const AttentionCardStyles = {
         fontFamily: "Noto Sans",
         fontStyle: "normal",
         fontWeight: "400",
-        lineHeight: "20px",
+        lineHeight: "22px",
         textOverflow: 'ellipsis',
         "@media (max-width:599px)": {
             fontWeight: "400",
@@ -80,23 +78,27 @@ export const AttentionCardStyles = {
             lineHeight: '24px',
         },
         "@media (min-width:600px) and (max-width:1024px)": {
-            maxWidth: "500px",
+            maxWidth: "450px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
         },
         "@media (min-width: 1025px) and (max-width: 1366px)": {
+            maxWidth: "650px",
+            overflow: "hidden",
+            textOverflow: "ellipsis",
+            whiteSpace: "nowrap",
+        }, "@media (min-width: 1366px)": {
             maxWidth: "900px",
             overflow: "hidden",
             textOverflow: "ellipsis",
             whiteSpace: "nowrap",
-
         },
     },
     AttentionsCardTextStyle: {
         display: "flex",
         flexDirection: "column",
-        gap: "17.5px",
+        gap: "17.54px",
         paddingLeft: "25.41px",
         paddingRight: "20px",
         "@media (max-width:599px)": {
@@ -123,18 +125,11 @@ export const AttentionCardStyles = {
             fontStyle: 'normal',
             fontWeight: 300,
         },
-        "@media (min-width: 1025px) and (max-width: 1366px)": {
-            maxWidth: "900px",
-            overflow: "hidden",
-            textOverflow: "ellipsis",
-            whiteSpace: "nowrap",
-
+        "@media (min-width: 600px) and (max-width:1024px)": {
+            lineHeight: "26px",
         },
     },
     ActionButton: {
-        "@media (max-width:599px)": {
-            marginTop: "10px",
-        },
         "@media (min-width:600px) and (max-width:1024px)": {
             marginLeft: "auto"
         },
@@ -162,5 +157,8 @@ export const AttentionCardStyles = {
         marginLeft: "auto",
         fontSize: "14px"
     },
+    icon: {
+        marginBottom: "19.6px"
+    }
 
 }

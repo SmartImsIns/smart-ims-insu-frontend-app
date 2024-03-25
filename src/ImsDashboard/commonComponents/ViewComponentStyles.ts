@@ -3,11 +3,7 @@ export const ViewComponentStyles = {
         display: "flex",
         gap: "5px",
         alignItems: "center",
-        height: "20px",
         cursor: "pointer",
-        "@media (min-width:360px) and (max-width:599px)": {
-            height: "15px"
-        },
     },
     headTypo: {
         fontFamily: "Noto Sans",
@@ -24,6 +20,7 @@ export const ViewComponentStyles = {
     arrowImgBox: {
         img: {
             width: "10.5px",
+            paddingBottom: "1px"
         },
     }
 }
