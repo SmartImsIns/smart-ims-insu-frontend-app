@@ -16,6 +16,7 @@ const documentTabStyles = {
 
     container: {
         marginTop: "20.5px",
+        marginBottom: "10px",
         height: "423px",
         border: "1px solid  #C9E1EC",
         padding: "22px 0px 0px 31px",
@@ -75,6 +76,15 @@ const documentTabStyles = {
         gap: "4px",
         padding: 0,
     },
+    mobileBox: {
+        display: "flex",
+        flexDirection: "column",
+        justifyContent: "center",
+        alignItems: "center",
+        marginLeft: "33px",
+        marginRight: "33px",
+        marginBottom: "60.68px",
+    }
 };
 
 export default documentTabStyles;

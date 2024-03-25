@@ -13,21 +13,9 @@ const DocumentsTabComponent: React.FC = () => {
     <>
       {isMobile ? (
         <>
-          <Box>
+          <Box aria-label="mobile" sx={documentTabStyles.mobileBox}>
             <DocumentTabComponentItem />
             <DocumentTabComponentItem />
-            <WhiteButton
-              buttonStyles={{
-                display: "flex",
-                width: "294px",
-                height: "40px",
-                padding: "16px 12px",
-                justifyContent: "center",
-                alignItems: "center",
-                flexShrink: 0,
-              }}
-              buttonText={"Download Policy"}
-            />
           </Box>
         </>
       ) : (

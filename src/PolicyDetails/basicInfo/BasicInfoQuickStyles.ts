@@ -2,7 +2,7 @@ export const BasicInfoQuickStyles = {
     BasicInfoQuickActionContainer: {
         boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset',
         color: '#1D252B',
-        background: "#FCFEFF",
+        background: "#F3F5F6",
         borderRadius: '0 10px 10px 0',
         "@media (max-width: 599px)": {
             borderRadius: '0 0 10px 10px',
@@ -42,7 +42,6 @@ export const BasicInfoQuickStyles = {
         justifyContent: "center",
         alignItems: "center",
         borderRadius: "20px",
-        border: "1px solid #B3C2C8",
         backgroundColor: "#FFF",
         padding: "8.5px 15px",
         minWidth: "151px",
