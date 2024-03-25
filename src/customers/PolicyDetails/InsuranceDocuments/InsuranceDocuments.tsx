@@ -11,6 +11,7 @@ const InsuranceDocuments = () => {
   const elements = [
     "https://s29.q4cdn.com/175625835/files/doc_downloads/test.pdf",
     "https://www.w3.org/WAI/ER/tests/xhtml/testfiles/resources/pdf/dummy.pdf",
+    "https://www.adobe.com/support/products/enterprise/knowledgecenter/media/c4611_sample_explain.pdf",
   ];
 
   return (
