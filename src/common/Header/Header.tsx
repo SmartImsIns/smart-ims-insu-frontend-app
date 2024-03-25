@@ -13,7 +13,7 @@ import menu from "../../assets/svgs/menu.svg";
 import { useAppDispatch, useAppSelector } from "../../store/hooks";
 import { deleteCookie } from '../../utils/Utility';
 
-const Header = () => {
+const Header = memo(() => {
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null);
@@ -88,6 +88,6 @@ const Header = () => {
       )}
     </Box>
   );
-};
+});
 
 export default Header;
