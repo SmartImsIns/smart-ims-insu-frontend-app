@@ -20,7 +20,7 @@ export const ViewComponentStyles = {
     arrowImgBox: {
         img: {
             width: "10.5px",
-            paddingBottom: "1px"
+            marginBottom:"2px",
         },
     }
 }
