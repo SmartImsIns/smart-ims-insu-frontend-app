@@ -5,7 +5,10 @@ import paymentHistoryIcon from "../assets/Group 1000009236.svg";
 import starIcon from "../assets/star.svg";
 import learnAboutIcon from "../assets/Group 1000009237.svg";
 import viewAllArrow from "../assets/viewAllArrow.svg";
-import leftArrow from "../assets/left_arrow.svg"
+import leftArrow from "../assets/left_arrow.svg";
+import searchIcon from "../assets/search.svg"
+import updownArrow from "../assets/upDownArrow.svg"
+import filter from "../assets/filter.svg"
 
 
 
@@ -41,6 +44,8 @@ export const annaulPrice = "2917.00";
 export const term = "1 Year";
 export const vaild = "02 Mar ‘23 - 01 Mar’24";
 export const status = "Active";
+export const SEARCH = searchIcon;
+export const UP_DOWN_ARROW = updownArrow;
 export const MYCLAIM_ICON = myClaimsIcon;
 export const CAR_ICON = carIcon;
 export const STAR_ICON = starIcon;
@@ -49,3 +54,4 @@ export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
 export const VIEW_ARROW = viewAllArrow;
 export const LEFT_ARROW = leftArrow;
+export const FILTER = filter;

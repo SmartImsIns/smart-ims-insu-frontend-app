@@ -9,6 +9,7 @@ import { MenuItem, Select, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
+import LeinholderTabComponent from "./leinholderTab/LeinholderTabComponent";
 
 const PolicyTab = () => {
   const [value, setValue] = useState("0");
@@ -21,6 +22,7 @@ const PolicyTab = () => {
   const TabComponents: { [key: string]: React.ComponentType<any> } = {
     // 0: ActivityContainer,
     3: DocumentsTabComponent,
+    4: LeinholderTabComponent,
   };
 
   const getComponent = ({ index }: { index: number }) => {
