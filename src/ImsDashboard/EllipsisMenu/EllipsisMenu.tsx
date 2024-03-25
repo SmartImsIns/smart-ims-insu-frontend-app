@@ -1,6 +1,4 @@
 import { Button } from '@mui/material';
-import React from 'react';
-// import ellipsis from '../../assets/Ellipsis/ellipsis.svg';
 import EllipsisStyles from './EllipsisStyles';
 import circle from '../../assets/circle.svg'
 
