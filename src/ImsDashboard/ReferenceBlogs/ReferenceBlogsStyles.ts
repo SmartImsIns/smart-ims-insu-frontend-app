@@ -30,25 +30,28 @@ const ReferenceBlogsStyles = {
   cardsContainer: {
     display: "flex",
     flexWrap: "wrap",
+
+    gap: "40px",
     justifyContent: "space-between",
-    gap: "10px",
-    width: "95.5%",
-    maxWidth: "100%",
-    padding: "0px 30px",
+    // width: "fit-content",
+    maxWidth: "1820px",
+    marginLeft: "30px",
+    marginRight: "30px",
+    // padding: "0px 30px",
 
     "@media(min-width: 600px) and (max-width: 865px)": {
       paddingLeft: "20px",
-      width: "91%",
+      // width: "91%",
       gap: "10px",
       justifyContent: "center",
     },
     "@media(min-width: 866px) and (max-width: 1023px)": {
       paddingLeft: "20px",
-      width: "92%",
+      // width: "92%",
     },
     "@media(min-width: 1023px) and (max-width: 1365px)": {
       paddingLeft: "20px",
-      width: "94%",
+      // width: "94%",
     },
   },
   containerHeading: {
@@ -230,17 +233,9 @@ const ReferenceBlogsStyles = {
     fontWeight: "400",
     lineHeight: "25px",
     textAlign: "left",
-    overflow: "hidden",
-    textOverflow: "ellipsis",
-    display: "-webkit-box",
-    WebkitLineClamp: "2",
-    WebkitBoxOrient: "vertical",
     "@media(min-width: 600px) and (max-width: 700px)": {
       fontSize: "14px",
       maxWidth: "200px",
-    },
-    "@media(min-width: 701px) and (max-width: 800px)": {
-      margin: "0px 20px 0px 20px",
     },
     "@media(min-width: 800px) and (max-width: 1023px)": {
       marginLeft: "20px",
