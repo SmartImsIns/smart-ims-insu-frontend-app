@@ -10,10 +10,12 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import BillingTabComponent from "./BillingTab/BillingTabComponent";
 import CoverageComponent from "./CoverageTab/CoverageTabComponent";
+import ResponsiveCoverageTab from "./CoverageTab/ResponsiveCoveragesTab";
 
 const TabComponents: { [key: string]: React.ComponentType<any> } = {
   // 0: ActivityContainer,
   0: CoverageComponent,
+  1:ResponsiveCoverageTab,
   5: BillingTabComponent,
 };
 
