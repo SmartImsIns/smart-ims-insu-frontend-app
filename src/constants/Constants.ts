@@ -5,6 +5,8 @@ import paymentHistoryIcon from "../assets/Group 1000009236.svg";
 import starIcon from "../assets/star.svg";
 import learnAboutIcon from "../assets/Group 1000009237.svg";
 import viewAllArrow from "../assets/viewAllArrow.svg";
+import leftArrow from "../assets/left_arrow.svg"
+
 
 
 export const customerPath = [];
@@ -23,13 +25,27 @@ export const newClaim = "New Claim";
 export const paymentHistory = "Payment History";
 export const roadSideAssistance = "Roadside Assistance";
 export const learnAbout = "Learn about Insurance";
-export const MYCLAIM_ICON = myClaimsIcon;
 export const name = "Mathew";
 export const viewPast = "View Past Claims";
 export const attentionText = "Things Need Your Attention";
+export const breadcrumbText = "12AW1145G057 |  Auto_Garage101";
+export const leftArrowText = "Navigate Before Icon";
+export const policyDetailsHead = "Policy Details";
+export const vehicleName = "Elena Rodriguez";
+export const numberOfVEchiles = "2";
+export const billingHead = "Billing Details";
+export const price = "821.00";
+export const dueDate = "01 Mar’24";
+export const premiumHead = "Premium & Term Details";
+export const annaulPrice = "2917.00";
+export const term = "1 Year";
+export const vaild = "02 Mar ‘23 - 01 Mar’24";
+export const status = "Active";
+export const MYCLAIM_ICON = myClaimsIcon;
 export const CAR_ICON = carIcon;
 export const STAR_ICON = starIcon;
 export const PAYMENT_ICON = paymentHistoryIcon;
 export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
-export const VIEW_ARROW = viewAllArrow
+export const VIEW_ARROW = viewAllArrow;
+export const LEFT_ARROW = leftArrow;

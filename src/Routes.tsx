@@ -13,8 +13,9 @@ import { customerPath } from "./constants/Constants";
 import ImsDashboard from "./ImsDashboard/ImsDashboard";
 import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
-import ReferenceBlogs from "./ImsDashboard/ReferenceBlogs/ReferenceBlogs";
 import { ContainerStyles } from "./Styles";
+import PolicyDetails from "./PolicyDetails/PolicyDetails";
+
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -25,24 +26,24 @@ const ApplicationRoutes = (props: any) => {
 
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split("/");
-    // console.log(pathArray)
-    navigate("/ims-dashboard");
-
-    // if (pathArray[1] !== 'customer') {
-    //   navigate('/');
-    // }
-    // if (pathArray[3]) {
-    //   const isValidCustomerPath = customerPath.some((path: string) => pathArray[2] === path);
-    //   if (isValidCustomerPath) {
-    //     navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
-    //   }
-    // } else {
-    //   if (pathArray[1] === 'ims-dashboard') {
-    //     navigate('/ims-dashboard');
-    //   } else{
-    //     navigate('/customer/dashboard');
-    //   }
-    // }
+    if (pathArray[1] !== "customer") {
+      navigate("/");
+    }
+    if (pathArray[3]) {
+      const isValidCustomerPath = customerPath.some(
+        (path: string) => pathArray[2] === path
+      );
+      if (isValidCustomerPath) {
+        navigate(`/customer/${pathArray[2]}/${pathArray[3]}`);
+      }
+    }
+    if (pathArray[1] === "ims-dashboard") {
+      navigate("/ims-dashboard");
+    } else if (pathArray[1] === "policy-details") {
+      navigate("/policy-details");
+    } else {
+      navigate("/customer/dashboard");
+    }
   }, [navigate, location.pathname]);
 
   const checkAuthentication = useCallback(() => {
@@ -87,6 +88,7 @@ const ApplicationRoutes = (props: any) => {
           <Route path="/login" element={<Login />} />
           <Route path="/customer/*" element={<CustomerRoutes />} />
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
+          <Route path="/policy-details" element={<PolicyDetails />} />
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>
