@@ -13,8 +13,13 @@ export const MyClaimCardStyles = {
         "@media (min-width: 1024px)": {
             paddingLeft: "30px",
             paddingRight: "30px",
-            marginTop: "40.23px",
+            marginTop: "40px",
         },
+    },
+    container1: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
     myClaimsCardWithIconStyles: {
         "@media (min-width:360px) and (max-width:1024px)": {
@@ -66,11 +71,10 @@ export const MyClaimCardStyles = {
         flexDirection: "row",
         alignItems: "center",
         marginTop: "22px",
-        padding: "15px",
+        padding: "15.66px 42px 12.34px 15px",
         border: "1px solid #C9E1EC",
         flexWrap: "wrap",
         justifyContent: "space-between",
-        paddingRight: "42px",
         borderRadius: "10px",
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
         "@media (max-width:599px)": {

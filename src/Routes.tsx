@@ -13,7 +13,6 @@ import { customerPath } from "./constants/Constants";
 import ImsDashboard from "./ImsDashboard/ImsDashboard";
 import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
-import ReferenceBlogs from "./ImsDashboard/ReferenceBlogs/ReferenceBlogs";
 import { ContainerStyles } from "./Styles";
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);

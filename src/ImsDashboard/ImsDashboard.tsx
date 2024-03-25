@@ -1,8 +1,6 @@
 import WelcomeCard from "./WelcomeCard/WelcomeCard";
 import AttentionCardContainer from "./AttentionCard/AttensionCardContainer";
 import { Box } from "@mui/material";
-import PolicyContainer from "./PoliciesList/PolicyContainer";
-import ReferenceBlogs from "./ReferenceBlogs/ReferenceBlogs";
 import ImsDashboardStyle from "./ImsDashboardStyle";
 import MyClaimsCard from "./MyClaimsCard/MyClaimsCard";
 
@@ -14,8 +12,6 @@ const ImsDashboard: React.FC = () => {
       <WelcomeCard />
       <AttentionCardContainer />
       <MyClaimsCard />
-      <PolicyContainer />
-      <ReferenceBlogs />
     </Box>
   );
 };
