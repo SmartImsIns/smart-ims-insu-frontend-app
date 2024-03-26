@@ -1,4 +1,4 @@
-import { createSlice } from '@reduxjs/toolkit';
+import { createSlice, PayloadAction } from '@reduxjs/toolkit';
 import { ILoginSlice } from '../models/login/Login';
 import { LoginSubmit } from './LoginAction';
 
