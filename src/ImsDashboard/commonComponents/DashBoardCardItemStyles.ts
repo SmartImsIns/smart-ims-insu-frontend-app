@@ -28,11 +28,11 @@ export const DashBoardCardItemStyles = {
     lineHeight: "110%",
     fontFamily: "Noto Sans",
     "@media (max-width: 599px)": {
-      fontSize: "14px",
+      fontSize: "16px",
       textAlign: "center",
     },
     "@media(min-width: 600px) and (max-width: 1023px)": {
-      fontSize: "15px",
+      fontSize: "16px",
     },
   },
 };
