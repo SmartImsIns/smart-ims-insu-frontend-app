@@ -78,9 +78,9 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
         </Box>
         <Box>
           <Tooltip title={data.plan}>
-            <Typography variant="body1" sx={PolicyStyles.cardBodyHeading}>
-              {data.plan}
-            </Typography>
+          <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
+            {data.plan}
+          </Typography>
           </Tooltip>
 
           <Box sx={PolicyStyles.autoDeduct}>
@@ -88,11 +88,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
               Premium: {data.premium} | Term: {data.term}
             </Typography>
             <Box sx={PolicyStyles.cardBodyPremiumAuto}>
-              <Typography
-                sx={PolicyStyles.cardAutoText}
-                component="span"
-                variant="body1"
-              >
+              <Typography component="span" variant="body1">
                 {data.autoDeduct ? "Auto Deduct" : ""}
               </Typography>
             </Box>
@@ -127,6 +123,7 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
           <EllipsisMenu />
         </Box>
       </Box>
+      
     </Card>
   );
 };

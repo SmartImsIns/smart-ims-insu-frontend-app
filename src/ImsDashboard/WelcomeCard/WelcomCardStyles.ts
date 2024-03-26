@@ -33,7 +33,12 @@ export const WelcomeCardStyles = {
       alignItems: "center",
       marginTop: "15px"
     },
-    "@media (min-width: 600px) and (max-width: 1024px)": {
+    "@media (min-width: 600px) and (max-width: 615px)": {
+      paddingLeft: "15px",
+      paddingRight: "10px",
+      gap: "15px",
+    },
+    "@media (min-width: 615px) and (max-width: 1024px)": {
       paddingLeft: "20px",
       paddingRight: "20px",
       gap: "15px",

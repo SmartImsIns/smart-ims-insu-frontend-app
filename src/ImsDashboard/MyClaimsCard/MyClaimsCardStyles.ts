@@ -13,8 +13,17 @@ export const MyClaimCardStyles = {
         "@media (min-width: 1024px)": {
             paddingLeft: "30px",
             paddingRight: "30px",
-            marginTop: "40.23px",
+            marginTop: "40px",
         },
+    },
+    imgStyle: {
+        paddingTop: "5px",
+        height: "39px",
+    },
+    container1: {
+        display: "flex",
+        justifyContent: "space-between",
+        alignItems: "center",
     },
     myClaimsCardWithIconStyles: {
         "@media (min-width:360px) and (max-width:1024px)": {
@@ -28,6 +37,7 @@ export const MyClaimCardStyles = {
         },
         "@media (min-width: 600px) and (max-width: 1070px)": {
             marginLeft: "auto",
+            paddingTop: "5px"
         }
     },
     trackYourClaim: {
@@ -66,16 +76,14 @@ export const MyClaimCardStyles = {
         flexDirection: "row",
         alignItems: "center",
         marginTop: "22px",
-        padding: "15px",
+        padding: "14.56px 42px 13.34px 15px",
         border: "1px solid #C9E1EC",
         flexWrap: "wrap",
         justifyContent: "space-between",
-        paddingRight: "42px",
         borderRadius: "10px",
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
         "@media (max-width:599px)": {
-            height: "309px",
-            paddingRight: "0px",
+            padding: "15px 30px 28px 15px",
             justifyContent: "space-between",
             marginTop: "15px",
         },
@@ -92,7 +100,7 @@ export const MyClaimCardStyles = {
             alignItem: "center",
             justifyContent: "flex-end",
             marginLeft: "auto",
-            marginRight: "30px"
+            paddingTop: "24px"
         }
     },
     box: {

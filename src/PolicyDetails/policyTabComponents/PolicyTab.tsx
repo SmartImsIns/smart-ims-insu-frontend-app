@@ -9,6 +9,10 @@ import { MenuItem, Select, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
+import ActivityTabComponent from "./ActivityTab/ActivityTabComponent";
+import CoverageComponent from "./CoverageTab/CoverageTabComponent";
+import VehicleCard from "./VehicleTab/VehicleCard";
+import BillingTabComponent from "./BillingTab/BillingTabComponent";
 
 const PolicyTab = () => {
   const [value, setValue] = useState("0");
@@ -19,7 +23,10 @@ const PolicyTab = () => {
   };
 
   const TabComponents: { [key: string]: React.ComponentType<any> } = {
-    // 0: ActivityContainer,
+    0: ActivityTabComponent,
+    1: CoverageComponent,
+    2: VehicleCard,
+    5: BillingTabComponent,
     3: DocumentsTabComponent,
   };
 

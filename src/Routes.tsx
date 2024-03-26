@@ -1,11 +1,11 @@
-import { useEffect, useCallback } from "react";
+import { useEffect, useCallback, useState } from "react";
 import { Routes, Route, useNavigate, useLocation } from "react-router-dom";
 import CircularProgress from "@mui/material/CircularProgress";
 import Dialog from "@mui/material/Dialog";
 import Error from "./common/Error/Error";
 import Login from "./login/Login";
 import CustomerRoutes from "./customers/CustomerRoutes";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import { useAppSelector } from "./store/hooks";
 import { RootState } from "./store/store";
 import { getCookie } from "./utils/Utility";
@@ -26,6 +26,8 @@ const ApplicationRoutes = (props: any) => {
 
   const routeToCustomer = useCallback(() => {
     const pathArray = location.pathname.split("/");
+    // console.log(pathArray)
+
     if (pathArray[1] !== "customer") {
       navigate("/");
     }
