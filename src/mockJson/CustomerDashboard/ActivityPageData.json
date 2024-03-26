@@ -1,0 +1,37 @@
+[
+    {
+        "id":1,
+        "Heading":"Policy Change",
+        "Description":"2 Endorsements added",
+        "date":"10 Feb’ 24"
+    },
+    {
+        "id":2,
+        "Heading":"Policy Renewal",
+        "Description":"Completed",
+        "date":"20 Feb’ 24"
+    },
+    {
+        "id":3,
+        "Heading":"Policy Change",
+        "Description":"1 Endorsements added",
+        "date":"25 Jan’ 24"
+    },
+    {
+        "id":4,
+        "Heading":"Claim Closed",
+        "Description":"",
+        "ClaimNumber": "C789" ,
+        "ClosureReason": "Repairs Completed",
+        "date":"04 Nov’ 23"
+    },
+    {
+        "id":5,
+        "Heading":"Claim Approved",
+        "Description":"",
+        "ClaimNumber": "C789" ,
+        "ClosureReason": "Repairs Completed",
+        "PayoutAmount": "$2,50",
+        "date":"04 Nov’ 23"
+    }
+]

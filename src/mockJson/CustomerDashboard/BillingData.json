@@ -1,0 +1,50 @@
+[
+    {
+        "id":"0",
+        "billingDate":"Billing Date",
+        "dueDate":"Due date",
+        "billedAmount":"Billed Amount",
+        "paidAmount":"Paid Amount",
+        "paidOn":"Paid on"
+    },
+    {
+        "id":"1",
+        "billingDate":"01 Feb’24",
+        "dueDate":"01 Mar’24",
+        "billedAmount":"$ 2818.00",
+        "paidAmount":"$ 2818.00",
+        "paidOn":"",
+        "showPayIcon":true,
+        "showDownloadIcon":true
+    },
+    {
+        "id":"2",
+        "billingDate":"01 Feb’23",
+        "dueDate":"01 Mar’23",
+        "billedAmount":"$ 2402.73",
+        "paidAmount":"$ 2402.73",
+        "paidOn":"20 Feb’23",
+        "showPayIcon":false,
+        "showDownloadIcon":false
+    },
+    {
+        "id":"3",
+        "billingDate":"01 Feb’22",
+        "dueDate":"01 Mar’22",
+        "billedAmount":"$ 2195.00",
+        "paidAmount":"$ 2195.00",
+        "paidOn":"28 Feb’22",
+        "showPayIcon":false,
+        "showDownloadIcon":false
+    },
+    {
+        "id":"4",
+        "billingDate":"01 Feb’21",
+        "dueDate":"01 Mar’21",
+        "billedAmount":"$ 2195.00",
+        "paidAmount":"$ 2195.00",
+        "paidOn":"02 Feb’21",
+        "showPayIcon":false,
+        "showDownloadIcon":false
+    }
+]
