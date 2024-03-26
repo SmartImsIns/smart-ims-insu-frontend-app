@@ -94,7 +94,7 @@ const ApplicationRoutes = (props: any) => {
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };
