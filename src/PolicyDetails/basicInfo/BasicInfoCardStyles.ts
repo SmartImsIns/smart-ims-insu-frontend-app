@@ -1,7 +1,6 @@
 export const BasicInfoCardStyles = {
     BasicInfoCard: {
         background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
-        // height: '203px',
         display: 'flex',
         justifyContent: 'space-between',
         border: '1px solid #C9E1EC',
@@ -38,9 +37,14 @@ export const BasicInfoCardStyles = {
         marginLeft: "30px",
         marginTop: "30px",
         maxWidth: "64.44px",
-        "@media (max-width: 799px)": {
+        "@media (max-width: 599px)": {
             marginLeft: "25px",
             marginTop: "26px",
+        },
+        "@media (min-width: 600px) and (max-width: 799px)": {
+            marginLeft: "25px",
+            marginTop: "26px",
+            marginBottom: "24.1px"
         },
         "@media (min-width: 799px) and (max-width: 1300px)": {
             marginLeft: "25px",
@@ -54,7 +58,6 @@ export const BasicInfoCardStyles = {
         },
         img: {
             width: "64.449px"
-
         }
     },
     imageBox: {
@@ -77,14 +80,8 @@ export const BasicInfoCardStyles = {
         lineHeight: "110%",
         whiteSpace: "pre",
         fontSize: "18px",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 789px)": {
             fontSize: "14px",
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "14px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            fontSize: "18px",
         },
     },
     content: {
@@ -94,16 +91,10 @@ export const BasicInfoCardStyles = {
         lineHeight: "110%",
         whiteSpace: "pre",
         fontSize: "20px",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 789px)": {
             fontSize: "14px",
             paddingLeft: 0,
             paddingBottom: "10px"
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "14px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            fontSize: "20px",
         },
     },
     statusText: {
@@ -118,11 +109,11 @@ export const BasicInfoCardStyles = {
         justifyContent: "space-around",
         alignItems: "center",
         gap: "101px",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 789px)": {
             display: "none"
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            gap: "55px",
+        "@media (min-width: 789px)": {
+            gap: "40px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             gap: "101px",
@@ -139,8 +130,6 @@ export const BasicInfoCardStyles = {
         "@media (max-width: 599px)": {
             display: "none",
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {},
-        "@media (min-width: 1024px) and (max-width: 1920px)": {},
     },
     container1: {
         display: "flex",

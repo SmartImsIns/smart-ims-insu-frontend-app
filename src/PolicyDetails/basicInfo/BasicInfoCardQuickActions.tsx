@@ -5,6 +5,7 @@ import WhiteButton from "../common/WhiteButton";
 import { BasicInfoCardStyles } from "./BasicInfoCardStyles";
 import { buttonText } from "./QuickActionButtonsList";
 import { BasicInfoQuickStyles } from "./BasicInfoQuickStyles";
+import { fileClaim } from "../../constants/Constants";
 
 const BasicInfoCardQuickActions: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:899px)");
@@ -21,7 +22,7 @@ const BasicInfoCardQuickActions: React.FC = () => {
         <Box sx={BasicInfoQuickStyles.container}>
           <Box>
             <WhiteButton
-              buttonText={"File a claim"}
+              buttonText={fileClaim}
               buttonStyles={BasicInfoQuickStyles.buttonStyle}
             />
           </Box>
@@ -33,11 +34,11 @@ const BasicInfoCardQuickActions: React.FC = () => {
         <>
           {isTablet ? (
             <>
-              <Typography sx={BasicInfoCardStyles.quickStyle}>
-                {"Quick Actions"}
-              </Typography>
-              <Box sx={BasicInfoQuickStyles.BasicInfoQuickActionCard}>
-                <Box>
+              <Box
+                aria-label="tablet container"
+                sx={BasicInfoQuickStyles.BasicInfoQuickActionCard}
+              >
+                <Box sx={BasicInfoQuickStyles.buttonsContainer}>
                   {buttonText.slice(0, buttonsToDisplay).map((text, index) => (
                     <WhiteButton
                       key={index}
@@ -45,9 +46,9 @@ const BasicInfoCardQuickActions: React.FC = () => {
                       buttonStyles={BasicInfoQuickStyles.buttonStyle}
                     />
                   ))}
-                  <Box>
-                    <img src={verticalEllipse} alt="vertical_ellipse" />
-                  </Box>
+                </Box>
+                <Box>
+                  <img src={verticalEllipse} alt="vertical_ellipse" />
                 </Box>
               </Box>
             </>
