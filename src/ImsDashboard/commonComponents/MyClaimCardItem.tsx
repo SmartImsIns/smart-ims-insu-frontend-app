@@ -8,7 +8,7 @@ interface MyClaimCardItemProps {
   contentText: string;
   icon?: ReactNode;
   parentClasses?: Object;
-  icons: string;
+  icons?: string | undefined;
 }
 
 const MyClaimCardItem: React.FC<MyClaimCardItemProps> = ({

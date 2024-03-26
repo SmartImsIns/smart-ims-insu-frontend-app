@@ -4,7 +4,7 @@ import { DashBoardCardItemStyles } from "./DashBoardCardItemStyles";
 
 interface DashBoardCardItemProps {
   text: string;
-  src: string;
+  src: string | undefined;
   alt: string;
   boxStyles?: SxProps;
   textStyles?: SxProps;
