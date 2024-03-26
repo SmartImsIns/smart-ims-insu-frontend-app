@@ -1,3 +1,4 @@
+
 import myClaimsIcon from "../assets/myClaimsIcon.svg";
 import carIcon from "../assets/car.svg";
 import roadsideAssistanceIcon from "../assets/roadsideAssistanceIcon.svg";
@@ -6,17 +7,22 @@ import starIcon from "../assets/star.svg";
 import learnAboutIcon from "../assets/Group 1000009237.svg";
 import viewAllArrow from "../assets/viewAllArrow.svg";
 import leftArrow from "../assets/left_arrow.svg"
-
-
-
 export const customerPath = [];
+export const SETTINGS_AND_PREFERENCES = "Setting and Preferences";
+export const LANGUAGE = "Language";
+export const SELECT_LANGUAGE = "Select Language you are comforable with";
+export const NOTIFICATIONS = "Notifications";
+export const LET_US_KNOW="Let us know how and when you would like to be notified";
+export const PROFILE_DETAILS_HEADING = "Profile Details"
+
+
 export const policiesHeading = "Here Is Your List Of Policies";
 export const quickReferences = "Quick References For You";
 export const footerLeftText = "© 2024 Smart IMS. All rights reserved.";
 export const termsAndService = "Terms of Service";
 export const privatePolicy = "Privacy Policy";
 export const viewAll = "View All";
-export const trackYourClaim = "Track Your Claim"
+export const trackYourClaim = "Track Your Claim";
 export const renewalAmount = "Renewal Amount :";
 export const renewNow = "Renew Now";
 export const duesDate = "Due Date :";
@@ -49,3 +55,5 @@ export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
 export const VIEW_ARROW = viewAllArrow;
 export const LEFT_ARROW = leftArrow;
+export const vehicle = "Vehicle"
+export const driver = "Driver"

@@ -1,19 +1,13 @@
 export const PolicyTabStyles = {
     PolicyTabsStyles: {
+        margin: "64px 30px 0px 30px",
         "@media (max-width: 601px)": {
-            paddingLeft: "20px",
-            paddingRight: "20px",
+            // paddingLeft: "20px",
+            // paddingRight: "20px",
             marginTop: "20px",
         },
         "@media (min-width: 602px) and (max-width: 1024px)": {
-            paddingLeft: "25px",
-            paddingRight: "25px",
             marginTop: "30px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            marginLeft: "30px",
-            marginRight: "30px",
-            marginTop: '64px',
         },
     },
     selectStyles: {
@@ -76,11 +70,12 @@ export const PolicyTabStyles = {
         },
         "& .css-heg063-MuiTabs-flexContainer": {
             display: "flex",
+            paddingRight: "336px",
             justifyContent: "space-between",
-            "@media (min-width: 600px) and (max-width: 1024px)": {
-                paddingRight: "166px",
+            "@media (min-width: 600px) and (max-width: 1230px)": {
+                paddingRight: "50px",
             },
-            "@media (min-width: 1024px) and (max-width: 1920px)": {
+            "@media (min-width: 1230px) and (max-width: 1920px)": {
                 paddingRight: "336px",
             },
         },
@@ -97,12 +92,7 @@ export const PolicyTabStyles = {
         lineHeight: "110%",
         textTransform: "none",
         minHeight: "auto",
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "16px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            fontSize: "20px",
-        },
+        fontSize: "20px",
     },
     tabPanel: {
         padding: "0",
