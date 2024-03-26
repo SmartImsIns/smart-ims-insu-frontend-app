@@ -77,22 +77,16 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
           </Box>
         </Box>
         <Box>
-          <Tooltip title={data.plan}>
-            <Typography variant="body1" sx={PolicyStyles.cardBodyHeading}>
-              {data.plan}
-            </Typography>
-          </Tooltip>
+          <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
+            {data.plan}
+          </Typography>
 
           <Box sx={PolicyStyles.autoDeduct}>
             <Typography variant="body1" sx={PolicyStyles.cardBodyPremium}>
               Premium: {data.premium} | Term: {data.term}
             </Typography>
             <Box sx={PolicyStyles.cardBodyPremiumAuto}>
-              <Typography
-                sx={PolicyStyles.cardAutoText}
-                component="span"
-                variant="body1"
-              >
+              <Typography component="span" variant="body1">
                 {data.autoDeduct ? "Auto Deduct" : ""}
               </Typography>
             </Box>

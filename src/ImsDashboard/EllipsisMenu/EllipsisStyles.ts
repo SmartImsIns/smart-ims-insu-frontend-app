@@ -6,7 +6,10 @@ const EllipsisStyles = {
     borderRadius: "34px",
     border: "1px",
     angle: "-0 deg",
-    color: "rgba(142, 142, 142, 1)",
+    "&:hover": {
+      background: "transparent",
+      boxShadow: "none",
+    },
   },
 };
 

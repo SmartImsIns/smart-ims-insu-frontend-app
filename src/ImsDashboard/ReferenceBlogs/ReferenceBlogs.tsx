@@ -1,8 +1,9 @@
 import React from "react";
 import ReferenceBlogsContainer from "./ReferenceBlogsContainer";
-import { Box, Slider, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import ReferenceBlogsStyles from "./ReferenceBlogsStyles";
 // import { Carousel } from "react-responsive-carousel";
+import Slider from "react-slick";
 // import Carousel from '@mui/lab/Carousel';
 import viewAllArrow from "../../assets/viewAllArrow.svg";
 // import "react-responsive-carousel/lib/styles/carousel.min.css";
