@@ -1,24 +1,31 @@
 export const BasicInfoCardStyles = {
     BasicInfoCard: {
-        marginTop: '43px',
         background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
-        height: '203px',
+        // height: '203px',
         display: 'flex',
         justifyContent: 'space-between',
         border: '1px solid #C9E1EC',
         borderRadius: '10px',
-        "@media (max-width: 599px)": {
+        margin: "44px 30px 0px 30px",
+        "@media (max-width: 399px)": {
             marginLeft: "20px",
             marginRight: "20px",
             marginTop: "25px",
             flexDirection: "column"
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            marginLeft: "25px",
-            marginRight: "25px",
-            marginTop: "30px",
+        "@media (min-width: 399px) and (max-width: 799px)": {
+            marginLeft: "20px",
+            marginRight: "20px",
+            marginTop: "25px",
+            flexDirection: "column"
         },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (min-width: 799px) and (max-width: 1300px)": {
+            marginLeft: "30px",
+            marginRight: "30px",
+            marginTop: "44px",
+            flexDirection: "column"
+        },
+        "@media (min-width: 1300px) and (max-width: 1920px)": {
             marginLeft: "30px",
             marginRight: "30px",
             marginTop: "44px",
@@ -27,30 +34,38 @@ export const BasicInfoCardStyles = {
     container: {
         display: "flex",
     },
-    "@media (max-width: 599px)": {
-
-    },
     logoContainer: {
-        "@media (max-width: 599px)": {
-            marginLeft: "20px",
-            marginTop: "21px",
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
+        marginLeft: "30px",
+        marginTop: "30px",
+        maxWidth: "64.44px",
+        "@media (max-width: 799px)": {
             marginLeft: "25px",
             marginTop: "26px",
         },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (min-width: 799px) and (max-width: 1300px)": {
+            marginLeft: "25px",
+            marginTop: "26px",
+            maxWidth: "64.44px",
+        },
+        "@media (min-width: 1300px) and (max-width: 1920px)": {
             marginLeft: "30px",
             marginTop: "30px",
             maxWidth: "64.44px",
         },
+        img: {
+            width: "64.449px"
+
+        }
     },
     imageBox: {
         display: "flex",
         gap: "6.5px",
         maxHeight: "18px",
         marginTop: "10.79px",
-        alignItems: "center"
+        alignItems: "center",
+        img: {
+            maxWidth: "10.5px",
+        }
     },
     head: {
         fontWeight: "300",
@@ -60,11 +75,13 @@ export const BasicInfoCardStyles = {
         alignItems: "center",
         fontStyle: "normal",
         lineHeight: "110%",
+        whiteSpace: "pre",
+        fontSize: "18px",
         "@media (max-width: 599px)": {
             fontSize: "14px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "16px",
+            fontSize: "14px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             fontSize: "18px",
@@ -75,13 +92,15 @@ export const BasicInfoCardStyles = {
         fontFamily: "Noto sans",
         color: "#1D252B",
         lineHeight: "110%",
+        whiteSpace: "pre",
+        fontSize: "20px",
         "@media (max-width: 599px)": {
             fontSize: "14px",
             paddingLeft: 0,
             paddingBottom: "10px"
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "17px",
+            fontSize: "14px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             fontSize: "20px",
@@ -98,46 +117,73 @@ export const BasicInfoCardStyles = {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
+        gap: "101px",
         "@media (max-width: 599px)": {
             display: "none"
         },
-    },
-    BasicInfoQuickActionContainer: {
-        boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset',
-        color: '#1D252B',
-        background: "#FCFEFF",
-        borderRadius: '0 10px 10px 0',
-        "@media (max-width: 599px)": {
-            borderRadius: '0 0 10px 10px',
-        },
-        "@media (min-width: 605px) and (max-width: 1364px)": {
-            padding: "13px 15px 9.5px 15px",
-        },
-        "@media (min-width: 1365px) and (max-width: 1920px)": {
-            padding: "26px 30px 19px 30px",
-            display: 'flex',
-            flexDirection: 'column',
-            justifyContent: 'space-around',
-        },
-    },
-    BasicInfoQuickActionCard: {
-
-        "@media (max-width: 599px)": {
-            display: "flex",
-
-        },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            paddingLeft: "25px",
-            paddingRight: "25px",
-            marginTop: "30px",
+            gap: "55px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
-            display: "grid",
-            gridTemplateColumns: "repeat(2, 1fr)",
-            gridAutoRows: "minmax(10px, auto)",
-            gap: "10px",
-            columnGap: '20px',
+            gap: "101px",
         },
-
     },
+    quickStyle: {
+        color: "#1D252B",
+        fontFamily: "Noto Sans",
+        fontSize: "18px",
+        fontStyle: "normal",
+        fontWeight: 300,
+        lineHeight: "110%",
+        marginBottom: "13px",
+        "@media (max-width: 599px)": {
+            display: "none",
+        },
+        "@media (min-width: 600px) and (max-width: 1024px)": {},
+        "@media (min-width: 1024px) and (max-width: 1920px)": {},
+    },
+    container1: {
+        display: "flex",
+        flexDirection: "column",
+        margin: "27px 0px 42px 67.65px",
+        "@media (max-width: 599px)": {
+            margin: "20px 0px 34px 20.55px",
+        },
+        "@media (min-width: 600px) and (max-width: 1024px)": {
+            margin: "24px 0px 35px 30px",
+        },
+        "@media (min-width: 1024px) and (max-width: 1920px)": {
+            margin: "27px 0px 42px 67.65px",
+        },
+    },
+    container2: {
+        display: "flex",
+        gap: "10px",
+        flexDirection: "column",
+    },
+    container3: {
+        display: "flex",
+        gap: "15px"
+    },
+    container4: {
+        display: "flex",
+        gap: "10px",
+        flexDirection: "column",
+        "@media (max-width: 599px)": {
+            gap: "15px",
+        }
+    },
+    container5: {
+        display: "flex",
+        gap: "15px",
+        "@media (max-width: 599px)": {
+            flexDirection: "column",
+            gap: "0px",
+        },
+    },
+    container6: {
+        "@media (max-width: 599px)": {
+            display: "none",
+        },
+    }
 };

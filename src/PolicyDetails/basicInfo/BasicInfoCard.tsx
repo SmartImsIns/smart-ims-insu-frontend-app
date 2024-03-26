@@ -24,119 +24,58 @@ const BasicInfoCard: React.FC = () => {
       aria-label="Basic card info details container"
     >
       <Box sx={BasicInfoCardStyles.logoContainer}>
-        <img src={car} alt="car-logo" style={{ width: "64.449px" }} />
+        <img src={car} alt="car-logo" />
         <Box sx={BasicInfoCardStyles.imageBox}>
           <img src={tickIcon} alt="tick-logo" />
           <Typography sx={BasicInfoCardStyles.statusText}>{status}</Typography>
         </Box>
       </Box>
-      <Box
-        sx={{
-          display: "flex",
-          flexDirection: "column",
-          "@media (max-width: 599px)": {
-            marginLeft: "20.55px",
-            marginTop: "20px",
-          },
-          "@media (min-width: 600px) and (max-width: 1024px)": {
-            paddingLeft: "25px",
-            paddingRight: "25px",
-            marginTop: "30px",
-          },
-          "@media (min-width: 1024px) and (max-width: 1920px)": {
-            margin: "27px 0px 42px 67.55px",
-          },
-        }}
-      >
+      <Box sx={BasicInfoCardStyles.container1}>
         <Box sx={BasicInfoCardStyles.box} aria-label="Basic card info details">
-          <Box
-            sx={{
-              paddingRight: "101px",
-              display: "flex",
-              gap: "10px",
-              flexDirection: "column",
-            }}
-            aria-label="Basic details"
-          >
+          <Box sx={BasicInfoCardStyles.container2} aria-label="Basic details">
             <Typography sx={BasicInfoCardStyles.head}>
               {`${policyDetailsHead}`}
             </Typography>
-            <Box sx={{ display: "flex", gap: "15px" }}>
+            <Box sx={BasicInfoCardStyles.container3}>
               <Typography sx={BasicInfoCardStyles.content}>
                 {vehicleName}
               </Typography>
-              <Typography
-                sx={{
-                  whiteSpace: "pre",
-                  ...BasicInfoCardStyles.content,
-                }}
-              >
+              <Typography sx={BasicInfoCardStyles.content}>
                 &bull; {` ${numberOfVEchiles} ${"vehicles"}`}
               </Typography>
             </Box>
           </Box>
-          <Box sx={{ display: "flex", gap: "10px", flexDirection: "column" }}>
+          <Box sx={BasicInfoCardStyles.container2}>
             <Typography
               sx={BasicInfoCardStyles.head}
             >{`${billingHead}`}</Typography>
-            <Box sx={{ display: "flex" }}>
+            <Box sx={BasicInfoCardStyles.container3}>
               <Typography
                 sx={BasicInfoCardStyles.content}
-              >{`$ ${price}`}</Typography>
-              <Typography
-                sx={{
-                  whiteSpace: "pre",
-                  paddingLeft: "20px",
-                  ...BasicInfoCardStyles.content,
-                }}
-              >
+              >{`$ ${price} `}</Typography>
+              <Typography sx={BasicInfoCardStyles.content}>
                 &bull; {` Due on ${dueDate}`}
               </Typography>
             </Box>
           </Box>
         </Box>
-        <Box
-          sx={{
-            display: "flex",
-            gap: "10px",
-            flexDirection: "column",
-            "@media (max-width: 599px)": {
-              gap: "15px",
-            },
-          }}
-        >
+        <Box sx={BasicInfoCardStyles.container4}>
           <Typography
             sx={BasicInfoCardStyles.head}
           >{`${premiumHead}`}</Typography>
-          <Box
-            sx={{
-              display: "flex",
-              gap: "15px",
-              "@media (max-width: 599px)": {
-                flexDirection: "column",
-                gap: "0px",
-              },
-            }}
-          >
+          <Box sx={BasicInfoCardStyles.container5}>
             <Typography sx={BasicInfoCardStyles.content}>
               {`$ ${annaulPrice} / ${term}`}
             </Typography>
             <Typography
               sx={{
                 ...BasicInfoCardStyles.content,
-                "@media (max-width: 599px)": {
-                  display: "none",
-                },
+                ...BasicInfoCardStyles.container6,
               }}
             >
               &bull;
             </Typography>
-            <Typography
-              sx={{
-                whiteSpace: "pre",
-                ...BasicInfoCardStyles.content,
-              }}
-            >
+            <Typography sx={BasicInfoCardStyles.content}>
               {`${vaild}`}
             </Typography>
           </Box>
