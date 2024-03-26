@@ -55,3 +55,5 @@ export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
 export const VIEW_ARROW = viewAllArrow;
 export const LEFT_ARROW = leftArrow;
+export const vehicle = "Vehicle"
+export const driver = "Driver"

@@ -3,34 +3,35 @@ const ActivityStyles = {
     width: "auto",
     height: "642px",
     padding: "0px 28px",
-    // marginTop:"30px",
+    marginTop: "20px",
     // position:"relative",
-    "@media (min-width: 360px) and (max-width: 600px)": {
-      padding: "0px 20px",
+    "@media (min-width: 360px) and (max-width: 1024px)": {
+      padding: "0px !important",
     },
   },
 
   oneCard: {
     position: "relative",
     height: "auto",
-    width: "100%",
+    width: "auto",
     display: "flex",
     gap: "34.06px",
     border: "0px",
     boxShadow: "0",
     borderBottom: "1px solid rgba(201, 225, 236, 1)",
     background: "rgba(255, 255, 255, 1)",
-    "@media (min-width: 360px) and (max-width: 600px)": {
-      width: "99.02%",
+    "@media (min-width:360px) and (max-width:1024px)": {
+      marginTop: "20px",
+      // width: "87.5%",
+      width: "auto",
       height: "auto",
       border: "1px solid rgba(201, 225, 236, 1)",
-      borderColor: "rgba(201, 225, 236, 1)",
       background: "rgba(255, 255, 255, 1)",
-      marginTop: "20px",
       borderRadius: "20px",
       gap: "17.46px",
+      padding: "20px",
     },
-    "@media (min-width: 600px)": {
+    "@media (min-width: 1025px)": {
       "&:hover": {
         boxShadow: "0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset",
         background: "rgba(243, 245, 246, 1)",
@@ -42,18 +43,16 @@ const ActivityStyles = {
   logo: {
     width: "37.94px",
     marginTop: "20px",
-    marginLeft: "30px",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       width: "46.36px",
       height: "48.88px",
-      marginLeft: "20px",
     },
   },
   cardContent: {
     marginTop: "23px",
     height: "auto",
     width: "auto",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       marginTop: "20px",
       height: "auto",
       width: "auto",
@@ -67,7 +66,7 @@ const ActivityStyles = {
     lineHeight: "22px",
     letterSpacing: "0em",
     textAlign: "left",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       height: "18px",
       fontSize: "16px",
       fontWeight: "400",
@@ -86,7 +85,7 @@ const ActivityStyles = {
     lineHeight: "20px",
     letterSpacing: "0em",
     textAlign: "left",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       height: "18px",
       fontSize: "16px",
       fontWeight: "300",
@@ -106,7 +105,7 @@ const ActivityStyles = {
     lineHeight: "20px",
     letterSpacing: "0em",
     textAlign: "left",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       height: "18px",
       marginBottom: "20px",
       fontSize: "16px",
@@ -118,13 +117,13 @@ const ActivityStyles = {
   },
   claimNumberClosureReason: {
     display: "flex",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       flexDirection: "column",
     },
   },
   line: {
     margin: "10px 10px 0px 10px",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       display: "none",
     },
   },
@@ -138,7 +137,7 @@ const ActivityStyles = {
     lineHeight: "20px",
     letterSpacing: "0em",
     textAlign: "left",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       height: "18px",
       fontSize: "16px",
       fontWeight: "300",
@@ -178,22 +177,44 @@ const ActivityStyles = {
     alignItems: "Center",
     position: "absolute",
     // left: "64.0549%",
-    left: "90.0549%",
+    left: "91.0549%",
     marginTop: "50px",
     cursor: "pointer",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       display: "none",
     },
   },
   ellipsis: {
     display: "none",
-    "@media (min-width: 360px) and (max-width: 600px)": {
+    "@media (min-width: 360px) and (max-width: 1024px)": {
       position: "absolute",
       display: "block",
       top: "20px",
       left: "91%",
       right: "5.55%",
     },
+  },
+  tableHeading: {
+    display: "flex",
+    gap: "10px",
+    alignItems: "center",
+    marginTop: "20.5px",
+    marginLeft: "95%",
+  },
+  tableHeadingFilterImage: {
+    img: {
+      width: "24px",
+      height: "24px",
+    },
+  },
+  tableHeadingFilterText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "24px",
+    letterSpacing: "0px",
+    textAlign: "left",
+    marginTop: "-5px",
   },
 };
 export default ActivityStyles;

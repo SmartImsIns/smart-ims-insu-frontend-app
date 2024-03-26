@@ -10,11 +10,13 @@ import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import BillingTabComponent from "./BillingTab/BillingTabComponent";
 import CoverageComponent from "./CoverageTab/CoverageTabComponent";
-import ActivityContainer from "./ActivityTab/ActivityContainer";
+import VehicleCard from "./VehicleTab/VehicleCard";
+import ActivityTabComponent from "./ActivityTab/ActivityTabComponent";
 
 const TabComponents: { [key: string]: React.ComponentType<any> } = {
-  0: ActivityContainer,
+  0: ActivityTabComponent,
   1: CoverageComponent,
+  2: VehicleCard,
   5: BillingTabComponent,
 };
 
