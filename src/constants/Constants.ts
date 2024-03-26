@@ -31,3 +31,5 @@ export const PAYMENT_ICON = paymentHistoryIcon;
 export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
 export const VIEW_ARROW = viewAllArrow;
+
+export const videoUrl = "https://www.youtube.com/embed/JFjOpajKeOw";
