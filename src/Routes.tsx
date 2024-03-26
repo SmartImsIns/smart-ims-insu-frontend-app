@@ -53,7 +53,7 @@ const ApplicationRoutes = (props: any) => {
         break;
     }
   }, [roleName, routeToCustomer]);
-  
+
   useEffect(() => {
     checkAuthentication();
   }, [checkAuthentication]);
@@ -63,7 +63,6 @@ const ApplicationRoutes = (props: any) => {
       checkAuthentication();
     }
   }, [isLogin, authenticated, checkAuthentication]);
-
 
   return (
     <>
@@ -93,11 +92,9 @@ const ApplicationRoutes = (props: any) => {
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
 
 export default ApplicationRoutes;
-
-

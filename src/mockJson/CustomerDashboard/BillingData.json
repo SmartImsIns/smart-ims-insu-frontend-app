@@ -13,7 +13,9 @@
         "dueDate":"01 Mar’24",
         "billedAmount":"$ 2818.00",
         "paidAmount":"$ 2818.00",
-        "paidOn":""
+        "paidOn":"",
+        "showPayIcon":true,
+        "showDownloadIcon":true
     },
     {
         "id":"2",
@@ -21,7 +23,9 @@
         "dueDate":"01 Mar’23",
         "billedAmount":"$ 2402.73",
         "paidAmount":"$ 2402.73",
-        "paidOn":"20 Feb’23"
+        "paidOn":"20 Feb’23",
+        "showPayIcon":false,
+        "showDownloadIcon":false
     },
     {
         "id":"3",
@@ -29,7 +33,9 @@
         "dueDate":"01 Mar’22",
         "billedAmount":"$ 2195.00",
         "paidAmount":"$ 2195.00",
-        "paidOn":"28 Feb’22"
+        "paidOn":"28 Feb’22",
+        "showPayIcon":false,
+        "showDownloadIcon":false
     },
     {
         "id":"4",
@@ -37,6 +43,8 @@
         "dueDate":"01 Mar’21",
         "billedAmount":"$ 2195.00",
         "paidAmount":"$ 2195.00",
-        "paidOn":"02 Feb’21"
+        "paidOn":"02 Feb’21",
+        "showPayIcon":false,
+        "showDownloadIcon":false
     }
 ]

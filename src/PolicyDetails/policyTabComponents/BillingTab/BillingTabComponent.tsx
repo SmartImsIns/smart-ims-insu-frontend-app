@@ -14,6 +14,8 @@ import filter from "../../../assets/Filter1.svg";
 import BillingTabStyles from "./BillingTabStyles";
 import billingData from "../../../mockJson/CustomerDashboard/BillingData.json";
 import upDownArrow from "../../../assets/upDownArrow.svg";
+import downloadIcon from '../../../assets/DownloadIcon.svg'
+import ActionButton from "../../../ImsDashboard/commonComponents/ActionButton";
 type Props = {};
 
 const BillingTabComponent = (props: Props) => {
@@ -67,6 +69,12 @@ const BillingTabComponent = (props: Props) => {
                     <TableCell>{row.billedAmount}</TableCell>
                     <TableCell>{row.paidAmount}</TableCell>
                     <TableCell>{row.paidOn}</TableCell>
+                    {row.showPayIcon && (
+                      <TableCell sx={BillingTabStyles.payAndDownloadOptions}> 
+                        <ActionButton sx={BillingTabStyles.payButton} buttonText={"Pay"} />
+                        <img src={downloadIcon} alt="First icon" />
+                      </TableCell>
+                    )}
                   </TableRow>
                 ))}
               </TableBody>

@@ -29,6 +29,24 @@ const BillingTabStyles = {
     marginTop: "20.5px",
     marginLeft: "0px",
   },
+  payButton: {
+    borderRadius: "20px",
+    width: "151px",
+    height: "35px",
+    backgroundColor: "#FFFFFF",
+    color: "#1D252B",
+    fontFamily: "Noto Sans",
+    fontSize: "16px",
+    fontWeight: "300",
+    lineHeight: "17.6px",
+    textAlign: "left",
+    border: "1px solid #B3C2C8",
+  },
+  payAndDownloadOptions: {
+    display: "flex",
+    alignItems: "center",
+    gap:"20px"
+  },
   tableHeadText: {
     fontFamily: "Noto Sans",
     fontSize: "14px",

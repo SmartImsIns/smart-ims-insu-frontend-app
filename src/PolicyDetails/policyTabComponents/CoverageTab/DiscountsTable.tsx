@@ -25,7 +25,11 @@ const DiscountsTable = () => {
         </Box>
       </Box>
       <TableContainer
-        sx={{ padding: "0px 24px", width: "97%", border:"1px solid rgba(201, 225, 236, 1)" }}
+        sx={{
+          padding: "0px 24px",
+          width: "97%",
+          border: "1px solid rgba(201, 225, 236, 1)",
+        }}
         component={Paper}
       >
         <Table>
@@ -45,9 +49,19 @@ const DiscountsTable = () => {
           <TableBody>
             {discountsData.slice(1).map((row) => (
               <TableRow key={row.id}>
-                <TableCell sx={{ width: "1000px" }}>{row.Types}</TableCell>
-                <TableCell>{row.Vechile1}</TableCell>
-                <TableCell>{row.Vechile2}</TableCell>
+                <TableCell
+                  sx={CoverageTabStyles.tableBodyCell}
+                  style={{ width: "70%" }}
+                >
+                  {row.Types}
+                </TableCell>
+
+                <TableCell sx={CoverageTabStyles.tableBodyCell}>
+                  {row.Vechile1}
+                </TableCell>
+                <TableCell sx={CoverageTabStyles.tableBodyCell}>
+                  {row.Vechile2}
+                </TableCell>
               </TableRow>
             ))}
           </TableBody>

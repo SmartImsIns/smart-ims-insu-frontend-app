@@ -1,10 +1,19 @@
 const CoverageTabStyles = {
   container: {
+    display: "block",
     marginTop: "20.5px",
     marginLeft: "0px",
-    // padding:"0px"
-    "@media(min-width:1367px)": {
-      margin: "0px auto 0px auto",
+    "@media (min-width: 1367px)": {
+      margin: "0px auto",
+    },
+    "@media (min-width: 360px) and (max-width: 599px)": {
+      display: "none",
+    },
+  },
+  container2: {
+    display: "none",
+    "@media (max-width: 599px)": {
+      display: "block",
     },
   },
   coverageAndLinks: {
@@ -41,6 +50,21 @@ const CoverageTabStyles = {
     letterSpacing: "0em",
     textAlign: "left",
   },
+  coveragesText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "24px",
+    textAlign: "left",
+  },
+  perThing: {
+    color: "#969696",
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "24px",
+    textAlign: "left",
+  },
   responsiveContainer: {
     border: "1px solid #C9E1EC",
     padding: "0px 10px",
@@ -56,12 +80,14 @@ const CoverageTabStyles = {
     display: "flex",
     flexDirection: "column",
     gap: "20px",
+    // margin: "0px -10px",
   },
   headText: {
     fontFamily: "Playfair Display",
     fontSize: "16px",
     fontWeight: "400",
     lineHeight: "17.6px",
+    padding: "15px 0px 13px 0px",
     textAlign: "left",
     borderBottom: "1px solid #3F3F3F",
   },
@@ -96,12 +122,140 @@ const CoverageTabStyles = {
   },
   coverages: {
     border: "1px solid #C9E1EC",
-    padding: "0px 10px",
-    borderRadius: "2px solid",
+    padding: "0px 10px 0px 10px",
+    borderRadius: "10px",
+    backgroundColor: "#ffffff",
   },
-  discountHeadText:{
-    display:"flex",
-    justifyContent:"space-between"
+  premiumText: {
+    fontFamily: "Playfair Display",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "17.6px",
+    textAlign: "left",
+  },
+  premiumValueText: {
+    fontFamily: "Noto Sans",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "17.6px",
+    textAlign: "right",
+  },
+  vechileValueText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "17.6px",
+    textAlign: "left",
+  },
+  vechileNameText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "15.4px",
+    textAlign: "left",
+  },
+  vechilePremiumTextValues: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "5px",
+  },
+  expanededItemkeyText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "300",
+    lineHeight: "15.4px",
+    textAlign: "left",
+  },
+  expanededItemvalueText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "15.4px",
+    textAlign: "left",
+  },
+  expandedItemsContainer: {
+    padding: "22px 23px 20px 0px",
+    borderTop: "1px solid #D0D1D9",
+    display: "flex",
+    flexDirection: "column",
+    gap: "15px",
+    // margin: "0px -10px",
+  },
+  expandedItems: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+
+  discountCardContext: {
+    borderBottom: " 1px solid #D0D1D9",
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+    padding: "20px 15px",
+  },
+  discountsCardTypesText: {
+    fontFamily: "Playfair Display",
+    padding: "16px 0px 15px 0px",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "17.6px",
+    textAlign: "left",
+    borderBottom: "1px solid #3F3F3F",
+  },
+  discountHeadText: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
+  discountContentText: {
+    display: "flex",
+    gap: "9px",
+  },
+  totalContainer: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "40px",
+    paddingTop: "20px",
+  },
+  coverageHeadingText: {
+    fontFamily: "Playfair Display",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "17.6px",
+    textAlign: "left",
+  },
+  discountsText: {
+    fontFamily: "Playfair Display",
+    fontSize: "16px",
+    fontWeight: "400",
+    lineHeight: "17.6px",
+    textAlign: "left",
+  },
+  discountsCard: {
+    border: "1px solid #C9E1EC",
+    borderRadius: "10px",
+    padding: "20px 10px 0px 10px",
+    backgroundColor: "#FFFFFF",
+  },
+  discountText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "300",
+    lineHeight: "15.4px",
+    textAlign: "left",
+  },
+  vechileText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "15.4px",
+    textAlign: "left",
+  },
+  typesText: {
+    fontFamily: "Noto Sans",
+    fontSize: "14px",
+    fontWeight: "400",
+    lineHeight: "24px",
+    textAlign: "left",
   },
   cardpremiums: {
     display: "flex",
@@ -126,7 +280,7 @@ const CoverageTabStyles = {
     gap: "85px",
   },
   tableHead: {
-    fontFamily: "Nunito Sans",
+    fontFamily: "Noto Sans",
     fontSize: "14px",
     fontWeight: "400",
     lineHeight: "24px",
@@ -134,12 +288,18 @@ const CoverageTabStyles = {
     textAlign: "left",
     opacity: "70%",
   },
+  tableContainer: {
+    padding: "0px 24px",
+    width: "97%",
+    border: "1px solid rgba(201, 225, 236, 1)",
+  },
+  tableRow: {
+    borderBottom: "2px solid rgba(63, 63, 63, 1)",
+  },
   premiumFirstRow: {
     maxWidth: "40px",
   },
   premiumFirstTitle: {
-    // paddingTop: "8px",
-    // paddingLeft: "-5px",
     fontFamily: "Playfair Display",
     fontSize: "20px",
     fontWeight: "400",

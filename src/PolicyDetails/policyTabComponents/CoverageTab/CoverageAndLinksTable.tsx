@@ -10,8 +10,8 @@ import TableRow from "@mui/material/TableRow";
 import Paper from "@mui/material/Paper";
 import CoveragesLogo from "../../../assets/CoveragesLogo.svg";
 import CoverageTabStyles from "./CoverageTabStyles";
+
 const CoverageAndLinks = () => {
-  console.log(coverageLinksData);
   const tableHead = coverageLinksData.find((row) => row.id === "0");
 
   if (!tableHead) return null;
@@ -27,10 +27,10 @@ const CoverageAndLinks = () => {
         <Box>
         <Typography sx={CoverageTabStyles.coverageAndLinksHeadingText}>Coverage and links</Typography></Box>
       </Box>
-      <TableContainer sx={{padding:"0px 24px", width:"97%",border:"1px solid rgba(201, 225, 236, 1)"}} component={Paper}>
+      <TableContainer sx={CoverageTabStyles.tableContainer} component={Paper}>
         <Table sx={{ minWidth: 650 }} aria-label="simple table">
           <TableHead>
-            <TableRow sx={{ borderBottom: "2px solid rgba(63, 63, 63, 1)", }}>
+            <TableRow sx={CoverageTabStyles.tableRow}>
               <TableCell sx={CoverageTabStyles.tableHead}>{Coverages}</TableCell>
               <TableCell sx={CoverageTabStyles.tableHead}>{Limit}</TableCell>
               <TableCell sx={CoverageTabStyles.tableHead}>{Deductible}</TableCell>
@@ -44,7 +44,10 @@ const CoverageAndLinks = () => {
               .map((row) => (
                 <TableRow key={row.id}>
                   <TableCell sx={CoverageTabStyles.tableBodyCell} component="th" scope="row">
-                    {row.Coverages}
+                    <Box>
+                    <Typography sx={CoverageTabStyles.coveragesText}>{row.Coverages}</Typography>
+                    <Typography sx={CoverageTabStyles.perThing}>{row.perThing}</Typography>
+                    </Box>
                   </TableCell>
                   <TableCell sx={CoverageTabStyles.tableBodyCell}>{row.Limit}</TableCell>
                   <TableCell sx={CoverageTabStyles.tableBodyCell}>{row.Deductible}</TableCell>
