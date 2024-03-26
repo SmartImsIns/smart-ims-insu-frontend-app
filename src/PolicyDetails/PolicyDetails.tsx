@@ -13,8 +13,8 @@ const PolicyDetails: React.FC = () => {
 
   return (
     <Box sx={PolicyDetailsStyles.policyContainer}>
-      {/* <BreadCrumb breadCrumbText={breadcrumbText} />
-      <BasicInfoCardComponent /> */}
+      <BreadCrumb breadCrumbText={breadcrumbText} />
+      <BasicInfoCardComponent />
       <PolicyTab />
     </Box>
   );

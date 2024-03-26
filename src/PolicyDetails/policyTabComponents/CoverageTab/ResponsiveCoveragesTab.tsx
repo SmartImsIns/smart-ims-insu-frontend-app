@@ -107,7 +107,9 @@ const ResponsiveCoverageTab = () => {
                     boxShadow: expandedItems[index]
                       ? "0px 2px 4px 0px #00000017 inset"
                       : "none",
- 
+                    padding: expandedItems[index]
+                      ? "22px 15px 20px 15px"
+                      : "15px 5px 20px 5px",
                   }}
                 >
                   <Box sx={CoverageTabStyles.coveragesHead}>
@@ -213,7 +215,7 @@ const ResponsiveCoverageTab = () => {
                   boxShadow: expandedDiscounts[index]
                     ? "0px 2px 4px 0px #00000017 inset"
                     : "none",
-                  borderRadius: expandedDiscounts[index] ? "10px" : "0px"
+                  borderRadius: expandedDiscounts[index] ? "10px" : "0px",
                 }}
               >
                 <Box sx={CoverageTabStyles.discountHeadText}>

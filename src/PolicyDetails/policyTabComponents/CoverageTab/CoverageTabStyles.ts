@@ -79,7 +79,6 @@ const CoverageTabStyles = {
   },
   coveragesCard: {
     borderBottom: "1px solid #D0D1D9",
-    padding: "15px 10px 20px 10px",
     display: "flex",
     flexDirection: "column",
     gap: "20px",
@@ -190,7 +189,6 @@ const CoverageTabStyles = {
     },
   },
   expandedItemsContainer: {
-    padding: "22px 23px 20px 0px",
     borderTop: "1px solid #D0D1D9",
     display: "flex",
     flexDirection: "column",
@@ -233,9 +231,9 @@ const CoverageTabStyles = {
   discountHeadText: {
     display: "flex",
     justifyContent: "space-between",
-    img:{
-      cursor:"pointer"
-    }
+    img: {
+      cursor: "pointer",
+    },
   },
   discountContentText: {
     display: "flex",

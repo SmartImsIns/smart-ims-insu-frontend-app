@@ -14,6 +14,7 @@ const VehicleSyles = {
   discountsHeading: {
     display: "flex",
     gap: "10px",
+
     alignItems: "center",
     marginBottom: "13px",
 
@@ -72,6 +73,7 @@ const VehicleSyles = {
     top: "369px",
     left: "1176px",
     padding: "0px 8px 0px 0px",
+    cursor: "pointer",
     gap: "10px",
     borderRadius: "8px",
     opacity: "0px",
