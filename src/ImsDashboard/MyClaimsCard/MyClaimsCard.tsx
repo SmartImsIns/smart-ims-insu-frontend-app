@@ -51,7 +51,7 @@ const MyClaimsCard: React.FC = () => {
   return (
     <Box sx={MyClaimCardStyles.Container} aria-label="MyClaims Card Container">
       <Box sx={MyClaimCardStyles.container1}>
-        <DynamicTextDisplay text={`My Claims(${formattedClaimCount})`} />
+        <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
         <ViewComponent src={VIEW_ARROW} viewText={viewPast} />
       </Box>
       {claimdata?.map((claim, id) => (
