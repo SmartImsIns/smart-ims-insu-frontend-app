@@ -4,13 +4,23 @@ export const BasicInfoQuickStyles = {
         color: '#1D252B',
         background: "#F3F5F6",
         borderRadius: '0 10px 10px 0',
-        "@media (max-width: 599px)": {
+        padding: "26px 30px 19px 30px",
+        display: 'flex',
+        flexDirection: 'column',
+        justifyContent: 'space-around',
+        "@media (max-width: 399px)": {
             borderRadius: '0 0 10px 10px',
+            padding: "0px"
         },
-        "@media (min-width: 605px) and (max-width: 1364px)": {
+        "@media (min-width: 399px) and (max-width: 799px)": {
+            borderRadius: '0 0 10px 10px',
+            padding: "0px"
+        },
+        "@media (min-width: 799px) and (max-width: 1300px)": {
             padding: "13px 15px 9.5px 15px",
+            borderRadius: '0px 0px 10px 10px',
         },
-        "@media (min-width: 1365px) and (max-width: 1920px)": {
+        "@media (min-width: 1300px) and (max-width: 1920px)": {
             padding: "26px 30px 19px 30px",
             display: 'flex',
             flexDirection: 'column',
@@ -18,21 +28,37 @@ export const BasicInfoQuickStyles = {
         },
     },
     BasicInfoQuickActionCard: {
+        display: "grid",
+        gridTemplateColumns: "repeat(2, 1fr)",
+        gridAutoRows: "minmax(10px, auto)",
+        gap: "10px",
+        columnGap: '20px',
         "@media (max-width: 599px)": {
             display: "flex",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
             paddingLeft: "25px",
             paddingRight: "25px",
-            marginTop: "30px",
         },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (min-width: 799px) and (max-width: 1300px)": {
+            display: "grid",
+            gridTemplateColumns: "repeat(4, 1fr)",
+            gridAutoRows: "minmax(10px, auto)",
+            // gap: "10px",
+            // columnGap: '20px',
+        },
+        "@media (min-width: 1300px) and (max-width: 1920px)": {
             display: "grid",
             gridTemplateColumns: "repeat(2, 1fr)",
             gridAutoRows: "minmax(10px, auto)",
             gap: "10px",
             columnGap: '20px',
         },
+        // "@media (min-width: 399px) and (max-width: 799px)": {
+        //     display: "grid",
+        //     gridTemplateColumns: "repeat(4, 1fr)",
+        //     gridAutoRows: "minmax(10px, auto)",
+        // },
     },
     buttonStyle: {
         textTransform: "none",
@@ -52,8 +78,11 @@ export const BasicInfoQuickStyles = {
         lineHeight: "110%",
         fontWeight: 300,
         fontStyle: "normal",
+        '&:hover': {
+            backgroundColor: "#FFF",
+        }
     },
-    mobileContainer: {
+    container: {
         display: "flex",
         alignItems: "center",
         marginTop: "15px",

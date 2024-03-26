@@ -1,5 +1,6 @@
 export const PolicyTabStyles = {
     PolicyTabsStyles: {
+        margin: "64px 30px 0px 30px",
         "@media (max-width: 601px)": {
             paddingLeft: "20px",
             paddingRight: "20px",
@@ -76,6 +77,7 @@ export const PolicyTabStyles = {
         },
         "& .css-heg063-MuiTabs-flexContainer": {
             display: "flex",
+            paddingRight: "336px",
             justifyContent: "space-between",
             "@media (min-width: 600px) and (max-width: 1024px)": {
                 paddingRight: "166px",
@@ -97,6 +99,7 @@ export const PolicyTabStyles = {
         lineHeight: "110%",
         textTransform: "none",
         minHeight: "auto",
+        fontSize: "20px",
         "@media (min-width: 600px) and (max-width: 1024px)": {
             fontSize: "16px",
         },

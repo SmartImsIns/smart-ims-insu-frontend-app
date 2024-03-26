@@ -7,7 +7,10 @@ import { buttonText } from "./QuickActionButtonsList";
 import { BasicInfoQuickStyles } from "./BasicInfoQuickStyles";
 
 const BasicInfoCardQuickActions: React.FC = () => {
-  const isMobile = useMediaQuery("(max-width:599px)");
+  const isMobile = useMediaQuery("(max-width:899px)");
+  const isTablet = useMediaQuery("(min-width:900px) and (max-width:1300px)");
+
+  const buttonsToDisplay = isMobile ? 1 : isTablet ? 4 : buttonText.length;
 
   return (
     <Box
@@ -15,7 +18,7 @@ const BasicInfoCardQuickActions: React.FC = () => {
       aria-label="Quick Actions Container"
     >
       {isMobile ? (
-        <Box sx={BasicInfoQuickStyles.mobileContainer}>
+        <Box sx={BasicInfoQuickStyles.container}>
           <Box>
             <WhiteButton
               buttonText={"File a claim"}
@@ -28,18 +31,42 @@ const BasicInfoCardQuickActions: React.FC = () => {
         </Box>
       ) : (
         <>
-          <Typography sx={BasicInfoCardStyles.quickStyle}>
-            {"Quick Actions"}
-          </Typography>
-          <Box sx={BasicInfoQuickStyles.BasicInfoQuickActionCard}>
-            {buttonText.map((text, index) => (
-              <WhiteButton
-                key={index}
-                buttonText={text}
-                buttonStyles={BasicInfoQuickStyles.buttonStyle}
-              />
-            ))}
-          </Box>
+          {isTablet ? (
+            <>
+              <Typography sx={BasicInfoCardStyles.quickStyle}>
+                {"Quick Actions"}
+              </Typography>
+              <Box sx={BasicInfoQuickStyles.BasicInfoQuickActionCard}>
+                <Box>
+                  {buttonText.slice(0, buttonsToDisplay).map((text, index) => (
+                    <WhiteButton
+                      key={index}
+                      buttonText={text}
+                      buttonStyles={BasicInfoQuickStyles.buttonStyle}
+                    />
+                  ))}
+                  <Box>
+                    <img src={verticalEllipse} alt="vertical_ellipse" />
+                  </Box>
+                </Box>
+              </Box>
+            </>
+          ) : (
+            <>
+              <Typography sx={BasicInfoCardStyles.quickStyle}>
+                {"Quick Actions"}
+              </Typography>
+              <Box sx={BasicInfoQuickStyles.BasicInfoQuickActionCard}>
+                {buttonText.map((text, index) => (
+                  <WhiteButton
+                    key={index}
+                    buttonText={text}
+                    buttonStyles={BasicInfoQuickStyles.buttonStyle}
+                  />
+                ))}
+              </Box>
+            </>
+          )}
         </>
       )}
     </Box>

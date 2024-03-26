@@ -1,24 +1,31 @@
 export const BasicInfoCardStyles = {
     BasicInfoCard: {
-        marginTop: '43px',
         background: 'linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)',
-        height: '203px',
+        // height: '203px',
         display: 'flex',
         justifyContent: 'space-between',
         border: '1px solid #C9E1EC',
         borderRadius: '10px',
-        "@media (max-width: 599px)": {
+        margin: "44px 30px 0px 30px",
+        "@media (max-width: 399px)": {
             marginLeft: "20px",
             marginRight: "20px",
             marginTop: "25px",
             flexDirection: "column"
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            marginLeft: "25px",
-            marginRight: "25px",
-            marginTop: "30px",
+        "@media (min-width: 399px) and (max-width: 799px)": {
+            marginLeft: "20px",
+            marginRight: "20px",
+            marginTop: "25px",
+            flexDirection: "column"
         },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (min-width: 799px) and (max-width: 1300px)": {
+            marginLeft: "30px",
+            marginRight: "30px",
+            marginTop: "44px",
+            flexDirection: "column"
+        },
+        "@media (min-width: 1300px) and (max-width: 1920px)": {
             marginLeft: "30px",
             marginRight: "30px",
             marginTop: "44px",
@@ -28,21 +35,26 @@ export const BasicInfoCardStyles = {
         display: "flex",
     },
     logoContainer: {
-        "@media (max-width: 599px)": {
-            marginLeft: "20px",
-            marginTop: "21px",
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
+        marginLeft: "30px",
+        marginTop: "30px",
+        maxWidth: "64.44px",
+        "@media (max-width: 799px)": {
             marginLeft: "25px",
             marginTop: "26px",
         },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (min-width: 799px) and (max-width: 1300px)": {
+            marginLeft: "25px",
+            marginTop: "26px",
+            maxWidth: "64.44px",
+        },
+        "@media (min-width: 1300px) and (max-width: 1920px)": {
             marginLeft: "30px",
             marginTop: "30px",
             maxWidth: "64.44px",
         },
         img: {
             width: "64.449px"
+
         }
     },
     imageBox: {
@@ -52,7 +64,7 @@ export const BasicInfoCardStyles = {
         marginTop: "10.79px",
         alignItems: "center",
         img: {
-            maxWidth: "10.5px"
+            maxWidth: "10.5px",
         }
     },
     head: {
@@ -64,11 +76,12 @@ export const BasicInfoCardStyles = {
         fontStyle: "normal",
         lineHeight: "110%",
         whiteSpace: "pre",
+        fontSize: "18px",
         "@media (max-width: 599px)": {
             fontSize: "14px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "16px",
+            fontSize: "14px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             fontSize: "18px",
@@ -80,13 +93,14 @@ export const BasicInfoCardStyles = {
         color: "#1D252B",
         lineHeight: "110%",
         whiteSpace: "pre",
+        fontSize: "20px",
         "@media (max-width: 599px)": {
             fontSize: "14px",
             paddingLeft: 0,
             paddingBottom: "10px"
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "17px",
+            fontSize: "14px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             fontSize: "20px",
@@ -103,6 +117,7 @@ export const BasicInfoCardStyles = {
         display: "flex",
         justifyContent: "space-around",
         alignItems: "center",
+        gap: "101px",
         "@media (max-width: 599px)": {
             display: "none"
         },
@@ -130,14 +145,12 @@ export const BasicInfoCardStyles = {
     container1: {
         display: "flex",
         flexDirection: "column",
+        margin: "27px 0px 42px 67.65px",
         "@media (max-width: 599px)": {
-            marginLeft: "20.55px",
-            marginTop: "20px",
+            margin: "20px 0px 34px 20.55px",
         },
         "@media (min-width: 600px) and (max-width: 1024px)": {
-            paddingLeft: "25px",
-            paddingRight: "25px",
-            marginTop: "30px",
+            margin: "24px 0px 35px 30px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             margin: "27px 0px 42px 67.65px",
