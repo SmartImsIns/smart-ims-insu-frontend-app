@@ -56,7 +56,7 @@ const MyClaimsCard: React.FC = () => {
           alignItems: "center",
         }}
       >
-        <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
+        <DynamicTextDisplay text={`My Claims(${formattedClaimCount})`} />
         <ViewComponent src={VIEW_ARROW} viewText={viewPast} />
       </Box>
       {claimdata?.map((claim, id) => (
@@ -98,7 +98,7 @@ const MyClaimsCard: React.FC = () => {
             </Box>
             <Box sx={MyClaimCardStyles.trackYourClaimText}>
               <Typography sx={MyClaimCardStyles.trackYourClaim}>
-                Track Your Claim
+                {"Track Your Claim"}
               </Typography>
             </Box>
           </Card>

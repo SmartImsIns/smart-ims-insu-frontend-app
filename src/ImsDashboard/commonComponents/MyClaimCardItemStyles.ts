@@ -36,7 +36,6 @@ export const MyClaimCardItemStyles = {
             fontFamily: 'Noto Sans',
             fontSize: '14px',
             fontStyle: 'normal',
-            lineHeight: '12px',
         },
         "@media (min-width:600px) and (max-width:1024px)": {
             maxWidth: "200px",
@@ -60,7 +59,6 @@ export const MyClaimCardItemStyles = {
         lineHeight: "19.8px",
         "@media(max-width:599px)": {
             fontSize: "14px",
-            lineHeight: "12px",
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             fontFamily: '"Noto Sans"',
