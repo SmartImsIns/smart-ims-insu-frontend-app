@@ -71,9 +71,11 @@ const PolicyCard: React.FC<Props> = ({ data }) => {
           </Box>
         </Box>
         <Box>
+          <Tooltip title={data.plan}>
           <Typography variant="h6" sx={PolicyStyles.cardBodyHeading}>
             {data.plan}
           </Typography>
+          </Tooltip>
 
           <Box sx={PolicyStyles.autoDeduct}>
             <Typography variant="body1" sx={PolicyStyles.cardBodyPremium}>
