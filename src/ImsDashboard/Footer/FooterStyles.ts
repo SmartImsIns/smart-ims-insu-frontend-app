@@ -7,9 +7,6 @@ const FooterStyle = {
     justifyContent: "space-between",
     borderTop: " 1px solid #D8D8D8",
     padding: "15px, 20px, 15px, 20px",
-    
-    bottom: 0,
-    left: 0,
     "@media(max-width: 780px)": {
       height: "104px",
       display: "flex",
