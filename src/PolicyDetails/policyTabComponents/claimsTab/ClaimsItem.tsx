@@ -52,7 +52,8 @@ const ClaimsItem: React.FC<ClaimsItemProps> = ({ linkText }) => {
                 key={index}
                 headText={item.headText}
                 contentText={item.contentText}
-                icons={index === 0 ? MYCLAIM_ICON : undefined}
+                imgStyle={MyClaimCardStyles.imgStyle}
+                icons={index === 0 ? MYCLAIM_ICON : ""}
                 icon={index === 0 ? MYCLAIM_ICON : undefined}
                 parentClasses={
                   index === 0
@@ -65,8 +66,9 @@ const ClaimsItem: React.FC<ClaimsItemProps> = ({ linkText }) => {
               <MyClaimCardItem
                 key={index}
                 headText={item.headText}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 contentText={item.contentText}
-                icons={index === 0 ? CAR_ICON : undefined}
+                icons={index === 0 ? CAR_ICON : ""}
                 icon={index === 0 ? CAR_ICON : undefined}
                 parentClasses={
                   index === 0
