@@ -21,6 +21,7 @@ const CoverageTabStyles = {
   },
   discounts: {
     marginTop: "49px",
+    marginBottom: "60px",
   },
   coverageAndLinksHeading: {
     display: "flex",
@@ -188,9 +189,13 @@ const CoverageTabStyles = {
       width: "92.035%",
     },
   },
+  discountCard: {
+    marginBottom: "30px",
+  },
   expandedItemsContainer: {
     borderTop: "1px solid #D0D1D9",
     display: "flex",
+    padding: "22px 23px 20px 0px",
     flexDirection: "column",
     gap: "15px",
   },

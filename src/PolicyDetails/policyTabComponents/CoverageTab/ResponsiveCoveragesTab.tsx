@@ -186,7 +186,7 @@ const ResponsiveCoverageTab = () => {
           </Box>
         </Box>
       </Box>
-      <Box>
+      <Box sx={CoverageTabStyles.discountCard}>
         <Box sx={CoverageTabStyles.discountsHeading}>
           <Box>
             <img src={DiscountsLogo} alt="discounts logo" />
@@ -211,12 +211,12 @@ const ResponsiveCoverageTab = () => {
                   backgroundColor: expandedDiscounts[index]
                     ? "#F5FAFC"
                     : "#FFFFFF",
-                  width: expandedDiscounts[index] ? "96.7%" : "auto",
+                  width: expandedDiscounts[index] ? "auto" : "auto",
                   marginLeft: expandedDiscounts[index] ? "-10px" : "0px",
+                  marginRight: expandedDiscounts[index] ? "-10px" : "0px",
                   boxShadow: expandedDiscounts[index]
                     ? "0px 2px 4px 0px #00000017 inset"
                     : "none",
-                  borderRadius: expandedDiscounts[index] ? "10px" : "0px",
                 }}
               >
                 <Box sx={CoverageTabStyles.discountHeadText}>
