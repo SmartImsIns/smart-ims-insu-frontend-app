@@ -28,6 +28,7 @@ export const MyClaimCardStyles = {
         },
         "@media (min-width: 600px) and (max-width: 1070px)": {
             marginLeft: "auto",
+            paddingTop: "5px"
         }
     },
     trackYourClaim: {
@@ -74,8 +75,7 @@ export const MyClaimCardStyles = {
         borderRadius: "10px",
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
         "@media (max-width:599px)": {
-            height: "309px",
-            paddingRight: "0px",
+            padding: "15px 30px 28px 15px",
             justifyContent: "space-between",
             marginTop: "15px",
         },
@@ -92,7 +92,7 @@ export const MyClaimCardStyles = {
             alignItem: "center",
             justifyContent: "flex-end",
             marginLeft: "auto",
-            marginRight: "30px"
+            paddingTop: "24px"
         }
     },
     box: {

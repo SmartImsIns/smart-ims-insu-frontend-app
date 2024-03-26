@@ -37,7 +37,7 @@ export const AttentionCardStyles = {
             // height: "228px",
             flexDirection: "column",
             padding: "20px",
-            gap: "46px"
+            gap: "46px",
         },
         "@media (min-width:600px) and (max-width:799px)": {
             paddingRight: "38px",
@@ -104,6 +104,8 @@ export const AttentionCardStyles = {
         "@media (max-width:599px)": {
             gap: "24px",
             flexWrap: "wrap",
+            paddingLeft: "10px",
+            paddingRight: "26px",
         },
         "@media (min-width:600px) and (max-width:1024px)": {
             gap: "15x",
@@ -131,7 +133,8 @@ export const AttentionCardStyles = {
     },
     ActionButton: {
         "@media (min-width:600px) and (max-width:1024px)": {
-            marginLeft: "auto"
+            marginLeft: "auto",
+            paddingTop: "15px"
         },
 
     },
