@@ -1,0 +1,15 @@
+[
+    {
+        "id":"0",
+        "premium":"Total Policy Premium",
+        "value1":"$2917.00"
+    },
+    {
+        "id":"1",
+        "premium":"Total Premium / Vechicle",
+        "Vechile1":"Triumph Tiger",
+        "value1":"$2096.00",
+        "Vechile2":"BMW M2",
+        "value2":"$821.00"
+    }
+]
