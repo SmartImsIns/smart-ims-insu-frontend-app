@@ -25,11 +25,7 @@ const DiscountsTable = () => {
         </Box>
       </Box>
       <TableContainer
-        sx={{
-          padding: "0px 24px",
-          width: "97%",
-          border: "1px solid rgba(201, 225, 236, 1)",
-        }}
+        sx={CoverageTabStyles.discountsTableContainer}
         component={Paper}
       >
         <Table>

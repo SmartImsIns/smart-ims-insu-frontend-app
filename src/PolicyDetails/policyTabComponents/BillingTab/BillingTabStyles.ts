@@ -41,11 +41,16 @@ const BillingTabStyles = {
     lineHeight: "17.6px",
     textAlign: "left",
     border: "1px solid #B3C2C8",
+    "&:hover": {
+      backgroundColor: "#FFFFFF",
+      color: "#1D252B",
+      border: "1px solid #B3C2C8",
+    },
   },
   payAndDownloadOptions: {
     display: "flex",
     alignItems: "center",
-    gap:"20px"
+    gap: "20px",
   },
   tableHeadText: {
     fontFamily: "Noto Sans",
@@ -56,7 +61,7 @@ const BillingTabStyles = {
     textAlign: "left",
     opacity: "70%",
   },
-  tableHead: {
+  tableRow: {
     borderBottom: "2px solid rgba(63, 63, 63, 1)",
   },
   tableHeadCellContainer: {

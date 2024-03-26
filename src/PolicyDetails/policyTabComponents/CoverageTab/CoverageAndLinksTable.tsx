@@ -28,7 +28,7 @@ const CoverageAndLinks = () => {
         <Typography sx={CoverageTabStyles.coverageAndLinksHeadingText}>Coverage and links</Typography></Box>
       </Box>
       <TableContainer sx={CoverageTabStyles.tableContainer} component={Paper}>
-        <Table sx={{ minWidth: 650 }} aria-label="simple table">
+        <Table  aria-label="simple table">
           <TableHead>
             <TableRow sx={CoverageTabStyles.tableRow}>
               <TableCell sx={CoverageTabStyles.tableHead}>{Coverages}</TableCell>

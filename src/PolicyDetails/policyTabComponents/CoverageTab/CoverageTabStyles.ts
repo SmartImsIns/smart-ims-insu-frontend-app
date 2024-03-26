@@ -6,13 +6,13 @@ const CoverageTabStyles = {
     "@media (min-width: 1367px)": {
       margin: "0px auto",
     },
-    "@media (min-width: 360px) and (max-width: 599px)": {
+    "@media (min-width: 360px) and (max-width: 649px)": {
       display: "none",
     },
   },
   container2: {
     display: "none",
-    "@media (max-width: 599px)": {
+    "@media (max-width: 649px)": {
       display: "block",
     },
   },
@@ -27,6 +27,7 @@ const CoverageTabStyles = {
     gap: "10px",
     alignItems: "center",
     marginBottom: "13px",
+    width: "320px",
   },
   coverageAndLinksHeadingText: {
     fontFamily: "Playfair Display",
@@ -41,6 +42,8 @@ const CoverageTabStyles = {
     gap: "10px",
     alignItems: "center",
     marginBottom: "13px",
+    // width: "100%",
+    maxWidth: "320px",
   },
   discountsHeadingText: {
     fontFamily: "Playfair Display",
@@ -173,13 +176,33 @@ const CoverageTabStyles = {
     lineHeight: "15.4px",
     textAlign: "left",
   },
+  premiumTableContainer: {
+    marginTop: "20px",
+    padding: "0px 24px",
+    width: "97%",
+    height: "auto",
+    minWidth: "450px",
+    border: "1px solid rgba(201, 225, 236, 1)",
+    "@media(min-width:650px) and (max-width:1024px)": {
+      width: "92.035%",
+    },
+  },
   expandedItemsContainer: {
     padding: "22px 23px 20px 0px",
     borderTop: "1px solid #D0D1D9",
     display: "flex",
     flexDirection: "column",
     gap: "15px",
-    // margin: "0px -10px",
+  },
+
+  discountsTableContainer: {
+    padding: "0px 24px",
+    width: "97%",
+    minWidth: "450px",
+    border: "1px solid rgba(201, 225, 236, 1)",
+    "@media(min-width:600px) and (max-width:1024px)": {
+      width: "92.035%",
+    },
   },
   expandedItems: {
     display: "flex",
@@ -233,7 +256,7 @@ const CoverageTabStyles = {
   discountsCard: {
     border: "1px solid #C9E1EC",
     borderRadius: "10px",
-    padding: "20px 10px 0px 10px",
+    padding: "0px 10px 0px 10px",
     backgroundColor: "#FFFFFF",
   },
   discountText: {
@@ -263,6 +286,7 @@ const CoverageTabStyles = {
     justifyContent: "space-between",
     padding: "15px 10px 19px 20px",
     borderBottom: "1px solid #C9E1EC",
+    // border: "10px solid red",
   },
   limits: {
     display: "flex",
@@ -291,13 +315,16 @@ const CoverageTabStyles = {
   tableContainer: {
     padding: "0px 24px",
     width: "97%",
-    border: "1px solid rgba(201, 225, 236, 1)",
+    minWidth: "450px",
+    "@media(min-width:650px) and (max-width:1024px)": {
+      width: "92.035%",
+    },
   },
   tableRow: {
     borderBottom: "2px solid rgba(63, 63, 63, 1)",
   },
   premiumFirstRow: {
-    maxWidth: "40px",
+    maxWidth: "225px",
   },
   premiumFirstTitle: {
     fontFamily: "Playfair Display",
@@ -309,10 +336,12 @@ const CoverageTabStyles = {
   },
   premiumTableCells: {
     display: "flex",
+    gap: "28px",
   },
-  //   tableBodyCell: {
-
-  //   },
+  tableInnerContainer: {
+    display: "flex",
+    justifyContent: "space-between",
+  },
   premiumTableRowCells: {
     display: "flex",
     flexDirection: "column",

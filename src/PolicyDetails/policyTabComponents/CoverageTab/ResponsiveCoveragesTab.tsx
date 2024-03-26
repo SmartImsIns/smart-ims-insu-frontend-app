@@ -8,11 +8,15 @@ import CoveragesLogo from "../../../assets/CoveragesLogo.svg";
 import DiscountsLogo from "../../../assets/DiscountsLogo.svg";
 import React, { useState } from "react";
 import coveragesAndLinksData from "../../../mockJson/CustomerDashboard/CoverageAndLinksData.json";
+
 import downArrow from "../../../assets/downArrow.svg";
 const ResponsiveCoverageTab = () => {
   const [expandedItems, setExpandedItems] = useState<(boolean | undefined)[]>(
     []
   );
+  const [expandedDiscounts, setExpandedDiscounts] = useState<
+    (boolean | undefined)[]
+  >([]);
 
   const handleClick = (index: number) => {
     setExpandedItems((prevExpandedItems) => {
@@ -24,6 +28,18 @@ const ResponsiveCoverageTab = () => {
         }
       }
       return newExpandedItems;
+    });
+  };
+  const handleDiscountsClick = (index: number) => {
+    setExpandedDiscounts((prevExpandedDiscounts) => {
+      const newExpandedDiscounts = [...prevExpandedDiscounts];
+      newExpandedDiscounts[index] = !newExpandedDiscounts[index];
+      for (let i = 0; i < newExpandedDiscounts.length; i++) {
+        if (i !== index) {
+          newExpandedDiscounts[i] = false;
+        }
+      }
+      return newExpandedDiscounts;
     });
   };
 
@@ -86,6 +102,11 @@ const ResponsiveCoverageTab = () => {
                     backgroundColor: expandedItems[index]
                       ? "#F5FAFC"
                       : "#FFFFFF",
+                    width: expandedItems[index] ? "100%" : "auto",
+                    marginLeft: expandedItems[index] ? "-10px" : "0px",
+                    boxShadow: expandedItems[index]
+                      ? "0px 2px 4px 0px #00000017 inset"
+                      : "none",
                   }}
                 >
                   <Box sx={CoverageTabStyles.coveragesHead}>
@@ -179,12 +200,33 @@ const ResponsiveCoverageTab = () => {
           {discountsData
             .filter((item) => item.id !== "0")
             .map((e, index) => (
-              <Box sx={CoverageTabStyles.discountCardContext}>
+              <Box
+                key={index}
+                sx={{
+                  ...CoverageTabStyles.discountCardContext,
+                  backgroundColor: expandedDiscounts[index]
+                    ? "#F5FAFC"
+                    : "#FFFFFF",
+                  width: expandedDiscounts[index] ? "96.7%" : "auto",
+                  marginLeft: expandedDiscounts[index] ? "-10px" : "0px",
+                  boxShadow: expandedDiscounts[index]
+                    ? "0px 2px 4px 0px #00000017 inset"
+                    : "none",
+                }}
+              >
                 <Box sx={CoverageTabStyles.discountHeadText}>
                   <Typography sx={CoverageTabStyles.typesText}>
                     {e.Types}
                   </Typography>
-                  <img src={horizontalArrow} alt="horizontal-arrow" />
+                  <img
+                    onClick={() => handleDiscountsClick(index)}
+                    src={expandedDiscounts[index] ? downArrow : horizontalArrow}
+                    alt={
+                      expandedDiscounts[index]
+                        ? "Down-arrow"
+                        : "Horizontal-arrow"
+                    }
+                  />
                 </Box>
                 <Box sx={CoverageTabStyles.discountContentText}>
                   <Typography sx={CoverageTabStyles.discountText}>
@@ -194,11 +236,36 @@ const ResponsiveCoverageTab = () => {
                     {e.Vechile1}
                   </Typography>
                 </Box>
+                {expandedDiscounts[index] && (
+                  <Box sx={CoverageTabStyles.expandedItemsContainer}>
+                    <Box sx={CoverageTabStyles.expandedItems}>
+                      <Typography sx={CoverageTabStyles.expanededItemkeyText}>
+                        {
+                          discountsData.find((item) => item.id === "0")
+                            ?.Vechile1
+                        }
+                      </Typography>
+                      <Typography sx={CoverageTabStyles.expanededItemvalueText}>
+                        {e.Vechile1}
+                      </Typography>
+                    </Box>
+                    <Box sx={CoverageTabStyles.expandedItems}>
+                      <Typography sx={CoverageTabStyles.expanededItemkeyText}>
+                        {
+                          discountsData.find((item) => item.id === "0")
+                            ?.Vechile2
+                        }
+                      </Typography>
+                      <Typography sx={CoverageTabStyles.expanededItemvalueText}>
+                        {e.Vechile2}
+                      </Typography>
+                    </Box>
+                  </Box>
+                )}
               </Box>
             ))}
         </Box>
       </Box>
-      <Box></Box>
     </Box>
   );
 };
