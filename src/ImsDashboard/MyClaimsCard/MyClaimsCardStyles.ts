@@ -47,6 +47,9 @@ export const MyClaimCardStyles = {
         letterSpacing: "0px",
         textAlign: "left",
         color: "rgba(44, 108, 231, 1)",
+        "& :hover": {
+            textDecoration: "underline"
+        }
     },
     myClaimsCardButtonStyles: {
         textTransform: "none",
@@ -83,7 +86,7 @@ export const MyClaimCardStyles = {
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0)",
         "@media (max-width:599px)": {
             height: "309px",
-            paddingRight: "0px",
+            padding: "30px 30px 28px 15px ",
             justifyContent: "space-between",
             marginTop: "15px",
         },
@@ -100,7 +103,6 @@ export const MyClaimCardStyles = {
             alignItem: "center",
             justifyContent: "flex-end",
             marginLeft: "auto",
-            marginRight: "30px"
         }
     },
     box: {

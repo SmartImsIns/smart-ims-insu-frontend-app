@@ -1,10 +1,10 @@
 import { Box, Card, Link, Typography } from "@mui/material";
 import React, { useEffect, useState } from "react";
 import claimsData from "../../../mockJson/CustomerDashboard/ClaimsData.json";
-import ActionButton from "../../../ImsDashboard/commonComponents/ActionButton";
 import { MyClaimCardStyles } from "../../../ImsDashboard/MyClaimsCard/MyClaimsCardStyles";
 import MyClaimCardItem from "../../../ImsDashboard/commonComponents/MyClaimCardItem";
 import { MYCLAIM_ICON, CAR_ICON } from "../../../constants/Constants";
+import ClaimsTabStyles from "./ClaimsTabStyles";
 
 interface ClaimsDataItem {
   houseLoanData?: {
@@ -78,13 +78,14 @@ const ClaimsItem: React.FC<ClaimsItemProps> = ({ linkText }) => {
               />
             ))}
             <Box sx={MyClaimCardStyles.trackYourClaimButton}>
-              <ActionButton
-                buttonText={linkText}
-                sx={MyClaimCardStyles.myClaimsCardButtonStyles}
-              />
+              <Link href="#" sx={ClaimsTabStyles.linkStyle}>
+                <Typography sx={MyClaimCardStyles.trackYourClaim}>
+                  {linkText}
+                </Typography>
+              </Link>
             </Box>
             <Box sx={MyClaimCardStyles.trackYourClaimText}>
-              <Link href="#">
+              <Link href="#" sx={ClaimsTabStyles.linkStyle}>
                 <Typography sx={MyClaimCardStyles.trackYourClaim}>
                   {linkText}
                 </Typography>

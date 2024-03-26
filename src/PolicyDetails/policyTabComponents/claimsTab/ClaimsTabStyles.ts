@@ -1,10 +1,10 @@
 const ClaimsTabStyles = {
     container: {
-        paddingTop: "20px",
+        paddingTop: "44px",
         paddingBottom: "69px",
         display: "flex",
         flexDirection: "column",
-        gap: "30px",
+        gap: "49px",
     },
     claimContainer: {
         display: "flex",
@@ -49,7 +49,6 @@ const ClaimsTabStyles = {
     activeClaimsContainer: {
         display: "flex",
         flexDirection: "column",
-        gap: "20px"
     },
     titleText: {
         color: "#383D4E",
@@ -59,5 +58,11 @@ const ClaimsTabStyles = {
         fontWeight: 400,
         lineHeight: "110%",
     },
+    linkStyle: {
+        textDecoration: "none",
+        "& :hover": {
+            textDecoration: "underline",
+        },
+    }
 }
 export default ClaimsTabStyles
