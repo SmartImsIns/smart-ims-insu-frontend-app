@@ -5,7 +5,6 @@ import EllipsisMenu from "../EllipsisMenu/EllipsisMenu";
 import car from "../../assets/car.svg";
 import home from "../../assets/home.svg";
 import ActionButton from "../commonComponents/ActionButton";
-import { useNavigate } from "react-router-dom";
 
 export interface PolicyData {
   id: string;
@@ -39,13 +38,8 @@ const getImage = (id: string) => {
 const PolicyCard: React.FC<Props> = ({ data }) => {
   const logo = getImage(data.id);
 
-  const navigate = useNavigate();
-  const handleClick = () => {
-    navigate("/policy-details");
-  };
-
   return (
-    <Card sx={PolicyStyles.oneCard} onClick={handleClick}>
+    <Card sx={PolicyStyles.oneCard}>
       <Box sx={PolicyStyles.oneCardTopSection}>
         <Box sx={PolicyStyles.card}>
           <Box sx={PolicyStyles.cardIcon}>

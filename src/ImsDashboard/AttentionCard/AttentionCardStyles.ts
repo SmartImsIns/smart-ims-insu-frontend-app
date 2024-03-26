@@ -51,6 +51,7 @@ export const AttentionCardStyles = {
             gap: "20px",
             height: "118px",
         }
+
     },
     AttentionsCardBoxStyle: {
         display: "flex",
