@@ -32,4 +32,5 @@ export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
 export const VIEW_ARROW = viewAllArrow;
 
-export const videoUrl = "https://www.youtube.com/embed/JFjOpajKeOw";
+export const youtubeVideoUrl = "https://www.youtube.com/embed/JFjOpajKeOw";
+export const videoUrl = "http://3.20.231.65/videos/Navigating%20Auto%20Liability%20Limits%20Your%20Road%20to%20Financial%20Security.mp4";
