@@ -18,7 +18,7 @@ const PolicyStyles = {
     fontFamily: "Playfair Display",
     fontSize: "20px",
     fontWeight: "400",
-    lineHeight: "22px",
+    lineHeight: "24px",
     letterSpacing: "0em",
     textAlign: "left",
     color: "rgba(56, 61, 78, 1)",
@@ -379,7 +379,7 @@ const PolicyStyles = {
     minWidth: "fit-content",
     display: "flex",
     justifyContent: "space-between",
-    marginBottom: "20px",
+    marginBottom: "30px",
     "@media (min-width:360px) and (max-width:599px)": {
       gap: "60px",
     },
@@ -406,7 +406,7 @@ const PolicyStyles = {
   policyCardViewAllBox: {
     display: "flex",
     gap: "5px",
-    marginTop: "25.78px",
+    marginTop: "30.78px",
     width: "90px",
     height: "15px",
     padding: "16px 30px 16px 12px",
@@ -421,6 +421,7 @@ const PolicyStyles = {
   policyCardHead: {
     display: "flex",
     justifyContent: "space-between",
+    alignItems: "center",
   },
   cardBottomButton: {
     fontFamily: "Lato",
@@ -457,7 +458,7 @@ const PolicyStyles = {
     height: "25.7px",
     marginTop: "5px",
     marginRight: "30px",
-    
+
     "@media (min-width:360px) and (max-width:600px)": {
       marginTop: "28px ",
       width: "40px",
