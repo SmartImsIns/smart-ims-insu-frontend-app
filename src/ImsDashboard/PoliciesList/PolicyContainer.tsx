@@ -19,6 +19,8 @@ const PolicyContainer: React.FC = () => {
         </Typography>
         
         {policyData.length > 2 && ( 
+
+          
           <Box sx={PolicyStyles.viewAll}>
             <ViewComponent src={VIEW_ARROW} viewText={viewAll} />
           </Box>
