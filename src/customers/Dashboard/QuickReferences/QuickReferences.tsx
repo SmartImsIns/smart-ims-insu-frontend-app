@@ -6,7 +6,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { videoUrl } from '../../../constants/Constants';
+import { videoUrl, youtubeVideoUrl } from '../../../constants/Constants';
 import QuickReferencesStyle from "./QuickReferencesStyle";
 import img1 from "../../../assets/svgs/group1.svg";
 import img2 from "../../../assets/svgs/group2.svg";
@@ -15,7 +15,7 @@ import img4 from "../../../assets/svgs/group4.svg";
 // import playIcon from "../../../assets/svgs/playIcon.svg";
 
 interface quickReference {
-  imgSrc: string;
+  src: string;
   description: string;
   type: string;
 }
@@ -24,23 +24,23 @@ const QuickReferences = () => {
   const getQuickReferences = () => {
     return [
       {
-        imgSrc: img1,
-        description: "When to make an insurance claim?",
-        type: "",
+        src: videoUrl,
+        description: "",
+        type: "video",
       },
       {
-        imgSrc: img2,
+        src: img2,
         description:
           "Which type of insurance is best for your automobile life.",
         type: "",
       },
       {
-        imgSrc: 'https://www.youtube.com/embed/JFjOpajKeOw',
+        src: youtubeVideoUrl,
         description: "",
         type: "video",
       },
       {
-        imgSrc: img4,
+        src: img4,
         description: "Make your insurance effective",
         type: "",
       },
@@ -51,7 +51,7 @@ const QuickReferences = () => {
       >
         {item.type === "video" && (
           <CardMedia component="iframe" 
-            src={videoUrl}
+            src={item.src}
             sx={{
               aspectRatio: "16/9",
               height: 'inherit',
@@ -66,7 +66,7 @@ const QuickReferences = () => {
             <CardMedia
               sx={QuickReferencesStyle.qucikReferencesCardMedia}
               component="img"
-              src={item.imgSrc}
+              src={item.src}
               alt="green iguana"
             />
             <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
