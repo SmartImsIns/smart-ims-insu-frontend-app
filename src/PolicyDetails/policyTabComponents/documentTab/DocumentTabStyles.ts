@@ -1,17 +1,3 @@
-import { SxProps } from "@mui/system";
-import { CSSProperties } from "react";
-
-export interface DocumentTabStyles {
-    container: SxProps,
-    documentContainer: SxProps,
-    imageContainer: SxProps,
-    imageStyle?: CSSProperties,
-    card: SxProps,
-    buttonGroup: SxProps,
-    walletButton: SxProps;
-    downloadButton: SxProps;
-}
-
 const documentTabStyles = {
 
     container: {
@@ -32,14 +18,10 @@ const documentTabStyles = {
         border: "1px solid #C9E1EC",
         maxWidth: "327px",
         borderRadius: "10px",
-        "@media (max-width: 599px)": {
-            marginTop: "20px"
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "16px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            fontSize: "18px",
+        fontSize: "18px",
+        "@media (max-width: 789px)": {
+            marginTop: "20px",
+            fontSize: "14px",
         },
     },
     imageContainer: {

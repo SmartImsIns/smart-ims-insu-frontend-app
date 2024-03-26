@@ -1,12 +1,9 @@
 import React from "react";
 import { Box, useMediaQuery } from "@mui/material";
-import documentTabStyles, { DocumentTabStyles } from "./DocumentTabStyles";
+import documentTabStyles from "./DocumentTabStyles";
 import DocumentTabComponentItem from "./DocumentTabComponentItem";
-import WhiteButton from "../../common/WhiteButton";
 
 const DocumentsTabComponent: React.FC = () => {
-  const { container }: DocumentTabStyles = documentTabStyles;
-
   const isMobile = useMediaQuery("(max-width:789px)");
 
   return (
@@ -19,7 +16,7 @@ const DocumentsTabComponent: React.FC = () => {
           </Box>
         </>
       ) : (
-        <Box sx={container}>
+        <Box sx={documentTabStyles.container}>
           <DocumentTabComponentItem />
           <DocumentTabComponentItem />
         </Box>
