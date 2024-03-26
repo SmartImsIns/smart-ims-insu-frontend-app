@@ -12,7 +12,6 @@ const PolicyContainer: React.FC = () => {
   
 
   return (
-    // <Box sx={PolicyStyles.policyCardHead}>
     <Box>
       <Box sx={PolicyStyles.policyCardHead}>
         <Typography sx={PolicyStyles.policyCardHeading}>
@@ -20,12 +19,6 @@ const PolicyContainer: React.FC = () => {
         </Typography>
         
         {policyData.length > 2 && ( 
-          // <Box sx={PolicyStyles.policyCardViewAllBox}>
-          //   <Typography sx={PolicyStyles.policyCardViewAll}>{viewAll}</Typography>
-          //   <Box sx={PolicyStyles.rightArrow}>
-          //     <img src={viewAllArrow} alt="view-all-arrow" />
-          //   </Box>
-          // </Box>
           <Box sx={PolicyStyles.viewAll}>
             <ViewComponent src={VIEW_ARROW} viewText={viewAll} />
           </Box>
