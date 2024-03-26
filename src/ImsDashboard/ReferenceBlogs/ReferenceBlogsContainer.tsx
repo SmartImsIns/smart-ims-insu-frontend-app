@@ -39,19 +39,17 @@ const ReferenceBlogsContainer: React.FC<{ data: BlogData }> = ({ data }) => {
         <img src={imageSrc} alt="cardImage" />
       </Box>
       <Box sx={ReferenceBlogsStyles.cardDescription}>
-        <Tooltip title={data.description}>
           <Typography sx={ReferenceBlogsStyles.cardDescriptionText}>
             {data.description}
           </Typography>
-        </Tooltip>
 
         <Box sx={ReferenceBlogsStyles.cardButtonIcon}>
           {data.videoUrl ? (
-            <Button sx={ReferenceBlogsStyles.playButton}>
+            <Button disableRipple sx={ReferenceBlogsStyles.playButton}>
               <img src={playIcon} alt="playIcon" />
             </Button>
           ) : (
-            <ActionButton
+            <ActionButton 
               sx={ReferenceBlogsStyles.readMoreButton}
               buttonText={"Read More"}
             />

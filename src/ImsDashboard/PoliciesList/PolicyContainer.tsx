@@ -11,6 +11,7 @@ const PolicyContainer: React.FC = () => {
   
 
   return (
+    // <Box sx={PolicyStyles.policyCardHead}>
     <Box>
       <Box sx={PolicyStyles.policyCardHead}>
         <Typography sx={PolicyStyles.policyCardHeading}>
