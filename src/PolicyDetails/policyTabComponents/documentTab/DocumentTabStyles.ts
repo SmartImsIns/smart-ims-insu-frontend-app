@@ -45,20 +45,20 @@ const documentTabStyles = {
     imageContainer: {
         height: "265px",
         backgroundColor: "#000",
-        borderRadius: "10px 10px 0 0",
+        borderRadius: "9px 9px 0 0",
     },
     imageStyle: {
         height: "265px",
         width: "327px",
         backgroundColor: "#000",
         opacity: 0.7,
-        borderRadius: "10px 10px 0 0",
+        borderRadius: "9px 9px 0 0",
     },
     card: {
         display: "flex",
         padding: "21px 27px 20px 22px ",
         flexDirection: "column",
-        borderRadius: "0px 0px 10px 10px",
+        borderRadius: "0px 0px 9px 9px",
         filter: "drop-shadow(0px -3px 4px rgba(0, 0, 0, 0.31))",
         boxShadow: "0px 0px 10px 0px rgba(0, 0, 0, 0.01)",
         height: "105px"

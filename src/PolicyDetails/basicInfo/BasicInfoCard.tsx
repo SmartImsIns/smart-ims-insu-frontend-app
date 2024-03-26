@@ -7,6 +7,7 @@ import {
   annaulPrice,
   billingHead,
   dueDate,
+  dueOn,
   numberOfVEchiles,
   policyDetailsHead,
   premiumHead,
@@ -15,6 +16,7 @@ import {
   term,
   vaild,
   vehicleName,
+  vehicles,
 } from "../../constants/Constants";
 
 const BasicInfoCard: React.FC = () => {
@@ -41,7 +43,7 @@ const BasicInfoCard: React.FC = () => {
                 {vehicleName}
               </Typography>
               <Typography sx={BasicInfoCardStyles.content}>
-                &bull; {` ${numberOfVEchiles} ${"vehicles"}`}
+                &bull; {` ${numberOfVEchiles} ${vehicles}`}
               </Typography>
             </Box>
           </Box>
@@ -54,7 +56,7 @@ const BasicInfoCard: React.FC = () => {
                 sx={BasicInfoCardStyles.content}
               >{`$ ${price} `}</Typography>
               <Typography sx={BasicInfoCardStyles.content}>
-                &bull; {` Due on ${dueDate}`}
+                &bull; {` ${dueOn} ${dueDate}`}
               </Typography>
             </Box>
           </Box>

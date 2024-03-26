@@ -14,7 +14,6 @@ export const BreadCrumbStyles = {
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             marginLeft: "30px",
-
         },
     },
     box: {
@@ -40,6 +39,5 @@ export const BreadCrumbStyles = {
         "@media (min-width: 1024px) and (max-width: 1920px)": {
             fontSize: '18px',
         },
-
     }
 }

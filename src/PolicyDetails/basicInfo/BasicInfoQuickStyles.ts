@@ -3,7 +3,7 @@ export const BasicInfoQuickStyles = {
         boxShadow: '0px 2px 4px 0px rgba(0, 0, 0, 0.09) inset',
         color: '#1D252B',
         background: "#F3F5F6",
-        borderRadius: '0 10px 10px 0',
+        borderRadius: '0 9px 9px 0',
         padding: "26px 30px 19px 30px",
         display: 'flex',
         flexDirection: 'column',
@@ -12,13 +12,13 @@ export const BasicInfoQuickStyles = {
             borderRadius: '0 0 10px 10px',
             padding: "0px"
         },
-        "@media (min-width: 399px) and (max-width: 799px)": {
-            borderRadius: '0 0 10px 10px',
+        "@media (min-width: 399px) and (max-width: 899px)": {
+            borderRadius: '0 0 9px 9px',
             padding: "0px"
         },
-        "@media (min-width: 799px) and (max-width: 1300px)": {
-            padding: "13px 15px 9.5px 15px",
-            borderRadius: '0px 0px 10px 10px',
+        "@media (min-width: 900px) and (max-width: 1300px)": {
+            borderRadius: '0px 0px 9px 9px',
+            padding: "15px 30px",
         },
         "@media (min-width: 1300px) and (max-width: 1920px)": {
             padding: "26px 30px 19px 30px",
@@ -41,11 +41,9 @@ export const BasicInfoQuickStyles = {
             paddingRight: "25px",
         },
         "@media (min-width: 799px) and (max-width: 1300px)": {
-            display: "grid",
-            gridTemplateColumns: "repeat(4, 1fr)",
-            gridAutoRows: "minmax(10px, auto)",
-            // gap: "10px",
-            // columnGap: '20px',
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "space-between"
         },
         "@media (min-width: 1300px) and (max-width: 1920px)": {
             display: "grid",
@@ -54,11 +52,6 @@ export const BasicInfoQuickStyles = {
             gap: "10px",
             columnGap: '20px',
         },
-        // "@media (min-width: 399px) and (max-width: 799px)": {
-        //     display: "grid",
-        //     gridTemplateColumns: "repeat(4, 1fr)",
-        //     gridAutoRows: "minmax(10px, auto)",
-        // },
     },
     buttonStyle: {
         textTransform: "none",
@@ -91,4 +84,10 @@ export const BasicInfoQuickStyles = {
         marginRight: "20px",
         justifyContent: "space-between",
     },
+    buttonsContainer: {
+        display: "flex",
+        alignItems: "center",
+        justifyContent: "space-between",
+        gap: "20px",
+    }
 }

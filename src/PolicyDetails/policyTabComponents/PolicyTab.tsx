@@ -32,7 +32,7 @@ const PolicyTab = () => {
     );
   };
 
-  const isMobile = useMediaQuery("(max-width:601px)");
+  const isMobile = useMediaQuery("(max-width:789px)");
 
   return (
     <Box sx={PolicyTabStyles.PolicyTabsStyles}>
