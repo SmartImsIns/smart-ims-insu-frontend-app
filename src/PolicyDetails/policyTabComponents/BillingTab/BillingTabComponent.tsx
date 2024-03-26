@@ -14,6 +14,8 @@ import filter from "../../../assets/Filter1.svg";
 import BillingTabStyles from "./BillingTabStyles";
 import billingData from "../../../mockJson/CustomerDashboard/BillingData.json";
 import upDownArrow from "../../../assets/upDownArrow.svg";
+import downloadIcon from '../../../assets/DownloadIcon.svg'
+import ActionButton from "../../../ImsDashboard/commonComponents/ActionButton";
 type Props = {};
 
 const BillingTabComponent = (props: Props) => {
@@ -37,13 +39,13 @@ const BillingTabComponent = (props: Props) => {
           >
             <Table>
               <TableHead>
-                <TableRow>
+                <TableRow sx={BillingTabStyles.tableRow}>
                   {billingData[0] &&
                     Object.entries(billingData[0]).map(
                       ([key, value], index) =>
                         key !== "id" && (
                           <TableCell
-                            sx={BillingTabStyles.tableHead}
+                            
                             key={index}
                           >
                             <Box sx={BillingTabStyles.tableHeadCellContainer}>
@@ -63,10 +65,16 @@ const BillingTabComponent = (props: Props) => {
                     <TableCell sx={BillingTabStyles.tableBodyCells}>
                       {row.billingDate}
                     </TableCell>
-                    <TableCell>{row.dueDate}</TableCell>
-                    <TableCell>{row.billedAmount}</TableCell>
-                    <TableCell>{row.paidAmount}</TableCell>
-                    <TableCell>{row.paidOn}</TableCell>
+                    <TableCell sx={BillingTabStyles.tableBodyCells}>{row.dueDate}</TableCell>
+                    <TableCell sx={BillingTabStyles.tableBodyCells}>{row.billedAmount}</TableCell>
+                    <TableCell sx={BillingTabStyles.tableBodyCells}>{row.paidAmount}</TableCell>
+                    <TableCell sx={BillingTabStyles.tableBodyCells}>{row.paidOn}</TableCell>
+                    {row.showPayIcon && (
+                      <TableCell sx={BillingTabStyles.payAndDownloadOptions}> 
+                        <ActionButton sx={BillingTabStyles.payButton} buttonText={"Pay"} />
+                        <img src={downloadIcon} alt="First icon" />
+                      </TableCell>
+                    )}
                   </TableRow>
                 ))}
               </TableBody>
