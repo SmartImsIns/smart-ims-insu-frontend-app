@@ -21,7 +21,7 @@ const PolicyStyles = {
     textAlign: "left",
     color: "rgba(56, 61, 78, 1)",
     "@media (min-width:360px) and (max-width:599px)": {
-      marginLeft: "25px",
+      marginLeft: "-9px",
       marginBottom: "10px",
       maxWidth: "150px",
     },
