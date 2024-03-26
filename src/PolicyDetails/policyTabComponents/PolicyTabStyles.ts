@@ -68,7 +68,7 @@ export const PolicyTabStyles = {
             width: "50%",
             transform: "translateX(0)",
         },
-        "& .css-heg063-MuiTabs-flexContainer": {
+        "& .MuiTabs-flexContainer": {
             display: "flex",
             paddingRight: "336px",
             justifyContent: "space-between",
