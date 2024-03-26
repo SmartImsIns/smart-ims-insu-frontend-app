@@ -7,6 +7,7 @@ import {
   CAR_ICON,
   viewPast,
   VIEW_ARROW,
+  trackYourClaim,
 } from "../../constants/Constants";
 import { MyClaimCardStyles } from "./MyClaimsCardStyles";
 import ActionButton from "../commonComponents/ActionButton";
@@ -49,14 +50,8 @@ const MyClaimsCard: React.FC = () => {
 
   return (
     <Box sx={MyClaimCardStyles.Container} aria-label="MyClaims Card Container">
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
-        <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
+      <Box sx={MyClaimCardStyles.container1}>
+        <DynamicTextDisplay text={`My Claims(${formattedClaimCount})`} />
         <ViewComponent src={VIEW_ARROW} viewText={viewPast} />
       </Box>
       {claimdata?.map((claim, id) => (
@@ -68,6 +63,7 @@ const MyClaimsCard: React.FC = () => {
                 headText={item.headText}
                 contentText={item.contentText}
                 icons={index === 0 ? MYCLAIM_ICON : "image not found"}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 icon={index === 0 ? MYCLAIM_ICON : undefined}
                 parentClasses={
                   index === 0
@@ -83,6 +79,7 @@ const MyClaimsCard: React.FC = () => {
                 contentText={item.contentText}
                 icons={index === 0 ? CAR_ICON : "image not found"}
                 icon={index === 0 ? CAR_ICON : undefined}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 parentClasses={
                   index === 0
                     ? MyClaimCardStyles.myClaimsCardWithIconStyles
@@ -92,13 +89,13 @@ const MyClaimsCard: React.FC = () => {
             ))}
             <Box sx={MyClaimCardStyles.trackYourClaimButton}>
               <ActionButton
-                buttonText="Track Your Claim"
+                buttonText={trackYourClaim}
                 sx={MyClaimCardStyles.myClaimsCardButtonStyles}
               />
             </Box>
             <Box sx={MyClaimCardStyles.trackYourClaimText}>
               <Typography sx={MyClaimCardStyles.trackYourClaim}>
-                Track Your Claim
+                {trackYourClaim}
               </Typography>
             </Box>
           </Card>

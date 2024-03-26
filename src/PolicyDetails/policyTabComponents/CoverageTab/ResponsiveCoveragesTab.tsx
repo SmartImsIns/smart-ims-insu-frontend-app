@@ -102,8 +102,9 @@ const ResponsiveCoverageTab = () => {
                     backgroundColor: expandedItems[index]
                       ? "#F5FAFC"
                       : "#FFFFFF",
-                    width: expandedItems[index] ? "100%" : "auto",
+                    width: expandedItems[index] ? "auto" : "auto",
                     marginLeft: expandedItems[index] ? "-10px" : "0px",
+                    marginRight: expandedItems[index] ? "-10px" : "0px",
                     boxShadow: expandedItems[index]
                       ? "0px 2px 4px 0px #00000017 inset"
                       : "none",

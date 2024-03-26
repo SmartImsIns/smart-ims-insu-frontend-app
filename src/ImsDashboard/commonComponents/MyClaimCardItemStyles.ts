@@ -5,8 +5,9 @@ export const MyClaimCardItemStyles = {
         padding: "15px",
         alignItems: "center",
         "@media (max-width:599px)": {
-            marginRight: "0px",
+            padding: "15px 0px 15px 15px",
             minWidth: "114px",
+            maxHeight: "35.35px"
         }
     },
     claimsData: {
@@ -14,9 +15,8 @@ export const MyClaimCardItemStyles = {
         display: "flex",
         flexDirection: "column",
         "@media (max-width:599px)": {
-            gap: "8.04px",
+            gap: "8.02px",
         }
-
     },
     HeadStyle: {
         overflow: "hidden",
@@ -34,9 +34,8 @@ export const MyClaimCardItemStyles = {
             color: '#1D252B',
             textOverflow: 'ellipsis',
             fontFamily: 'Noto Sans',
-            fontSize: '16px',
+            fontSize: '14px',
             fontStyle: 'normal',
-            lineHeight: '24px',
         },
         "@media (min-width:600px) and (max-width:1024px)": {
             maxWidth: "200px",
@@ -60,7 +59,6 @@ export const MyClaimCardItemStyles = {
         lineHeight: "19.8px",
         "@media(max-width:599px)": {
             fontSize: "14px",
-            lineHeight: "18px",
             overflow: 'hidden',
             textOverflow: 'ellipsis',
             fontFamily: '"Noto Sans"',
@@ -76,4 +74,4 @@ export const MyClaimCardItemStyles = {
             whiteSpace: "nowrap",
         },
     },
-}
+};

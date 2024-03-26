@@ -4,7 +4,8 @@ import { Box, Typography, useMediaQuery } from "@mui/material";
 import PolicyStyles from "./PolicyStyles";
 import policyData from "../../mockJson/CustomerDashboard/PolicyCardData.json";
 import viewAllArrow from "../../assets/viewAllArrow.svg";
-import { policiesHeading, viewAll } from "../../constants/Constants";
+import { VIEW_ARROW, policiesHeading, viewAll } from "../../constants/Constants";
+import ViewComponent from "../commonComponents/ViewComponent";
 
 const PolicyContainer: React.FC = () => {
 
@@ -18,12 +19,10 @@ const PolicyContainer: React.FC = () => {
         </Typography>
         
         {policyData.length > 2 && ( 
-          <Box sx={PolicyStyles.policyCardViewAllBox}>
-            <Typography sx={PolicyStyles.policyCardViewAll}>{viewAll}</Typography>
-            <Box sx={PolicyStyles.rightArrow}>
-              <img src={viewAllArrow} alt="view-all-arrow" />
-            </Box>
+          <Box sx={PolicyStyles.viewAll}>
+            <ViewComponent src={VIEW_ARROW} viewText={viewAll} />
           </Box>
+          
         )}
       </Box>
       <Box sx={PolicyStyles.AllCards}>
