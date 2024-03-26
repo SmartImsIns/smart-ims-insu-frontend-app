@@ -5,7 +5,7 @@ export const MyClaimCardItemStyles = {
         padding: "15px",
         alignItems: "center",
         "@media (max-width:599px)": {
-            padding: "15px",
+            padding: "15px 0px 15px 15px",
             minWidth: "114px",
             maxHeight: "35.35px"
         }
