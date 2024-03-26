@@ -7,13 +7,13 @@ import {
   CAR_ICON,
   viewPast,
   VIEW_ARROW,
+  trackYourClaim,
 } from "../../constants/Constants";
 import { MyClaimCardStyles } from "./MyClaimsCardStyles";
 import ActionButton from "../commonComponents/ActionButton";
 import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
 import MyClaimCardItem from "../commonComponents/MyClaimCardItem";
 import ViewComponent from "../commonComponents/ViewComponent";
-import { CSSProperties } from "@mui/material/styles/createMixins";
 interface claimsData {
   houseLoanData?: {
     data: {
@@ -89,13 +89,13 @@ const MyClaimsCard: React.FC = () => {
             ))}
             <Box sx={MyClaimCardStyles.trackYourClaimButton}>
               <ActionButton
-                buttonText="Track Your Claim"
+                buttonText={trackYourClaim}
                 sx={MyClaimCardStyles.myClaimsCardButtonStyles}
               />
             </Box>
             <Box sx={MyClaimCardStyles.trackYourClaimText}>
               <Typography sx={MyClaimCardStyles.trackYourClaim}>
-                {"Track Your Claim"}
+                {trackYourClaim}
               </Typography>
             </Box>
           </Card>
