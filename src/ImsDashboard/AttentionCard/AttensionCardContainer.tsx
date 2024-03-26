@@ -19,17 +19,22 @@ const AttentionCardContainer: React.FC = () => {
   );
 
   useEffect(() => {
-    setTimeout(() => {
-      setAttentionCards(attentionData);
-    });
-  }, []);
+    const fetchData = async () => {
+      try {
+        setAttentionCards(attentionData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
+    fetchData();
+  }, []);
   return (
     <Box sx={AttentionCardStyles.Container}>
       <DynamicTextDisplay text={attentionText} />
       <Box>
         {attentionCards.map((card, index) => (
-          <AttentionCard key={index} {...card} />
+          <AttentionCard key={index} data={card} />
         ))}
       </Box>
     </Box>
