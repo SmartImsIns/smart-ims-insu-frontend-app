@@ -7,7 +7,7 @@ import WhiteButton from "../../common/WhiteButton";
 const DocumentsTabComponent: React.FC = () => {
   const { container }: DocumentTabStyles = documentTabStyles;
 
-  const isMobile = useMediaQuery("(max-width:1024px)");
+  const isMobile = useMediaQuery("(max-width:789px)");
 
   return (
     <>
