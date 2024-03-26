@@ -357,6 +357,7 @@ const CoverageTabStyles = {
     display: "flex",
     flexDirection: "column",
     gap: "10px",
+    borderBottom:"0px"
   },
   premiumTableCellValue: {
     fontFamily: "Noto Sans",
