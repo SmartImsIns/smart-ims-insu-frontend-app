@@ -1,6 +1,6 @@
 export const PolicyTabStyles = {
   PolicyTabsStyles: {
-    "@media (max-width: 650px)": {
+    "@media (max-width: 649px)": {
       paddingLeft: "20px",
       paddingRight: "20px",
       marginTop: "20px",
