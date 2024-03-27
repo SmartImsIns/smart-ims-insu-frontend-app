@@ -41,6 +41,7 @@ function VehicleTable() {
                     </TableCell>
                   )
               )}
+              <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
@@ -50,9 +51,6 @@ function VehicleTable() {
                 <TableCell sx={VehicleStyles.rowTwo}>{row.Model}</TableCell>
                 <TableCell sx={VehicleStyles.rowThree}>{row.Year}</TableCell>
                 <TableCell sx={VehicleStyles.rowFour}>{row.Type}</TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
                 <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
               </TableRow>
             ))}
@@ -68,7 +66,10 @@ function VehicleTable() {
           </Box>
           <Box>
             <Box sx={VehicleStyles.type}>
-              Type :&nbsp; <Typography sx={VehicleStyles.vehicleType}>{vehicle.Type}</Typography>
+              Type :&nbsp;{" "}
+              <Typography sx={VehicleStyles.vehicleType}>
+                {vehicle.Type}
+              </Typography>
             </Box>
           </Box>
         </Card>

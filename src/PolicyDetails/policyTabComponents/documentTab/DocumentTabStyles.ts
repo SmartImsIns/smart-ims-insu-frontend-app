@@ -1,27 +1,13 @@
-import { SxProps } from "@mui/system";
-import { CSSProperties } from "react";
-
-export interface DocumentTabStyles {
-    container: SxProps,
-    documentContainer: SxProps,
-    imageContainer: SxProps,
-    imageStyle?: CSSProperties,
-    card: SxProps,
-    buttonGroup: SxProps,
-    walletButton: SxProps;
-    downloadButton: SxProps;
-}
-
 const documentTabStyles = {
 
     container: {
         marginTop: "20.5px",
         marginBottom: "10px",
-        height: "423px",
         border: "1px solid  #C9E1EC",
-        padding: "22px 0px 0px 31px",
+        padding: "22px 0px 31px 31px",
         background: "linear-gradient(108deg, #FFF 80.85%, #F8F9FF 145.84%)",
         display: "flex",
+        flexWrap: "wrap",
         gap: "15px",
     },
 
@@ -32,14 +18,8 @@ const documentTabStyles = {
         border: "1px solid #C9E1EC",
         maxWidth: "327px",
         borderRadius: "10px",
-        "@media (max-width: 599px)": {
-            marginTop: "20px"
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: "16px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            fontSize: "18px",
+        "@media (max-width: 789px)": {
+            marginTop: "20px",
         },
     },
     imageContainer: {
@@ -56,7 +36,7 @@ const documentTabStyles = {
     },
     card: {
         display: "flex",
-        padding: "21px 27px 20px 22px ",
+        padding: "21px 27px 22px 20px ",
         flexDirection: "column",
         borderRadius: "0px 0px 9px 9px",
         filter: "drop-shadow(0px -3px 4px rgba(0, 0, 0, 0.31))",
@@ -84,6 +64,30 @@ const documentTabStyles = {
         marginLeft: "33px",
         marginRight: "33px",
         marginBottom: "60.68px",
+    },
+    text: {
+        color: '#000',
+        fontFamily: 'Noto Sans',
+        fontSize: '18px',
+        fontStyle: 'normal',
+        fontWeight: 400,
+        lineHeight: '110%',
+        "@media (max-width: 789px)": {
+            marginTop: "20px",
+            fontSize: '14px',
+        },
+    },
+    insuranceText: {
+        color: '#1D252B',
+        fontFamily: 'Noto Sans',
+        fontSize: '18px',
+        fontStyle: 'normal',
+        fontWeight: 300,
+        lineHeight: '110%',
+        "@media (max-width: 789px)": {
+            marginTop: "20px",
+            fontSize: '14px',
+        },
     }
 };
 

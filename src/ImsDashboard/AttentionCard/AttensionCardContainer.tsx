@@ -11,6 +11,7 @@ interface AttentionCardProps {
   renewalPrice: string;
   dueDate: string;
   contentText: string;
+  id: number;
 }
 
 const AttentionCardContainer: React.FC = () => {
@@ -33,8 +34,8 @@ const AttentionCardContainer: React.FC = () => {
     <Box sx={AttentionCardStyles.Container}>
       <DynamicTextDisplay text={attentionText} />
       <Box>
-        {attentionCards.map((card, index) => (
-          <AttentionCard key={index} data={card} />
+        {attentionCards.map((card, id) => (
+          <AttentionCard key={id} data={card} />
         ))}
       </Box>
     </Box>
