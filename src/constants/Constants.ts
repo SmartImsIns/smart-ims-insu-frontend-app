@@ -15,7 +15,7 @@ export const NOTIFICATIONS = "Notifications";
 export const LET_US_KNOW = "Let us know how and when you would like to be notified";
 export const PROFILE_DETAILS_HEADING = "Profile Details"
 
-
+export const customerPath = ["policyDetails", "dashboard"];
 export const policiesHeading = "Here Is Your List Of Policies";
 export const quickReferences = "Quick References For You";
 export const footerLeftText = "© 2024 Smart IMS. All rights reserved.";
@@ -63,3 +63,7 @@ export const LEFT_ARROW = leftArrow;
 export const vehicle = "Vehicle"
 export const driver = "Driver"
 export const imageNotFound = "image not found"
+
+export const youtubeVideoUrl = "https://www.youtube.com/embed/JFjOpajKeOw";
+export const videoUrl =
+  "http://3.20.231.65/videos/Navigating%20Auto%20Liability%20Limits%20Your%20Road%20to%20Financial%20Security.mp4";

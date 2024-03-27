@@ -1,11 +1,25 @@
-import { setIsLoading, setIsSuccess, setIsError, setMessage, setDisplayMsg, setCalledReducerType, resetCommonSlice } from '../common/CommonSlice';
+import {
+  setIsLoading,
+  setIsSuccess,
+  setIsError,
+  setMessage,
+  setDisplayMsg,
+  setCalledReducerType,
+  resetCommonSlice,
+} from "../common/CommonSlice";
 
-export const CustomAction = async (apiMethod: any, dispatch: any, reducerType: string | null = null, displayMsg: boolean = false, customMsg: string | null = null) => {
+export const CustomAction = async (
+  apiMethod: any,
+  dispatch: any,
+  reducerType: string | null = null,
+  displayMsg: boolean = false,
+  customMsg: string | null = null
+) => {
   dispatch(resetCommonSlice());
-  dispatch(setIsLoading(true))
+  dispatch(setIsLoading(true));
   try {
     const { data } = await apiMethod;
-    if (data.status === 'success') {
+    if (data.statusCode === 200) {
       dispatch(setIsSuccess(true));
     } else {
       dispatch(setIsError(true));
@@ -28,5 +42,4 @@ export const CustomAction = async (apiMethod: any, dispatch: any, reducerType: s
     dispatch(setIsError(true));
     throw error;
   }
-}
-  
+};

@@ -1,20 +1,28 @@
-import { configureStore, combineReducers, ThunkAction, Action, AnyAction } from '@reduxjs/toolkit';
-import DashboardSlice from '../customers/Dashboard/DashboardSlice';
-import CommonSlice from '../common/CommonSlice';
-import LoginSlice from '../login/LoginSlice';
+import {
+  configureStore,
+  combineReducers,
+  ThunkAction,
+  Action,
+  AnyAction,
+} from "@reduxjs/toolkit";
+import DashboardSlice from "../customers/Dashboard/DashboardSlice";
+import CommonSlice from "../common/CommonSlice";
+import LoginSlice from "../login/LoginSlice";
+import PolicyDetailsSlice from "../customers/PolicyDetails/PolicyDetailsSlice";
 
 const appReducer = combineReducers({
-  dashboard: DashboardSlice,
   common: CommonSlice,
   login: LoginSlice,
+  dashboard: DashboardSlice,
+  policyDetails: PolicyDetailsSlice,
 });
 
 const reducerProxy = (state: any, action: AnyAction) => {
-  if(action.type === 'logout') {
+  if (action.type === "logout") {
     return appReducer(undefined, action);
   }
   return appReducer(state, action);
-}
+};
 
 export const store = configureStore({
   reducer: reducerProxy,

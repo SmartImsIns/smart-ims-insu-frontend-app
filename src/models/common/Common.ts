@@ -12,3 +12,8 @@ export interface ICommon {
   displayMsg: boolean;
   calledReducerType: string | null;
 }
+
+export interface ICookie {
+  cookieName: string;
+  cookieValue: any;
+}

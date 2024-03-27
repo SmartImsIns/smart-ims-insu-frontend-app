@@ -1,7 +1,6 @@
-const API_GET_TEST_DATA = 'posts';
-const API_POST_LOGIN_SUBMIT = 'login';
-
-export {
-  API_GET_TEST_DATA,
-  API_POST_LOGIN_SUBMIT
-};
+export const API_POST_LOGIN_SUBMIT = "login/user";
+export const API_POST_TEST_DATA = "dashboard/customer/policies";
+export const API_GET_POLICY_DETAILS = "policyDetails";
+export const API_GET_POLICY_VEHICLES = "policy/vehicles";
+export const API_GET_POLICY_DRIVERS = "policy/drivers";
+export const API_GET_INSURANCE_DOCUMENTS = "";

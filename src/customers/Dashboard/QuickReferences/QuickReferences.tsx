@@ -1,45 +1,107 @@
-import { Box, Card, CardContent, CardMedia, Typography } from "@mui/material";
+import {
+  Box,
+  Button,
+  Card,
+  CardContent,
+  CardMedia,
+  Typography,
+} from "@mui/material";
+import { videoUrl, youtubeVideoUrl } from "../../../constants/Constants";
 import QuickReferencesStyle from "./QuickReferencesStyle";
-import ArrowRightAltIcon from "@mui/icons-material/ArrowRightAlt";
+import img2 from "../../../assets/svgs/group2.svg";
+import img4 from "../../../assets/svgs/group4.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
+
+interface quickReference {
+  src: string;
+  description: string;
+  type: string;
+}
 
 const QuickReferences = () => {
+  const slickSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    dotsClass: "slickDots",
+  };
+
   const getQuickReferences = () => {
-    return [1, 2, 3].map((item: number, index: number) => (
+    return [
+      {
+        src: videoUrl,
+        description: "",
+        type: "video",
+      },
+      {
+        src: img2,
+        description:
+          "Which type of insurance is best for your automobile life.",
+        type: "",
+      },
+      {
+        src: youtubeVideoUrl,
+        description: "",
+        type: "video",
+      },
+      {
+        src: img4,
+        description: "Make your insurance effective",
+        type: "",
+      },
+    ].map((item: quickReference, index: number) => (
       <Card
         key={`QucikReference_${index}`}
         sx={QuickReferencesStyle.qucikReferencesCard}
       >
-        <CardMedia
-          sx={QuickReferencesStyle.qucikReferencesCardMedia}
-          component="img"
-          image=""
-          alt="green iguana"
-        />
-        <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
-          <Typography sx={QuickReferencesStyle.quickReferencesContentText}>
-            When to make an insurance claim?{" "}
-          </Typography>
-          <Typography sx={QuickReferencesStyle.quickReferencesContentText}>
-            05min
-          </Typography>
-        </CardContent>
+        {item.type === "video" && (
+          <CardMedia
+            component="iframe"
+            src={item.src}
+            sx={{
+              aspectRatio: "16/9",
+              height: "inherit",
+              border: 0,
+            }}
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          />
+        )}
+        {item.type !== "video" && (
+          <>
+            <CardMedia component="img" src={item.src} alt="green iguana" />
+            <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
+              <Typography
+                sx={QuickReferencesStyle.quickReferencesCardContentText}
+              >
+                {item.description}
+              </Typography>
+              <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
+                Read More
+              </Button>
+            </CardContent>
+          </>
+        )}
       </Card>
     ));
   };
 
   return (
     <Box sx={QuickReferencesStyle.quickReferences}>
-      <Box sx={QuickReferencesStyle.quickReferencesHeadingContainer}>
-        <Typography sx={QuickReferencesStyle.quickReferencesHeading}>
-          QuickReferences
-        </Typography>
-        <Box sx={QuickReferencesStyle.viewAllContainer}>
-          <Typography sx={QuickReferencesStyle.viewAll}>View All</Typography>
-          <ArrowRightAltIcon sx={QuickReferencesStyle.rightIcon} />
-        </Box>
-      </Box>
+      <Typography sx={QuickReferencesStyle.quickReferencesHeading}>
+        Quick References For You
+      </Typography>
       <Box sx={QuickReferencesStyle.qucikReferencesCards}>
         {getQuickReferences()}
+      </Box>
+      <Box sx={QuickReferencesStyle.carousel}>
+        <Slider {...slickSettings}>{getQuickReferences()}</Slider>
       </Box>
     </Box>
   );

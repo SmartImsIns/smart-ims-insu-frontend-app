@@ -1,37 +1,35 @@
 export interface IDashboard {
-  PolicyCount: string;
-  PolicyCustomerList: IPolicyCustomer[];
-  PolicyList: IPolicy[];
-}
-
-export interface IUser {
-  userId: number;
-  id: number;
-  title: string;
-  body: string;
-}
-
-export interface IPolicyCustomer {
-  CustomerName: string;
-  CustomerId: string;
+  policyCount: string | null;
+  policyList: IPolicy[] | null;
 }
 
 export interface IPolicy {
-  CarrierPolicyNo: string;
-  CarrierPolicyStatus: string;
-  Tenure: string;
-  RiskCount: string;
-  DuePremium: number;
-  LOBCode: string;
-  PaymentFrequency: string;
+  policyRef: string;
+  lineCode: string;
+  carrierCode: string;
+  carrierPolicyNo: string;
+  carrierPolicyStatus: string;
+  carrierQuoteNumber: string;
+  tenure: string;
+  riskCount: number;
+  basePrimium: string;
+  writtenPremium: string;
+  writtenFeeAmt: string;
+  productName: string;
+  effectiveDate: string;
+  expiryDate: string;
 }
 
 export interface IDashboardSlice {
   dashboardData: IDashboard | null;
 }
 
+export interface IDashboardRequestParams {
+  customerId: string;
+}
+
 export interface IDashboardResponse {
-  data: IDashboard;
+  data: IDashboard | null;
   message: string;
-  status: number;
+  statusCode: number;
 }
