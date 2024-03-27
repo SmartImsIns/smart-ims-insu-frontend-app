@@ -2,7 +2,7 @@ import React from "react";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../commonComponents/DashBoardCardItem";
 import ActionButton from "../commonComponents/ActionButton";
-import { Box,Card,Typography,Tooltip  } from "@mui/material";
+import { Box, Card, Typography, Tooltip } from "@mui/material";
 import {
   renewalAmount,
   duesDate,
@@ -11,18 +11,18 @@ import {
 } from "../../constants/Constants";
 import { AttentionCardStyles } from "./AttentionCardStyles";
 
-interface AttentionCardProps {
+interface AttentionCardData {
   headText: string;
   renewalPrice: string;
   dueDate: string;
   contentText: string;
 }
 
-const AttentionCard: React.FC<AttentionCardProps> = ({
-  headText,
-  renewalPrice,
-  dueDate,
-}) => {
+interface AttentionCardProps {
+  data: AttentionCardData;
+}
+
+const AttentionCard: React.FC<AttentionCardProps> = ({ data }) => {
   return (
     <Box>
       <Card sx={AttentionCardStyles.AttentionCardStyles}>
@@ -35,14 +35,14 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
             />
           </Box>
           <Box sx={AttentionCardStyles.AttentionsCardTextStyle}>
-            <Tooltip title={headText}>
+            <Tooltip title={data.headText}>
               <Typography sx={AttentionCardStyles.HeadStyle}>
-                {headText}
+                {data.headText}
               </Typography>
             </Tooltip>
             <Box>
               <Typography sx={AttentionCardStyles.ContentStyle}>
-                {renewalAmount} {renewalPrice} | {duesDate} {dueDate}
+                {renewalAmount} {data.renewalPrice} | {duesDate} {data.dueDate}
                 {terms}
               </Typography>
             </Box>

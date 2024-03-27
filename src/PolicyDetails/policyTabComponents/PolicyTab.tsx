@@ -1,11 +1,14 @@
 import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
-import TabContext from "@mui/lab/TabContext";
-import TabList from "@mui/lab/TabList";
-import TabPanel from "@mui/lab/TabPanel";
 import PolicyTabsLists from "./PolicyTabsLists";
-import { MenuItem, Select, useMediaQuery } from "@mui/material";
+import {
+  MenuItem,
+  Select,
+  Tabs,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
@@ -14,20 +17,44 @@ import CoverageComponent from "./CoverageTab/CoverageTabComponent";
 import VehicleCard from "./VehicleTab/VehicleCard";
 import BillingTabComponent from "./BillingTab/BillingTabComponent";
 
-const PolicyTab = () => {
-  const [value, setValue] = useState("0");
-  const [selected, setSelected] = useState("0");
+interface TabPanelProps {
+  index: number;
+  value: number;
+  sx?: any;
+  child?: React.FC;
+}
 
-  const handleChange = (event: React.SyntheticEvent, newValue: string) => {
+const PolicyTab = () => {
+  const [value, setValue] = useState<number>(0); // Changed from "0" to 0
+  const [selected, setSelected] = useState<string>("0");
+
+  const handleChange = (event: React.SyntheticEvent, newValue: number) => {
     setValue(newValue);
   };
 
+  function CustomTabPanel(props: TabPanelProps) {
+    const { value, index, sx, ...other } = props;
+
+    return (
+      <Box
+        role="tabpanel"
+        hidden={value !== index}
+        id={`simple-tabpanel-${index}`}
+        aria-labelledby={`simple-tab-${index}`}
+        {...other}
+        sx={sx}
+      >
+        {value === index && getComponent({ index })}
+      </Box>
+    );
+  }
+
   const TabComponents: { [key: string]: React.ComponentType<any> } = {
-    0: ActivityTabComponent,
-    1: CoverageComponent,
-    2: VehicleCard,
-    5: BillingTabComponent,
-    3: DocumentsTabComponent,
+    "0": ActivityTabComponent,
+    "1": CoverageComponent,
+    "2": VehicleCard,
+    "3": DocumentsTabComponent,
+    "5": BillingTabComponent,
   };
 
   const getComponent = ({ index }: { index: number }) => {
@@ -51,7 +78,7 @@ const PolicyTab = () => {
             id="select"
             value={selected}
             IconComponent={KeyboardArrowDownIcon}
-            onChange={(event) => setSelected(event.target.value)}
+            onChange={(event) => setSelected(event.target.value as string)} // Added type assertion as string
             sx={PolicyTabStyles.selectStyles}
           >
             {PolicyTabsLists.map((tabName, index) => (
@@ -67,33 +94,30 @@ const PolicyTab = () => {
           {selected && <Box>{getComponent({ index: parseInt(selected) })}</Box>}
         </Box>
       ) : (
-        <TabContext value={value}>
-          <Box>
-            <TabList
-              sx={PolicyTabStyles.tabList}
-              onChange={handleChange}
-              aria-label="Tab List"
-            >
-              {PolicyTabsLists.map((tabName, index) => (
-                <Tab
-                  key={index}
-                  label={tabName}
-                  sx={PolicyTabStyles.tab}
-                  value={index.toString()}
-                />
-              ))}
-            </TabList>
-          </Box>
+        <Box>
+          <Tabs
+            sx={PolicyTabStyles.tabList}
+            onChange={handleChange}
+            aria-label="Tab List"
+            value={value}
+          >
+            {PolicyTabsLists.map((tabName, index) => (
+              <Tab
+                key={index}
+                label={tabName}
+                sx={PolicyTabStyles.tab}
+                value={index}
+              />
+            ))}
+          </Tabs>
           {PolicyTabsLists.map((_, index) => (
-            <TabPanel
-              sx={PolicyTabStyles.tabPanel}
+            <CustomTabPanel
               key={index}
-              value={index.toString()}
-            >
-              {getComponent({ index })}
-            </TabPanel>
+              value={value}
+              index={index}
+            ></CustomTabPanel>
           ))}
-        </TabContext>
+        </Box>
       )}
     </Box>
   );

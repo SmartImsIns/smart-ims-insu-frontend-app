@@ -12,7 +12,7 @@ export const SETTINGS_AND_PREFERENCES = "Setting and Preferences";
 export const LANGUAGE = "Language";
 export const SELECT_LANGUAGE = "Select Language you are comforable with";
 export const NOTIFICATIONS = "Notifications";
-export const LET_US_KNOW="Let us know how and when you would like to be notified";
+export const LET_US_KNOW = "Let us know how and when you would like to be notified";
 export const PROFILE_DETAILS_HEADING = "Profile Details"
 
 
@@ -50,6 +50,8 @@ export const status = "Active";
 export const dueOn = "Due on";
 export const vehicles = "vehicles";
 export const fileClaim = "File a claim";
+export const download = "Download";
+export const addWallet = "Add to wallet";
 export const MYCLAIM_ICON = myClaimsIcon;
 export const CAR_ICON = carIcon;
 export const STAR_ICON = starIcon;
@@ -60,3 +62,4 @@ export const VIEW_ARROW = viewAllArrow;
 export const LEFT_ARROW = leftArrow;
 export const vehicle = "Vehicle"
 export const driver = "Driver"
+export const imageNotFound = "image not found"

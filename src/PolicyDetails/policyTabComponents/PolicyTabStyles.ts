@@ -9,10 +9,10 @@ export const PolicyTabStyles = {
     },
   },
   selectStyles: {
-    border: "none",
     boxShadow: "none",
     outline: "none",
     cursor: "pointer",
+    paddingRight: "10px",
     "&.MuiSelect-select:focus": {
       backgroundColor: "transparent",
     },
@@ -25,10 +25,6 @@ export const PolicyTabStyles = {
       fontWeight: 400,
       lineHeight: "110%",
     },
-    "& .css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input.css-1rxz5jq-MuiSelect-select-MuiInputBase-input-MuiInput-input":
-      {
-        padding: "0 34px 0 0",
-      },
     "&:after": {
       display: "none",
       boxShadow: "none",
@@ -98,5 +94,5 @@ export const PolicyTabStyles = {
     minWidth: "auto",
     width: "auto",
     minHeight: "auto",
-  },
-};
+  }
+}

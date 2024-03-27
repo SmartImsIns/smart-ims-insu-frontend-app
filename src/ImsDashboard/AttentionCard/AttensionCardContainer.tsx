@@ -11,6 +11,7 @@ interface AttentionCardProps {
   renewalPrice: string;
   dueDate: string;
   contentText: string;
+  id: number;
 }
 
 const AttentionCardContainer: React.FC = () => {
@@ -19,17 +20,22 @@ const AttentionCardContainer: React.FC = () => {
   );
 
   useEffect(() => {
-    setTimeout(() => {
-      setAttentionCards(attentionData);
-    });
-  }, []);
+    const fetchData = async () => {
+      try {
+        setAttentionCards(attentionData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
 
+    fetchData();
+  }, []);
   return (
     <Box sx={AttentionCardStyles.Container}>
       <DynamicTextDisplay text={attentionText} />
       <Box>
-        {attentionCards.map((card, index) => (
-          <AttentionCard key={index} {...card} />
+        {attentionCards.map((card, id) => (
+          <AttentionCard key={id} data={card} />
         ))}
       </Box>
     </Box>
