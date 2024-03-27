@@ -112,7 +112,7 @@ const ResponsiveCoverageTab = () => {
                       ? "22px 15px 20px 15px"
                       : "15px 5px 20px 5px",
                     borderRadius:
-                      index === expandedItems.length - 1
+                      index === expandedItems.length-1
                         ? "0px 0px 10px 10px"
                         : "0px",
                   }}
@@ -222,7 +222,7 @@ const ResponsiveCoverageTab = () => {
                     ? "0px 2px 4px 0px #00000017 inset"
                     : "none",
                   borderRadius:
-                    index === expandedDiscounts.length - 1
+                    index === expandedDiscounts.length-1
                       ? "0px 0px 10px 10px"
                       : "0px",
                 }}

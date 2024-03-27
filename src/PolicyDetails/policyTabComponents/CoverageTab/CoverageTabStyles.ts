@@ -73,6 +73,7 @@ const CoverageTabStyles = {
     border: "1px solid #C9E1EC",
     padding: "0px 10px",
     borderRadius: "10px",
+    background: "#FFFFFF",
   },
   coveragesHead: {
     display: "flex",
@@ -185,6 +186,7 @@ const CoverageTabStyles = {
     height: "auto",
     minWidth: "450px",
     border: "1px solid rgba(201, 225, 236, 1)",
+    boxShadow: "0px",
     "@media(min-width:650px) and (max-width:1024px)": {
       width: "92.035%",
     },
@@ -204,7 +206,8 @@ const CoverageTabStyles = {
     padding: "0px 24px",
     width: "97%",
     minWidth: "450px",
-    border: "1px solid rgba(201, 225, 236, 1)",
+    boxShadow: "none",
+    border: "1px solid #C9E1EC",
     "@media(min-width:650px) and (max-width:1024px)": {
       width: "92.035%",
     },
@@ -327,6 +330,8 @@ const CoverageTabStyles = {
     padding: "0px 24px",
     width: "97%",
     minWidth: "450px",
+    boxShadow: "none",
+    border: "1px solid #C9E1EC",
     "@media(min-width:650px) and (max-width:1024px)": {
       width: "92.035%",
     },
@@ -357,6 +362,7 @@ const CoverageTabStyles = {
     display: "flex",
     flexDirection: "column",
     gap: "10px",
+    borderBottom: "0px",
   },
   premiumTableCellValue: {
     fontFamily: "Noto Sans",
@@ -373,6 +379,7 @@ const CoverageTabStyles = {
     lineHeight: "19.8px",
     letterSpacing: "0em",
     textAlign: "left",
+    color: "#1D252B",
   },
   tableBodyCell: {
     fontFamily: "Noto Sans",
@@ -386,6 +393,14 @@ const CoverageTabStyles = {
     overflow: "hidden",
     textOverflow: "ellipsis",
     maxWidth: "223px",
+    borderBottom: "none",
+  },
+
+  tableRows: {
+    borderBottom: "1px solid #D0D1D9",
+    "&:last-child": {
+      borderBottom: "none",
+    },
   },
 };
 export default CoverageTabStyles;

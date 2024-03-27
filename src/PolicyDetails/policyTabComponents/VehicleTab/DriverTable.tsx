@@ -16,17 +16,17 @@ function DriverTable() {
   return (
     <Box sx={{ marginTop: "40px" }}>
       <Box sx={VehicleStyles.headingAndButton}>
-        <Box sx={VehicleStyles.discountsHeading}>
+        <Box sx={VehicleStyles.vehicleHeading}>
           <Box>
             <img src={car} alt="discounts logo" />
           </Box>
           <Box>
-            <Typography sx={VehicleStyles.discountsHeadingText}>
+            <Typography sx={VehicleStyles.HeadingText}>
               {driver} ({DriverData.length})
             </Typography>
           </Box>
         </Box>
-        <Box sx={VehicleStyles.addVehicleButton}>Add Vehicle</Box>
+        <Box sx={VehicleStyles.addVehicleButton}>Add Driver</Box>
       </Box>
 
       <TableContainer sx={VehicleStyles.tableContainer} component={Paper}>

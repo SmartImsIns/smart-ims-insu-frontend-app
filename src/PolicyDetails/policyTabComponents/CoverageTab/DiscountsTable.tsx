@@ -44,7 +44,7 @@ const DiscountsTable = () => {
           </TableHead>
           <TableBody>
             {discountsData.slice(1).map((row) => (
-              <TableRow key={row.id}>
+              <TableRow sx={CoverageTabStyles.tableRows} key={row.id}>
                 <TableCell
                   sx={CoverageTabStyles.tableBodyCell}
                   style={{ width: "70%" }}
