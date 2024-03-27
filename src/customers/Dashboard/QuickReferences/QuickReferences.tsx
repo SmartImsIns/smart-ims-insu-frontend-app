@@ -6,13 +6,13 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
-import { videoUrl, youtubeVideoUrl } from '../../../constants/Constants';
+import { videoUrl, youtubeVideoUrl } from "../../../constants/Constants";
 import QuickReferencesStyle from "./QuickReferencesStyle";
-import img1 from "../../../assets/svgs/group1.svg";
 import img2 from "../../../assets/svgs/group2.svg";
-// import img3 from "../../../assets/svgs/group3.svg";
 import img4 from "../../../assets/svgs/group4.svg";
-// import playIcon from "../../../assets/svgs/playIcon.svg";
+import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface quickReference {
   src: string;
@@ -21,6 +21,17 @@ interface quickReference {
 }
 
 const QuickReferences = () => {
+  const slickSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    dotsClass: "slickDots",
+  };
+
   const getQuickReferences = () => {
     return [
       {
@@ -50,12 +61,13 @@ const QuickReferences = () => {
         sx={QuickReferencesStyle.qucikReferencesCard}
       >
         {item.type === "video" && (
-          <CardMedia component="iframe" 
+          <CardMedia
+            component="iframe"
             src={item.src}
             sx={{
               aspectRatio: "16/9",
-              height: 'inherit',
-              border: 0
+              height: "inherit",
+              border: 0,
             }}
             allowFullScreen
             allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -63,19 +75,16 @@ const QuickReferences = () => {
         )}
         {item.type !== "video" && (
           <>
-            <CardMedia
-              sx={QuickReferencesStyle.qucikReferencesCardMedia}
-              component="img"
-              src={item.src}
-              alt="green iguana"
-            />
+            <CardMedia component="img" src={item.src} alt="green iguana" />
             <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
-              <Typography sx={QuickReferencesStyle.quickReferencesCardContentText}>
+              <Typography
+                sx={QuickReferencesStyle.quickReferencesCardContentText}
+              >
                 {item.description}
               </Typography>
               <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
-                  Read More
-                </Button>
+                Read More
+              </Button>
             </CardContent>
           </>
         )}
@@ -90,6 +99,9 @@ const QuickReferences = () => {
       </Typography>
       <Box sx={QuickReferencesStyle.qucikReferencesCards}>
         {getQuickReferences()}
+      </Box>
+      <Box sx={QuickReferencesStyle.carousel}>
+        <Slider {...slickSettings}>{getQuickReferences()}</Slider>
       </Box>
     </Box>
   );

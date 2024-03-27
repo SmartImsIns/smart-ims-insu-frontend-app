@@ -51,6 +51,9 @@ const PolicyCardStyles = {
   premium: {
     display: "flex",
     justifyContent: "space-between",
+    "@media(min-width: 992px)": {
+      flexDirection: "column",
+    },
   },
   cardBodyPremium: {
     ...commonStyles,

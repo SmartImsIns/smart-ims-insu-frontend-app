@@ -14,55 +14,34 @@ const WelcomeCard = () => {
   const isAM = new Date().toLocaleTimeString().split(" ")[1] === "AM";
 
   return (
-    <Box sx={{ padding: "0px 30px" }}>
-      <Typography sx={WelcomeCardStyle.welcomeTextStyle}>
+    <Box sx={WelcomeCardStyle.welcomeCardContainerStyle}>
+      <Typography sx={WelcomeCardStyle.welcomeCardTextStyle}>
         Good{" "}
         {isAM ? "Morning" : parseInt(time[0]) > 6 ? "Evening" : "Afternoon"} ,{" "}
         {userDetails?.customerName} ! Need help today?
       </Typography>
-      <Card sx={WelcomeCardStyle.welcomeCardStyle}>
-        <Box sx={WelcomeCardStyle.WelcomeCardItemStyle}>
+      <Card sx={WelcomeCardStyle.welcomeCardStyle} aria-label="welcome Card">
+        <Box sx={WelcomeCardStyle.welcomeCardItemStyle}>
           <img src={star} alt={"new-claim-icon"} />
           <Typography sx={WelcomeCardStyle.WelcomCardItemTextStyle}>
             New Claim
           </Typography>
         </Box>
-        <Box sx={WelcomeCardStyle.WelcomeCardItemStyle}>
+        <Box sx={WelcomeCardStyle.welcomeCardItemStyle}>
           <img src={paymentHistoryIcon} alt={"payment-history-icon"} />
-          <Typography
-            sx={{
-              color: "#1D252B",
-              fontSize: "20px",
-              fontStyle: "normal",
-              fontWeight: 300,
-            }}
-          >
+          <Typography sx={WelcomeCardStyle.WelcomCardItemTextStyle}>
             Payment History
           </Typography>
         </Box>
-        <Box sx={WelcomeCardStyle.WelcomeCardItemStyle}>
+        <Box sx={WelcomeCardStyle.welcomeCardItemStyle}>
           <img src={roadsideAssistanceIcon} alt={"road-side-assistance-icon"} />
-          <Typography
-            sx={{
-              color: "#1D252B",
-              fontSize: "20px",
-              fontStyle: "normal",
-              fontWeight: 300,
-            }}
-          >
+          <Typography sx={WelcomeCardStyle.WelcomCardItemTextStyle}>
             Roadside Assistance
           </Typography>
         </Box>
-        <Box sx={WelcomeCardStyle.WelcomeCardItemStyle}>
+        <Box sx={WelcomeCardStyle.welcomeCardItemStyle}>
           <img src={learnAboutIcon} alt={"learn-about-icon"} />
-          <Typography
-            sx={{
-              color: "#1D252B",
-              fontSize: "20px",
-              fontStyle: "normal",
-              fontWeight: 300,
-            }}
-          >
+          <Typography sx={WelcomeCardStyle.WelcomCardItemTextStyle}>
             Learn About Insurance
           </Typography>
         </Box>

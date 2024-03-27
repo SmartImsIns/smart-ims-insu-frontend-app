@@ -17,6 +17,9 @@ const HeaderStyles = {
     gap: "12px",
     alignItems: "center",
   },
+  notificationIcon: { width: "36px", height: "auto" },
+  displayPicture: { width: "32px", height: "auto" },
+  menuIcon: { width: "40px", height: "auto" },
 };
 
 export default HeaderStyles;
