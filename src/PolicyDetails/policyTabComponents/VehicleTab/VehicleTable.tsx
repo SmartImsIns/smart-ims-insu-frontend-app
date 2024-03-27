@@ -16,12 +16,12 @@ function VehicleTable() {
   return (
     <Box>
       <Box sx={VehicleStyles.headingAndButton}>
-        <Box sx={VehicleStyles.discountsHeading}>
+        <Box sx={VehicleStyles.vehicleHeading}>
           <Box>
             <img src={car} alt="discounts logo" />
           </Box>
           <Box>
-            <Typography sx={VehicleStyles.discountsHeadingText}>
+            <Typography sx={VehicleStyles.HeadingText}>
               {vehicle} ({VehicleData.length})
             </Typography>
           </Box>
