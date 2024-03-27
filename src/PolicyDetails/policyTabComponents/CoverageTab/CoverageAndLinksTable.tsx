@@ -42,7 +42,7 @@ const CoverageAndLinks = () => {
             {coverageLinksData
               .filter((row) => row.id !== "0")
               .map((row) => (
-                <TableRow key={row.id}>
+                <TableRow sx={CoverageTabStyles.tableRows} key={row.id}>
                   <TableCell sx={CoverageTabStyles.tableBodyCell} component="th" scope="row">
                     <Box>
                     <Typography sx={CoverageTabStyles.coveragesText}>{row.Coverages}</Typography>

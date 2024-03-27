@@ -39,29 +39,41 @@ const PremiumTable = () => {
                     {row.premium}
                   </Typography>
                 </TableCell>
-                <Box sx={CoverageTabStyles.premiumTableCells}>
-                  <TableCell
-                    sx={CoverageTabStyles.premiumTableRowCells}
-                    align="left"
-                  >
-                    <Box sx={CoverageTabStyles.premiumTableCellValue}>
-                      {row.value1}
-                    </Box>
-                    <Box sx={CoverageTabStyles.premiumTableCellVechile}>
-                      {row.Vechile1}
-                    </Box>
-                  </TableCell>
-                  <TableCell
-                    sx={CoverageTabStyles.premiumTableRowCells}
-                    align="left"
-                  >
-                    <Box sx={CoverageTabStyles.premiumTableCellValue}>
-                      {row.value2}
-                    </Box>
-                    <Box sx={CoverageTabStyles.premiumTableCellVechile}>
-                      {row.Vechile2}
-                    </Box>
-                  </TableCell>
+                <Box
+                  sx={{
+                    ...CoverageTabStyles.premiumTableCells,
+                    gap: row.value2 ? "28px" : "0px",
+                  }}
+                >
+                  {row.value1 !== "" && ( 
+                    <TableCell
+                      sx={{
+                        ...CoverageTabStyles.premiumTableRowCells,
+                        alignSelf: "flex-end",
+                      }}
+                      align="left"
+                    >
+                      <Box sx={CoverageTabStyles.premiumTableCellValue}>
+                        {row.value1}
+                      </Box>
+                      <Box sx={CoverageTabStyles.premiumTableCellVechile}>
+                        {row.Vechile1}
+                      </Box>
+                    </TableCell>
+                  )}
+                  {row.value2 !== "" && ( 
+                    <TableCell
+                      sx={CoverageTabStyles.premiumTableRowCells}
+                      align="left"
+                    >
+                      <Box sx={CoverageTabStyles.premiumTableCellValue}>
+                        {row.value2}
+                      </Box>
+                      <Box sx={CoverageTabStyles.premiumTableCellVechile}>
+                        {row.Vechile2}
+                      </Box>
+                    </TableCell>
+                  )}
                 </Box>
               </Box>
             </TableRow>
