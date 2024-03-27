@@ -341,6 +341,7 @@ const CoverageTabStyles = {
   },
   premiumFirstRow: {
     maxWidth: "225px",
+    borderBottom: "0px"
   },
   premiumFirstTitle: {
     fontFamily: "Playfair Display",

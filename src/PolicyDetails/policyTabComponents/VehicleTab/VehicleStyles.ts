@@ -14,7 +14,6 @@ const VehicleSyles = {
   vehicleHeading: {
     display: "flex",
     gap: "10px",
-
     alignItems: "center",
     marginBottom: "13px",
 
@@ -121,7 +120,7 @@ const VehicleSyles = {
     fontFamily: "Lato",
     fontSize: "14px",
     fontWeight: "400",
-    lineHeight: "22px",
+    lineHeight: "14px",
     textAlign: "center",
 
     boxShadow: "0px 2px 0px 0px rgba(0, 0, 0, 0.02)",

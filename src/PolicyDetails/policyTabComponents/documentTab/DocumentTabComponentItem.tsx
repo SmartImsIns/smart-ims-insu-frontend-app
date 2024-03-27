@@ -20,7 +20,7 @@ const DocumentTabComponentItem: React.FC<DocumentDataProps> = ({ data }) => {
   return (
     <Box aria-label="Policy Document" sx={documentTabStyles.documentContainer}>
       <Box sx={documentTabStyles.imageContainer}>
-        <img src={billImage} alt="Bill" style={documentTabStyles.imageStyle} />
+        <img src={billImage} alt="Bill" />
       </Box>
       <Card sx={documentTabStyles.card}>
         <Typography sx={documentTabStyles.insuranceText}>
