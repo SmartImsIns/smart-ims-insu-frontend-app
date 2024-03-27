@@ -1,4 +1,4 @@
-import { Box, Button, Card, Typography } from "@mui/material";
+import { Box, Button, Card, CardActionArea, Typography } from "@mui/material";
 import PolicyCardStyles from "./PolicyCardStyles";
 import EllipsisMenu from "../../../../common/EllipsisMenu/EllipsisMenu";
 import { IPolicy } from "../../../../models/customers/dashboard/Dashboard";
@@ -21,18 +21,20 @@ const PolicyCard: FC<props> = ({ policy }) => {
   return (
     <Card sx={PolicyCardStyles.policyCard}>
       <Box sx={PolicyCardStyles.containerOne}>
-        {policy.lineCode === "1" ? (
-          <img src={car} alt="car-icon" />
-        ) : (
-          <img src={home} alt="home-icon" />
-        )}
-        <Box>
-          <Typography sx={PolicyCardStyles.cardTopPolicyHeading}>
-            Policy Number
-          </Typography>
-          <Typography sx={PolicyCardStyles.cardTopPolicyNumber}>
-            {policy.carrierPolicyNo}
-          </Typography>
+        <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
+          {policy.lineCode === "1" ? (
+            <img src={car} alt="car-icon" />
+          ) : (
+            <img src={home} alt="home-icon" />
+          )}
+          <Box>
+            <Typography sx={PolicyCardStyles.cardTopPolicyHeading}>
+              Policy Number
+            </Typography>
+            <Typography sx={PolicyCardStyles.cardTopPolicyNumber}>
+              {policy.carrierPolicyNo}
+            </Typography>
+          </Box>
         </Box>
         <Box>
           <Typography sx={PolicyCardStyles.cardTopStatusHeading}>

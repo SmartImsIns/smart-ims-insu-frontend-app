@@ -1,26 +1,37 @@
 const PoliciesStyles = {
   policiesContainer: {
-    backgroundColor: "#e6f7ff",
-    padding: "20px",
+    padding: "0px 20px",
     display: "grid",
     gap: "20px",
-    "@media(max-width: 780px)": {
-      padding: "10px",
-    },
+  },
+  policiesContainerHeader: {
+    display: "flex",
+    justifyContent: "space-between",
   },
   heading: {
-    color: "#383D4E",
-    fontSize: "20px",
-    fontStyle: "normal",
-    fontWeight: 400,
+    maxWidth: "257px",
     fontFamily: "Playfair Display",
+    fontSize: "20px",
+    fontWeight: "400",
+    lineHeight: "22px",
+    color: "rgba(56, 61, 78, 1)",
+  },
+  viewAll: { display: "flex", alignItems: "center", gap: "5px" },
+  viweAllText: {
+    fontFamily: "Noto Sans",
+    fontSize: "18px",
+    fontWeight: "400",
     lineHeight: "110%",
+    color: "#000000",
+    "@media (max-width:599px)": {
+      fontSize: "14px",
+    },
   },
   policies: {
     display: "grid",
     gridTemplateColumns: "repeat(3, 1fr)",
     gap: "10px",
-    "@media(max-width: 780px)": {
+    "@media(max-width: 992px)": {
       gridTemplateColumns: "1fr",
     },
   },
