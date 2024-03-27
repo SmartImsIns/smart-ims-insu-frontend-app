@@ -2,7 +2,10 @@
     {
         "id":"0",
         "premium":"Total Policy Premium",
-        "value1":"$2917.00"
+        "Vechile1":"",
+        "value1":"$2917.00",
+        "Vechile2":"",
+        "value2":""
     },
     {
         "id":"1",
