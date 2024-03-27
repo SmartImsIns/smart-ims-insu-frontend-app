@@ -156,9 +156,10 @@ const CoverageTabStyles = {
   vechileNameText: {
     fontFamily: "Noto Sans",
     fontSize: "14px",
-    fontWeight: "400",
+    fontWeight: "300",
     lineHeight: "15.4px",
     textAlign: "left",
+    color: "#1D252B",
   },
   vechilePremiumTextValues: {
     display: "flex",
@@ -298,7 +299,7 @@ const CoverageTabStyles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: "15px 10px 19px 20px",
+    padding: "15px 10px 19px 10px",
     borderBottom: "1px solid #C9E1EC",
     // border: "10px solid red",
   },
@@ -308,7 +309,7 @@ const CoverageTabStyles = {
     aliginItems: "center",
   },
   cardTotalPremiums: {
-    padding: "15px 0px 20px 20px",
+    padding: "15px 0px 20px 10px",
     display: "flex",
     flexDirection: "column",
     gap: "24px",
