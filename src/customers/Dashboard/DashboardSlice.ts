@@ -1,4 +1,4 @@
-import { createSlice, PayloadAction } from '@reduxjs/toolkit';
+import { createSlice } from '@reduxjs/toolkit';
 import { IDashboardSlice } from '../../models/customers/dashboard/Dashboard';
 import { GetTestData } from './DashboardAction';
 
