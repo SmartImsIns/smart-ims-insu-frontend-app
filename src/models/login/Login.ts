@@ -10,8 +10,8 @@ export interface ILoginResponse {
 }
 
 export interface IUserDetails {
-  customerName: string;
-  customerId: string;
+  customerName: string | null;
+  customerId: string | null;
 }
 
 export interface ILoginSlice {

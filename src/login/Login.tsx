@@ -12,8 +12,8 @@ const Login = () => {
 
   const [showMessage, setShowMessage] = useState<string | null>(null);
   const [loginData, setLoginData] = useState<ILoginRequestParams>({
-    customerName: "Jhonson Scarllet",
-    mobile: "2345678900",
+    customerName: "1085 Testing OH",
+    mobile: "7402929087",
   });
 
   const { isError, calledReducerType } = useAppSelector(

@@ -12,6 +12,7 @@ import img2 from "../../../assets/svgs/group2.svg";
 import img3 from "../../../assets/svgs/group3.svg";
 import img4 from "../../../assets/svgs/group4.svg";
 import playIcon from "../../../assets/svgs/playIcon.svg";
+import Slider from "react-slick";
 
 interface quickReference {
   imgSrc: string;
@@ -20,6 +21,17 @@ interface quickReference {
 }
 
 const QuickReferences = () => {
+  const slickSettings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    autoplay: true,
+    dotsClass: "slickDots",
+  };
+
   const getQuickReferences = () => {
     return [
       {
@@ -49,7 +61,7 @@ const QuickReferences = () => {
         sx={QuickReferencesStyle.qucikReferencesCard}
       >
         <CardMedia
-          sx={QuickReferencesStyle.qucikReferencesCardMedia}
+          sx={{ height: "160px" }}
           component="img"
           src={item.imgSrc}
           alt="green iguana"
@@ -59,13 +71,15 @@ const QuickReferences = () => {
             {item.description}
           </Typography>
           {item.type === "video" ? (
-            <Button>
+            <Box>
               <img src={playIcon} alt="" />
-            </Button>
+            </Box>
           ) : (
-            <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
-              Read More
-            </Button>
+            <Box>
+              <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
+                Read More
+              </Button>
+            </Box>
           )}
         </CardContent>
       </Card>
