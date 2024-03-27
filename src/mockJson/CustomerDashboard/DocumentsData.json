@@ -1,0 +1,22 @@
+[
+  {
+    "id": 0,
+    "insuranceName": "Geico Insurance",
+    "img": "billImage"
+  },
+  {
+    "id": 1,
+    "insuranceName": "Geico Insurance",
+    "img": "billImage"
+  },
+  {
+    "id": 2,
+    "insuranceName": "Ims Insurance",
+    "img": "billImage"
+  },
+  {
+    "id": 3,
+    "insuranceName": "Ims Insurance",
+    "img": "billImage"
+  }
+]

@@ -19,33 +19,37 @@ const WelcomeCard: React.FC = () => {
   return (
     <Box
       sx={WelcomeCardStyles.welcomeCardContainer}
-      aria-label="welcome Card Container"
+      aria-label={"welcome Card Container"}
     >
       <DynamicTextDisplay text={`Good Morning, ${name}! Need Help Today?`} />
       <Box sx={WelcomeCardStyles.WelcomeCard} aria-label="welcome Card">
         <DashBoardCardItem
           src={STAR_ICON}
-          alt="new-claim-icon"
+          alt={"new-claim-icon"}
           text={newClaim}
-          style={WelcomeCardStyles.startIconText}
+          textStyles={WelcomeCardStyles.IconText}
+          boxStyles={WelcomeCardStyles.IconBox}
         />
         <DashBoardCardItem
           src={PAYMENT_ICON}
-          alt="payment-history-icon"
+          alt={"payment-history-icon"}
           text={paymentHistory}
-          style={WelcomeCardStyles.paymentIconText}
+          textStyles={WelcomeCardStyles.IconText}
+          boxStyles={WelcomeCardStyles.IconBox}
         />
         <DashBoardCardItem
           src={ASSISTANCE_ICON}
-          alt="roadside-assistance-icon"
+          alt={"roadside-assistance-icon"}
           text={roadSideAssistance}
-          style={WelcomeCardStyles.roadSideIconText}
+          textStyles={WelcomeCardStyles.IconText}
+          boxStyles={WelcomeCardStyles.IconBox}
         />
         <DashBoardCardItem
           src={LEARN_ICON}
-          alt="Learn-About-icon"
+          alt={"Learn-About-icon"}
           text={learnAbout}
-          style={WelcomeCardStyles.learnIconText}
+          textStyles={WelcomeCardStyles.IconText}
+          boxStyles={WelcomeCardStyles.IconBox}
         />
       </Box>
     </Box>

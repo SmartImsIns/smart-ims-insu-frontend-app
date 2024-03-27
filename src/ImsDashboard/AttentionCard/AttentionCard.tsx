@@ -1,43 +1,48 @@
 import React from "react";
-import { Box, Card, Tooltip, Typography } from "@mui/material";
-import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
 import attentionsIcon from "../../assets/attensionsIcon.svg";
 import DashBoardCardItem from "../commonComponents/DashBoardCardItem";
 import ActionButton from "../commonComponents/ActionButton";
-import { renewalAmount, duesDate, terms } from "../../constants/Constants";
+import { Box, Card, Typography, Tooltip } from "@mui/material";
+import {
+  renewalAmount,
+  duesDate,
+  terms,
+  renewNow,
+} from "../../constants/Constants";
 import { AttentionCardStyles } from "./AttentionCardStyles";
 
-interface AttentionCardProps {
+interface AttentionCardData {
   headText: string;
   renewalPrice: string;
   dueDate: string;
   contentText: string;
 }
 
-const AttentionCard: React.FC<AttentionCardProps> = ({
-  headText,
-  renewalPrice,
-  dueDate,
-}) => {
+interface AttentionCardProps {
+  data: AttentionCardData;
+}
+
+const AttentionCard: React.FC<AttentionCardProps> = ({ data }) => {
   return (
-    <Box sx={AttentionCardStyles.Container}>
-      <DynamicTextDisplay text="Things Need Your Attention" />
+    <Box>
       <Card sx={AttentionCardStyles.AttentionCardStyles}>
         <Box sx={AttentionCardStyles.AttentionsCardBoxStyle}>
-          <Box sx={{ marginBottom: "19px" }}>
+          <Box sx={AttentionCardStyles.icon}>
             <DashBoardCardItem
               src={attentionsIcon}
-              alt="attentions-icon"
-              text=""
+              alt={"attentions-icon"}
+              text={""}
             />
           </Box>
           <Box sx={AttentionCardStyles.AttentionsCardTextStyle}>
-            <Typography sx={AttentionCardStyles.HeadStyle}>
-              {headText}
-            </Typography>
+            <Tooltip title={data.headText}>
+              <Typography sx={AttentionCardStyles.HeadStyle}>
+                {data.headText}
+              </Typography>
+            </Tooltip>
             <Box>
               <Typography sx={AttentionCardStyles.ContentStyle}>
-                {renewalAmount} {renewalPrice} | {duesDate} {dueDate}
+                {renewalAmount} {data.renewalPrice} | {duesDate} {data.dueDate}
                 {terms}
               </Typography>
             </Box>
@@ -46,7 +51,7 @@ const AttentionCard: React.FC<AttentionCardProps> = ({
         <Box sx={AttentionCardStyles.ActionButton}>
           <ActionButton
             sx={AttentionCardStyles.renewNowButton}
-            buttonText="Renew Now"
+            buttonText={renewNow}
           />
         </Box>
       </Card>

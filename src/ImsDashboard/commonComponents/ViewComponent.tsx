@@ -1,6 +1,6 @@
 import React from "react";
 import { Box, Typography } from "@mui/material";
-import { ViewComponentStyles } from "./ViewComponentStles";
+import { ViewComponentStyles } from "./ViewComponentStyles";
 
 interface ViewComponentProps {
   src?: string;

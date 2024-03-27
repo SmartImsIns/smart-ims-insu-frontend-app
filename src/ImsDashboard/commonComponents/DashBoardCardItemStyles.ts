@@ -10,12 +10,15 @@ export const DashBoardCardItemStyles = {
       gap: "10px",
       alignItems: "center",
       height: "68px",
+    },
+    "@media(min-width: 600px) and (max-width: 1024px)": {
+      display: "flex",
+      alignItems: "center",
+      justifyContent: "space-between",
+      gap: "10px",
       img: {
         height: "40px",
       },
-    },
-    "@media(min-width: 600px) and (max-width: 800px)": {
-      maxWidth: "100px",
     },
   },
   DashBoardCardText: {
@@ -23,22 +26,14 @@ export const DashBoardCardItemStyles = {
     fontSize: "20px",
     fontStyle: "normal",
     fontWeight: 300,
-    lineHeight: "22px",
+    lineHeight: "110%",
     fontFamily: "Noto Sans",
     "@media (max-width: 599px)": {
       fontSize: "16px",
-      fontFamily: "Lato",
-      paddingLeft: "10px",
-      lineHeight: "17.6px",
-      marginLeft: "0px",
       textAlign: "center",
-      minWidth: "120px",
-      maxHeight: "36px",
     },
-    "@media(min-width: 600px) and (max-width: 1023px)": {
+    "@media(min-width: 600px) and (max-width: 800px)": {
       fontSize: "16px",
-      marginLeft: "10px",
-      maxWidth: "140px",
     },
   },
 };

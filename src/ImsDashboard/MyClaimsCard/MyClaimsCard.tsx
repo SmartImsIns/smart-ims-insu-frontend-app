@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from "react";
 import { Box, Card, Typography } from "@mui/material";
-import ImsDashboardStyle from "../ImsDashboardStyle";
 import claimsData from "../../mockJson/CustomerDashboard/MyClaimsData.json";
 import { formatNumber } from "../../utils/Utility";
-import { MYCLAIM_ICON, CAR_ICON } from "../../constants/Constants";
-import viewAllArrow from "../../assets/viewAllArrow.svg";
+import {
+  MYCLAIM_ICON,
+  CAR_ICON,
+  viewPast,
+  VIEW_ARROW,
+  trackYourClaim,
+  imageNotFound,
+} from "../../constants/Constants";
 import { MyClaimCardStyles } from "./MyClaimsCardStyles";
 import ActionButton from "../commonComponents/ActionButton";
 import DynamicTextDisplay from "../commonComponents/DynamicTextDisplay";
 import MyClaimCardItem from "../commonComponents/MyClaimCardItem";
+import ViewComponent from "../commonComponents/ViewComponent";
 interface claimsData {
   houseLoanData?: {
     data: {
@@ -45,22 +51,9 @@ const MyClaimsCard: React.FC = () => {
 
   return (
     <Box sx={MyClaimCardStyles.Container} aria-label="MyClaims Card Container">
-      <Box
-        sx={{
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-        }}
-      >
+      <Box sx={MyClaimCardStyles.container1}>
         <DynamicTextDisplay text={`My Claims (${formattedClaimCount})`} />
-        <Box sx={MyClaimCardStyles.box}>
-          <Typography sx={MyClaimCardStyles.headTypo}>
-            {"View Past Claims"}
-          </Typography>
-          <Box sx={MyClaimCardStyles.arrowImgBox}>
-            <img src={viewAllArrow} alt="view-all-arrow" />
-          </Box>
-        </Box>
+        <ViewComponent src={VIEW_ARROW} viewText={viewPast} />
       </Box>
       {claimdata?.map((claim, id) => (
         <Box key={id}>
@@ -70,7 +63,8 @@ const MyClaimsCard: React.FC = () => {
                 key={index}
                 headText={item.headText}
                 contentText={item.contentText}
-                icons={index === 0 ? MYCLAIM_ICON : "image not found"}
+                icons={index === 0 ? MYCLAIM_ICON : imageNotFound}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 icon={index === 0 ? MYCLAIM_ICON : undefined}
                 parentClasses={
                   index === 0
@@ -84,24 +78,25 @@ const MyClaimsCard: React.FC = () => {
                 key={index}
                 headText={item.headText}
                 contentText={item.contentText}
-                icons={index === 0 ? CAR_ICON : "image not found"}
+                icons={index === 0 ? CAR_ICON : imageNotFound}
                 icon={index === 0 ? CAR_ICON : undefined}
+                imgStyle={MyClaimCardStyles.imgStyle}
                 parentClasses={
                   index === 0
                     ? MyClaimCardStyles.myClaimsCardWithIconStyles
-                    : "none"
+                    : undefined
                 }
               />
             ))}
             <Box sx={MyClaimCardStyles.trackYourClaimButton}>
               <ActionButton
-                buttonText="Track Your Claim"
+                buttonText={trackYourClaim}
                 sx={MyClaimCardStyles.myClaimsCardButtonStyles}
               />
             </Box>
             <Box sx={MyClaimCardStyles.trackYourClaimText}>
               <Typography sx={MyClaimCardStyles.trackYourClaim}>
-                Track Your Claim
+                {trackYourClaim}
               </Typography>
             </Box>
           </Card>
