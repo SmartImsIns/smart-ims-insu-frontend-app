@@ -1,4 +1,4 @@
-export const vechileType=[
+export const incidentType=[
     "Single Vehicle Accident",
     "double Vehicle Accident",
     "triple Vehicle Accident",

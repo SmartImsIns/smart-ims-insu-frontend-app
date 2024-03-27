@@ -156,8 +156,9 @@ const CoverageTabStyles = {
   vechileNameText: {
     fontFamily: "Noto Sans",
     fontSize: "14px",
-    fontWeight: "400",
+    fontWeight: "300",
     lineHeight: "15.4px",
+    color:"#1D252B",
     textAlign: "left",
   },
   vechilePremiumTextValues: {
@@ -341,6 +342,7 @@ const CoverageTabStyles = {
   },
   premiumFirstRow: {
     maxWidth: "225px",
+    borderBottom: "0px",
   },
   premiumFirstTitle: {
     fontFamily: "Playfair Display",

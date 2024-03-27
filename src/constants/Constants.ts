@@ -60,3 +60,5 @@ export const VIEW_ARROW = viewAllArrow;
 export const LEFT_ARROW = leftArrow;
 export const vehicle = "Vehicle"
 export const driver = "Driver"
+export const fileAClaim="File a Claim"
+export const clickToUpload="Click to upload"

@@ -10,7 +10,6 @@ import { fileClaim } from "../../constants/Constants";
 const BasicInfoCardQuickActions: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:899px)");
   const isTablet = useMediaQuery("(min-width:900px) and (max-width:1300px)");
-
   const buttonsToDisplay = isMobile ? 1 : isTablet ? 4 : buttonText.length;
 
   return (

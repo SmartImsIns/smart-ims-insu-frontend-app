@@ -3,7 +3,8 @@
     {
         "policyType":"Auto Insurance",
         "policyNumber":"12AW1145G057 (Auto_Garage101)",
-        "vechile":"Single Vehicle Accident",
+        "vechile":"BMW M2 Coupe_2D",
+        "incidentType":"Single Vehicle Accident",
         "incidentDate":"2024-02-23",
         "incidentTime":"09:00",
         "location":"Maria A Mendoza De Zuniga, 2929 SW 19th St, Oklahoma City, OK 73108-4410",

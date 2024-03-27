@@ -98,7 +98,14 @@ const VehicleSyles = {
     textAlign: "left",
   },
 
-  row: { height: "64px", fontFamily: "Noto Sans" },
+  row: {
+    
+     height: "64px",
+    fontFamily: "Noto Sans",
+    '&:last-child': {
+      borderBottom: '0px',
+    },
+     },
   rowEmpty: {
     "@media (min-width:601px) and (max-width:690px)": { display: "none" },
   },
