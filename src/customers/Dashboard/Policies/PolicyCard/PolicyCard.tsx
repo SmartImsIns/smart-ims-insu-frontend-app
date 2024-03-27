@@ -82,7 +82,7 @@ const PolicyCard: FC<props> = ({ policy }) => {
         </span>
         | Carrier ABC Insurance
       </Typography>
-      <CardActionArea sx={PolicyCardStyles.actions}>
+      <Box sx={PolicyCardStyles.actions}>
         <Button
           variant="contained"
           sx={PolicyCardStyles.viewPolicy}
@@ -91,7 +91,7 @@ const PolicyCard: FC<props> = ({ policy }) => {
           View Policy
         </Button>
         <EllipsisMenu />
-      </CardActionArea>
+      </Box>
     </Card>
   );
 };

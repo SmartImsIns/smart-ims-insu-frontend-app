@@ -6,16 +6,16 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import { videoUrl, youtubeVideoUrl } from "../../../constants/Constants";
 import QuickReferencesStyle from "./QuickReferencesStyle";
-import img1 from "../../../assets/svgs/group1.svg";
 import img2 from "../../../assets/svgs/group2.svg";
-import img3 from "../../../assets/svgs/group3.svg";
 import img4 from "../../../assets/svgs/group4.svg";
-import playIcon from "../../../assets/svgs/playIcon.svg";
 import Slider from "react-slick";
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 interface quickReference {
-  imgSrc: string;
+  src: string;
   description: string;
   type: string;
 }
@@ -35,23 +35,23 @@ const QuickReferences = () => {
   const getQuickReferences = () => {
     return [
       {
-        imgSrc: img1,
-        description: "When to make an insurance claim?",
+        src: videoUrl,
+        description: "",
         type: "video",
       },
       {
-        imgSrc: img2,
+        src: img2,
         description:
           "Which type of insurance is best for your automobile life.",
         type: "",
       },
       {
-        imgSrc: img3,
-        description: "How to create your first proposal?",
+        src: youtubeVideoUrl,
+        description: "",
         type: "video",
       },
       {
-        imgSrc: img4,
+        src: img4,
         description: "Make your insurance effective",
         type: "",
       },
@@ -60,28 +60,34 @@ const QuickReferences = () => {
         key={`QucikReference_${index}`}
         sx={QuickReferencesStyle.qucikReferencesCard}
       >
-        <CardMedia
-          sx={{ height: "160px" }}
-          component="img"
-          src={item.imgSrc}
-          alt="green iguana"
-        />
-        <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
-          <Typography sx={QuickReferencesStyle.quickReferencesCardContentText}>
-            {item.description}
-          </Typography>
-          {item.type === "video" ? (
-            <Box>
-              <img src={playIcon} alt="" />
-            </Box>
-          ) : (
-            <Box>
+        {item.type === "video" && (
+          <CardMedia
+            component="iframe"
+            src={item.src}
+            sx={{
+              aspectRatio: "16/9",
+              height: "inherit",
+              border: 0,
+            }}
+            allowFullScreen
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          />
+        )}
+        {item.type !== "video" && (
+          <>
+            <CardMedia component="img" src={item.src} alt="green iguana" />
+            <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
+              <Typography
+                sx={QuickReferencesStyle.quickReferencesCardContentText}
+              >
+                {item.description}
+              </Typography>
               <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
                 Read More
               </Button>
-            </Box>
-          )}
-        </CardContent>
+            </CardContent>
+          </>
+        )}
       </Card>
     ));
   };
@@ -93,6 +99,9 @@ const QuickReferences = () => {
       </Typography>
       <Box sx={QuickReferencesStyle.qucikReferencesCards}>
         {getQuickReferences()}
+      </Box>
+      <Box sx={QuickReferencesStyle.carousel}>
+        <Slider {...slickSettings}>{getQuickReferences()}</Slider>
       </Box>
     </Box>
   );

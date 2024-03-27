@@ -33,6 +33,7 @@ const WelcomeCardStyle = {
     display: "flex",
     alignItems: "center",
     gap: "20.19px",
+    cursor: "pointer",
     "@media only screen and (max-width: 600px)": {
       flexDirection: "column",
       gap: "10px",

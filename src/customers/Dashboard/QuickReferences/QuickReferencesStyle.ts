@@ -24,9 +24,13 @@ const QuickReferencesStyle = {
     "@media(max-width: 600px)": {
       display: "none",
     },
+    "@media(max-width: 350px)": {
+      display: "grid",
+      gridTemplateColumns: "1fr",
+    },
   },
   qucikReferencesCard: {
-    boxShadow: "5",
+    height: "100%",
     backgroundColor: "rgba(255, 255, 255, 1)",
     border: "1px solid rgba(175, 175, 175, 1)",
     borderRadius: "10px",
@@ -44,7 +48,7 @@ const QuickReferencesStyle = {
     fontColor: "rgba(29, 37, 43, 1)",
     fontWeight: "400",
     lineHeight: "25px",
-    "@media(min-width: 600px) and (max-width: 699px)": {
+    "@media (max-width: 699px)": {
       fontSize: "14px",
     },
   },
@@ -65,6 +69,45 @@ const QuickReferencesStyle = {
     "&:hover": {
       background: "transparent",
       color: "rgba(63, 63, 63, 1)",
+    },
+  },
+  carousel: {
+    display: "none",
+    "@media (min-width: 350px) and (max-width: 600px)": {
+      width: "300px",
+      display: "block",
+      margin: "auto",
+    },
+    ".slickDots": {
+      verticalAlign: "middle",
+      margin: "auto",
+      padding: "0",
+      textAlign: "center",
+      marginTop: "19px",
+      li: {
+        listStyle: "none",
+        cursor: "pointer",
+        display: "inline-block",
+        margin: "0 3px",
+        padding: "0px",
+        "&.slick-active button": {
+          width: "21px",
+          height: "9px",
+          borderRadius: "30px",
+          backgroundColor: "#3F3F3F",
+        },
+        button: {
+          border: "none",
+          background: "#D9D9D9",
+          color: "transparent",
+          cursor: "pointer",
+          display: "block",
+          padding: "0px",
+          height: "9px",
+          width: "9px",
+          borderRadius: "50%",
+        },
+      },
     },
   },
 };
