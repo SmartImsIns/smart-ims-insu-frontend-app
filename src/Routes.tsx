@@ -16,6 +16,7 @@ import Footer from "./ImsDashboard/Footer/Footer";
 import { ContainerStyles } from "./Styles";
 import PolicyDetails from "./PolicyDetails/PolicyDetails";
 import FileAClaim from "./FileAClaim/FileAClaim";
+import Acknowledgement from "./Acknowledgement/Acknowledgement";
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -45,7 +46,7 @@ const ApplicationRoutes = (props: any) => {
     } else if (pathArray[1] === "policy-details") {
       navigate("/policy-details");
     } else {
-      navigate("customer/dashboard");
+      navigate("/ack");
     }
   }, [navigate, location.pathname]);
 
@@ -92,6 +93,7 @@ const ApplicationRoutes = (props: any) => {
           <Route path="/customer/*" element={<CustomerRoutes />} />
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
           <Route path="/policy-details" element={<PolicyDetails />} />
+          <Route path="/ack" element={<Acknowledgement />} />
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>
