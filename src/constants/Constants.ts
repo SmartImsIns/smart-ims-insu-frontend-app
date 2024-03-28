@@ -59,9 +59,12 @@ export const ASSISTANCE_ICON = roadsideAssistanceIcon;
 export const LEARN_ICON = learnAboutIcon;
 export const VIEW_ARROW = viewAllArrow;
 export const LEFT_ARROW = leftArrow;
-export const vehicle = "Vehicle"
-export const driver = "Driver"
-export const imageNotFound = "image not found"
+export const vehicle = "Vehicle";
+export const driver = "Driver";
+export const imageNotFound = "image not found";
+export const policyTabsLists = [
+  "Activity", "Coverages", "Vehicles & Drivers", "Documents", "Lienholder", "Billing", "Claims"
+]
 
 export const youtubeVideoUrl = "https://www.youtube.com/embed/JFjOpajKeOw";
 export const videoUrl =

@@ -47,4 +47,4 @@ const PolicyDetailsSlice = createSlice({
 });
 
 export default PolicyDetailsSlice.reducer;
-// export const {} = PolicyDetailsSlice.actions;
+export const {} = PolicyDetailsSlice.actions;
