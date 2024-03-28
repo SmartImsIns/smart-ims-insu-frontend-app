@@ -36,7 +36,7 @@ const QuickReferences = () => {
     return [
       {
         src: videoUrl,
-        description: "Buy life insurance from us and sleep well at night.",
+        description: "Navigating Auto Liability Limits.",
         type: "video",
       },
       {
@@ -47,7 +47,7 @@ const QuickReferences = () => {
       },
       {
         src: youtubeVideoUrl,
-        description: "At least be clear with your Insurance because the future is not",
+        description: "Navigating Auto Liability Limits.",
         type: "video",
       },
       {
