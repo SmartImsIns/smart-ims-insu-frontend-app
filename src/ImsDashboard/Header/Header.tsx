@@ -1,11 +1,10 @@
 import React, { useState, useEffect } from "react";
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Logo from "../../assets/Layer 1 copy 1.svg";
 import notification from "../../assets/notification.svg";
 import displayPicture from "../../assets/Rectangle 41106.svg";
 import menu from "../../assets/align-justify.svg";
 import HeaderStyle from "./HeaderStyles";
-
 const Header = () => {
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
@@ -42,7 +41,7 @@ const Header = () => {
           src={headerData[0].logo}
           style={HeaderStyle.simsLogo}
           alt="smart-ims logo"
-          onClick={()=>window.location.reload()}
+          onClick={() => window.location.reload()}
         />
       </Box>
       <Box sx={HeaderStyle.headerItems}>

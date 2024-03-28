@@ -21,6 +21,7 @@ import MoreButton from "../common/MoreButton";
 const options = ["Road Side Assistance", "Update Policy", "Cancel Policy"];
 
 const BasicInfoCardQuickActions: React.FC = () => {
+
   const isMobile = useMediaQuery("(max-width:799px)");
   const isTablet = useMediaQuery("(min-width:800px) and (max-width:1300px)");
 
