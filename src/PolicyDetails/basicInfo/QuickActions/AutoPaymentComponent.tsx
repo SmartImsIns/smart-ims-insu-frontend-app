@@ -8,8 +8,9 @@ import DialogTitle from "@mui/material/DialogTitle";
 import FormControl from "@mui/material/FormControl";
 import MenuItem from "@mui/material/MenuItem";
 import Select from "@mui/material/Select";
-import { IconButton, InputLabel } from "@mui/material";
+import { IconButton, InputLabel, Typography } from "@mui/material";
 import { CLOSE } from "../../../constants/Constants";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 interface AutoPaymentProps {
   onClose: () => void;
   open: boolean;
@@ -30,10 +31,29 @@ const AutoPaymentComponent: React.FC<AutoPaymentProps> = ({
   // };
   return (
     <React.Fragment>
-      <Dialog open={open} onClose={onClose}>
-        <Box>
-          <DialogTitle>Turn-on Auto Payment</DialogTitle>
-          <IconButton color="inherit" onClick={onClose} aria-label="close">
+      <Dialog open={open} onClose={onClose} aria-label="dialog box">
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "20px 20px 0px 20px",
+          }}
+        >
+          <DialogTitle sx={{ padding: "0px" }}>
+            Turn-on Auto Payment
+          </DialogTitle>
+          <IconButton
+            color="inherit"
+            onClick={onClose}
+            aria-label="close"
+            sx={{
+              paddingRight: "20px",
+              padding: "0px",
+              "& :hover": {
+                boxShadow: " 2px rgba(0,0,0,0.3)",
+              },
+            }}
+          >
             <img src={CLOSE} />
           </IconButton>
         </Box>
@@ -48,11 +68,13 @@ const AutoPaymentComponent: React.FC<AutoPaymentProps> = ({
               width: "fit-content",
             }}
           >
-            <FormControl sx={{ mt: 2, minWidth: 500 }}>
+            <Typography>Payment Method</Typography>
+            <FormControl sx={{ mt: 2, width: "301px" }}>
               {/* {focused && ( */}
               <InputLabel id="Select Payment Method">
                 Select Payment Method
               </InputLabel>
+
               {/* )} */}
               <Select
                 // onBlur={handleBlur}
@@ -68,11 +90,34 @@ const AutoPaymentComponent: React.FC<AutoPaymentProps> = ({
                 <MenuItem value="Rupay">Rupay</MenuItem>
                 <MenuItem value="Phone">Phone pay</MenuItem>
               </Select>
+              <Box
+                sx={{
+                  paddingTop: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
+              >
+                <AddCircleOutlineIcon />
+                <Typography>Payment Method</Typography>
+              </Box>
             </FormControl>
           </Box>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={onClose}>Close</Button>{" "}
+        <DialogActions
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            paddingBottom: "20px",
+          }}
+        >
+          <Button variant="outlined" onClick={onClose}>
+            Cancel
+          </Button>
+          <Button variant="contained" onClick={onClose}>
+            save
+          </Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
