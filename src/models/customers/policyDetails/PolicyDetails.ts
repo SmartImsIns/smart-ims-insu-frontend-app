@@ -72,3 +72,7 @@ export interface IInsuranceDocuments {
 export interface IGetInsuranceDocumentsRequestParams {
   policyId: string;
 }
+
+export interface BreadCrumbProps {
+  breadCrumbText: string;
+}
