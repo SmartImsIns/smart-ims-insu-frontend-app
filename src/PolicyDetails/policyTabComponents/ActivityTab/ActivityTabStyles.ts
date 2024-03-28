@@ -1,11 +1,9 @@
 const ActivityTabStyles = {
   container: {
-    // display:"flex",
     background: "rgba(255, 255, 255, 1)",
-    padding: "0px !important",
-    //   margin: "24.5px 0px 0px 0px",
     overflow: "visible",
-    "@media (min-width:360px) and (max-width:1240px)": {
+    marginTop: "10px",
+    "@media (min-width:360px) and (max-width:1024px)": {
       background: "none",
       boxShadow: "none",
     },
@@ -23,10 +21,13 @@ const ActivityTabStyles = {
     gap: "10px",
     alignItems: "center",
     marginTop: "20.5px",
-    marginLeft: "94.5%",
+    justifyContent: "flex-end",
 
     "@media (max-width:599px)": {
       marginLeft: "75%",
+    },
+    "@media (max-width:788px)": {
+      marginTop: "-20.5px",
     },
   },
   tableHeadingFilterImage: {

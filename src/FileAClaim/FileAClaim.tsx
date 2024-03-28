@@ -164,7 +164,13 @@ const FileAClaim: React.FC<FileAClaimProps> = ({ onClose }) => {
               onChange={handleTimeChange}
             />
           </FormControl>
-          <FormControl fullWidth sx={{ minWidth: isMobile ? 300 : 760 }}>
+          <FormControl
+            fullWidth
+            sx={{
+              minWidth: isMobile ? 300 : 300,
+              maxWidth: isMobile ? 539 : 760,
+            }}
+          >
             <TextField
               id="outlined-basic"
               label="Incident Location"
@@ -173,7 +179,13 @@ const FileAClaim: React.FC<FileAClaimProps> = ({ onClose }) => {
               multiline
             />
           </FormControl>
-          <FormControl fullWidth sx={{ minWidth: isMobile ? 300 : 760 }}>
+          <FormControl
+            fullWidth
+            sx={{
+              minWidth: isMobile ? 300 : 300,
+              maxWidth: isMobile ? 539 : 760,
+            }}
+          >
             <TextField
               id="outlined-basic"
               label="Incident Description"

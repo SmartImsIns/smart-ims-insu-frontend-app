@@ -1,9 +1,8 @@
 const FileAClaimStyles = {
   container: {
     padding: "30px",
-    width: "100%",
+    width: "auto",
     maxWidth: "815px",
-    border: "2px solid",
     background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)",
     "@media(min-width:600px) and (max-width:1023px)": {
       maxWidth: "540px",
