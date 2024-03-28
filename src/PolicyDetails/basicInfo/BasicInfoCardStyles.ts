@@ -18,7 +18,7 @@ export const BasicInfoCardStyles = {
             marginTop: "25px",
             flexDirection: "column"
         },
-        "@media (min-width: 799px) and (max-width: 1300px)": {
+        "@media (min-width: 800px) and (max-width: 1300px)": {
             marginLeft: "30px",
             marginRight: "30px",
             marginTop: "44px",
@@ -41,17 +41,12 @@ export const BasicInfoCardStyles = {
             marginLeft: "25px",
             marginTop: "26px",
         },
-        "@media (min-width: 600px) and (max-width: 799px)": {
+        "@media (min-width: 600px) and (max-width: 800px)": {
             marginLeft: "25px",
             marginTop: "26px",
             marginBottom: "24.1px"
         },
-        "@media (min-width: 799px) and (max-width: 1300px)": {
-            marginLeft: "25px",
-            marginTop: "26px",
-            maxWidth: "64.44px",
-        },
-        "@media (min-width: 1300px) and (max-width: 1920px)": {
+        "@media (min-width: 800px) and (max-width: 1920px)": {
             marginLeft: "30px",
             marginTop: "30px",
             maxWidth: "64.44px",
@@ -80,7 +75,7 @@ export const BasicInfoCardStyles = {
         lineHeight: "110%",
         whiteSpace: "pre",
         fontSize: "18px",
-        "@media (max-width: 789px)": {
+        "@media (max-width: 799px)": {
             fontSize: "14px",
         },
     },
@@ -91,7 +86,7 @@ export const BasicInfoCardStyles = {
         lineHeight: "110%",
         whiteSpace: "pre",
         fontSize: "20px",
-        "@media (max-width: 789px)": {
+        "@media (max-width: 799px)": {
             fontSize: "14px",
             paddingLeft: 0,
             paddingBottom: "10px"
@@ -109,10 +104,10 @@ export const BasicInfoCardStyles = {
         justifyContent: "space-around",
         alignItems: "center",
         gap: "101px",
-        "@media (max-width: 789px)": {
+        "@media (max-width: 799px)": {
             display: "none"
         },
-        "@media (min-width: 789px)": {
+        "@media (min-width: 800px)": {
             gap: "40px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {
@@ -135,10 +130,10 @@ export const BasicInfoCardStyles = {
         display: "flex",
         flexDirection: "column",
         margin: "27px 0px 42px 67.65px",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 799px)": {
             margin: "20px 0px 34px 20.55px",
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
+        "@media (min-width: 800px) and (max-width: 1024px)": {
             margin: "24px 0px 35px 30px",
         },
         "@media (min-width: 1024px) and (max-width: 1920px)": {

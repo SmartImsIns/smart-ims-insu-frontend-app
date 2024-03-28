@@ -2,7 +2,7 @@ import React from "react";
 import Breadcrumbs from "@mui/material/Breadcrumbs";
 import NavigateNextIcon from "@mui/icons-material/NavigateNext";
 import { useNavigate } from "react-router-dom";
-import { Box, Link, Typography } from "@mui/material";
+import { Box, Link } from "@mui/material";
 import { BreadCrumbStyles } from "./BreadCrumbsStyles";
 import { BreadCrumbProps } from "../policyDetail";
 import { LEFT_ARROW, leftArrowText } from "../../constants/Constants";

@@ -18,7 +18,11 @@ function VehicleTable() {
       <Box sx={VehicleStyles.headingAndButton}>
         <Box sx={VehicleStyles.vehicleHeading}>
           <Box>
-            <img src={car} alt="discounts logo" />
+            <img
+              src={car}
+              alt="discounts logo"
+              style={{ width: "40px", height: "40px" }}
+            />
           </Box>
           <Box>
             <Typography sx={VehicleStyles.HeadingText}>
@@ -41,19 +45,65 @@ function VehicleTable() {
                     </TableCell>
                   )
               )}
+              <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
             </TableRow>
           </TableHead>
           <TableBody>
-            {VehicleData.map((row) => (
+            {VehicleData.map((row, index) => (
               <TableRow key={row.id} sx={VehicleStyles.row}>
-                <TableCell sx={VehicleStyles.rowOne}>{row.VIN}</TableCell>
-                <TableCell sx={VehicleStyles.rowTwo}>{row.Model}</TableCell>
-                <TableCell sx={VehicleStyles.rowThree}>{row.Year}</TableCell>
-                <TableCell sx={VehicleStyles.rowFour}>{row.Type}</TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
-                <TableCell sx={VehicleStyles.rowEmpty}></TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowOne,
+                    borderBottom:
+                      index === VehicleData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
+                  {row.VIN}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowTwo,
+                    borderBottom:
+                      index === VehicleData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
+                  {row.Model}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowThree,
+                    borderBottom:
+                      index === VehicleData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
+                  {row.Year}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowFour,
+                    borderBottom:
+                      index === VehicleData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
+                  {row.Type}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowEmpty,
+                    borderBottom:
+                      index === VehicleData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                ></TableCell>
               </TableRow>
             ))}
           </TableBody>
@@ -68,7 +118,10 @@ function VehicleTable() {
           </Box>
           <Box>
             <Box sx={VehicleStyles.type}>
-              Type :&nbsp; <Typography sx={VehicleStyles.vehicleType}>{vehicle.Type}</Typography>
+              Type :&nbsp;{" "}
+              <Typography sx={VehicleStyles.vehicleType}>
+                {vehicle.Type}
+              </Typography>
             </Box>
           </Box>
         </Card>

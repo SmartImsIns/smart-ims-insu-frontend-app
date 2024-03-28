@@ -11,14 +11,18 @@ import { Card, Box, Typography } from "@mui/material";
 import VehicleStyles from "./VehicleStyles";
 import car from "../../../assets/car.svg";
 import { driver } from "../../../constants/Constants";
-
+import DriverLogo from "../../../assets/DriverLogo.svg";
 function DriverTable() {
   return (
     <Box sx={{ marginTop: "40px" }}>
       <Box sx={VehicleStyles.headingAndButton}>
         <Box sx={VehicleStyles.vehicleHeading}>
           <Box>
-            <img src={car} alt="discounts logo" />
+            <img
+              src={DriverLogo}
+              alt="driver logo"
+              style={{ width: "40px", height: "40px" }}
+            />
           </Box>
           <Box>
             <Typography sx={VehicleStyles.HeadingText}>
@@ -36,7 +40,7 @@ function DriverTable() {
               {Object.keys(DriverData[0]).map(
                 (key, index) =>
                   key !== "id" &&
-                  index !== Object.keys(DriverData[0]).length - 1 && ( 
+                  index !== Object.keys(DriverData[0]).length - 1 && (
                     <TableCell key={index} sx={VehicleStyles.tableHead}>
                       {key}
                     </TableCell>
@@ -45,17 +49,61 @@ function DriverTable() {
             </TableRow>
           </TableHead>
           <TableBody>
-            {DriverData.map((row) => (
+            {DriverData.map((row, index) => (
               <TableRow key={row.id} sx={VehicleStyles.row}>
-                <TableCell sx={VehicleStyles.rowName}>{row.Name}</TableCell>
-                <TableCell sx={VehicleStyles.rowLicense}>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowName,
+                    borderBottom:
+                      index === DriverData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
+                  {row.Name}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowLicense,
+                    borderBottom:
+                      index === DriverData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
                   {row["Driving License"]}
                 </TableCell>
-                <TableCell sx={VehicleStyles.rowDriverType}>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowDriverType,
+                    borderBottom:
+                      index === DriverData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
                   {row["Driver Type"]}
                 </TableCell>
-                <TableCell sx={VehicleStyles.rowGender}>{row.Gender}</TableCell>
-                <TableCell sx={VehicleStyles.rowDob}>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowGender,
+                    borderBottom:
+                      index === DriverData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
+                  {row.Gender}
+                </TableCell>
+                <TableCell
+                  sx={{
+                    ...VehicleStyles.rowDob,
+                    borderBottom:
+                      index === DriverData.length - 1
+                        ? "transparent"
+                        : "1px solid rgba(224, 224, 224, 1)",
+                  }}
+                >
                   {row["Date of Birth"]}
                 </TableCell>
               </TableRow>

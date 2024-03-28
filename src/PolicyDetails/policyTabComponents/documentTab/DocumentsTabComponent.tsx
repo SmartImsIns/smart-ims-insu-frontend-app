@@ -1,29 +1,45 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Box, useMediaQuery } from "@mui/material";
-import documentTabStyles, { DocumentTabStyles } from "./DocumentTabStyles";
+import documentTabStyles from "./DocumentTabStyles";
 import DocumentTabComponentItem from "./DocumentTabComponentItem";
-import WhiteButton from "../../common/WhiteButton";
+import documentData from "../../../mockJson/CustomerDashboard/DocumentsData.json";
+
+interface DocumentDataProps {
+  id: number;
+  insuranceName: string;
+  img: string;
+}
 
 const DocumentsTabComponent: React.FC = () => {
-  const { container }: DocumentTabStyles = documentTabStyles;
+  const [data, setData] = useState<DocumentDataProps[]>(
+    documentData as DocumentDataProps[]
+  );
 
-  const isMobile = useMediaQuery("(max-width:1024px)");
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        setData(documentData);
+      } catch (error) {
+        console.error("Error fetching data:", error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+  const isMobile = useMediaQuery("(max-width:789px)");
 
   return (
     <>
-      {isMobile ? (
-        <>
-          <Box aria-label="mobile" sx={documentTabStyles.mobileBox}>
-            <DocumentTabComponentItem />
-            <DocumentTabComponentItem />
-          </Box>
-        </>
-      ) : (
-        <Box sx={container}>
-          <DocumentTabComponentItem />
-          <DocumentTabComponentItem />
-        </Box>
-      )}
+      <Box
+        sx={
+          isMobile ? documentTabStyles.mobileBox : documentTabStyles.container
+        }
+      >
+        {data.map((document) => (
+          <DocumentTabComponentItem key={document.id} data={document} />
+        ))}
+      </Box>
     </>
   );
 };

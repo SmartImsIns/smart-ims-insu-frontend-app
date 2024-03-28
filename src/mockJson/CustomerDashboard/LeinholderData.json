@@ -1,0 +1,26 @@
+[
+  {
+    "id": 0,
+    "name": "Name",
+    "address": "Address",
+    "contactNumber": "Contact Number",
+    "bankName": "Bank Name",
+    "accountNumber": "Account Number"
+  },
+  {
+    "id": 1,
+    "name": "Lorena Casper",
+    "address": "937 Keeling Locks, North Robert, 58256",
+    "contactNumber": "485-213-5547",
+    "bankName": "Okuneva and Sons",
+    "accountNumber": "16055116"
+  },
+  {
+    "id": 2,
+    "name": "Vivian Klocko",
+    "address": "7628 Ashtyn Pine, West Kirstin, 88917",
+    "contactNumber": "870-357-2342",
+    "bankName": "Leannon Inc",
+    "accountNumber": "95083954"
+  }
+]

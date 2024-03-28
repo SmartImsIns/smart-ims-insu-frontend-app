@@ -8,6 +8,7 @@ import {
   viewPast,
   VIEW_ARROW,
   trackYourClaim,
+  imageNotFound,
 } from "../../constants/Constants";
 import { MyClaimCardStyles } from "./MyClaimsCardStyles";
 import ActionButton from "../commonComponents/ActionButton";
@@ -62,7 +63,7 @@ const MyClaimsCard: React.FC = () => {
                 key={index}
                 headText={item.headText}
                 contentText={item.contentText}
-                icons={index === 0 ? MYCLAIM_ICON : "image not found"}
+                icons={index === 0 ? MYCLAIM_ICON : imageNotFound}
                 imgStyle={MyClaimCardStyles.imgStyle}
                 icon={index === 0 ? MYCLAIM_ICON : undefined}
                 parentClasses={
@@ -77,13 +78,13 @@ const MyClaimsCard: React.FC = () => {
                 key={index}
                 headText={item.headText}
                 contentText={item.contentText}
-                icons={index === 0 ? CAR_ICON : "image not found"}
+                icons={index === 0 ? CAR_ICON : imageNotFound}
                 icon={index === 0 ? CAR_ICON : undefined}
                 imgStyle={MyClaimCardStyles.imgStyle}
                 parentClasses={
                   index === 0
                     ? MyClaimCardStyles.myClaimsCardWithIconStyles
-                    : "none"
+                    : undefined
                 }
               />
             ))}

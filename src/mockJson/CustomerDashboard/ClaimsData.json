@@ -1,0 +1,101 @@
+[
+  [
+    {
+      "houseLoanData": {
+        "data": [
+          {
+            "id": 1,
+            "headText": "Home_Protection",
+            "contentText": "12AW1145G057"
+          },
+          {
+            "id": 2,
+            "headText": "Verification",
+            "contentText": "Claim Stage"
+          },
+          {
+            "id": 3,
+            "headText": "15/02/2024",
+            "contentText": "Updated On"
+          },
+          {
+            "id": 4,
+            "headText": "12/02/2024",
+            "contentText": "Claim Initiated"
+          },
+          {
+            "id": 5,
+            "headText": "John Doe",
+            "contentText": "Contact Person"
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "carLoanData": {
+        "data": [
+          {
+            "id": 1,
+            "headText": "Home_Protection",
+            "contentText": "12AW1145G057"
+          },
+          {
+            "id": 2,
+            "headText": "Verification",
+            "contentText": "Claim Stage"
+          },
+          {
+            "id": 3,
+            "headText": "15/02/2024",
+            "contentText": "Updated On"
+          },
+          {
+            "id": 4,
+            "headText": "12/02/2024",
+            "contentText": "Claim Initiated"
+          },
+          {
+            "id": 5,
+            "headText": "John Doe",
+            "contentText": "Contact Person"
+          }
+        ]
+      }
+    }
+  ],
+  [
+    {
+      "houseLoanData": {
+        "data": [
+          {
+            "id": 1,
+            "headText": "Home_Protection",
+            "contentText": "12AW1145G057"
+          },
+          {
+            "id": 2,
+            "headText": "Verification",
+            "contentText": "Claim Stage"
+          },
+          {
+            "id": 3,
+            "headText": "15/02/2024",
+            "contentText": "Updated On"
+          },
+          {
+            "id": 4,
+            "headText": "12/02/2024",
+            "contentText": "Claim Initiated"
+          },
+          {
+            "id": 5,
+            "headText": "John Doe",
+            "contentText": "Contact Person"
+          }
+        ]
+      }
+    }
+  ]
+]

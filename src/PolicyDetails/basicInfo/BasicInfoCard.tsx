@@ -1,5 +1,5 @@
 import React from "react";
-import { Box, Typography, createTheme } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import car from "../../assets/car.svg";
 import tickIcon from "../../assets/tick.svg";
 import { BasicInfoCardStyles } from "./BasicInfoCardStyles";
@@ -56,7 +56,8 @@ const BasicInfoCard: React.FC = () => {
                 sx={BasicInfoCardStyles.content}
               >{`$ ${price} `}</Typography>
               <Typography sx={BasicInfoCardStyles.content}>
-                &bull; {` ${dueOn} ${dueDate}`}
+                &bull; {dueOn}
+                {` ${dueDate}`}
               </Typography>
             </Box>
           </Box>
