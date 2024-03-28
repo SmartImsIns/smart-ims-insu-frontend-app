@@ -30,7 +30,6 @@ const QuickReferencesStyle = {
     },
   },
   qucikReferencesCard: {
-    height: "100%",
     backgroundColor: "rgba(255, 255, 255, 1)",
     border: "1px solid rgba(175, 175, 175, 1)",
     borderRadius: "10px",

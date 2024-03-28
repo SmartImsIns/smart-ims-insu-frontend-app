@@ -1,4 +1,4 @@
-import { Box, Button, Card, CardActionArea, Typography } from "@mui/material";
+import { Box, Button, Card, Typography } from "@mui/material";
 import PolicyCardStyles from "./PolicyCardStyles";
 import EllipsisMenu from "../../../../common/EllipsisMenu/EllipsisMenu";
 import { IPolicy } from "../../../../models/customers/dashboard/Dashboard";
@@ -6,6 +6,7 @@ import { FC } from "react";
 import home from "../../../../assets/svgs/home.svg";
 import car from "../../../../assets/svgs/car.svg";
 import { useNavigate } from "react-router-dom";
+import CheckCircleOutlineIcon from "@mui/icons-material/CheckCircleOutline";
 
 interface props {
   policy: IPolicy;
@@ -21,7 +22,7 @@ const PolicyCard: FC<props> = ({ policy }) => {
   return (
     <Card sx={PolicyCardStyles.policyCard}>
       <Box sx={PolicyCardStyles.containerOne}>
-        <Box sx={{ display: "flex", alignItems: "center", gap: "20px" }}>
+        <Box sx={PolicyCardStyles.policyNumber}>
           {policy.lineCode === "1" ? (
             <img src={car} alt="car-icon" />
           ) : (
@@ -36,18 +37,18 @@ const PolicyCard: FC<props> = ({ policy }) => {
             </Typography>
           </Box>
         </Box>
-        <Box>
-          <Typography sx={PolicyCardStyles.cardTopStatusHeading}>
+        <Box sx={PolicyCardStyles.policyStatusContainer}>
+          <Typography sx={PolicyCardStyles.policyStatusHeading}>
             Status
           </Typography>
-          <Typography sx={PolicyCardStyles.cardTopStatusDate}>
+          <Typography sx={PolicyCardStyles.policyStatus}>
             {policy.carrierPolicyStatus}
           </Typography>
         </Box>
+        <Typography sx={PolicyCardStyles.productName}>
+          {policy.productName}
+        </Typography>
       </Box>
-      <Typography sx={PolicyCardStyles.productName}>
-        {policy.productName}
-      </Typography>
       <Box sx={PolicyCardStyles.premium}>
         <Typography sx={PolicyCardStyles.cardBodyPremium}>
           Premium:{" "}
@@ -60,17 +61,12 @@ const PolicyCard: FC<props> = ({ policy }) => {
           </span>{" "}
           | Term: <span style={{ fontWeight: "bold" }}>{policy.tenure}</span>
         </Typography>
-        <Box>
-          <Typography sx={PolicyCardStyles.cardBodyPremiumAuto}>
-            Auto deduct
-          </Typography>
-        </Box>
       </Box>
-      <Typography sx={PolicyCardStyles.cardBodyDueDate}>
+      <Typography sx={PolicyCardStyles.dueDate}>
         Due date:22 Mar 2024 in 8 days
       </Typography>
-      <Typography sx={PolicyCardStyles.cardBodyDueDate}>
-        <span style={{ fontWeight: "bold" }}>
+      <Typography sx={PolicyCardStyles.dueDate}>
+        <span style={PolicyCardStyles.vehicleCount}>
           {policy.riskCount}{" "}
           {policy.lineCode === "1"
             ? policy.riskCount > 1
@@ -80,8 +76,14 @@ const PolicyCard: FC<props> = ({ policy }) => {
             ? "Houses"
             : "House"}{" "}
         </span>
-        | Carrier ABC Insurance
+        | Prefered Risk Insurance
       </Typography>
+      <Box sx={PolicyCardStyles.autoDebitActive}>
+        <CheckCircleOutlineIcon sx={PolicyCardStyles.checkCircleIcon} />
+        <Typography sx={PolicyCardStyles.cardBodyPremiumAuto}>
+          Auto Debit Active
+        </Typography>
+      </Box>
       <Box sx={PolicyCardStyles.actions}>
         <Button
           variant="contained"

@@ -15,8 +15,7 @@ const AttentionCard = () => {
             Smart IMS life online saving plan child solutions
           </Typography>
           <Typography sx={AttentionsCardStyle.attentionCardItemContentStyle}>
-            Renewal amount : $821 | due date : 22 Mar 2024 : Tax and Fee may
-            apply.
+            Due amount : $821 | Due Date : 22 Mar 2024
           </Typography>
         </Box>
         <Box sx={AttentionsCardStyle.attentionCardButtonContainer}>
@@ -24,7 +23,7 @@ const AttentionCard = () => {
             variant="contained"
             sx={AttentionsCardStyle.attentionCardButton}
           >
-            Renew Now
+            Pay Now
           </Button>
         </Box>
       </Card>

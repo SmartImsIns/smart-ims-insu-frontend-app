@@ -61,17 +61,37 @@ const QuickReferences = () => {
         sx={QuickReferencesStyle.qucikReferencesCard}
       >
         {item.type === "video" && (
-          <CardMedia
-            component="iframe"
-            src={item.src}
-            sx={{
-              aspectRatio: "16/9",
-              height: "inherit",
-              border: 0,
-            }}
-            allowFullScreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          />
+          <>
+            {/* <iframe
+              src={item.src}
+              width={"100%"}
+              style={{ aspectRatio: "16/9", border: "none" }}
+              title={item.description}
+              allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allowFullScreen
+            ></iframe> */}
+            <CardMedia
+              component="iframe"
+              src={item.src}
+              sx={{
+                aspectRatio: "16/9",
+                height: "inherit",
+                border: 0,
+              }}
+              allowFullScreen
+              allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            />
+            <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
+              <Typography
+                sx={QuickReferencesStyle.quickReferencesCardContentText}
+              >
+                {item.description}
+              </Typography>
+              <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
+                Read More
+              </Button>
+            </CardContent>
+          </>
         )}
         {item.type !== "video" && (
           <>
