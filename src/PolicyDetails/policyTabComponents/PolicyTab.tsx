@@ -10,6 +10,8 @@ import ActivityTabComponent from "./ActivityTab/ActivityTabComponent";
 import CoverageComponent from "./CoverageTab/CoverageTabComponent";
 import VehicleCard from "./VehicleTab/VehicleCard";
 import BillingTabComponent from "./BillingTab/BillingTabComponent";
+import ClaimTabComponent from "./claimsTab/ClaimTabComponent";
+import leinholderTabComponent from "./LeinHolderTab/LeinholderTabComponent";
 
 interface TabPanelProps {
   index: number;
@@ -48,7 +50,9 @@ const PolicyTab = () => {
     "1": CoverageComponent,
     "2": VehicleCard,
     "3": DocumentsTabComponent,
+    "4": leinholderTabComponent,
     "5": BillingTabComponent,
+    "6": ClaimTabComponent,
   };
 
   const getComponent = ({ index }: { index: number }) => {

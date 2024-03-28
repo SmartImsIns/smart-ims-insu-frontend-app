@@ -2,7 +2,7 @@ export const PolicyTabStyles = {
   PolicyTabsStyles: {
     margin: "64px 30px 0px 30px",
     "@media (max-width: 799px)": {
-      marginTop: "20px",
+      margin: "20px 20px 0px 20px",
     },
     "@media (min-width: 800px) and (max-width: 1300px)": {
       marginTop: "40px",
