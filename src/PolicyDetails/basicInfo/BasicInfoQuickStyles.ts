@@ -12,13 +12,13 @@ export const BasicInfoQuickStyles = {
             borderRadius: '0 0 10px 10px',
             padding: "0px"
         },
-        "@media (min-width: 399px) and (max-width: 899px)": {
+        "@media (min-width: 399px) and (max-width: 799px)": {
             borderRadius: '0 0 9px 9px',
             padding: "0px"
         },
-        "@media (min-width: 900px) and (max-width: 1300px)": {
+        "@media (min-width: 800px) and (max-width: 1300px)": {
             borderRadius: '0px 0px 9px 9px',
-            padding: "15px 30px",
+            padding: "15px 20px",
         },
         "@media (min-width: 1300px) and (max-width: 1920px)": {
             padding: "26px 30px 19px 30px",
@@ -36,10 +36,6 @@ export const BasicInfoQuickStyles = {
         "@media (max-width: 599px)": {
             display: "flex",
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            paddingLeft: "25px",
-            paddingRight: "25px",
-        },
         "@media (min-width: 799px) and (max-width: 1300px)": {
             display: "flex",
             alignItems: "center",
@@ -54,6 +50,7 @@ export const BasicInfoQuickStyles = {
         },
     },
     buttonStyle: {
+        position: "relative",
         textTransform: "none",
         display: "flex",
         height: "35px",
