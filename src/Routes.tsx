@@ -15,6 +15,7 @@ import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
 import { ContainerStyles } from "./Styles";
 import PolicyDetails from "./PolicyDetails/PolicyDetails";
+import LoginPage from "./LoginPage/LoginPage";
 
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
@@ -91,6 +92,7 @@ const ApplicationRoutes = (props: any) => {
           <Route path="/customer/*" element={<CustomerRoutes />} />
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
           <Route path="/policy-details" element={<PolicyDetails />} />
+          <Route path="/login-page" element={<LoginPage />} />
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>
