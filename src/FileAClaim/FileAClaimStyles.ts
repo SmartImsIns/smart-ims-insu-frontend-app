@@ -174,7 +174,7 @@ const FileAClaimStyles = {
     flex: "1 1 0%",
     marginBottom: "30px",
     "@media(min-width:360px) and (max-width:699px)": {
-      justifyContent: "center",
+      justifyContent: "flex-end",
       padding: "0px",
       marginTop: "68px",
     },

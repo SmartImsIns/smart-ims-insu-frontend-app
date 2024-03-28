@@ -77,7 +77,7 @@ const FileAClaim: React.FC<FileAClaimProps> = ({ onClose }) => {
     console.log(fileName);
     setFileName("");
   };
-  const isMobile = windowWidth <= 599;
+  const isMobile = windowWidth <= 699;
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Box sx={FileAClaimStyles.container}>
@@ -164,7 +164,7 @@ const FileAClaim: React.FC<FileAClaimProps> = ({ onClose }) => {
               onChange={handleTimeChange}
             />
           </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 760 }}>
+          <FormControl fullWidth sx={{ minWidth: isMobile ? 300 : 760 }}>
             <TextField
               id="outlined-basic"
               label="Incident Location"
@@ -173,7 +173,7 @@ const FileAClaim: React.FC<FileAClaimProps> = ({ onClose }) => {
               multiline
             />
           </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 760 }}>
+          <FormControl fullWidth sx={{ minWidth: isMobile ? 300 : 760 }}>
             <TextField
               id="outlined-basic"
               label="Incident Description"

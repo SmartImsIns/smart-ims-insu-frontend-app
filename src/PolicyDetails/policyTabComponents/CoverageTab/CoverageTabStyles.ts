@@ -187,7 +187,7 @@ const CoverageTabStyles = {
     height: "auto",
     minWidth: "450px",
     border: "1px solid rgba(201, 225, 236, 1)",
-    boxShadow: "0px",
+    boxShadow: "none",
     "@media(min-width:650px) and (max-width:1024px)": {
       width: "auto",
     },
