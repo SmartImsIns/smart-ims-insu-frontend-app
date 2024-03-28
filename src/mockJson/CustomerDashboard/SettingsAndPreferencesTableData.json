@@ -1,0 +1,37 @@
+[
+    {
+        "id":"0",
+        "Scenarios":"Scenarios",
+        "Via_Mail":"Via Mail",
+        "Via_SMS":"Via SMS",
+        "Push_Notification":"Push Notification"
+    },
+    {
+        "id":"1",
+        "Scenarios":"Policy Updates",
+        "Via_Mail":"",
+        "Via_SMS":"",
+        "Push_Notification":""
+    },
+    {
+        "id":"2",
+        "Scenarios":"Payment Reminder",
+        "Via_Mail":"",
+        "Via_SMS":"",
+        "Push_Notification":""
+    },
+    {
+        "id":"3",
+        "Scenarios":"Claim Updates",
+        "Via_Mail":"",
+        "Via_SMS":"",
+        "Push_Notification":""
+    },
+    {
+        "id":"4",
+        "Scenarios":"News and Blogs",
+        "Via_Mail":"",
+        "Via_SMS":"",
+        "Push_Notification":""
+    }
+]

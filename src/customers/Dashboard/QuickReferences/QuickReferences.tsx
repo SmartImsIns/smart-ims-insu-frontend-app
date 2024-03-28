@@ -36,7 +36,7 @@ const QuickReferences = () => {
     return [
       {
         src: videoUrl,
-        description: "",
+        description: "Navigating Auto Liability Limits.",
         type: "video",
       },
       {
@@ -47,7 +47,7 @@ const QuickReferences = () => {
       },
       {
         src: youtubeVideoUrl,
-        description: "",
+        description: "Navigating Auto Liability Limits.",
         type: "video",
       },
       {
@@ -62,14 +62,6 @@ const QuickReferences = () => {
       >
         {item.type === "video" && (
           <>
-            {/* <iframe
-              src={item.src}
-              width={"100%"}
-              style={{ aspectRatio: "16/9", border: "none" }}
-              title={item.description}
-              allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-              allowFullScreen
-            ></iframe> */}
             <CardMedia
               component="iframe"
               src={item.src}
@@ -79,7 +71,7 @@ const QuickReferences = () => {
                 border: 0,
               }}
               allowFullScreen
-              allow="accelerometer; autoplay=0; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
             />
             <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
               <Typography
@@ -87,9 +79,6 @@ const QuickReferences = () => {
               >
                 {item.description}
               </Typography>
-              <Button variant="outlined" sx={QuickReferencesStyle.readMoreBtn}>
-                Read More
-              </Button>
             </CardContent>
           </>
         )}

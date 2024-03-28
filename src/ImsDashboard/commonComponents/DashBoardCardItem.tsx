@@ -1,26 +1,33 @@
 import React from "react";
 import { Box, SxProps, Typography } from "@mui/material";
 import { DashBoardCardItemStyles } from "./DashBoardCardItemStyles";
+import { CSSProperties } from "@mui/material/styles/createMixins";
 
 interface DashBoardCardItemProps {
   text: string;
   src: string;
   alt: string;
-  style?: SxProps;
+  textStyles?: SxProps;
+  boxStyles?: SxProps;
+  imgStyle?: CSSProperties;
 }
 
 const DashBoardCardItem: React.FC<DashBoardCardItemProps> = ({
   text,
   src,
   alt,
-  style,
+  boxStyles,
+  textStyles,
+  imgStyle,
 }) => {
   return (
-    <Box sx={DashBoardCardItemStyles.DashBoardCardItemStyles}>
-      <img src={src} alt={alt} />
+    <Box
+      sx={{ ...boxStyles, ...DashBoardCardItemStyles.DashBoardCardItemStyles }}
+    >
+      <img src={src} alt={alt} style={imgStyle} />
       {text.length > 0 && (
         <Typography
-          sx={{ ...style, ...DashBoardCardItemStyles.DashBoardCardText }}
+          sx={{ ...textStyles, ...DashBoardCardItemStyles.DashBoardCardText }}
         >
           {text}
         </Typography>

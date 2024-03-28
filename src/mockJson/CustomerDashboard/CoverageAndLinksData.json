@@ -1,0 +1,46 @@
+[
+    {
+        "id":"0",
+        "Coverages":"Coverages",
+        "Limit":"Limit",
+        "Deductible":"Deductible",
+        "Vechile1":"Triumph Tiger",
+        "Vechile2":"BMW M2"
+    },
+    {
+        "id":"1",
+        "Coverages":"Bodily Injury",
+        "perThing":"(Each Person/Each Accident)",
+        "Limit":"$100,000/300,000",
+        "Deductible":"00",
+        "Vechile1":"$311.00",
+        "Vechile2":"$231.00"
+    },
+    {
+        "id":"2",
+        "Coverages":"Property Damage ",
+        "perThing":"(Each Accident)",
+        "Limit":"$100,000",
+        "Deductible":"00",
+        "Vechile1":"$102.00",
+        "Vechile2":"$99.00"
+    },
+    {
+        "id":"3",
+        "Coverages":"Uninsured/Underinsured Motorist",
+        "perThing":"(Each Person/Each Accident)",
+        "Limit":"$100,000/300,000",
+        "Deductible":"00",
+        "Vechile1":"$104.00",
+        "Vechile2":"$104.00"
+    },
+    {
+        "id":"4",
+        "Coverages":"Transportation Limit",
+        "perThing":"(Per Day/Max Limit)",
+        "Limit":"$30 / $900",
+        "Deductible":"00",
+        "Vechile1":"$26.00",
+        "Vechile2":"$350.00"
+    }
+]

@@ -44,11 +44,11 @@ const ReferenceBlogsContainer: React.FC<{ data: BlogData }> = ({ data }) => {
 
         <Box sx={ReferenceBlogsStyles.cardButtonIcon}>
           {data.videoUrl ? (
-            <Button sx={ReferenceBlogsStyles.playButton}>
+            <Button disableRipple sx={ReferenceBlogsStyles.playButton}>
               <img src={playIcon} alt="playIcon" />
             </Button>
           ) : (
-            <ActionButton
+            <ActionButton 
               sx={ReferenceBlogsStyles.readMoreButton}
               buttonText={"Read More"}
             />

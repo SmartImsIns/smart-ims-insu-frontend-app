@@ -8,7 +8,7 @@ interface ActionButtonProps {
 
 const ActionButton: React.FC<ActionButtonProps> = ({ buttonText, sx }) => {
   return (
-    <Button variant="contained" sx={{ ...sx }}>
+    <Button disableRipple variant="contained" sx={{ ...sx }}>
       {buttonText}
     </Button>
   );
