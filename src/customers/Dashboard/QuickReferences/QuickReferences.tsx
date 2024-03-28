@@ -71,7 +71,7 @@ const QuickReferences = () => {
                 border: 0,
               }}
               allowFullScreen
-              allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+              allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoPlay=0"
             />
             <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
               <Typography
