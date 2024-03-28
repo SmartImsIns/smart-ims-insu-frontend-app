@@ -1,40 +1,43 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Dialog, { DialogProps } from "@mui/material/Dialog";
+import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import FormControl from "@mui/material/FormControl";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import Switch from "@mui/material/Switch";
+import Select from "@mui/material/Select";
+import { IconButton, InputLabel } from "@mui/material";
+import { CLOSE } from "../../../constants/Constants";
+interface AutoPaymentProps {
+  onClose: () => void;
+  open: boolean;
+}
 
-const AutoPaymentComponent: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
+const AutoPaymentComponent: React.FC<AutoPaymentProps> = ({
+  onClose,
+  open,
+}) => {
+  // const [focused, setFocused] = React.useState(true);
+  // const [selectValue, setValue] = React.useState("");
 
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+  // const handleFocus = () => {
+  //   setFocused(false);
+  // };
+  // const handleBlur = () => {
+  //   setFocused(true);
+  // };
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open max-width dialog
-      </Button>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Optional sizes</DialogTitle>
+      <Dialog open={open} onClose={onClose}>
+        <Box>
+          <DialogTitle>Turn-on Auto Payment</DialogTitle>
+          <IconButton color="inherit" onClick={onClose} aria-label="close">
+            <img src={CLOSE} />
+          </IconButton>
+        </Box>
         <DialogContent>
-          <DialogContentText>
-            You can set my maximum width and whether to adapt or not.
-          </DialogContentText>
           <Box
             noValidate
             component="form"
@@ -45,11 +48,20 @@ const AutoPaymentComponent: React.FC = () => {
               width: "fit-content",
             }}
           >
-            <FormControl sx={{ mt: 2, minWidth: 120 }}>
-              <InputLabel htmlFor="Select Payment Method">
+            <FormControl sx={{ mt: 2, minWidth: 500 }}>
+              {/* {focused && ( */}
+              <InputLabel id="Select Payment Method">
                 Select Payment Method
               </InputLabel>
-              <Select autoFocus>
+              {/* )} */}
+              <Select
+                // onBlur={handleBlur}
+                // onFocus={handleFocus}
+                id="Select Payment Method"
+                // autoFocus
+                // value={selectValue}
+                // onChange={(e: any) => setValue(e.target.value)}
+              >
                 <MenuItem value="Credit">Credit Card</MenuItem>
                 <MenuItem value="sm">Debit Card</MenuItem>
                 <MenuItem value="Debit">Cash</MenuItem>
@@ -60,7 +72,7 @@ const AutoPaymentComponent: React.FC = () => {
           </Box>
         </DialogContent>
         <DialogActions>
-          <Button onClick={handleClose}>Close</Button>
+          <Button onClick={onClose}>Close</Button>{" "}
         </DialogActions>
       </Dialog>
     </React.Fragment>

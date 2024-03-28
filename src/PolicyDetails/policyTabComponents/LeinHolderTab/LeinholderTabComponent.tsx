@@ -17,14 +17,6 @@ import leinholderData from "../../../mockJson/CustomerDashboard/LeinholderData.j
 import { LeinholderStyles } from "./LeinholderStyles";
 import ResponsiveLeinholderTab from "./ResponsiveLeinholderTab";
 
-// interface row {
-//   name: string;
-//   address: number;
-//   contactNumber: number;
-//   bankName: number;
-//   accountNumber: number;
-// }
-
 const leinholderTabComponent: React.FC = () => {
   return (
     <Box
@@ -76,35 +68,6 @@ const leinholderTabComponent: React.FC = () => {
           </IconButton>
         </Box>
       </Box>
-      {/* <Box>
-        <Table>
-          <TableHead>
-            <TableRow>
-              <TableCell>{"Name"}</TableCell>
-              <TableCell align="left">{"Address"}</TableCell>
-              <TableCell align="left">{"Contact Number"}</TableCell>
-              <TableCell align="left">{"Bank Name"}</TableCell>
-              <TableCell align="left">{"Account Number"}</TableCell>
-            </TableRow>
-          </TableHead>
-          <TableBody>
-            {leinholderData.map((row, index) => (
-              <TableRow
-                key={index}
-                sx={{ "&:last-child td, &:last-child th": { border: 0 } }}
-              >
-                <TableCell component="th" scope="row">
-                  {row.name}
-                </TableCell>
-                <TableCell align="left">{row.address}</TableCell>
-                <TableCell align="left">{row.contactNumber}</TableCell>
-                <TableCell align="left">{row.bankName}</TableCell>
-                <TableCell align="left">{row.accountNumber}</TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </Box> */}
       <Box
         sx={{
           "@media(max-width: 599px)": {
