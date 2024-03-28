@@ -22,6 +22,7 @@ export interface ActivityDetails {
 
 interface Props {
   data: ActivityDetails;
+  isLast: boolean;
 }
 
 const getActivityIcon = (id: number) => {
@@ -41,70 +42,81 @@ const getActivityIcon = (id: number) => {
   }
 };
 
-const ActivityCard: React.FC<Props> = ({ data }) => {
+const ActivityCard: React.FC<Props> = ({ data, isLast }) => {
   const [hover, setHover] = useState(false);
   const icon = getActivityIcon(data.id);
 
   return (
-    <Box
-      sx={ActivityStyles.oneCard}
-      onMouseEnter={() => setHover(true)}
-      onMouseLeave={() => setHover(false)}
-    >
-      <Box sx={ActivityStyles.logo}>
-        {icon && <img src={icon} alt="Icon" />}
-      </Box>
-      <Box sx={ActivityStyles.cardContent}>
-        <Typography variant="h5" component="h5" sx={ActivityStyles.heading}>
-          {data.Heading}
-        </Typography>
-        {data.id <= 3 && (
-          <Typography variant="body1" sx={ActivityStyles.description}>
-            {data.Description}
-          </Typography>
-        )}
-        {data.id === 4 && (
-          <Box sx={ActivityStyles.claimNumberClosureReason}>
-            <Typography variant="body1" sx={ActivityStyles.claimNumber}>
-              Claim Number: {data.ClaimNumber}
-            </Typography>
-            <Typography sx={ActivityStyles.line}> | </Typography>
-            <Typography variant="body1" sx={ActivityStyles.closureReason}>
-              {" "}
-              Closure Reason: {data.ClosureReason}
-            </Typography>
-          </Box>
-        )}
-        {data.id === 5 && (
-          <Box sx={ActivityStyles.claimNumberClosureReason}>
-            <Typography variant="body1" sx={ActivityStyles.claimNumber}>
-              Claim Number: {data.ClaimNumber}
-            </Typography>
-            <Typography sx={{ margin: "10px 10px 0px 10px" }}> | </Typography>
-            <Typography variant="body1" sx={ActivityStyles.payoutAmount}>
-              {" "}
-              Payout Amount: {data.PayoutAmount}
-            </Typography>
-          </Box>
-        )}
-        <Typography variant="body1" sx={ActivityStyles.date}>
-          Date: {data.date}
-        </Typography>
-      </Box>
-
-      {hover && (
-        <Box sx={ActivityStyles.images}>
-          <Box sx={ActivityStyles.hoveredImage1}>
-            <img src={Download} alt="Download" />
-          </Box>
-          <Box sx={ActivityStyles.hoveredImage1}>
-            <img src={Document} alt="Document" />
-          </Box>
+    <Box sx={ActivityStyles.hoverCard}>
+      <Box
+        sx={{
+          ...ActivityStyles.oneCard,
+          borderBottom: isLast ? "none" : "1px solid rgba(201, 225, 236, 1)",
+        }}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <Box sx={ActivityStyles.logo}>
+          {icon && <img src={icon} alt="Icon" />}
         </Box>
-      )}
-      <Typography sx={ActivityStyles.ellipsis }>
-        <img src={ellipsisDots} alt="" />
-      </Typography>
+        <Box sx={ActivityStyles.hoverImg}>
+          <Box sx={ActivityStyles.cardContent}>
+            <Typography variant="h5" component="h5" sx={ActivityStyles.heading}>
+              {data.Heading}
+            </Typography>
+            {data.id <= 3 && (
+              <Typography variant="body1" sx={ActivityStyles.description}>
+                {data.Description}
+              </Typography>
+            )}
+            {data.id === 4 && (
+              <Box sx={ActivityStyles.claimNumberClosureReason}>
+                <Typography variant="body1" sx={ActivityStyles.claimNumber}>
+                  Claim Number: {data.ClaimNumber}
+                </Typography>
+                <Typography sx={ActivityStyles.line}> | </Typography>
+                <Typography variant="body1" sx={ActivityStyles.closureReason}>
+                  {" "}
+                  Closure Reason: {data.ClosureReason}
+                </Typography>
+              </Box>
+            )}
+            {data.id === 5 && (
+              <Box sx={ActivityStyles.claimNumberClosureReason}>
+                <Typography variant="body1" sx={ActivityStyles.claimNumber}>
+                  Claim Number: {data.ClaimNumber}
+                </Typography>
+                <Typography sx={{ margin: "10px 10px 0px 10px" }}>
+                  {" "}
+                  |{" "}
+                </Typography>
+                <Typography variant="body1" sx={ActivityStyles.payoutAmount}>
+                  {" "}
+                  Payout Amount: {data.PayoutAmount}
+                </Typography>
+              </Box>
+            )}
+            <Typography variant="body1" sx={ActivityStyles.date}>
+              {data.date}
+            </Typography>
+          </Box>
+
+          {hover && (
+            <Box sx={ActivityStyles.images}>
+              <Box sx={ActivityStyles.hoveredImage1}>
+                <img src={Download} alt="Download" />
+              </Box>
+              <Box sx={ActivityStyles.hoveredImage1}>
+                <img src={Document} alt="Document" />
+              </Box>
+            </Box>
+          )}
+
+          <Typography sx={ActivityStyles.ellipsis}>
+            <img src={ellipsisDots} alt="" />
+          </Typography>
+        </Box>
+      </Box>
     </Box>
   );
 };

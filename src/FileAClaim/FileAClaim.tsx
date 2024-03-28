@@ -27,15 +27,23 @@ import ActionButton from "../ImsDashboard/commonComponents/ActionButton";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
 import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { clickToUpload } from "../constants/Constants";
-import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
+import dayjs from "dayjs";
 import WhiteButton from "../PolicyDetails/common/WhiteButton";
-const FileAClaim = () => {
+import closeImage from "../assets/x-circle.svg";
+interface FileAClaimProps {
+  onClose: () => void;
+}
+const FileAClaim: React.FC<FileAClaimProps> = ({ onClose }) => {
   console.log(fileAClaimJosn[0].policyType);
   const [windowWidth, setWindowWidth] = useState(window.innerWidth);
   const [fileName, setFileName] = useState("");
   const [fileSize, setFileSize] = useState(null);
-  const [selectedDate, setSelectedDate] = useState(null);
-  const [selectedTime, setSelectedTime] = useState(null);
+  const [selectedDate, setSelectedDate] = useState(
+    dayjs(fileAClaimJosn[0].incidentDate)
+  );
+  const [selectedTime, setSelectedTime] = useState(
+    dayjs(fileAClaimJosn[0].incidentTime)
+  );
 
   useEffect(() => {
     const handleResize = () => {
@@ -50,6 +58,7 @@ const FileAClaim = () => {
   }, []);
 
   const handleDateChange = (date: any) => {
+    console.log(date);
     setSelectedDate(date);
   };
   const handleTimeChange = (time: any) => {
@@ -68,7 +77,7 @@ const FileAClaim = () => {
     console.log(fileName);
     setFileName("");
   };
-  const isMobile = windowWidth <= 599;
+  const isMobile = windowWidth <= 699;
   return (
     <LocalizationProvider dateAdapter={AdapterDayjs}>
       <Box sx={FileAClaimStyles.container}>
@@ -76,6 +85,9 @@ const FileAClaim = () => {
           <Typography sx={FileAClaimStyles.headingText}>
             {fileAClaim}
           </Typography>
+          <Box>
+            <img onClick={onClose} src={closeImage} alt="closing-tag" />
+          </Box>
         </Box>
         <Box sx={FileAClaimStyles.formsContainer}>
           <FormControl fullWidth sx={{ width: isMobile ? 300 : 360 }}>
@@ -152,7 +164,13 @@ const FileAClaim = () => {
               onChange={handleTimeChange}
             />
           </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 760 }}>
+          <FormControl
+            fullWidth
+            sx={{
+              minWidth: isMobile ? 300 : 300,
+              maxWidth: isMobile ? 539 : 760,
+            }}
+          >
             <TextField
               id="outlined-basic"
               label="Incident Location"
@@ -161,7 +179,13 @@ const FileAClaim = () => {
               multiline
             />
           </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 760 }}>
+          <FormControl
+            fullWidth
+            sx={{
+              minWidth: isMobile ? 300 : 300,
+              maxWidth: isMobile ? 539 : 760,
+            }}
+          >
             <TextField
               id="outlined-basic"
               label="Incident Description"

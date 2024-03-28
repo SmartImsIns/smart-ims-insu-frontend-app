@@ -1,5 +1,14 @@
 import React, { useState } from "react";
-import { Box, Popover, Typography, useMediaQuery } from "@mui/material";
+import {
+  Box,
+  Drawer,
+  Link,
+  Menu,
+  MenuItem,
+  Popover,
+  Typography,
+  useMediaQuery,
+} from "@mui/material";
 import WhiteButton from "../common/WhiteButton";
 import { BasicInfoCardStyles } from "./BasicInfoCardStyles";
 import { buttonText } from "./QuickActionButtonsList";
@@ -9,6 +18,8 @@ import ContactButtonComponent from "./QuickActions/ContactButtonComponent";
 import DropDown from "../common/DropDown";
 import AutoPaymentComponent from "./QuickActions/AutoPaymentComponent";
 import EllipsisButtonComponent from "./QuickActions/EllipsisButtonComponent";
+import FileAClaim from "../../FileAClaim/FileAClaim";
+const options = ["Road Side Assistance", "Update Policy", "Cancel Policy"];
 
 const BasicInfoCardQuickActions: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:799px)");
@@ -16,10 +27,17 @@ const BasicInfoCardQuickActions: React.FC = () => {
 
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [selectedAction, setSelectedAction] = useState<string>("");
+
   const buttonsToDisplay = isMobile ? 1 : isTablet ? 4 : buttonText.length;
   const open = Boolean(anchorEl);
   const id = open ? "simple-popover" : undefined;
-
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+  const handleCloseFileAClaim = () => {
+    setIsDrawerOpen(false);
+  };
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement>,
     text: string
@@ -83,7 +101,11 @@ const BasicInfoCardQuickActions: React.FC = () => {
             <WhiteButton
               buttonText={fileClaim}
               buttonStyles={BasicInfoQuickStyles.buttonStyle}
+              onClick={() => toggleDrawer()}
             />
+            <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
+              <FileAClaim onClose={handleCloseFileAClaim} />
+            </Drawer>
           </Box>
           <EllipsisButtonComponent />
         </Box>

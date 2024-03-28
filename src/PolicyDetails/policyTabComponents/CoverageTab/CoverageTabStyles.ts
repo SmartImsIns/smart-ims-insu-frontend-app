@@ -187,7 +187,7 @@ const CoverageTabStyles = {
     height: "auto",
     minWidth: "450px",
     border: "1px solid rgba(201, 225, 236, 1)",
-    boxShadow: "0px",
+    boxShadow: "none",
     "@media(min-width:650px) and (max-width:1024px)": {
       width: "auto",
     },
@@ -299,7 +299,7 @@ const CoverageTabStyles = {
     display: "flex",
     flexDirection: "row",
     justifyContent: "space-between",
-    padding: "15px 10px 19px 20px",
+    padding: "15px 10px 19px 10px",
     borderBottom: "1px solid #C9E1EC",
     // border: "10px solid red",
   },
@@ -309,7 +309,7 @@ const CoverageTabStyles = {
     aliginItems: "center",
   },
   cardTotalPremiums: {
-    padding: "15px 0px 20px 20px",
+    padding: "15px 0px 20px 10px",
     display: "flex",
     flexDirection: "column",
     gap: "24px",
