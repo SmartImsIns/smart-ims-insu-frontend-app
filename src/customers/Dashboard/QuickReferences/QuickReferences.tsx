@@ -36,7 +36,7 @@ const QuickReferences = () => {
     return [
       {
         src: videoUrl,
-        description: "",
+        description: "Buy life insurance from us and sleep well at night.",
         type: "video",
       },
       {
@@ -47,7 +47,7 @@ const QuickReferences = () => {
       },
       {
         src: youtubeVideoUrl,
-        description: "",
+        description: "At least be clear with your Insurance because the future is not",
         type: "video",
       },
       {
@@ -61,6 +61,7 @@ const QuickReferences = () => {
         sx={QuickReferencesStyle.qucikReferencesCard}
       >
         {item.type === "video" && (
+          <>
           <CardMedia
             component="iframe"
             src={item.src}
@@ -70,8 +71,16 @@ const QuickReferences = () => {
               border: 0,
             }}
             allowFullScreen
-            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           />
+          <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
+              <Typography
+                sx={QuickReferencesStyle.quickReferencesCardContentText}
+              >
+                {item.description}
+              </Typography>
+            </CardContent>
+          </>
         )}
         {item.type !== "video" && (
           <>
