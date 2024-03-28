@@ -10,6 +10,8 @@ import filter from "../assets/filter.svg"
 import searchIcon from "../assets/search.svg"
 import updownArrow from "../assets/upDownArrow.svg"
 import close from "../assets/closeIcon.svg"
+import ellipsis from "../assets/vertical_ellipse.svg"
+
 export const customerPath = [];
 export const SETTINGS_AND_PREFERENCES = "Setting and Preferences";
 export const LANGUAGE = "Language";
@@ -77,5 +79,5 @@ export const driver = "Driver";
 export const imageNotFound = "image not found";
 export const agentDetails = "Agent Details";
 export const businessAddress = "Business Address";
-
+export const ELLIPSIS = ellipsis;
 export const CLOSE = close;

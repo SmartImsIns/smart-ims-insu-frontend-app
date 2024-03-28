@@ -8,16 +8,17 @@ import { fileClaim } from "../../constants/Constants";
 import ContactButtonComponent from "./QuickActions/ContactButtonComponent";
 import DropDown from "../common/DropDown";
 import AutoPaymentComponent from "./QuickActions/AutoPaymentComponent";
+import EllipsisButtonComponent from "./QuickActions/EllipsisButtonComponent";
 
 const BasicInfoCardQuickActions: React.FC = () => {
   const isMobile = useMediaQuery("(max-width:799px)");
   const isTablet = useMediaQuery("(min-width:800px) and (max-width:1300px)");
 
-  const buttonsToDisplay = isMobile ? 1 : isTablet ? 4 : buttonText.length;
-
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
-
   const [selectedAction, setSelectedAction] = useState<string>("");
+  const buttonsToDisplay = isMobile ? 1 : isTablet ? 4 : buttonText.length;
+  const open = Boolean(anchorEl);
+  const id = open ? "simple-popover" : undefined;
 
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement>,
@@ -31,9 +32,6 @@ const BasicInfoCardQuickActions: React.FC = () => {
     setAnchorEl(null);
     setSelectedAction("");
   };
-
-  const open = Boolean(anchorEl);
-  const id = open ? "simple-popover" : undefined;
 
   const renderPopoverContent = () => {
     if (selectedAction === "Contact") {
@@ -87,9 +85,7 @@ const BasicInfoCardQuickActions: React.FC = () => {
               buttonStyles={BasicInfoQuickStyles.buttonStyle}
             />
           </Box>
-          <Box>
-            <DropDown />
-          </Box>
+          <EllipsisButtonComponent />
         </Box>
       ) : (
         <>
@@ -111,9 +107,7 @@ const BasicInfoCardQuickActions: React.FC = () => {
                     />
                   ))}
                 </Box>
-                <Box>
-                  <DropDown />
-                </Box>
+                <EllipsisButtonComponent />
               </Box>
             </>
           ) : (
