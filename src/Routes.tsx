@@ -15,9 +15,8 @@ import Header from "./ImsDashboard/Header/Header";
 import Footer from "./ImsDashboard/Footer/Footer";
 import { ContainerStyles } from "./Styles";
 import PolicyDetails from "./PolicyDetails/PolicyDetails";
+import LoginPage from "./LoginPage/LoginPage";
 import FileAClaim from "./FileAClaim/FileAClaim";
-import Acknowledgement from "./Acknowledgement/Acknowledgement";
-
 const ApplicationRoutes = (props: any) => {
   const { isLoading } = useAppSelector((store: RootState) => store.common);
   const navigate = useNavigate();
@@ -45,8 +44,10 @@ const ApplicationRoutes = (props: any) => {
       navigate("/ims-dashboard");
     } else if (pathArray[1] === "policy-details") {
       navigate("/policy-details");
+    } else if (pathArray[1] === "file") {
+      navigate("/file");
     } else {
-      navigate("/ack");
+      navigate("/customer/dashboard");
     }
   }, [navigate, location.pathname]);
 
@@ -93,7 +94,8 @@ const ApplicationRoutes = (props: any) => {
           <Route path="/customer/*" element={<CustomerRoutes />} />
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
           <Route path="/policy-details" element={<PolicyDetails />} />
-          <Route path="/ack" element={<Acknowledgement />} />
+          <Route path="/login-page" element={<LoginPage />} />
+          {/* <Route path="/file" element={ <FileAClaim onClose={handleCloseFileAClaim} />} /> */}
           <Route path="*" element={<Error header={true} {...props} />} />
         </Routes>
       </Box>

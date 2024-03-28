@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import {
   Box,
+  Drawer,
   Link,
   Menu,
   MenuItem,
@@ -8,7 +9,7 @@ import {
   Typography,
   useMediaQuery,
 } from "@mui/material";
-import verticalEllipse from "../../assets/vertical_ellipse.svg";
+
 import WhiteButton from "../common/WhiteButton";
 import { BasicInfoCardStyles } from "./BasicInfoCardStyles";
 import { buttonText } from "./QuickActionButtonsList";
@@ -16,12 +17,11 @@ import { BasicInfoQuickStyles } from "./BasicInfoQuickStyles";
 import { fileClaim } from "../../constants/Constants";
 import ContactButtonComponent from "./QuickActions/ContactButtonComponent";
 import DropDown from "../common/DropDown";
-import AutoPaymentComponent from "./QuickActions/AutoPaymentComponent";
-import MoreButton from "../common/MoreButton";
+
+import FileAClaim from "../../FileAClaim/FileAClaim";
 const options = ["Road Side Assistance", "Update Policy", "Cancel Policy"];
 
 const BasicInfoCardQuickActions: React.FC = () => {
-
   const isMobile = useMediaQuery("(max-width:799px)");
   const isTablet = useMediaQuery("(min-width:800px) and (max-width:1300px)");
 
@@ -29,7 +29,13 @@ const BasicInfoCardQuickActions: React.FC = () => {
 
   const [anchorEl, setAnchorEl] = useState<HTMLButtonElement | null>(null);
   const [selectedAction, setSelectedAction] = useState<string>("");
-
+  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
+  const toggleDrawer = () => {
+    setIsDrawerOpen(true);
+  };
+  const handleCloseFileAClaim = () => {
+    setIsDrawerOpen(false);
+  };
   const handleClick = (
     event: React.MouseEvent<HTMLButtonElement>,
     text: string
@@ -131,7 +137,11 @@ const BasicInfoCardQuickActions: React.FC = () => {
             <WhiteButton
               buttonText={fileClaim}
               buttonStyles={BasicInfoQuickStyles.buttonStyle}
+              onClick={() => toggleDrawer()}
             />
+            <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
+              <FileAClaim onClose={handleCloseFileAClaim} />
+            </Drawer>
           </Box>
           <Box>
             <DropDown />

@@ -3,12 +3,14 @@ const FileAClaimStyles = {
     padding: "30px",
     width: "100%",
     maxWidth: "815px",
-    backgroundColor: "#FFFFFF",
+    border: "2px solid",
+    background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)",
     "@media(min-width:600px) and (max-width:1023px)": {
       maxWidth: "540px",
     },
-    "@media(min-width:360px) and (max-width:699px)": {
-      maxWidth: "300px",
+    "@media(min-width:360px) and (max-width:599px)": {
+      padding: "0px",
+      width: "auto",
     },
   },
   imageDisplayerBox: {
@@ -16,6 +18,7 @@ const FileAClaimStyles = {
     gap: "16px",
 
     border: "1px solid #C4C4C4",
+    backgroundColor: "#FFFFFF",
     padding: "20px 16px",
     marginTop: "14px",
     height: "38.4px",
@@ -61,12 +64,12 @@ const FileAClaimStyles = {
     lineHeight: "24px",
     letterSpacing: "0.15000000596046448px",
     textAlign: "left",
-
+    border: "1px solid #C4C4C4",
     textTransform: "none",
-    backgroundColor: "#FFFFFF",
     color: "#000000",
     "&:hover": {
-      backgroundColor: "#FFFFFF",
+      background: "linear-gradient(180deg, #FBFDFC 0%, #E5F6FE 100%)",
+
       color: "#000000",
     },
   },
@@ -76,10 +79,26 @@ const FileAClaimStyles = {
     gap: "40px",
     flexWrap: "wrap",
     marginTop: "30px",
+    "@media (min-width:360px) and (max-width:599px)": {
+      padding: " 0px 30px",
+    },
   },
   heading: {
     paddingBottom: "30px",
+    display: "flex",
+    justifyContent: "space-between",
     borderBottom: "1px solid #3F3F3F",
+
+    img: {
+      cursor: "pointer",
+    },
+    "@media (min-width:360px) and (max-width:599px)": {
+      paddingBottom: "0px",
+      height: "21.2px",
+      alignItems: "center",
+      padding: "19px 30px 19px 20px",
+      border: "1px solid #D8D8D8",
+    },
   },
   headingText: {
     fontFamily: "Playfair Display",
@@ -151,8 +170,9 @@ const FileAClaimStyles = {
     display: "flex",
     gap: "20px",
     marginTop: "36px",
-    width: "320px",
-    // marginLeft: "63%",
+    justifyContent: "flex-end",
+    flex: "1 1 0%",
+    marginBottom: "30px",
     "@media(min-width:360px) and (max-width:699px)": {
       justifyContent: "center",
       padding: "0px",

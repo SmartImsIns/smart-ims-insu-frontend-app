@@ -4,7 +4,12 @@ const BillingTabStyles = {
     gap: "10px",
     alignItems: "center",
     marginTop: "20.5px",
-    marginLeft: "95%",
+    cursor: "pointer",
+    justifyContent: "flex-end",
+    "@media (min-width: 699px) and (max-width: 799px)": {
+      marginTop: "-25px",
+      marginBottom: "16px",
+    },
   },
   tableHeadingFilterImage: {
     img: {
@@ -23,11 +28,18 @@ const BillingTabStyles = {
   },
   tableContainer: {
     padding: "0px 24px",
-    width: "97%",
+    width: "auto",
     border: "1px solid rgba(201, 225, 236, 1)",
     // maxWidth: "1258px",
-    marginTop: "20.5px",
+    marginTop: "13.5px",
     marginLeft: "0px",
+    marginBottom: "10px",
+  },
+  billingContainer: {
+    display: "flex",
+    flexDirection: "column",
+    gap: "20px",
+    marginBottom: "60px",
   },
   payButton: {
     borderRadius: "20px",
@@ -41,6 +53,7 @@ const BillingTabStyles = {
     lineHeight: "17.6px",
     textAlign: "left",
     border: "1px solid #B3C2C8",
+    textTransform: "none",
     "&:hover": {
       backgroundColor: "#FFFFFF",
       color: "#1D252B",
@@ -51,6 +64,11 @@ const BillingTabStyles = {
     display: "flex",
     alignItems: "center",
     gap: "20px",
+    borderBottom: "0px",
+    borderTop: "0px",
+    img: {
+      cursor: "pointer",
+    },
   },
   tableHeadText: {
     fontFamily: "Noto Sans",
@@ -60,13 +78,30 @@ const BillingTabStyles = {
     letterSpacing: "0px",
     textAlign: "left",
     opacity: "70%",
+    borderBottom: "0px",
+  },
+  billingTableRows: {
+    // border:"2px solid",
+    borderBottom: "1px solid #D0D1D9",
+    "&:last-child": {
+      borderBottom: "0px",
+    },
   },
   tableRow: {
-    borderBottom: "2px solid rgba(63, 63, 63, 1)",
+    borderBottom: "1px solid #3F3F3F",
   },
   tableHeadCellContainer: {
     display: "flex",
     gap: "10px",
+    cursor: "pointer",
+    "&:hover": {
+      img: {
+        visibility: "visible",
+      },
+    },
+    img: {
+      visibility: "hidden",
+    },
   },
   tableBodyCells: {
     fontFamily: "Noto Sans",
@@ -75,60 +110,72 @@ const BillingTabStyles = {
     lineHeight: "24px",
     letterSpacing: "0px",
     textAlign: "left",
+    borderBottom: "0px",
   },
   billingTable: {
     display: "block",
-    "@media(max-width:599px)": {
+    "@media(max-width:699px)": {
       display: "none",
     },
   },
   cardContainer: {
     display: "none",
-    "@media(max-width: 599px)": {
+    "@media(max-width: 699px)": {
       display: "block",
     },
   },
   container: {
     display: "flex",
     height: "auto",
-    width: "100%",
-    // minWidth: "320px",
-    paddingBottom: "30.93px",
+    width: "auto",
     gap: "59px",
     flexWrap: "wrap",
+    justifyContent: "center",
+    backgroundColor: "#FFFFFF",
     border: "1px solid rgba(201, 225, 236, 1)",
     borderRadius: "13px",
-    marginTop: "20px",
-    paddingTop: "24px",
-    marginLeft: "-10px",
+    padding: "30px",
   },
   amount: {
-    fontFamily: "Lato",
+    fontFamily: "Noto Sans",
     fontSize: "14px",
     fontWeight: "400",
-    lineHeight: "12px",
+    lineHeight: "24px",
     letterSpacing: "0px",
     textAlign: "left",
   },
+  payActionButton: {
+    width: "90px",
+    height: "34px",
+    padding: "10px",
+    borderRadius: "40px",
+    cursor: "pointer",
+    alignItems: "center",
+    textTransform: "none",
+    background: "#3F3F3F",
+    boxShadow: "0px 6px 10px 0px #3F3F3F4D",
+  },
   downloadIcon: {
     marginLeft: "80px",
+    alignItems: "center",
+    cursor: "pointer",
+    img: {
+      marginTop: "5px",
+    },
   },
   cardContent: {
     minWidth: "89px",
     display: "flex",
     flexDirection: "column",
     gap: "2.09px",
-    "&:nth-child(odd)": {
-      paddingLeft: "30px",
-    },
-    "@media(min-width: 500px) and (max-width: 599px)": {
-      paddingLeft: "30px",
-    },
   },
   filterContainer: {
     display: "flex",
     gap: "10px",
-    marginLeft: "76%",
+    justifyContent: "flex-end",
+    alignItems: "center",
+    marginTop: "-25px",
+    marginBottom: "16px",
   },
   descriptionText: {
     fontFamily: "Lato",
