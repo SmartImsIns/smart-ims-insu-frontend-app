@@ -6,6 +6,7 @@ import {
   CardMedia,
   Typography,
 } from "@mui/material";
+import ReactPlayer from 'react-player';
 import { videoUrl, youtubeVideoUrl } from "../../../constants/Constants";
 import QuickReferencesStyle from "./QuickReferencesStyle";
 import img2 from "../../../assets/svgs/group2.svg";
@@ -62,18 +63,19 @@ const QuickReferences = () => {
       >
         {item.type === "video" && (
           <>
-            <CardMedia
-              component="iframe"
-              src={item.src}
-              sx={{
-                aspectRatio: "16/9",
-                height: "inherit",
-                border: 0,
-              }}
-              allowFullScreen
-              allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoPlay=0"
-            />
-            <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
+          <ReactPlayer url={item.src} controls={true} width={'100%'} height={'100%'} />
+          {/* <CardMedia
+            component="iframe"
+            src={item.src}
+            sx={{
+              aspectRatio: "16/9",
+              height: "inherit",
+              border: 0,
+            }}
+            allowFullScreen
+            allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+          /> */}
+          <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
               <Typography
                 sx={QuickReferencesStyle.quickReferencesCardContentText}
               >
