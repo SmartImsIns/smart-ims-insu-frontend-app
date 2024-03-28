@@ -25,8 +25,9 @@ import fileAClaimJosn from "../mockJson/CustomerDashboard/FileAClaim.json";
 import { fileAClaim } from "../constants/Constants";
 import ActionButton from "../ImsDashboard/commonComponents/ActionButton";
 import { DatePicker } from "@mui/x-date-pickers/DatePicker";
-import { TimePicker } from "@mui/x-date-pickers/TimePicker"; // Import TimePicker
+import { TimePicker } from "@mui/x-date-pickers/TimePicker";
 import { clickToUpload } from "../constants/Constants";
+import { DemoContainer } from "@mui/x-date-pickers/internals/demo";
 import WhiteButton from "../PolicyDetails/common/WhiteButton";
 const FileAClaim = () => {
   console.log(fileAClaimJosn[0].policyType);
@@ -58,7 +59,7 @@ const FileAClaim = () => {
     const file = event.target.files[0];
     if (file) {
       setFileName(file.name);
-      setFileSize(file.size)
+      setFileSize(file.size);
     } else {
       setFileName("");
     }
@@ -137,6 +138,20 @@ const FileAClaim = () => {
               ))}
             </Select>
           </FormControl>
+          <FormControl fullWidth sx={{ width: isMobile ? 300 : 360 }}>
+            <DatePicker
+              label="Select Date"
+              value={selectedDate}
+              onChange={handleDateChange}
+            />
+          </FormControl>
+          <FormControl fullWidth sx={{ width: isMobile ? 300 : 360 }}>
+            <TimePicker
+              label="Select Time"
+              value={selectedTime}
+              onChange={handleTimeChange}
+            />
+          </FormControl>
           <FormControl fullWidth sx={{ width: isMobile ? 300 : 760 }}>
             <TextField
               id="outlined-basic"
@@ -174,15 +189,16 @@ const FileAClaim = () => {
                     <img src={document} alt="document-text" />
                   </Box>
                   <Box sx={FileAClaimStyles.fileNames}>
-                    
                     <Typography sx={FileAClaimStyles.fileNameText}>
                       {fileName}
                     </Typography>
                     <Box sx={FileAClaimStyles.fileSizeBox}>
-                      <Typography sx={FileAClaimStyles.fileSizeText}>{fileSize}kb</Typography>
-                    <Typography sx={FileAClaimStyles.completedText}>
-                      Complete
-                    </Typography>
+                      <Typography sx={FileAClaimStyles.fileSizeText}>
+                        {fileSize}kb
+                      </Typography>
+                      <Typography sx={FileAClaimStyles.completedText}>
+                        Complete
+                      </Typography>
                     </Box>
                   </Box>
                   <img onClick={handleDelete} src={trashBin} alt="trash-bin" />
@@ -190,29 +206,6 @@ const FileAClaim = () => {
                 </Box>
               )}
             </Box>
-          </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 760 }}>
-            <TextField
-              id="outlined-basic"
-              label="Incident Location"
-              variant="outlined"
-              value={fileAClaimJosn[0].location}
-              multiline
-            />
-          </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 360 }}>
-            <DatePicker
-              label="Select Date"
-              value={selectedDate}
-              onChange={handleDateChange}
-            />
-          </FormControl>
-          <FormControl fullWidth sx={{ width: isMobile ? 300 : 360 }}>
-            <TimePicker
-              label="Select Time"
-              value={selectedTime}
-              onChange={handleTimeChange}
-            />
           </FormControl>
         </Box>
         <Box sx={FileAClaimStyles.buttons}>

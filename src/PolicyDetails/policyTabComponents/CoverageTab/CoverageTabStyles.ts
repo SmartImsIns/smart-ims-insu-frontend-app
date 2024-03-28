@@ -20,7 +20,7 @@ const CoverageTabStyles = {
     marginTop: "44px",
   },
   discounts: {
-    marginTop: "49px",
+    marginTop: "17px",
     marginBottom: "60px",
   },
   coverageAndLinksHeading: {
@@ -158,7 +158,7 @@ const CoverageTabStyles = {
     fontSize: "14px",
     fontWeight: "300",
     lineHeight: "15.4px",
-    color:"#1D252B",
+    color: "#1D252B",
     textAlign: "left",
   },
   vechilePremiumTextValues: {
@@ -183,13 +183,13 @@ const CoverageTabStyles = {
   premiumTableContainer: {
     marginTop: "20px",
     padding: "0px 24px",
-    width: "97%",
+    width: "auto",
     height: "auto",
     minWidth: "450px",
     border: "1px solid rgba(201, 225, 236, 1)",
     boxShadow: "0px",
     "@media(min-width:650px) and (max-width:1024px)": {
-      width: "92.035%",
+      width: "auto",
     },
   },
   discountCard: {
@@ -205,12 +205,12 @@ const CoverageTabStyles = {
 
   discountsTableContainer: {
     padding: "0px 24px",
-    width: "97%",
+    width: "auto",
     minWidth: "450px",
     boxShadow: "none",
     border: "1px solid #C9E1EC",
     "@media(min-width:650px) and (max-width:1024px)": {
-      width: "92.035%",
+      width: "auto",
     },
   },
   expandedItems: {
@@ -329,12 +329,12 @@ const CoverageTabStyles = {
   },
   tableContainer: {
     padding: "0px 24px",
-    width: "97%",
+    width: "auto",
     minWidth: "450px",
     boxShadow: "none",
     border: "1px solid #C9E1EC",
     "@media(min-width:650px) and (max-width:1024px)": {
-      width: "92.035%",
+      width: "auto",
     },
   },
   tableRow: {

@@ -1,17 +1,11 @@
 import React, { useState, useEffect } from "react";
-import { Box, Drawer, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Logo from "../../assets/Layer 1 copy 1.svg";
 import notification from "../../assets/notification.svg";
 import displayPicture from "../../assets/Rectangle 41106.svg";
 import menu from "../../assets/align-justify.svg";
 import HeaderStyle from "./HeaderStyles";
-import FileAClaim from "../../FileAClaim/FileAClaim";
 const Header = () => {
-  const [isDrawerOpen, setIsDrawerOpen] = useState(false);
-
-  const toggleDrawer = () => {
-    setIsDrawerOpen(!isDrawerOpen);
-  };
   const [prevScrollPos, setPrevScrollPos] = useState(0);
   const [visible, setVisible] = useState(true);
 
@@ -70,13 +64,9 @@ const Header = () => {
             src={headerData[0].menu}
             alt="menu"
             style={HeaderStyle.menuIcon}
-            onClick={toggleDrawer}
           />
         </Box>
       </Box>
-      <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer}>
-        <FileAClaim />
-      </Drawer>
     </Box>
   );
 };

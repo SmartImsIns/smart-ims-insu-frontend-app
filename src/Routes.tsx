@@ -45,7 +45,7 @@ const ApplicationRoutes = (props: any) => {
     } else if (pathArray[1] === "policy-details") {
       navigate("/policy-details");
     } else {
-      navigate("/file-claim");
+      navigate("customer/dashboard");
     }
   }, [navigate, location.pathname]);
 
@@ -93,7 +93,6 @@ const ApplicationRoutes = (props: any) => {
           <Route path="/ims-dashboard" element={<ImsDashboard />} />
           <Route path="/policy-details" element={<PolicyDetails />} />
           <Route path="*" element={<Error header={true} {...props} />} />
-          <Route path="/file-claim" element={<FileAClaim />} />
         </Routes>
       </Box>
       <Footer />

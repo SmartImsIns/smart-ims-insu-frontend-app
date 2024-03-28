@@ -23,8 +23,8 @@ const PolicyTab = () => {
   };
 
   const TabComponents: { [key: string]: React.ComponentType<any> } = {
-    0: ActivityTabComponent,
-    1: CoverageComponent,
+    1: ActivityTabComponent,
+    0: CoverageComponent,
     2: VehicleCard,
     5: BillingTabComponent,
     3: DocumentsTabComponent,
