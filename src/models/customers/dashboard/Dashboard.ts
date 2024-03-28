@@ -1,6 +1,6 @@
 export interface IDashboard {
-  policyCount: string | null;
-  policyList: IPolicy[] | null;
+  policyCount: string;
+  policyList: IPolicy[] | [];
 }
 
 export interface IPolicy {

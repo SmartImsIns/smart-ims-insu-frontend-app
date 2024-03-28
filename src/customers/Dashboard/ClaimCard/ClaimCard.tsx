@@ -3,7 +3,7 @@ import ClaimCardStyles from "./CalimCardStyles";
 import myClaimsIcon from "../../../assets/svgs/myClaimsIcon.svg";
 import rightArrowIcon from "../../../assets/viewAllArrow.svg";
 
-const ClaimsCard = () => {
+const ClaimCard = () => {
   return (
     <Box sx={ClaimCardStyles.claimCardContainer}>
       <Box sx={ClaimCardStyles.claimCardsContainerHeader}>
@@ -97,4 +97,4 @@ const ClaimsCard = () => {
   );
 };
 
-export default ClaimsCard;
+export default ClaimCard;
