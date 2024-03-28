@@ -9,6 +9,9 @@ import leftArrow from "../assets/left_arrow.svg"
 import filter from "../assets/filter.svg"
 import searchIcon from "../assets/search.svg"
 import updownArrow from "../assets/upDownArrow.svg"
+import close from "../assets/closeIcon.svg"
+import ellipsis from "../assets/vertical_ellipse.svg"
+
 export const customerPath = [];
 export const SETTINGS_AND_PREFERENCES = "Setting and Preferences";
 export const LANGUAGE = "Language";
@@ -67,7 +70,7 @@ export const fileAClaim = "File a Claim";
 export const clickToUpload = "Click to upload";
 export const claimSubmitted = "Claim Submitted";
 export const referenceNumber = "Please find you claim reference number ";
-export const contactAgent="Contact your Agent for further process"
+export const contactAgent = "Contact your Agent for further process"
 export const FILTER = filter;
 export const SEARCH = searchIcon;
 export const UP_DOWN_ARROW = updownArrow;
@@ -76,6 +79,8 @@ export const driver = "Driver";
 export const imageNotFound = "image not found";
 export const agentDetails = "Agent Details";
 export const businessAddress = "Business Address";
+export const ELLIPSIS = ellipsis;
+export const CLOSE = close;
 export const loginMessage = "Welcome, please login to continue";
 export const loginName = "Mathew Thomas";
 export const loginPassword = "Mathew Thomas";

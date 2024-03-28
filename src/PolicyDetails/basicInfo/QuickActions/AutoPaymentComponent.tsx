@@ -1,66 +1,200 @@
 import * as React from "react";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
-import Dialog, { DialogProps } from "@mui/material/Dialog";
+import Dialog from "@mui/material/Dialog";
 import DialogActions from "@mui/material/DialogActions";
 import DialogContent from "@mui/material/DialogContent";
-import DialogContentText from "@mui/material/DialogContentText";
 import DialogTitle from "@mui/material/DialogTitle";
 import FormControl from "@mui/material/FormControl";
-import FormControlLabel from "@mui/material/FormControlLabel";
-import InputLabel from "@mui/material/InputLabel";
 import MenuItem from "@mui/material/MenuItem";
-import Select, { SelectChangeEvent } from "@mui/material/Select";
-import Switch from "@mui/material/Switch";
+import Select from "@mui/material/Select";
+import { Divider, IconButton, InputLabel, Typography } from "@mui/material";
+import { CLOSE } from "../../../constants/Constants";
+import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
+import { Padding } from "@mui/icons-material";
+interface AutoPaymentProps {
+  onClose: () => void;
+  open: boolean;
+}
 
-const AutoPaymentComponent: React.FC = () => {
-  const [open, setOpen] = React.useState(false);
-
-  const handleClickOpen = () => {
-    setOpen(true);
-  };
-
-  const handleClose = () => {
-    setOpen(false);
-  };
-
+const AutoPaymentComponent: React.FC<AutoPaymentProps> = ({
+  onClose,
+  open,
+}) => {
   return (
     <React.Fragment>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Open max-width dialog
-      </Button>
-      <Dialog open={open} onClose={handleClose}>
-        <DialogTitle>Optional sizes</DialogTitle>
-        <DialogContent>
-          <DialogContentText>
-            You can set my maximum width and whether to adapt or not.
-          </DialogContentText>
+      <Dialog open={open} onClose={onClose} aria-label="dialog box">
+        <Box
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            padding: "20px 0px 0px 20px",
+          }}
+        >
+          <DialogTitle
+            sx={{
+              padding: "0px",
+              fontFamily: "Playfair Display",
+              fontSize: "16px",
+              lineHeight: "110%",
+            }}
+          >
+            Turn-on Auto Payment
+          </DialogTitle>
+          <Box
+            onClick={onClose}
+            aria-label="close"
+            sx={{
+              padding: "0px 20px 0px 20px",
+            }}
+          >
+            <img src={CLOSE} />
+          </Box>
+        </Box>
+        <Divider sx={{ paddingTop: "15px" }}></Divider>
+        <DialogContent sx={{ padding: "0px" }}>
           <Box
             noValidate
             component="form"
             sx={{
               display: "flex",
               flexDirection: "column",
-              m: "auto",
               width: "fit-content",
+              padding: "17px 20px 30px 20px ",
             }}
           >
-            <FormControl sx={{ mt: 2, minWidth: 120 }}>
-              <InputLabel htmlFor="Select Payment Method">
+            <Typography
+              sx={{
+                fontFamily: "Noto Sans",
+                fontSize: "16px",
+                lineHeight: "110%",
+              }}
+            >
+              Payment Method
+            </Typography>
+            <FormControl sx={{ mt: 2, width: "301px" }}>
+              <InputLabel
+                id="Select Payment Method"
+                sx={{
+                  fontFamily: "Noto Sans",
+                  fontSize: "16px",
+                  lineHeight: "110%",
+                }}
+              >
                 Select Payment Method
               </InputLabel>
-              <Select autoFocus>
-                <MenuItem value="Credit">Credit Card</MenuItem>
-                <MenuItem value="sm">Debit Card</MenuItem>
-                <MenuItem value="Debit">Cash</MenuItem>
-                <MenuItem value="Rupay">Rupay</MenuItem>
-                <MenuItem value="Phone">Phone pay</MenuItem>
+
+              {/* )} */}
+              <Select
+                id="Select Payment Method"
+                // autoFocus
+                // value={selectValue}
+                // onChange={(e: any) => setValue(e.target.value)}
+              >
+                <MenuItem
+                  sx={{
+                    fontFamily: "Noto Sans",
+                    fontSize: "16px",
+                    lineHeight: "110%",
+                  }}
+                  value="Credit"
+                >
+                  Credit Card
+                </MenuItem>
+                <MenuItem
+                  sx={{
+                    fontFamily: "Noto Sans",
+                    fontSize: "16px",
+                    lineHeight: "110%",
+                  }}
+                  value="sm"
+                >
+                  Debit Card
+                </MenuItem>
+                <MenuItem
+                  sx={{
+                    fontFamily: "Noto Sans",
+                    fontSize: "16px",
+                    lineHeight: "110%",
+                  }}
+                  value="Debit"
+                >
+                  Cash
+                </MenuItem>
+                <MenuItem
+                  sx={{
+                    fontFamily: "Noto Sans",
+                    fontSize: "16px",
+                    lineHeight: "110%",
+                  }}
+                  value="Rupay"
+                >
+                  Rupay
+                </MenuItem>
+                <MenuItem
+                  sx={{
+                    fontFamily: "Noto Sans",
+                    fontSize: "16px",
+                    lineHeight: "110%",
+                  }}
+                  value="Phone"
+                >
+                  Phone pay
+                </MenuItem>
               </Select>
+              <Box
+                sx={{
+                  paddingTop: "20px",
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                }}
+              >
+                <AddCircleOutlineIcon />
+                <Typography
+                  sx={{
+                    fontFamily: "Noto Sans",
+                    fontSize: "16px",
+                    lineHeight: "110%",
+                  }}
+                >
+                  Payment Method
+                </Typography>
+              </Box>
             </FormControl>
           </Box>
         </DialogContent>
-        <DialogActions>
-          <Button onClick={handleClose}>Close</Button>
+        <DialogActions
+          sx={{
+            padding: "0px 20px 20px 20px",
+          }}
+        >
+          <Button
+            variant="text"
+            onClick={onClose}
+            sx={{
+              textTransform: "none",
+              fontFamily: "Noto Sans",
+              fontSize: "14px",
+              lineHeight: "110%",
+              borderRadius: "40px",
+            }}
+          >
+            Cancel
+          </Button>
+          <Button
+            variant="contained"
+            onClick={onClose}
+            sx={{
+              borderRadius: "40px",
+              fontFamily: "Noto Sans",
+              fontSize: "14px",
+              lineHeight: "110%",
+              textTransform: "none",
+            }}
+          >
+            Save
+          </Button>
         </DialogActions>
       </Dialog>
     </React.Fragment>
