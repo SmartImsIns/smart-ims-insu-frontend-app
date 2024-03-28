@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import PolicyTabsLists from "./PolicyTabsLists";
-import {
-  MenuItem,
-  Select,
-  Tabs,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { MenuItem, Select, Tabs, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
@@ -66,7 +60,7 @@ const PolicyTab = () => {
     );
   };
 
-  const isMobile = useMediaQuery("(max-width:789px)");
+  const isMobile = useMediaQuery("(max-width:799px)");
 
   return (
     <Box sx={PolicyTabStyles.PolicyTabsStyles}>
