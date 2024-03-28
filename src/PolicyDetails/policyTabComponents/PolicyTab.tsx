@@ -2,13 +2,7 @@ import React, { useState } from "react";
 import Box from "@mui/material/Box";
 import Tab from "@mui/material/Tab";
 import PolicyTabsLists from "./PolicyTabsLists";
-import {
-  MenuItem,
-  Select,
-  Tabs,
-  Typography,
-  useMediaQuery,
-} from "@mui/material";
+import { MenuItem, Select, Tabs, useMediaQuery } from "@mui/material";
 import KeyboardArrowDownIcon from "@mui/icons-material/KeyboardArrowDown";
 import { PolicyTabStyles } from "./PolicyTabStyles";
 import DocumentsTabComponent from "./documentTab/DocumentsTabComponent";
@@ -16,6 +10,8 @@ import ActivityTabComponent from "./ActivityTab/ActivityTabComponent";
 import CoverageComponent from "./CoverageTab/CoverageTabComponent";
 import VehicleCard from "./VehicleTab/VehicleCard";
 import BillingTabComponent from "./BillingTab/BillingTabComponent";
+import ClaimTabComponent from "./claimsTab/ClaimTabComponent";
+import leinholderTabComponent from "./LeinHolderTab/LeinholderTabComponent";
 
 interface TabPanelProps {
   index: number;
@@ -54,7 +50,9 @@ const PolicyTab = () => {
     "1": CoverageComponent,
     "2": VehicleCard,
     "3": DocumentsTabComponent,
+    "4": leinholderTabComponent,
     "5": BillingTabComponent,
+    "6": ClaimTabComponent,
   };
 
   const getComponent = ({ index }: { index: number }) => {
@@ -66,7 +64,7 @@ const PolicyTab = () => {
     );
   };
 
-  const isMobile = useMediaQuery("(max-width:789px)");
+  const isMobile = useMediaQuery("(max-width:799px)");
 
   return (
     <Box sx={PolicyTabStyles.PolicyTabsStyles}>

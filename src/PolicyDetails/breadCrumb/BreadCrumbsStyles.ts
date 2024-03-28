@@ -4,16 +4,9 @@ export const BreadCrumbStyles = {
         gap: '10px',
         marginTop: "40.23px",
         marginLeft: "30px",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 799px)": {
             marginLeft: "20px",
             marginTop: "20px",
-        },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            marginLeft: "25px",
-            marginTop: "30px",
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
-            marginLeft: "30px",
         },
     },
     box: {
@@ -30,13 +23,10 @@ export const BreadCrumbStyles = {
         fontWeight: 400,
         lineHeight: '110%',
         whiteSpace: "pre",
-        "@media (max-width: 599px)": {
+        "@media (max-width: 800px)": {
             fontSize: '14px',
         },
-        "@media (min-width: 600px) and (max-width: 1024px)": {
-            fontSize: '16px',
-        },
-        "@media (min-width: 1024px) and (max-width: 1920px)": {
+        "@media (max-width: 800px) and (max-width: 1920px)": {
             fontSize: '18px',
         },
     }

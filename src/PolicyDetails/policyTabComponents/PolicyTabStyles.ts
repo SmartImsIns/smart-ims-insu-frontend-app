@@ -1,11 +1,11 @@
 export const PolicyTabStyles = {
   PolicyTabsStyles: {
     margin: "64px 30px 0px 30px",
-    "@media (max-width: 601px)": {
-      marginTop: "20px",
+    "@media (max-width: 799px)": {
+      margin: "20px 20px 0px 20px",
     },
-    "@media (min-width: 602px) and (max-width: 1024px)": {
-      marginTop: "30px",
+    "@media (min-width: 800px) and (max-width: 1300px)": {
+      marginTop: "40px",
     },
   },
   selectStyles: {
