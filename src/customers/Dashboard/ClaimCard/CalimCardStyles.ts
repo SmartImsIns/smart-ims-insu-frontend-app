@@ -10,7 +10,12 @@ const ClaimsCardStyles = {
     justifyContent: "space-between",
     alignItems: "center",
   },
-  viewAll: { display: "flex", alignItems: "center", gap: "5px" },
+  viewAll: {
+    display: "flex",
+    alignItems: "center",
+    gap: "5px",
+    cursor: "pointer",
+  },
   viweAllText: {
     fontFamily: "Noto Sans",
     fontSize: "18px",
@@ -72,21 +77,10 @@ const ClaimsCardStyles = {
     lineHeight: "19.8px",
     textOverflow: "ellipsis",
     "@media (max-width:599px)": {
-      overflow: "hidden",
-      color: "#1D252B",
-      textOverflow: "ellipsis",
-      fontFamily: "Noto Sans",
       fontSize: "16px",
       lineHeight: "24px",
     },
     "@media (min-width:600px) and (max-width:1024px)": {
-      overflow: "hidden",
-      textOverflow: "ellipsis",
-      whiteSpace: "nowrap",
-    },
-    "@media (min-width: 1025px) and (max-width: 1366px)": {
-      overflow: "hidden",
-      textOverflow: "ellipsis",
       whiteSpace: "nowrap",
     },
   },

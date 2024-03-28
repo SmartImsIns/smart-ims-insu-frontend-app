@@ -62,18 +62,18 @@ const QuickReferences = () => {
       >
         {item.type === "video" && (
           <>
-          <CardMedia
-            component="iframe"
-            src={item.src}
-            sx={{
-              aspectRatio: "16/9",
-              height: "inherit",
-              border: 0,
-            }}
-            allowFullScreen
-            allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          />
-          <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
+            <CardMedia
+              component="iframe"
+              src={item.src}
+              sx={{
+                aspectRatio: "16/9",
+                height: "inherit",
+                border: 0,
+              }}
+              allowFullScreen
+              allow="clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoPlay=0"
+            />
+            <CardContent sx={QuickReferencesStyle.quickReferencesCardContent}>
               <Typography
                 sx={QuickReferencesStyle.quickReferencesCardContentText}
               >
